@@ -11,16 +11,21 @@ enum toolList
     wateringCan
 }
 
-public class ToolScript : MonoBehaviour
+public abstract class ToolScript : MonoBehaviour
 {
     public Grid grid;
     public Tilemap tileMap;
-    
+
     private toolList currentTool;
 
-    public virtual void useTool()
+    private void Start()
     {
-
+        grid = FindObjectOfType<Grid>();
+        tileMap = FindObjectOfType<Tilemap>();
     }
+    public virtual void useTool() { }
+
+    public Grid GetGrid() { return grid; }
+    public Tilemap GetTileMap () { return tileMap; }
 }
 

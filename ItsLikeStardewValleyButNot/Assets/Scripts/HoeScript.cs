@@ -11,10 +11,10 @@ public class HoeScript : ToolScript
     {
         grid = FindObjectOfType<Grid>();
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int posInt = grid.LocalToCell(pos);
+        Vector3Int posInt = base.GetGrid().LocalToCell(pos);
         // Shows the name of the tile at the specified coordinates            
-        Debug.Log(tileMap.GetTile(posInt).name);
+        Debug.Log(base.GetTileMap().GetTile(posInt).name);
         Debug.Log("This is hoeing");
-        tileMap.SetTile(posInt, tilledTile);
+        base.GetTileMap().SetTile(posInt, tilledTile);
     }
 }
