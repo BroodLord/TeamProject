@@ -7,17 +7,28 @@ public class CharacterMovement : MonoBehaviour
 
     public GameObject thisObject;
     [SerializeField] private float moveSpeed;
+    ToolScript tool;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tool = new HoeScript();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.P))
+        {
+            tool = new WateringCanScript();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            tool.useTool();
+        }
+
+            if (Input.GetKey(KeyCode.W))
         {
             thisObject.transform.position += new Vector3(0, moveSpeed + Time.deltaTime, 0);
         }

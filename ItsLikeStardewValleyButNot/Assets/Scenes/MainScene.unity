@@ -261,6 +261,8 @@ GameObject:
   - component: {fileID: 870664278}
   - component: {fileID: 870664277}
   - component: {fileID: 870664276}
+  - component: {fileID: 870664280}
+  - component: {fileID: 870664279}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -347,6 +349,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870664279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870664275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91058d51d397fa14c83b0412a7389df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 14985315}
+  tileMap: {fileID: 1731866889}
+  tilledTile: {fileID: 11400000, guid: 93e25be957bb56b4a84f6b33da6cde3f, type: 2}
+--- !u!114 &870664280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870664275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b9ed01383480547935ad92b799a36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 14985315}
+  tileMap: {fileID: 1731866889}
+  wateredTile: {fileID: 11400000, guid: 21d89a4af94faaf4982a1055df9b9953, type: 2}
 --- !u!1 &1731866886
 GameObject:
   m_ObjectHideFlags: 0
