@@ -11,6 +11,7 @@ public class Clock : MonoBehaviour
     public TimeFormats ClockTimeFormat = TimeFormats.Hour_24;
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
     public float SecondsPerMin = 1;
+    
 
     /*Strings which will be assigned to the UI*/
     private string TimeText;

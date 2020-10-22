@@ -24,8 +24,5 @@ public abstract class ToolScript : MonoBehaviour
         tileMap = FindObjectOfType<Tilemap>();
     }
     public virtual void useTool() { }
-
-    public Grid GetGrid() { return grid; }
-    public Tilemap GetTileMap () { return tileMap; }
 }
 
