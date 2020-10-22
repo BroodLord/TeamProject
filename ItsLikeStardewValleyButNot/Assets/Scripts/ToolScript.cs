@@ -18,7 +18,7 @@ public abstract class ToolScript : MonoBehaviour
 
     private toolList currentTool;
 
-    private void Start()
+    protected void awake()
     {
         grid = FindObjectOfType<Grid>();
         tileMap = FindObjectOfType<Tilemap>();
