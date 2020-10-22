@@ -39,12 +39,15 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKey(KeyCode.Z))
         {
             tool = this.GetComponent<WateringCanScript>();
         }
 
-
+        if (Input.GetKey(KeyCode.X))
+        {
+            tool = this.GetComponent<HoeScript>();
+        }
 
         if (!actionLocked)
         {
