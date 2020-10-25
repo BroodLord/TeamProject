@@ -1,0 +1,25 @@
+<Items>
+	<!-- List of Tools -->
+	<Item name="Hoe" type="Tools" src-image="" stackable="No" sellPrice=""/>
+	<Item name="Watering Can" type="Tools" src-image="" stackable="No" sellPrice=""/>
+	<Item name="Axe" type="Tools" src-image="" stackable="No" sellPrice=""/>
+	<Item name="Pickaxe" type="Tools" src-image="" stackable="No" sellPrice=""/>
+	<Item name="Scythe" type="Tools" src-image="" stackable="No" sellPrice=""/>
+
+	<!-- List of Seeds -->
+	<Item name="Potato Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Kale Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Strawberry Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Watermelon Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Pumpkin Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Onion Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Cauliflower Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Wheat Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Rice Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+
+	<!-- List of Decorations -->
+	<Item name="Stone Path" type="Decoration" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Wood Path" type="Decoration" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Torch" type="Decoration" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Fence" type="Decoration" src-image="" stackable="Yes" sellPrice=""/>
+</ItemsYes
