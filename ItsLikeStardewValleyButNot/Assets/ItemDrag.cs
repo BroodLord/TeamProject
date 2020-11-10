@@ -41,7 +41,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         {
             cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
             cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
-            cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()].SetResetNeeded(true);
+            cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
             cInventory.UpdateUI();
         }
     }

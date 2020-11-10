@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ItemBase : MonoBehaviour
+public class ItemBase : MonoBehaviour
 {
     public InventoryClass cInventory;
     public enum ItemTypes { Tool, Seed, Decoration }
@@ -20,16 +20,6 @@ public abstract class ItemBase : MonoBehaviour
     public bool CheckResetNeeded() { return ResetNeeded; }
     public void SetResetNeeded(bool Value) { ResetNeeded = Value; }
 
-    public void ResetItem(int ID)
-    {
-        mImage = null;
-        mName = null;
-        mAmount = 0;
-        mStackable = false;
-        mSrcImage = null;
-        mSellPrice = 0;
-        cInventory.ItemList[ID] = null;
-    }
     public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
     public Sprite GetSpriteImage() { return mImage; }
     public string GetName() { return mName; }

@@ -10,6 +10,7 @@ public class InventoryClass : InventoryAbstractClass
 {
     // Start is called before the first frame update
     public UnityEngine.UI.Image[] ImageSlots;
+    public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     private GameObject Parent;
     private bool UIEnabled;
@@ -17,26 +18,24 @@ public class InventoryClass : InventoryAbstractClass
     {
         if (UIEnabled != false)
         {
-           
-            TextMeshProUGUI AmountText = new TextMeshProUGUI();
             for (int i = 0; i < ImageSlots.Length; i++)
             {
-                if (ItemList[i] != null && ItemList[i].CheckResetNeeded())
-                {
-                    ItemList[i].ResetItem(i);
-                    ItemList[i].SetResetNeeded(false);
-                    Markers[i] = false;
-                }
                 if (ItemList[i] != null)
                 {
                     
                     ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
-                    AmountText = ImageSlots[i].gameObject.GetComponentInChildren<TextMeshProUGUI>();
-                    AmountText.text = ItemList[i].GetAmount().ToString();
+                    AmountText[i].text = ItemList[i].GetAmount().ToString();
                 }
                 else
                 {
                     ImageSlots[i].sprite = BackgroundImage;
+                    AmountText[i].text = "0";
+                    if (Markers[i] == true)
+                    {
+                        
+                        Markers[i] = false;
+                    }
+
                 }
 
 

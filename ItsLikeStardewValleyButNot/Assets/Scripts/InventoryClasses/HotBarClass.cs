@@ -8,16 +8,35 @@ public class HotBarClass : InventoryAbstractClass
 {
     // Start is called before the first frame update
     public UnityEngine.UI.Image[] ImageSlots;
+    public TextMeshProUGUI[] AmountText;
+    public Sprite BackgroundImage;
+    private bool UIEnabled;
     public void UpdateUI()
     {
-        TextMeshProUGUI AmountText = new TextMeshProUGUI();
-        for (int i = 0; i < ImageSlots.Length; i++)
+        if (UIEnabled != false)
         {
-            ImageSlots[i].sprite = ItemList[i].GetSpriteImage(); ;
-            AmountText = ImageSlots[i].gameObject.GetComponentInChildren<TextMeshProUGUI>();
-            AmountText.text = ItemList[i].GetAmount().ToString();
+            for (int i = 0; i < ImageSlots.Length; i++)
+            {
+                if (ItemList[i] != null)
+                {
+
+                    ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
+                    AmountText[i].text = ItemList[i].GetAmount().ToString();
+                }
+                else
+                {
+                    ImageSlots[i].sprite = BackgroundImage;
+                    AmountText[i].text = "0";
+                    if (Markers[i] == true)
+                    {
+
+                        Markers[i] = false;
+                    }
+
+                }
 
 
+            }
         }
     }
     // Start is called before the first frame update
