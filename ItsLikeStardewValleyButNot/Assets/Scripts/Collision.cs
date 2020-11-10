@@ -23,9 +23,19 @@ public class Collision : MonoBehaviour
         {
             ItemBase Item = collision.GetComponent<ItemBase>();
             Sprite ItemSprite = collision.GetComponent<SpriteRenderer>().sprite;
-            Item.SetName("Test Item");
-            Item.SetSpriteImage(ItemSprite);
-            cInventory.AddItem(Item);
+            if (cInventory.HasItem(Item.name) && Item.GetStackable() == true)
+            {
+                Item.AddAmount(1);
+                cInventory.UpdateUI();
+            }
+            else
+            {
+                Item.SetName(Item.name);
+                Item.SetAmount(1);
+                Item.SetSpriteImage(ItemSprite);
+                cInventory.AddItem(Item, Item.GetAmount());
+                cInventory.UpdateUI();
+            }
             Debug.Log("COLLISION!");
         }
         Destroy(this.gameObject);

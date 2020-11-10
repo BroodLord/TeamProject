@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEditor.PackageManager;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 
 public class InventoryClass : InventoryAbstractClass
@@ -11,9 +12,14 @@ public class InventoryClass : InventoryAbstractClass
     public UnityEngine.UI.Image[] ImageSlots;
     public void UpdateUI()
     {
+        TextMeshProUGUI AmountText = new TextMeshProUGUI();
         for (int i = 0; i < ImageSlots.Length; i++)
         {
-            ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
+            ImageSlots[i].sprite = ItemList[i].GetSpriteImage();;
+            AmountText = ImageSlots[i].gameObject.GetComponentInChildren<TextMeshProUGUI>();
+            AmountText.text = ItemList[i].GetAmount().ToString();
+
+
         }
     }
 

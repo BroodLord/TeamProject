@@ -55,12 +55,11 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         Markers = TempMarkers;
         ResetMarkers();
     }
-
     public bool HasItem(string ID)
     {
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (ID == ItemList[i].GetName())
+            if (ItemList[i] != null && ID == ItemList[i].name)
             {
                 return true;
             }
@@ -82,18 +81,18 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
        return false;
    }
-   public bool AddItem(ItemBase Item)
+
+   public bool AddItem(ItemBase Item, int Amount)
    {
-       for(int i = 0; i < ItemList.Length; i++)
+        for (int i = 0; i < ItemList.Length; i++)
         {
             if(Markers[i] == false)
             {
                 ItemList[i] = Item;
                 Markers[i] = true;
-                cInventory.UpdateUI();
                 return true;
             }
-       }
+        }
        return false;
    }
     public int CheckItemAmount(string ID)
