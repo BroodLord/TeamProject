@@ -7,6 +7,8 @@ public class CharacterMovement : MonoBehaviour
 {
 
     public GameObject thisObject;
+    private float CoolDown;
+    [SerializeField] InventoryClass cInventory;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float interactRange;
     private static float actionLock = 0.4f;         //how long after executing an action the character is locked in place for 
@@ -22,11 +24,16 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         tool = this.GetComponent<HoeScript>();
+        CoolDown = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(CoolDown > 0.0f)
+        {
+            CoolDown -= Time.deltaTime;
+        }
         if (actionLocked)
         {
 
@@ -78,6 +85,14 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 thisObject.transform.position += new Vector3(moveSpeed + Time.deltaTime, 0, 0);
+            }
+            if (Input.GetKey(KeyCode.I))
+            {
+                if (CoolDown <= 0.0f)
+                {
+                    cInventory.DisabledNEnable();
+                    CoolDown = 0.2f;
+                }
             }
         }
     }

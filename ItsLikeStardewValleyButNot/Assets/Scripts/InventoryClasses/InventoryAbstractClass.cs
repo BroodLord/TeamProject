@@ -9,6 +9,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
     public int MaxCapacity;
     public bool[] Markers;
     public InventoryClass cInventory;
+    public HotBarClass cHotBar;
     public InventoryAbstractClass()
     {
         MaxCapacity = 32;
