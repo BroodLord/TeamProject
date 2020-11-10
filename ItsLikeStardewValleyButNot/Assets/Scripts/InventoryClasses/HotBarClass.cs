@@ -13,8 +13,6 @@ public class HotBarClass : InventoryAbstractClass
     private bool UIEnabled;
     public void UpdateUI()
     {
-        if (UIEnabled != false)
-        {
             for (int i = 0; i < ImageSlots.Length; i++)
             {
                 if (ItemList[i] != null)
@@ -37,7 +35,6 @@ public class HotBarClass : InventoryAbstractClass
 
 
             }
-        }
     }
     // Start is called before the first frame update
     void Start()

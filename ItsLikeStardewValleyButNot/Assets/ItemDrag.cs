@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler, IDropHandler
 {
-    public InventoryClass cInventory;
+    public InventoryAbstractClass cInventory;
+    public HotBarClass cHotBar;
     private Transform OringalParent;
     private bool IsDragging;
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
@@ -32,17 +33,84 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     void IDropHandler.OnDrop(PointerEventData eventData)
     {
-        ItemBase DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
-        if (eventData.pointerDrag.transform.parent.name == gameObject.name)
+        if (transform.parent.parent.name == "InventoryUI")
         {
-            return;
+            ItemBase DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+            if (DropedItem != null)
+            {
+                if (eventData.pointerDrag.transform.parent.name == gameObject.name)
+                {
+                    return;
+                }
+                if (cInventory.ItemList[transform.parent.GetSiblingIndex()] == null)
+                {
+                    cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
+                    cInventory.cInventory.UpdateUI();
+                    //cHotBar.cHotBar.UpdateUI();
+                }
+                else
+                {
+                    ItemBase TempItem = cInventory.ItemList[transform.GetSiblingIndex()];
+                    cInventory.ItemList[transform.GetSiblingIndex()] = DropedItem;
+                    cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = TempItem;
+                    cInventory.cInventory.UpdateUI();
+                    //cHotBar.cHotBar.UpdateUI();
+                }
+            }
+            else
+            {
+                if (DropedItem == null) { DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()]; }
+                if (cInventory.ItemList[transform.parent.GetSiblingIndex()] == null)
+                {
+                    cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
+                    cInventory.cHotBar.UpdateUI();
+                    cHotBar.cInventory.UpdateUI();
+                }
+            }
         }
-        if (cInventory.ItemList[transform.parent.GetSiblingIndex()] == null)
+        if (transform.parent.parent.name == "HotbarUI")
         {
-            cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
-            cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
-            cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
-            cInventory.UpdateUI();
+            ItemBase DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+            if (DropedItem != null)
+            {
+                if (eventData.pointerDrag.transform.parent.name == gameObject.name)
+                {
+                    return;
+                }
+                if (cHotBar.ItemList[transform.parent.GetSiblingIndex()] == null)
+                {
+                    cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
+                    //cInventory.cInventory.UpdateUI();
+                    cHotBar.cHotBar.UpdateUI();
+                }
+                else
+                {
+                    ItemBase TempItem = cHotBar.ItemList[transform.GetSiblingIndex()];
+                    cHotBar.ItemList[transform.GetSiblingIndex()] = DropedItem;
+                    cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = TempItem;
+                    //cInventory.cInventory.UpdateUI();
+                    cHotBar.cHotBar.UpdateUI();
+                }
+            }
+            else
+            {
+                if (DropedItem == null) { DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()]; }
+                if (cHotBar.ItemList[transform.parent.GetSiblingIndex()] == null)
+                {
+                    cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
+                    cHotBar.cInventory.UpdateUI();
+                    cInventory.cHotBar.UpdateUI();
+
+                }
+            }
         }
     }
 
