@@ -7,6 +7,7 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
     public InventoryClass cInventory;
+    public Clock cClock;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +38,12 @@ public class Collision : MonoBehaviour
                 cInventory.UpdateUI();
             }
             Debug.Log("COLLISION!");
+            Destroy(collision.gameObject);
         }
-        Destroy(this.gameObject);
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
+        if (collision.gameObject.tag == "Bed")
+        {
+            cClock.NightUpdate();
+            Debug.Log("COLLISION!");
+        }
     }
 }

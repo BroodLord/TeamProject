@@ -40,6 +40,16 @@ public class Clock : MonoBehaviour
         if(Hour < 12) { AM = true; }
         SetTextStrings();
     }
+    public void NightUpdate()
+    {
+        TimeTimer = SecondsPerMin;
+        Min = -1;
+        Hour = 8;
+        ++Day;
+        
+        // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
+    }
+
     // Update is called once per frame
     void Update()
     {
