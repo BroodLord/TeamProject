@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Unity.VisualStudio.Editor;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,15 @@ public class ItemBase : MonoBehaviour
     public enum ItemTypes { Tool, Seed, Decoration }
     protected ItemTypes mItemType;
 
+    protected Sprite mImage;
     protected string mName;
     protected int mAmount;
     protected bool mStackable;
     protected string mSrcImage;
     protected float mSellPrice;
 
+    public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
+    public Sprite GetSpriteImage() { return mImage; }
     public string GetName() { return mName; }
     public int GetAmount() { return mAmount; }
     public ItemTypes GetType() { return mItemType; }

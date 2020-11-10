@@ -23,13 +23,13 @@ public class CharacterMovement : MonoBehaviour
     {
         tool = this.GetComponent<HoeScript>();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         if (actionLocked)
         {
-            
+
             actionLockedTimer -= Time.deltaTime;
             if (actionLockedTimer < 0)
             {
