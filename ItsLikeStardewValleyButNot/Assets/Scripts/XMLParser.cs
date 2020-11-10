@@ -25,7 +25,7 @@ public class XMLParser : MonoBehaviour
 
         foreach (XmlNode ItemsXML in constVarList)
         {
-            ItemBase temp = new ItemBase();
+            ItemBase temp = new ToolItem();
 
             temp.SetName(ItemsXML.Attributes.GetNamedItem("name").Value);
             string itemType = ItemsXML.Attributes.GetNamedItem("type").Value;

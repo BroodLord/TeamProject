@@ -98,6 +98,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
    }
     public int CheckItemAmount(string ID)
     {
+
         for (int i = 0; i < ItemList.Length; i++)
         {
             if (ID == ItemList[i].GetName())
