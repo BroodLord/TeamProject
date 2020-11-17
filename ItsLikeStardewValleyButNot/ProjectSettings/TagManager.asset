@@ -8,6 +8,10 @@ TagManager:
   - InventorySlot
   - Item
   - Bed
+  - NoneWalkable
+  - Teleporter
+  - Canvas
+  - EventSystem
   layers:
   - Default
   - TransparentFX

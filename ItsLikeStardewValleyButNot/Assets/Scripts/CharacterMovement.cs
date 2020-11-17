@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 {
 
     public GameObject thisObject;
+    public Animator PlayerAnim;
     private float CoolDown;
     [SerializeField] InventoryClass cInventory;
     [SerializeField] private float moveSpeed;
@@ -21,8 +22,17 @@ public class CharacterMovement : MonoBehaviour
 
     //TODO - when an item list is added, check currently equipped item, if its a tool set the correct tool
     // Start is called before the first frame update
+
+    public void GetCamera()
+    {
+        GameObject Go = GameObject.FindGameObjectWithTag("MainCamera");
+        camera = Go.GetComponent<Camera>();
+    }
+
     void Start()
     {
+
+        GetCamera();
         tool = this.GetComponent<HoeScript>();
         CoolDown = 0.0f;
     }
@@ -60,6 +70,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (camera == null) { GetCamera(); }
                 mouseWorldPoint = camera.ScreenToWorldPoint(Input.mousePosition);
                 if (Vector2.Distance(this.transform.position, mouseWorldPoint) < interactRange)
                 {
@@ -70,22 +81,29 @@ public class CharacterMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W))
             {
+                PlayerAnim.SetBool("Up", true);
                 thisObject.transform.position += new Vector3(0, moveSpeed + Time.deltaTime, 0);
             }
-
+            else { PlayerAnim.SetBool("Up", false); }
             if (Input.GetKey(KeyCode.A))
             {
+                PlayerAnim.SetBool("Left", true);
                 thisObject.transform.position -= new Vector3(moveSpeed + Time.deltaTime, 0, 0);
             }
-
+            else { PlayerAnim.SetBool("Left", false); }
             if (Input.GetKey(KeyCode.S))
             {
+                PlayerAnim.SetBool("Forward", true);
                 thisObject.transform.position -= new Vector3(0, moveSpeed + Time.deltaTime, 0);
+
             }
+            else { PlayerAnim.SetBool("Forward", false); }
             if (Input.GetKey(KeyCode.D))
             {
+                PlayerAnim.SetBool("Right", true);
                 thisObject.transform.position += new Vector3(moveSpeed + Time.deltaTime, 0, 0);
             }
+            else { PlayerAnim.SetBool("Right", false); }
             if (Input.GetKey(KeyCode.I))
             {
                 if (CoolDown <= 0.0f)
