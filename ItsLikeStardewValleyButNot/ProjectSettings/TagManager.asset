@@ -12,6 +12,7 @@ TagManager:
   - Teleporter
   - Canvas
   - EventSystem
+  - Tileable
   layers:
   - Default
   - TransparentFX

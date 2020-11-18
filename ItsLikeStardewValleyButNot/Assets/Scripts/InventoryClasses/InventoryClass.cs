@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using UnityEditor.PackageManager;
+//using UnityEditor.PackageManager;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -9,6 +9,7 @@ using UnityEngine;
 public class InventoryClass : InventoryAbstractClass
 {
     // Start is called before the first frame update
+    public LoadLevel Data; 
     public UnityEngine.UI.Image[] ImageSlots;
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
@@ -58,7 +59,7 @@ public class InventoryClass : InventoryAbstractClass
         }
     }
 
-    void Start()
+    void Awake()
     {
         Parent = ImageSlots[0].transform.parent.parent.gameObject;
         UIEnabled = true;

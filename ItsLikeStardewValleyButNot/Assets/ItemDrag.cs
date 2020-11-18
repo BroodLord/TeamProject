@@ -9,6 +9,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     public HotBarClass cHotBar;
     private Transform OringalParent;
     private bool IsDragging;
+
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
 
@@ -33,9 +34,20 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     void IDropHandler.OnDrop(PointerEventData eventData)
     {
+        cInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryAbstractClass>();
+        cHotBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HotBarClass>();
         if (transform.parent.parent.name == "InventoryUI")
         {
-            ItemBase DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+
+            ItemBase DropedItem = new ItemBase();
+            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cInventory.ItemList.Length)
+            {
+                DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+            }
+            else
+            {
+                DropedItem = null;
+            }
             if (DropedItem != null)
             {
                 if (eventData.pointerDrag.transform.parent.name == gameObject.name)
@@ -74,7 +86,15 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         }
         if (transform.parent.parent.name == "HotbarUI")
         {
-            ItemBase DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+            ItemBase DropedItem = new ItemBase();
+            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cHotBar.ItemList.Length)
+            {
+                DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
+            }
+            else
+            {
+                DropedItem = null;
+            }
             if (DropedItem != null)
             {
                 if (eventData.pointerDrag.transform.parent.name == gameObject.name)

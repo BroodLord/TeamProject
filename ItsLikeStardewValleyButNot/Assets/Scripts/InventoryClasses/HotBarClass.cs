@@ -23,7 +23,10 @@ public class HotBarClass : InventoryAbstractClass
                 }
                 else
                 {
-                    ImageSlots[i].sprite = BackgroundImage;
+                     if(ImageSlots[i].sprite != null)
+                        {
+                          ImageSlots[i].sprite = BackgroundImage;
+                        }
                     AmountText[i].text = "0";
                     if (Markers[i] == true)
                     {
