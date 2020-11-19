@@ -18,7 +18,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 mouseWorldPoint;
     private bool actionLocked;
     private float actionLockedTimer = actionLock;
-
+    JunkPlacer junkPlace;
 
     //TODO - when an item list is added, check currently equipped item, if its a tool set the correct tool
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-
+        junkPlace = this.GetComponent<JunkPlacer>();
         GetCamera();
         tool = this.GetComponent<HoeScript>();
         CoolDown = 0.0f;
@@ -64,6 +64,11 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.X))
         {
             tool = this.GetComponent<HoeScript>();
+        }
+
+        if (Input.GetKey(KeyCode.O))
+        {
+            junkPlace.PlaceTrees();
         }
 
         if (!actionLocked)
