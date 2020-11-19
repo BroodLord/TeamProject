@@ -9,6 +9,7 @@ using UnityEngine;
 public class InventoryClass : InventoryAbstractClass
 {
     // Start is called before the first frame update
+    public bool NewLevel;
     public LoadLevel Data; 
     public UnityEngine.UI.Image[] ImageSlots;
     public TextMeshProUGUI[] AmountText;

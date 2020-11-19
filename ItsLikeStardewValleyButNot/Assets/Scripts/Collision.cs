@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
     }
 
     // Update is called once per frame

@@ -4231,6 +4231,51 @@ RectTransform:
   m_AnchoredPosition: {x: 336, y: 0}
   m_SizeDelta: {x: 64.86194, y: 53.9765}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &219536751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219536753}
+  - component: {fileID: 219536752}
+  m_Layer: 0
+  m_Name: TeleportManager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &219536752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219536751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d430d644e72016f40aef98a8ec8b281f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mInventoryRef: {fileID: 0}
+  mHotBarRef: {fileID: 0}
+--- !u!4 &219536753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219536751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13579026, y: 1.8841828, z: -2.301723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &226780966
 GameObject:
   m_ObjectHideFlags: 0
@@ -9915,6 +9960,7 @@ MonoBehaviour:
   Markers: 0000000000000000000000000000000000000000000000000000000000000000
   cInventory: {fileID: 870664281}
   cHotBar: {fileID: 870664283}
+  NewLevel: 0
   Data: {fileID: 0}
   ImageSlots:
   - {fileID: 524539359}
@@ -13101,7 +13147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fdaf5c32918f854c9548271ad997a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TransferManager: {fileID: 0}
   NewLevel: 0
+  UICanvas: {fileID: 0}
+  EventSystemRef: {fileID: 0}
+  Player: {fileID: 0}
+  InventoryRef: {fileID: 0}
+  HotBarRef: {fileID: 0}
   LevelName: PlayerRoom
 --- !u!1 &1578239158
 GameObject:
