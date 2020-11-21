@@ -22,21 +22,26 @@ public class LoadLevel : MonoBehaviour
     {
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
-        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Manager"));
-        TransferManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<TransferData>();
+        GameObject Manager = GameObject.FindGameObjectWithTag("InventoryManager");
+        InventoryClass Invent = Manager.GetComponent<InventoryClass>();
+        HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
+        for (int i = 0; i < Invent.ItemList.Length; i++)
+        {
+            if(Invent.ItemList[i] != null)
+                DontDestroyOnLoad(Invent.ItemList[i]);
+        }
+        for (int i = 0; i < HotBar.ItemList.Length; i++)
+        {
+            if (HotBar.ItemList[i] != null)
+                DontDestroyOnLoad(HotBar.ItemList[i]);
+        }
+
+        DontDestroyOnLoad(Manager);
         if (LevelName == "PlayerRoom")
         {
             Player = GameObject.FindGameObjectWithTag("Player");
-            InventoryRef = Player.GetComponent<InventoryClass>();
-            HotBarRef = Player.GetComponent<HotBarClass>();
-            TransferManager.SetData(InventoryRef, HotBarRef);
-            DontDestroyOnLoad(TransferManager.mInventoryRef);
-            DontDestroyOnLoad(TransferManager.mHotBarRef);
-            Destroy(Player);
+            DontDestroyOnLoad(Player);
             Application.LoadLevel("PlayerRoom");
-            InventoryRef = Player.GetComponent<InventoryClass>();
-            HotBarRef = Player.GetComponent<HotBarClass>();
-            TransferManager.ReturnData(ref InventoryRef, ref HotBarRef);
 
 
         }

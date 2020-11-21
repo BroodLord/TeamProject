@@ -39,7 +39,6 @@ public class Collision : MonoBehaviour
                 cInventory.UpdateUI();
             }
             Debug.Log("COLLISION!");
-            //Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Bed")
         {

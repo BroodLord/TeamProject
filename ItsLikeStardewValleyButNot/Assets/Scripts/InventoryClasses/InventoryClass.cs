@@ -57,10 +57,11 @@ public class InventoryClass : InventoryAbstractClass
         {
             UIEnabled = false;
             Parent.gameObject.SetActive(false);
+     
         }
     }
 
-    void Awake()
+    void Start()
     {
         Parent = ImageSlots[0].transform.parent.parent.gameObject;
         UIEnabled = true;

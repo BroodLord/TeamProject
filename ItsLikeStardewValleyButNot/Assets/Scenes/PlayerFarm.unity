@@ -292,8 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &31776971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,8 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &60097370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4155,8 +4155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &187606421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,8 +4629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &294206164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,8 +4826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &373901706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4951,8 +4951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &377421393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5865,8 +5865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &434186650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,8 +6196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &481959833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6321,8 +6321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &487126589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6484,8 +6484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!1 &529686553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,8 +6705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &530223821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7041,8 +7041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &577162394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7186,7 +7186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.3, y: -113.00001}
+  m_AnchoredPosition: {x: -41.000015, y: -113.00001}
   m_SizeDelta: {x: 64.86194, y: 53.9765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &634417693
@@ -7274,8 +7274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &634417698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7801,8 +7801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &681136956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7962,8 +7962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &715950358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9045,8 +9045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &791548703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9170,8 +9170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &804932382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9599,8 +9599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &857559916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9786,8 +9786,6 @@ GameObject:
   - component: {fileID: 870664276}
   - component: {fileID: 870664280}
   - component: {fileID: 870664279}
-  - component: {fileID: 870664281}
-  - component: {fileID: 870664283}
   - component: {fileID: 870664282}
   - component: {fileID: 870664284}
   m_Layer: 0
@@ -9811,7 +9809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisObject: {fileID: 870664275}
   PlayerAnim: {fileID: 870664284}
-  cInventory: {fileID: 870664281}
+  cInventory: {fileID: 1898954092}
   moveSpeed: 0.001
   interactRange: 3
   camera: {fileID: 186388619}
@@ -9911,100 +9909,6 @@ MonoBehaviour:
   grid: {fileID: 14985315}
   tileMap: {fileID: 179263306}
   tilledTile: {fileID: 11400000, guid: 93e25be957bb56b4a84f6b33da6cde3f, type: 2}
---- !u!114 &870664281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1585022694639894883, guid: f5eceb6387ee4d04792b1313660d4971, type: 3}
-  m_PrefabInstance: {fileID: 1585022693803346234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870664275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee6277ffa7ffc845a473559005620c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MaxCapacity: 32
-  Markers: 0000000000000000000000000000000000000000000000000000000000000000
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
-  NewLevel: 0
-  Data: {fileID: 0}
-  ImageSlots:
-  - {fileID: 524539359}
-  - {fileID: 634417698}
-  - {fileID: 804932382}
-  - {fileID: 530223821}
-  - {fileID: 187606421}
-  - {fileID: 1157674944}
-  - {fileID: 577162394}
-  - {fileID: 1114149078}
-  - {fileID: 481959833}
-  - {fileID: 294206164}
-  - {fileID: 31776971}
-  - {fileID: 1788049385}
-  - {fileID: 1876865033}
-  - {fileID: 1446436503}
-  - {fileID: 1812253414}
-  - {fileID: 487126589}
-  - {fileID: 2078507664}
-  - {fileID: 791548703}
-  - {fileID: 60097370}
-  - {fileID: 373901706}
-  AmountText:
-  - {fileID: 907676359}
-  - {fileID: 1523530791}
-  - {fileID: 1678696975}
-  - {fileID: 1515463978}
-  - {fileID: 1898565928}
-  - {fileID: 1058715203}
-  - {fileID: 268312118}
-  - {fileID: 434349644}
-  - {fileID: 1073527512}
-  - {fileID: 2005254755}
-  - {fileID: 60794960}
-  - {fileID: 1578239160}
-  - {fileID: 1693873072}
-  - {fileID: 1152660378}
-  - {fileID: 857995549}
-  - {fileID: 1822357420}
-  - {fileID: 1613804790}
-  - {fileID: 665547127}
-  - {fileID: 670276570}
-  - {fileID: 818607295}
-  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
 --- !u!50 &870664282
 Rigidbody2D:
   serializedVersion: 4
@@ -10026,78 +9930,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &870664283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1585022694639894881, guid: f5eceb6387ee4d04792b1313660d4971, type: 3}
-  m_PrefabInstance: {fileID: 1585022693803346234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870664275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b06b6f8c387761438e9040f0c283e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MaxCapacity: 32
-  Markers: 0000000000000000000000000000000000000000000000000000000000000000
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
-  ImageSlots:
-  - {fileID: 377421393}
-  - {fileID: 857559916}
-  - {fileID: 434186650}
-  - {fileID: 715950358}
-  - {fileID: 1535978214}
-  - {fileID: 1840009328}
-  - {fileID: 681136956}
-  - {fileID: 1663349795}
-  - {fileID: 959498573}
-  - {fileID: 2025798205}
-  AmountText:
-  - {fileID: 848895215}
-  - {fileID: 1498248105}
-  - {fileID: 934541572}
-  - {fileID: 1522827240}
-  - {fileID: 651125148}
-  - {fileID: 1555242555}
-  - {fileID: 529686555}
-  - {fileID: 960451152}
-  - {fileID: 226780968}
-  - {fileID: 1470729910}
-  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
 --- !u!95 &870664284
 Animator:
   serializedVersion: 3
@@ -10416,7 +10248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050e48e57c19f6743964c3c264dcd7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
+  cInventory: {fileID: 1898954092}
 --- !u!61 &957506857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10593,8 +10425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &959498573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11241,8 +11073,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1114149078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11500,8 +11332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1157674944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11876,8 +11708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1446436503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12779,8 +12611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1535978214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13544,8 +13376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1663349795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17207,8 +17039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1788049385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17368,8 +17200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1812253414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17622,7 +17454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2a1a972f126284da6b45d5cfedf805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
+  cInventory: {fileID: 1898954092}
   cClock: {fileID: 2108497412}
 --- !u!61 &1839501636
 BoxCollider2D:
@@ -17735,8 +17567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1840009328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17903,7 +17735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -113}
+  m_AnchoredPosition: {x: -116.30002, y: -113.00001}
   m_SizeDelta: {x: 64.86194, y: 53.9765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1876865028
@@ -17991,8 +17823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &1876865033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18165,6 +17997,204 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898565926}
   m_CullTransparentMesh: 0
+--- !u!1 &1898954090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898954093}
+  - component: {fileID: 1898954092}
+  - component: {fileID: 1898954091}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: InventoryManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1898954091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898954090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b06b6f8c387761438e9040f0c283e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MaxCapacity: 32
+  Markers: 0000000000000000000000000000000000000000000000000000000000000000
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
+  ImageSlots:
+  - {fileID: 377421393}
+  - {fileID: 857559916}
+  - {fileID: 434186650}
+  - {fileID: 715950358}
+  - {fileID: 1535978214}
+  - {fileID: 1840009328}
+  - {fileID: 681136956}
+  - {fileID: 1663349795}
+  - {fileID: 959498573}
+  - {fileID: 2025798205}
+  AmountText:
+  - {fileID: 848895215}
+  - {fileID: 1498248105}
+  - {fileID: 934541572}
+  - {fileID: 1522827240}
+  - {fileID: 651125148}
+  - {fileID: 1555242555}
+  - {fileID: 529686555}
+  - {fileID: 960451152}
+  - {fileID: 226780968}
+  - {fileID: 1470729910}
+  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
+--- !u!114 &1898954092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898954090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee6277ffa7ffc845a473559005620c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MaxCapacity: 32
+  Markers: 0000000000000000000000000000000000000000000000000000000000000000
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
+  NewLevel: 0
+  Data: {fileID: 0}
+  ImageSlots:
+  - {fileID: 524539359}
+  - {fileID: 634417698}
+  - {fileID: 804932382}
+  - {fileID: 530223821}
+  - {fileID: 187606421}
+  - {fileID: 1157674944}
+  - {fileID: 577162394}
+  - {fileID: 1114149078}
+  - {fileID: 481959833}
+  - {fileID: 294206164}
+  - {fileID: 31776971}
+  - {fileID: 1788049385}
+  - {fileID: 1876865033}
+  - {fileID: 1446436503}
+  - {fileID: 1812253414}
+  - {fileID: 487126589}
+  - {fileID: 2078507664}
+  - {fileID: 791548703}
+  - {fileID: 60097370}
+  - {fileID: 373901706}
+  AmountText:
+  - {fileID: 907676359}
+  - {fileID: 1523530791}
+  - {fileID: 1678696975}
+  - {fileID: 1515463978}
+  - {fileID: 1898565928}
+  - {fileID: 1058715203}
+  - {fileID: 268312118}
+  - {fileID: 434349644}
+  - {fileID: 1073527512}
+  - {fileID: 2005254755}
+  - {fileID: 60794960}
+  - {fileID: 1578239160}
+  - {fileID: 1693873072}
+  - {fileID: 1152660378}
+  - {fileID: 857995549}
+  - {fileID: 1822357420}
+  - {fileID: 1613804790}
+  - {fileID: 665547127}
+  - {fileID: 670276570}
+  - {fileID: 818607295}
+  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
+--- !u!4 &1898954093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898954090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23405021, y: 0.49997935, z: -3.201278}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005254753
 GameObject:
   m_ObjectHideFlags: 0
@@ -18384,8 +18414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &2025798205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18581,8 +18611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca92a086dcfb0c45b289710c3ec15ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cInventory: {fileID: 870664281}
-  cHotBar: {fileID: 870664283}
+  cInventory: {fileID: 1898954092}
+  cHotBar: {fileID: 1898954091}
 --- !u!114 &2078507664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19134,5 +19164,6 @@ PrefabInstance:
       propertyPath: cClock
       value: 
       objectReference: {fileID: 2108497412}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f5eceb6387ee4d04792b1313660d4971, type: 3}
