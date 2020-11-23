@@ -15,6 +15,7 @@ TagManager:
   - Tileable
   - Manager
   - InventoryManager
+  - Transition
   layers:
   - Default
   - TransparentFX

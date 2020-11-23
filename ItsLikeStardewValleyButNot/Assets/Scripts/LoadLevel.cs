@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
-    public TransferData TransferManager;
+    public Animator Transition;
     public bool NewLevel;
     public Canvas UICanvas;
     public EventSystem EventSystemRef;
@@ -18,8 +19,15 @@ public class LoadLevel : MonoBehaviour
 
     public string LevelName;
     // Start is called before the first frame update
+    private void Start()
+    {
+        Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        DontDestroyOnLoad(Player);
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
         GameObject Manager = GameObject.FindGameObjectWithTag("InventoryManager");
@@ -35,20 +43,21 @@ public class LoadLevel : MonoBehaviour
             if (HotBar.ItemList[i] != null)
                 DontDestroyOnLoad(HotBar.ItemList[i]);
         }
-
         DontDestroyOnLoad(Manager);
-        if (LevelName == "PlayerRoom")
-        {
-            Player = GameObject.FindGameObjectWithTag("Player");
-            DontDestroyOnLoad(Player);
-            Application.LoadLevel("PlayerRoom");
+        LoadNextLevel(LevelName);
+    }
 
+    public void LoadNextLevel(string LevelName)
+    {
+        StartCoroutine(eLoadNextLevel(LevelName));
+    }
 
-        }
-        if (LevelName == "PlayerFarm")
-        {
-            Application.LoadLevel("PlayerFarm");
-        }
+    IEnumerator eLoadNextLevel(string LevelName)
+    {
+        Transition.SetTrigger("Start");
 
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(LevelName);
     }
 }

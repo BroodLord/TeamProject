@@ -29,9 +29,18 @@ public class CharacterMovement : MonoBehaviour
         camera = Go.GetComponent<Camera>();
     }
 
-    void Start()
+    private void Awake()
     {
 
+        GetCamera();
+        if (GameObject.FindGameObjectWithTag("InventoryManager") != null)
+        {
+            cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
+        }
+    }
+
+    void Start()
+    {
         GetCamera();
         tool = this.GetComponent<HoeScript>();
         CoolDown = 0.0f;
@@ -108,6 +117,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 if (CoolDown <= 0.0f)
                 {
+                    cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
                     cInventory.DisabledNEnable();
                     CoolDown = 0.2f;
                 }

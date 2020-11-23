@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler, IDropHandler
 {
-    public InventoryAbstractClass cInventory;
-    public HotBarClass cHotBar;
+    private InventoryAbstractClass cInventory;
+    private HotBarClass cHotBar;
     private Transform OringalParent;
     private bool IsDragging;
 
@@ -40,11 +40,12 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         {
 
             ItemBase DropedItem = new ItemBase();
-            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cInventory.ItemList.Length)
+            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.parent.name != "HotbarUI"
+                && eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cInventory.ItemList.Length)
             {
                 Debug.Log("Index: " + eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex());
                 DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
-                if (cInventory.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] == true)
+                if (cInventory.Markers[transform.parent.GetSiblingIndex()] == true)
                 {
                     DropedItem = null;
                 }
@@ -92,11 +93,13 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         if (transform.parent.parent.name == "HotbarUI")
         {
             ItemBase DropedItem = new ItemBase();
-            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cHotBar.ItemList.Length)
+            if (eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.parent.name != "InventoryUI" 
+                && eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex() < cHotBar.ItemList.Length)
             {
+                
                 Debug.Log("Index: " + eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex());
                 DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
-                if(cHotBar.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] == true)
+                if(cHotBar.Markers[transform.parent.GetSiblingIndex()] == true)
                 {
                     DropedItem = null;
                 }

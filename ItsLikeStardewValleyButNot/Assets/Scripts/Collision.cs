@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
     }
 

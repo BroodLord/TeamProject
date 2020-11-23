@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class WateringCanScript : ToolScript
 {
     public TileBase wateredTile;
+
     public override void useTool()
     {
         //TODO - when we add more grids and tilemaps, this will break
