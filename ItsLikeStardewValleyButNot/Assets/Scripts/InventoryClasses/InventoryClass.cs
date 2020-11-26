@@ -13,7 +13,7 @@ public class InventoryClass : InventoryAbstractClass
     public UnityEngine.UI.Image[] ImageSlots;
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
-    private GameObject Parent;
+    public GameObject ImageParent;
     private bool UIEnabled;
     public void UpdateUI()
     {
@@ -49,20 +49,19 @@ public class InventoryClass : InventoryAbstractClass
         if(UIEnabled == false)
         {
             UIEnabled = true;
-            Parent.gameObject.SetActive(true);
+            ImageParent.gameObject.SetActive(true);
             cInventory.UpdateUI();
         }
         else
         {
             UIEnabled = false;
-            Parent.gameObject.SetActive(false);
+            ImageParent.gameObject.SetActive(false);
      
         }
     }
 
     void Start()
     {
-        Parent = ImageSlots[0].transform.parent.parent.gameObject;
         UIEnabled = true;
         DisabledNEnable();
         Resize(20);
