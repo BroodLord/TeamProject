@@ -12,15 +12,13 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-
-            if (eventData.button == PointerEventData.InputButton.Left)
-            {
-                IsDragging = true;
-                OringalParent = transform.parent;
-                transform.SetParent(transform.parent.parent);
-                GetComponent<CanvasGroup>().blocksRaycasts = false;
-            }
-        
+          if (eventData.button == PointerEventData.InputButton.Left)
+          {
+              IsDragging = true;
+              OringalParent = transform.parent;
+              transform.SetParent(transform.parent.parent);
+              GetComponent<CanvasGroup>().blocksRaycasts = false;
+          }  
     }
     void IDragHandler.OnDrag(PointerEventData eventData)
     {

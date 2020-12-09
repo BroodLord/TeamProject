@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
+    public TileDictionaryClass Dictioary;
     /*UI Components for Text on the Canvus*/
     public TextMeshProUGUI[] TimeUIText;
     public TextMeshProUGUI[] DateUIText;
@@ -46,8 +47,16 @@ public class Clock : MonoBehaviour
         Min = -1;
         Hour = 8;
         ++Day;
-        
+
         // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
+        foreach(var v in Dictioary.TileMapData)
+        {
+            if(v.Value.HasPlant())
+            {
+                PlantAbstractClass P = v.Value.GetPlant();
+                P.UpdatePlant();
+            }
+        }
     }
 
     // Update is called once per frame

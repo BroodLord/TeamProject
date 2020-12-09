@@ -2,16 +2,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 using UnityEngine;
 
 public class ItemBase : MonoBehaviour
 {
     public InventoryClass cInventory;
+    public Grid grid;
+    public Tilemap tileMap;
     public enum ItemTypes { Tool, Seed, Decoration }
-    protected ItemTypes mItemType;
+    public ItemTypes mItemType;
     protected bool ResetNeeded;
     protected Sprite mImage;
     protected string mName;
+    [SerializeField]
     protected int mAmount;
     protected bool mStackable;
     protected string mSrcImage;
@@ -21,7 +25,7 @@ public class ItemBase : MonoBehaviour
     public void SetResetNeeded(bool Value) { ResetNeeded = Value; }
 
     public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
-    public Sprite GetSpriteImage() { return mImage; }
+    public Sprite GetSpriteImage() { SpriteRenderer s = this.GetComponent<SpriteRenderer>(); return s.sprite; }
     public string GetName() { return mName; }
     public int GetAmount() { return mAmount; }
     public ItemTypes GetType() { return mItemType; }
@@ -40,5 +44,7 @@ public class ItemBase : MonoBehaviour
     public void SetStackable(bool stackable) { mStackable = stackable; }
 
     public void SetSellPrice(float sellPrice) { mSellPrice = sellPrice; }
+
+    public virtual void useTool() { }
 
 }

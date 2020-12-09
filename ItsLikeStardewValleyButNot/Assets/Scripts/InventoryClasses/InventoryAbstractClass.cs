@@ -30,7 +30,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         return null;
     }
 
-    private bool ResetMarkers()
+    public bool ResetMarkers()
     {
         for (int i = 0; i < Markers.Length; i++)
         {
@@ -90,6 +90,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
             if(Markers[i] == false)
             {
                 ItemList[i] = Item;
+                ItemList[i].AddAmount(Amount);
                 Markers[i] = true;
                 return true;
             }

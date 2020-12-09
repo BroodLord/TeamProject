@@ -16,6 +16,10 @@ TagManager:
   - Manager
   - InventoryManager
   - Transition
+  - Tools
+  - TileMapManager
+  - LoadManager
+  - Turnip
   layers:
   - Default
   - TransparentFX

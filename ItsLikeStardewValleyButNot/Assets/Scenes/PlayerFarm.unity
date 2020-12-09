@@ -215,17 +215,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 75182678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fdaf5c32918f854c9548271ad997a03, type: 3}
+  m_Script: {fileID: 11500000, guid: 4285ca39f083a9c43ad49408a7e88808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Transition: {fileID: 1359896810}
-  NewLevel: 0
-  UICanvas: {fileID: 0}
-  EventSystemRef: {fileID: 0}
-  Player: {fileID: 0}
-  InventoryRef: {fileID: 0}
-  HotBarRef: {fileID: 0}
   LevelName: Town
+  Load: {fileID: 0}
 --- !u!19719996 &75182681
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -383,7 +377,7 @@ GameObject:
   - component: {fileID: 179263305}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12877,6 +12871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cInventory: {fileID: 1898954092}
+  grid: {fileID: 0}
+  tileMap: {fileID: 0}
+  mItemType: 0
 --- !u!61 &957506857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13321,17 +13318,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568294118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fdaf5c32918f854c9548271ad997a03, type: 3}
+  m_Script: {fileID: 11500000, guid: 4285ca39f083a9c43ad49408a7e88808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Transition: {fileID: 0}
-  NewLevel: 0
-  UICanvas: {fileID: 0}
-  EventSystemRef: {fileID: 0}
-  Player: {fileID: 0}
-  InventoryRef: {fileID: 0}
-  HotBarRef: {fileID: 0}
   LevelName: PlayerRoom
+  Load: {fileID: 0}
 --- !u!1 &1731866886
 GameObject:
   m_ObjectHideFlags: 0
@@ -13345,7 +13336,7 @@ GameObject:
   - component: {fileID: 1731866888}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Floor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

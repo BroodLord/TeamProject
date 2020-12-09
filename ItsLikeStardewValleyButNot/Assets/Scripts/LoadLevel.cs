@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
+    public TileBase TiledTiled;
     public Animator Transition;
     public bool NewLevel;
     public Canvas UICanvas;
@@ -16,16 +18,24 @@ public class LoadLevel : MonoBehaviour
     public GameObject Player;
     public InventoryClass InventoryRef;
     public HotBarClass HotBarRef;
-
-    public string LevelName;
+    public TileDictionaryClass Dictionary;
     // Start is called before the first frame update
-    private void Start()
+
+    public void TransferLevel(string LevelName)
     {
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+        Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
+        if (LevelName != "PlayerFarm")
+        {
+            foreach (var V in Dictionary.TileMapData)
+            {
+                if (V.Value.Clone != null)
+                {
+                    V.Value.Clone.SetActive(false);
+                    DontDestroyOnLoad(V.Value.Clone);
+                }
+            }
+        }
         Player = GameObject.FindGameObjectWithTag("Player");
         DontDestroyOnLoad(Player);
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
@@ -35,7 +45,7 @@ public class LoadLevel : MonoBehaviour
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         for (int i = 0; i < Invent.ItemList.Length; i++)
         {
-            if(Invent.ItemList[i] != null)
+            if (Invent.ItemList[i] != null)
                 DontDestroyOnLoad(Invent.ItemList[i]);
         }
         for (int i = 0; i < HotBar.ItemList.Length; i++)
@@ -46,6 +56,7 @@ public class LoadLevel : MonoBehaviour
         DontDestroyOnLoad(Manager);
         LoadNextLevel(LevelName);
     }
+    
 
     public void LoadNextLevel(string LevelName)
     {
@@ -58,6 +69,36 @@ public class LoadLevel : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(LevelName);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(LevelName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        if (asyncLoad.isDone)
+        {
+            if (LevelName == "PlayerFarm")
+            {
+                foreach (var v in Dictionary.TileMapData)
+                {
+                    v.Value.GetTileMap();
+                    v.Value.TileMap.SetTile(v.Key, v.Value.Tile);
+                    if (v.Value.Clone != null)
+                    {
+                        v.Value.Clone.SetActive(true);
+                        PlantAbstractClass P = v.Value.GetPlant();
+                        P.UpdatePlantSprite();
+                        v.Value.SetWatered(false);
+                        v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                    }
+                    else
+                    {
+                        v.Value.SetWatered(false);
+                        PlantAbstractClass P = v.Value.GetPlant();
+                        v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                    }
+                }
+            }
+        }
     }
 }

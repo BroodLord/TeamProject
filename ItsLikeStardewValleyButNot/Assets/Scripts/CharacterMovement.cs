@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEngine.Tilemaps;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -13,8 +14,6 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float interactRange;
     private static float actionLock = 0.4f;         //how long after executing an action the character is locked in place for 
-    ToolScript tool;                                //tool that is currently being used 
-    public Camera camera;
     private Vector3 mouseWorldPoint;
     private bool actionLocked;
     private float actionLockedTimer = actionLock;
@@ -23,26 +22,18 @@ public class CharacterMovement : MonoBehaviour
     //TODO - when an item list is added, check currently equipped item, if its a tool set the correct tool
     // Start is called before the first frame update
 
-    public void GetCamera()
-    {
-        GameObject Go = GameObject.FindGameObjectWithTag("MainCamera");
-        camera = Go.GetComponent<Camera>();
-    }
-
     private void Awake()
     {
 
-        GetCamera();
         if (GameObject.FindGameObjectWithTag("InventoryManager") != null)
         {
             cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         }
     }
 
+
     void Start()
     {
-        GetCamera();
-        tool = this.GetComponent<HoeScript>();
         CoolDown = 0.0f;
     }
 
@@ -65,28 +56,9 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.Z))
-        {
-            tool = this.GetComponent<WateringCanScript>();
-        }
-
-        if (Input.GetKey(KeyCode.X))
-        {
-            tool = this.GetComponent<HoeScript>();
-        }
 
         if (!actionLocked)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (camera == null) { GetCamera(); }
-                mouseWorldPoint = camera.ScreenToWorldPoint(Input.mousePosition);
-                if (Vector2.Distance(this.transform.position, mouseWorldPoint) < interactRange)
-                {
-                    actionLocked = true;
-                    tool.useTool();
-                }
-            }
 
             if (Input.GetKey(KeyCode.W))
             {

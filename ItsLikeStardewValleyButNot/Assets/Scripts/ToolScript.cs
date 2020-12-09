@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine;
 
 enum toolList
 {
@@ -11,18 +11,16 @@ enum toolList
     wateringCan
 }
 
-public abstract class ToolScript : MonoBehaviour
+public abstract class ToolScript : ItemBase
 {
-    public Grid grid;
-    public Tilemap tileMap;
 
     private toolList currentTool;
 
     protected void awake()
     {
+        mItemType = ItemTypes.Tool;
         grid = FindObjectOfType<Grid>();
         tileMap = FindObjectOfType<Tilemap>();
     }
-    public virtual void useTool() { }
 }
 
