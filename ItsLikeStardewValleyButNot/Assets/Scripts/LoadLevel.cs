@@ -31,7 +31,6 @@ public class LoadLevel : MonoBehaviour
             {
                 if (V.Value.Clone != null)
                 {
-                    V.Value.Clone.SetActive(false);
                     DontDestroyOnLoad(V.Value.Clone);
                 }
             }
@@ -77,6 +76,14 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
+            foreach (var V in Dictionary.TileMapData)
+            {
+                if (V.Value.Clone != null)
+                {
+                    V.Value.Clone.SetActive(false);
+                    DontDestroyOnLoad(V.Value.Clone);
+                }
+            }
             if (LevelName == "PlayerFarm")
             {
                 foreach (var v in Dictionary.TileMapData)

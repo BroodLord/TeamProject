@@ -8,14 +8,21 @@
 
 	<!-- List of Seeds -->
 	<Item name="Potato Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
-	<Item name="Kale Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Eggplant Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
 	<Item name="Strawberry Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
 	<Item name="Watermelon Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
 	<Item name="Pumpkin Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
-	<Item name="Onion Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
-	<Item name="Cauliflower Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Tomato Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Greenbeen Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
 	<Item name="Wheat Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
-	<Item name="Rice Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Pineapple Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Pear Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Honeydew Watermelon Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Corn Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Grapes Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+	<Item name="Rasberries Seeds" type="Seed" src-image="" stackable="Yes" sellPrice=""/>
+
+
 
 	<!-- List of Decorations -->
 	<Item name="Stone Path" type="Decoration" src-image="" stackable="Yes" sellPrice=""/>
