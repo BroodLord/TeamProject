@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnipSeed : ToolScript
+public class PlantSeed : ToolScript
 {
     private Vector3Int ID;
     private Vector3 pos;
@@ -24,25 +24,17 @@ public class TurnipSeed : ToolScript
             // Shows the name of the tile at the specified coordinates  
             ID = posInt;
             Debug.Log(tileMap.GetTile(posInt).name);
-            Debug.Log("Turnip Planted");
+            Debug.Log("Seed Planted");
             GameObject Clone;
             Clone = Instantiate(PlantPrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
-            PlantAbstractClass PrefabTurnip = Clone.GetComponent<PlantAbstractClass>();
-            PrefabTurnip.ID = ID;
-            PrefabTurnip.pos = pos;
-            Dictioary.TileMapData[posInt].SetPlant(PrefabTurnip);
+            PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();
+            TempPlant.ID = ID;
+            TempPlant.pos = pos;
+            TempPlant.AddAmount(1);
+            Dictioary.TileMapData[posInt].SetPlant(TempPlant);
             Dictioary.TileMapData[posInt].Clone = Clone;
-            if (Dictioary.TileMapData[posInt].IsWatered())
-            {
-                PlantAbstractClass Plant = Dictioary.TileMapData[posInt].GetPlant();
-                Plant.mWatered = true;
-            }
-            else
-            {
-                PlantAbstractClass Plant = Dictioary.TileMapData[posInt].GetPlant();
-                Plant.mWatered = false;
-            }
-
+            if (Dictioary.TileMapData[posInt].IsWatered()) { TempPlant.mWatered = true; }
+            else { TempPlant.mWatered = false; }
         }
         else
         {

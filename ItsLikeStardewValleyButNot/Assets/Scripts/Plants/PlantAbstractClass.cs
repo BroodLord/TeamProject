@@ -10,11 +10,12 @@ public abstract class PlantAbstractClass : ItemBase
     public int mGrowthTime;
     public bool mHarvestable;
     public bool mWatered;
-    public int SpriteIndex;
+    public int mSpriteIndex;
+    public bool mGrowth = false;
     public Vector3Int ID;
     public Vector3 pos;
 
-    public abstract void UpdatePlant();
+    public abstract void UpdatePlant(int DayAmount);
     public abstract void DestoryPlant();
 
     public abstract void UpdatePlantSprite();

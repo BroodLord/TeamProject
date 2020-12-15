@@ -10,7 +10,7 @@ public class TurnipClass : PlantAbstractClass
     public bool Harvestable;
     public bool Watered;
     public TileDictionaryClass Dictioary;
-    TurnipSeed Seeds;
+    PlantSeed Seeds;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class TurnipClass : PlantAbstractClass
         GrowthTime = mGrowthTime;
         Watered = mWatered;
     }
-    public override void UpdatePlant()
+    public override void UpdatePlant(int DayAmount)
     {
         if (mHarvestable != true)
         {
@@ -29,24 +29,21 @@ public class TurnipClass : PlantAbstractClass
                 Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
             }
             PlantAbstractClass P = Dictioary.TileMapData[ID].GetPlant();
+            P.mGrowth = true;
             if (!P.mWatered) { DestoryPlant(); }
             else { Dictioary.TileMapData[ID].SetWatered(false); }
-            ++CurrentDays;
+            CurrentDays += DayAmount;
             if (CurrentDays >= 0 && CurrentDays < 1)
             {
-                SpriteIndex = 0;
+                mSpriteIndex = 0;
             }
-            if (CurrentDays >= 1 && CurrentDays < 3)
+            if (CurrentDays >= 2 && CurrentDays < 4)
             {
-                SpriteIndex = 1;
+                mSpriteIndex = 1;
             }
-            if (CurrentDays >= 3 && CurrentDays < 6)
+            if (CurrentDays >= 4)
             {
-                SpriteIndex = 2;
-            }
-            if (CurrentDays >= 6)
-            {
-                SpriteIndex = 3;
+                mSpriteIndex = 2;
                 mHarvestable = true;
             }
         }
@@ -62,10 +59,10 @@ public class TurnipClass : PlantAbstractClass
         {
             Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         }
-        Seeds = GameObject.FindObjectOfType<TurnipSeed>();
+        Seeds = GameObject.FindObjectOfType<PlantSeed>();
         PlantAbstractClass PrefabTurnip = Dictioary.TileMapData[ID].GetPlant();
         SpriteRenderer S = Dictioary.TileMapData[ID].Clone.GetComponent<SpriteRenderer>();
-        S.sprite = PrefabTurnip.mGrowthSprites[PrefabTurnip.SpriteIndex];
+        S.sprite = PrefabTurnip.mGrowthSprites[PrefabTurnip.mSpriteIndex];
 
     }
 }

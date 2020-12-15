@@ -95,8 +95,11 @@ public class LoadLevel : MonoBehaviour
                         v.Value.Clone.SetActive(true);
                         PlantAbstractClass P = v.Value.GetPlant();
                         P.UpdatePlantSprite();
-                        v.Value.SetWatered(false);
-                        v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                        if (P.mGrowth == true)
+                        {
+                            v.Value.SetWatered(false); P.mGrowth = false;
+                            v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                        }
                     }
                     else
                     {

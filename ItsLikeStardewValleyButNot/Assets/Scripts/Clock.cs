@@ -54,7 +54,7 @@ public class Clock : MonoBehaviour
             if(v.Value.HasPlant())
             {
                 PlantAbstractClass P = v.Value.GetPlant();
-                P.UpdatePlant();
+                P.UpdatePlant(6);
             }
         }
     }

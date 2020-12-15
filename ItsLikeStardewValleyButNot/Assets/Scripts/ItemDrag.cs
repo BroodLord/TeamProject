@@ -43,10 +43,10 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             {
                 Debug.Log("Index: " + eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex());
                 DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
-                if (cInventory.Markers[transform.parent.GetSiblingIndex()] == true)
-                {
-                    DropedItem = null;
-                }
+                //if (cInventory.Markers[transform.parent.GetSiblingIndex()] == true)
+                //{
+                //    DropedItem = null;
+                //}
             }
             else
             {
@@ -97,10 +97,10 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 
                 Debug.Log("Index: " + eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex());
                 DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()];
-                if(cHotBar.Markers[transform.parent.GetSiblingIndex()] == true)
-                {
-                    DropedItem = null;
-                }
+                //if(cHotBar.Markers[transform.parent.GetSiblingIndex()] == true)
+                //{
+                //    DropedItem = null;
+                //}
             }
             else
             {

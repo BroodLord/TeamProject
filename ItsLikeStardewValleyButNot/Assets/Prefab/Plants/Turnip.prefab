@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8980547487541013525
+--- !u!1 &7598171935107267874
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6682248874038130487}
-  - component: {fileID: 1377626897284877871}
-  - component: {fileID: 675424386720185013}
+  - component: {fileID: 4214910086160261628}
+  - component: {fileID: 3875773584169117756}
+  - component: {fileID: -1264207758954909679}
   m_Layer: 0
-  m_Name: WaterBucket
+  m_Name: Turnip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6682248874038130487
+--- !u!4 &4214910086160261628
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8980547487541013525}
+  m_GameObject: {fileID: 7598171935107267874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 2.3363752, z: -6.6685095}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -3.357656, y: -0.6850555, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1377626897284877871
+--- !u!212 &3875773584169117756
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8980547487541013525}
+  m_GameObject: {fileID: 7598171935107267874}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,33 +72,31 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 377cb403c5c06ad428659eee19eac86c, type: 3}
+  m_Sprite: {fileID: -163281874789078530, guid: 028e93bc971a53847a4833e1a48f1055, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.6, y: 4.5}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &675424386720185013
+--- !u!114 &-1264207758954909679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8980547487541013525}
+  m_GameObject: {fileID: 7598171935107267874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0b9ed01383480547935ad92b799a36e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c2006c5fc8cced4f97cbf198782ad7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cInventory: {fileID: 0}
   grid: {fileID: 0}
   tileMap: {fileID: 0}
-  mItemType: 0
-  mAmount: 113
-  Dictioary: {fileID: 0}
-  wateredTile: {fileID: 11400000, guid: 21d89a4af94faaf4982a1055df9b9953, type: 2}
+  mItemType: 1
+  mAmount: 1032

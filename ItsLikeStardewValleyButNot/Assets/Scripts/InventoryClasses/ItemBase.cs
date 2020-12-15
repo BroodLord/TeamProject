@@ -25,7 +25,11 @@ public class ItemBase : MonoBehaviour
     public void SetResetNeeded(bool Value) { ResetNeeded = Value; }
 
     public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
-    public Sprite GetSpriteImage() { SpriteRenderer s = this.GetComponent<SpriteRenderer>(); return s.sprite; }
+    public Sprite GetSpriteImage() 
+    { 
+        SpriteRenderer s = this.GetComponent<SpriteRenderer>(); 
+        return s.sprite;
+    }
     public string GetName() { return mName; }
     public int GetAmount() { return mAmount; }
     public ItemTypes GetType() { return mItemType; }

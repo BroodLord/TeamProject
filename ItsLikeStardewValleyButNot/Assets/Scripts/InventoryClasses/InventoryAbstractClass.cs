@@ -17,6 +17,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         Markers = new bool[MaxCapacity];
     }
 
+    public abstract void UpdateUI();
 
     public ItemBase GetItem(string ID) 
     {
@@ -28,6 +29,18 @@ public abstract class InventoryAbstractClass : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public int FindFreeSpaceIndex()
+    {
+        for (int i = 0; i < Markers.Length; i++)
+        {
+            if (!Markers[i])
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public bool ResetMarkers()
@@ -56,26 +69,27 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         Markers = TempMarkers;
         ResetMarkers();
     }
-    public bool HasItem(string ID)
+    public bool HasItem(string ItemName)
     {
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (ItemList[i] != null && ID == ItemList[i].name)
+            if (ItemList[i] != null && ItemName == ItemList[i].name)
             {
                 return true;
             }
         }
         return false;
     }
-   public bool RemoveItem(int Slot)
+   public bool RemoveItem(string Name)
    {
 
            for (int i = 0; i < ItemList.Length; i++)
            {
-               if (Slot == i)
+               if (Name == ItemList[i].name)
                {
                    ItemList[i] = null;
                     Markers[i] = false;
+                UpdateUI();
                     return true;
                }
            }
@@ -83,8 +97,24 @@ public abstract class InventoryAbstractClass : MonoBehaviour
        return false;
    }
 
-   public bool AddItem(ItemBase Item, int Amount)
-   {
+    public bool RemoveAmount(string Name, int Amount)
+    {
+        for (int i = 0; i < ItemList.Length; i++)
+        {
+            if (Name == ItemList[i].name)
+            {
+                int temp = ItemList[i].GetAmount();
+                temp -= Amount;
+                ItemList[i].SetAmount(temp);
+                UpdateUI();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool AddItem(ItemBase Item, int Amount)
+    {
         for (int i = 0; i < ItemList.Length; i++)
         {
             if(Markers[i] == false)
@@ -92,11 +122,29 @@ public abstract class InventoryAbstractClass : MonoBehaviour
                 ItemList[i] = Item;
                 ItemList[i].AddAmount(Amount);
                 Markers[i] = true;
+                UpdateUI();
                 return true;
             }
         }
        return false;
-   }
+    }
+    public bool AddAmount(string Name, int Amount)
+    {
+
+        for (int i = 0; i < ItemList.Length; i++)
+        {
+            if (Name == ItemList[i].name)
+            {
+                int temp = ItemList[i].GetAmount();
+                temp += Amount;
+                ItemList[i].SetAmount(temp);
+                UpdateUI();
+                return true;
+            }
+        }
+        return false;
+    }
+
     public int CheckItemAmount(string ID)
     {
 

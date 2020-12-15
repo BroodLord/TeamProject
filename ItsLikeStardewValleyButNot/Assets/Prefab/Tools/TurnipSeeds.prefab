@@ -99,6 +99,6 @@ MonoBehaviour:
   grid: {fileID: 0}
   tileMap: {fileID: 0}
   mItemType: 0
-  mAmount: 29
+  mAmount: 63
   Dictioary: {fileID: 0}
-  PlantPrefab: {fileID: 12328117394546376, guid: a15ad90be84fd1747bb2696441702056, type: 3}
+  PlantPrefab: {fileID: 5710775666756206111, guid: bad3278719b42cf429ca4290d9df27cd, type: 3}

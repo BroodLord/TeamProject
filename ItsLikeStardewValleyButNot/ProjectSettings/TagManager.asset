@@ -20,6 +20,7 @@ TagManager:
   - TileMapManager
   - LoadManager
   - Turnip
+  - Icon
   layers:
   - Default
   - TransparentFX

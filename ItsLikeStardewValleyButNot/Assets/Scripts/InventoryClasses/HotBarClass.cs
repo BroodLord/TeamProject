@@ -22,13 +22,13 @@ public class HotBarClass : InventoryAbstractClass
     private float actionLockedTimer = actionLock;
     public ItemBase tool;                         //tool that is currently being used 
     private bool UIEnabled;
-    public void UpdateUI()
+    public override void UpdateUI()
     {
         for (int i = 0; i < ImageSlots.Length; i++)
         {
             if (ItemList[i] != null)
             {
-
+                ImageSlots[i].gameObject.SetActive(true);
                 ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
                 AmountText[i].text = ItemList[i].GetAmount().ToString();
             }
@@ -36,6 +36,7 @@ public class HotBarClass : InventoryAbstractClass
             {
                 if (ImageSlots[i].sprite != null)
                 {
+                    ImageSlots[i].gameObject.SetActive(false);
                     ImageSlots[i].sprite = BackgroundImage;
                 }
                 AmountText[i].text = "0";

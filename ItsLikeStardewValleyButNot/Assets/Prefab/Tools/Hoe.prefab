@@ -48,7 +48,7 @@ MonoBehaviour:
   grid: {fileID: 0}
   tileMap: {fileID: 0}
   mItemType: 0
-  mAmount: 29
+  mAmount: 113
   Dictioary: {fileID: 0}
   tilledTile: {fileID: 11400000, guid: 93e25be957bb56b4a84f6b33da6cde3f, type: 2}
 --- !u!212 &2927447041766264935
