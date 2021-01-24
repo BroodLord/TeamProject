@@ -31,7 +31,7 @@ public class ScytheTool : ToolScript
             if(i.Key.Equals(Name))
             {
                 ItemBase PlantItem = new ItemBase();
-                PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage, i.Value.bTile, i.Value.bSellPrice);
+                PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
                 return PlantItem;
             }
         }

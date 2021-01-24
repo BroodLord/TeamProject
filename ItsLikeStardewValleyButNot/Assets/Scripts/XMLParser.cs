@@ -29,6 +29,7 @@ public class XMLParser : MonoBehaviour
             string itemType = ItemsXML.Attributes.GetNamedItem("type").Value;
             string amount = ItemsXML.Attributes.GetNamedItem("amount").Value;
             string stackable = ItemsXML.Attributes.GetNamedItem("stackable").Value;
+            string prefab = ItemsXML.Attributes.GetNamedItem("Prefab").Value;
             string TileName = ItemsXML.Attributes.GetNamedItem("tile-src-image").Value;
             bool StackableResult = false;
             float sellPrice;
@@ -73,11 +74,12 @@ public class XMLParser : MonoBehaviour
                 StackableResult = false;
             }
             string Path = "TEMP ASSETS/" + TileName;
-
             TileBase Tile = Resources.Load<TileBase>(Path);
-            //ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, float SellPrice
+            Path = "TEMP ASSETS/" + prefab;
+            var Prefab = Resources.Load(Path);
+            GameObject Pre = (GameObject)Prefab;
             ItemBase temp = new ItemBase();
-            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Tile, sellPrice);
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Tile, Pre, sellPrice);
             items.Add(name, temp);
 
         }

@@ -10,6 +10,7 @@ public class PlantSeed : ToolScript
     public GameObject PlantPrefab;
     public override void useTool()
     {
+        PlantPrefab = bPrefab;
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         //TODO - when we add more grids and tilemaps, this will break
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

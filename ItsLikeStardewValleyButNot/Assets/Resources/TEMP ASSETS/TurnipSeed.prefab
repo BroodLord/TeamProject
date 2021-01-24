@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6640846603240233233}
   - component: {fileID: 9211364703677255148}
   m_Layer: 0
-  m_Name: TurnipSeedling
+  m_Name: TurnipSeed
   m_TagString: Turnip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,9 +115,9 @@ MonoBehaviour:
   mCurrentDays: 0
   mGrowthTime: 4
   mHarvestable: 0
+  XMLName: Turnip
   mWatered: 0
   mSpriteIndex: 0
-  XMLName: Turnip
   mGrowth: 0
   ID: {x: 0, y: 0, z: 0}
   pos: {x: 0, y: 0, z: 0}

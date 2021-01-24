@@ -19,15 +19,17 @@ public class ItemBase : DefaultItemBase
     [SerializeField]
     protected int mAmount;
     protected bool mStackable;
+    protected GameObject mPrefab;
     protected string mSrcImage;
     protected float mSellPrice;
     private string TempAssetPath = "TEMP ASSETS/";
 
-    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, TileBase Tile, float SellPrice)
+    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, TileBase Tile, GameObject prefab, float SellPrice)
     {
-        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Tile, SellPrice);
+        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Tile, prefab, SellPrice);
         mItemType = bItemType;
         mImage = bImage;
+        mPrefab = prefab;
         mTile = bTile;
         mName = bName;
         mAmount = bAmount;
@@ -39,6 +41,11 @@ public class ItemBase : DefaultItemBase
     public TileBase GetTile()
     {
         return mTile;
+    }
+
+    public GameObject GetPrefab()
+    {
+        return mPrefab;
     }
 
     public bool CheckResetNeeded() { return ResetNeeded; }
