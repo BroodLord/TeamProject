@@ -6,12 +6,6 @@ using UnityEngine.Tilemaps;
 public class HoeScript : ToolScript
 {
     public TileDictionaryClass Dictioary;
-    public TileBase tilledTile;
-    private void Start()
-    {
-        mAmount = 0;
-
-    }
 
     public override void useTool()
     {
@@ -26,7 +20,7 @@ public class HoeScript : ToolScript
             Debug.Log("This is hoeing");
             TileDataClass Temp = new TileDataClass();
             Dictioary.TileMapData.Add(posInt, Temp);
-            Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, tilledTile);
+            Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
             Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);
         }
         else

@@ -10,6 +10,9 @@ public class Test : MonoBehaviour
     public GameObject Manager;
     public GameObject TileMapManager;
     public GameObject LoadManager;
+    public GameObject ItemManager;
+    public XMLParser XML;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,9 @@ public class Test : MonoBehaviour
         DontDestroyOnLoad(Manager);
         DontDestroyOnLoad(TileMapManager);
         DontDestroyOnLoad(LoadManager);
+        DontDestroyOnLoad(ItemManager);
+        DontDestroyOnLoad(XML);
+
         SceneManager.LoadScene("PlayerFarm");
     }
 }

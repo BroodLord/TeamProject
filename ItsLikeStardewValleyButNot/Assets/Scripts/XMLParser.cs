@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 
 public class XMLParser : MonoBehaviour
 {
-    Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
+    public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
 
-    private void Start()
+    void Start()
     {
         XmlDocument newXml = new XmlDocument();
         newXml.Load("Assets/Scripts/XML Files/Item File.xml");
@@ -25,12 +25,14 @@ public class XMLParser : MonoBehaviour
 
         foreach (XmlNode ItemsXML in constVarList)
         {
-            ItemBase temp = new ToolItem();
-
-            temp.SetName(ItemsXML.Attributes.GetNamedItem("name").Value);
+            string name = ItemsXML.Attributes.GetNamedItem("name").Value;
             string itemType = ItemsXML.Attributes.GetNamedItem("type").Value;
+            string amount = ItemsXML.Attributes.GetNamedItem("amount").Value;
             string stackable = ItemsXML.Attributes.GetNamedItem("stackable").Value;
+            string TileName = ItemsXML.Attributes.GetNamedItem("tile-src-image").Value;
+            bool StackableResult = false;
             float sellPrice;
+            ItemBase.ItemTypes Item = ItemBase.ItemTypes.Tool;
 
             if (float.TryParse(ItemsXML.Attributes.GetNamedItem("sellPrice").Value, out float result))
             {
@@ -40,36 +42,43 @@ public class XMLParser : MonoBehaviour
             {
                 sellPrice = 0.0f;
             }
-            
-            if ( itemType == "Tool")
+
+            if (itemType == "Tool")
             {
-                temp.SetType(ItemBase.ItemTypes.Tool);
+                Item = ItemBase.ItemTypes.Tool;
             }
-            else if ( itemType == "Seed")
+            else if (itemType == "Plant")
             {
-                temp.SetType(ItemBase.ItemTypes.Seed);
+                Item = ItemBase.ItemTypes.Plant;
             }
-            else if ( itemType == "Decoration")
+            else if (itemType == "Seed")
             {
-                temp.SetType(ItemBase.ItemTypes.Decoration);
+                Item = ItemBase.ItemTypes.Seed;
+            }
+            else if (itemType == "Decoration")
+            {
+                Item = ItemBase.ItemTypes.Decoration;
             }
 
-            temp.SetImage(ItemsXML.Attributes.GetNamedItem("src-image").Value);
+            string srcImage = ItemsXML.Attributes.GetNamedItem("src-image").Value;
+            int CastedAmount = int.Parse(amount);
+            int Amount = CastedAmount;
 
-            if ( stackable == "Yes")
+            if (stackable == "Yes")
             {
-                temp.SetStackable(true);
+                StackableResult = true;
             }
             else if (stackable == "No")
             {
-                temp.SetStackable(false);
+                StackableResult = false;
             }
+            string Path = "TEMP ASSETS/" + TileName;
 
-            temp.SetName(ItemsXML.Attributes.GetNamedItem("name").Value);
-
-            temp.SetSellPrice(sellPrice);
-
-            items.Add(temp.GetName(), temp);
+            TileBase Tile = Resources.Load<TileBase>(Path);
+            //ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, float SellPrice
+            ItemBase temp = new ItemBase();
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Tile, sellPrice);
+            items.Add(name, temp);
 
         }
             

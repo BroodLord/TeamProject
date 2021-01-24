@@ -95,6 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e4f8f19b0fada4e8377322df458331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bItemType: 0
+  bImage: {fileID: 0}
+  bName: 
+  bAmount: 0
+  bStackable: 0
+  bSrcImage: 
+  bTile: {fileID: 0}
+  bSellPrice: 0
   cInventory: {fileID: 0}
   grid: {fileID: 0}
   tileMap: {fileID: 0}
@@ -108,7 +116,9 @@ MonoBehaviour:
   mGrowthTime: 4
   mHarvestable: 0
   mWatered: 0
-  SpriteIndex: 0
+  mSpriteIndex: 0
+  XMLName: Turnip
+  mGrowth: 0
   ID: {x: 0, y: 0, z: 0}
   pos: {x: 0, y: 0, z: 0}
   CurrentDays: 0

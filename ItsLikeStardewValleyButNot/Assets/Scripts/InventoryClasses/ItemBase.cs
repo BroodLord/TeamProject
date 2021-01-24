@@ -5,30 +5,51 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
-public class ItemBase : MonoBehaviour
+public class ItemBase : DefaultItemBase
 {
     public InventoryClass cInventory;
     public Grid grid;
     public Tilemap tileMap;
-    public enum ItemTypes { Tool, Seed, Decoration }
+    //public enum ItemTypes { Tool, Seed, Decoration }
     public ItemTypes mItemType;
     protected bool ResetNeeded;
     protected Sprite mImage;
+    protected TileBase mTile;
     protected string mName;
     [SerializeField]
     protected int mAmount;
     protected bool mStackable;
     protected string mSrcImage;
     protected float mSellPrice;
+    private string TempAssetPath = "TEMP ASSETS/";
+
+    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, TileBase Tile, float SellPrice)
+    {
+        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Tile, SellPrice);
+        mItemType = bItemType;
+        mImage = bImage;
+        mTile = bTile;
+        mName = bName;
+        mAmount = bAmount;
+        mSrcImage = bSrcImage;
+        mStackable = bStackable;
+        mSellPrice = bSellPrice;
+    }
+
+    public TileBase GetTile()
+    {
+        return mTile;
+    }
 
     public bool CheckResetNeeded() { return ResetNeeded; }
     public void SetResetNeeded(bool Value) { ResetNeeded = Value; }
 
     public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
-    public Sprite GetSpriteImage() 
-    { 
-        SpriteRenderer s = this.GetComponent<SpriteRenderer>(); 
-        return s.sprite;
+    public Sprite GetSpriteImage()
+    {
+        //string Path = TempAssetPath + GetSrcImage();
+        //Sprite Sprite = Resources.Load<Sprite>(Path);
+        return mImage;
     }
     public string GetName() { return mName; }
     public int GetAmount() { return mAmount; }
@@ -50,5 +71,4 @@ public class ItemBase : MonoBehaviour
     public void SetSellPrice(float sellPrice) { mSellPrice = sellPrice; }
 
     public virtual void useTool() { }
-
 }

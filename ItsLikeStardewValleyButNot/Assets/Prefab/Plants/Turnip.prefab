@@ -95,8 +95,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2006c5fc8cced4f97cbf198782ad7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bItemType: 0
+  bImage: {fileID: 0}
+  bName: 
+  bAmount: 0
+  bStackable: 0
+  bSrcImage: 
+  bSellPrice: 0
   cInventory: {fileID: 0}
   grid: {fileID: 0}
   tileMap: {fileID: 0}
   mItemType: 1
-  mAmount: 1032
+  mAmount: 1

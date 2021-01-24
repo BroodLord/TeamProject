@@ -8,11 +8,6 @@ public class PlantSeed : ToolScript
     private Vector3 pos;
     public TileDictionaryClass Dictioary;
     public GameObject PlantPrefab;
-
-    private void Start()
-    {
-        mAmount = 0;
-    }
     public override void useTool()
     {
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
@@ -23,7 +18,7 @@ public class PlantSeed : ToolScript
         {
             // Shows the name of the tile at the specified coordinates  
             ID = posInt;
-            Debug.Log(tileMap.GetTile(posInt).name);
+            //Debug.Log(tileMap.GetTile(posInt).name);
             Debug.Log("Seed Planted");
             GameObject Clone;
             Clone = Instantiate(PlantPrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);

@@ -11,6 +11,7 @@ public class InventoryClass : InventoryAbstractClass
     public bool NewLevel;
     public GameObject[] Plants;
     public UnityEngine.UI.Image[] ImageSlots;
+    
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public GameObject ImageParent;
@@ -21,7 +22,7 @@ public class InventoryClass : InventoryAbstractClass
         {
             for (int i = 0; i < ImageSlots.Length; i++)
             {
-                if (ItemList[i] != null)
+                if (Markers[i] != false && ImageSlots != null)
                 {
                     ImageSlots[i].gameObject.SetActive(true);
                     ImageSlots[i].sprite = ItemList[i].GetSpriteImage();

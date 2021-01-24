@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
+    XMLParser ItemManager;
     public InventoryClass cInventory;
     public Clock cClock;
     // Start is called before the first frame update
     void Start()
     {
+        ItemManager = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
     }
@@ -24,19 +26,21 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item")
         {
-            ItemBase Item = collision.GetComponent<ItemBase>();
+            string ItemName = collision.gameObject.name;
+            ItemBase Item = new ItemBase();
+            ItemManager.items.TryGetValue(ItemName, out Item);
+            //ItemBase Item = collision.GetComponent<ItemBase>();
             Sprite ItemSprite = collision.GetComponent<SpriteRenderer>().sprite;
-            if (cInventory.HasItem(Item.name) && Item.GetStackable() == true)
+            if (cInventory.HasItem(Item.GetName()) && Item.GetStackable() == true)
             {
                 Item.AddAmount(1);
                 cInventory.UpdateUI();
             }
             else
             {
-                Item.SetName(Item.name);
-                Item.SetAmount(1);
-                Item.SetSpriteImage(ItemSprite);
-                cInventory.AddItem(Item, Item.GetAmount());
+                //Item.SetAmount(1);
+                //Item.SetSpriteImage(ItemSprite);
+                cInventory.AddItem(Item);
                 cInventory.UpdateUI();
             }
             Debug.Log("COLLISION!");

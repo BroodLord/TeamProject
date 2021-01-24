@@ -21,6 +21,7 @@ TagManager:
   - LoadManager
   - Turnip
   - Icon
+  - ItemManager
   layers:
   - Default
   - TransparentFX

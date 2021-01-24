@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
 using TMPro;
 using UnityEngine.Tilemaps;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class HotBarClass : InventoryAbstractClass
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public ItemBase[] InitItems;
-
+    public GameObject Test;
     private Vector3 mouseWorldPoint;
     public Camera camera;
     private float CoolDown;
@@ -26,15 +27,15 @@ public class HotBarClass : InventoryAbstractClass
     {
         for (int i = 0; i < ImageSlots.Length; i++)
         {
-            if (ItemList[i] != null)
-            {
+            if (Markers[i] != false && ImageSlots[i] != null)
+                {
                 ImageSlots[i].gameObject.SetActive(true);
                 ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
                 AmountText[i].text = ItemList[i].GetAmount().ToString();
             }
             else
             {
-                if (ImageSlots[i].sprite != null)
+                if (ImageSlots[i] != null && ImageSlots[i].sprite != null)
                 {
                     ImageSlots[i].gameObject.SetActive(false);
                     ImageSlots[i].sprite = BackgroundImage;
@@ -65,23 +66,52 @@ public class HotBarClass : InventoryAbstractClass
     }
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        GetCamera();
-    }
+    //private void Awake()
+    //{
+    //    GetCamera();
+    //}
 
     void Start()
     {
+        XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
+        GetCamera();
         tool = new ItemBase();
         GetCamera();
         CoolDown = 0.0f;
         Resize(10);
+        //for (int i = 0; i < 4; i++) {ItemBase BasicItem = gameObject.AddComponent<ItemBase>() as ItemBase; AddItem(BasicItem); }
         Debug.Log(ItemList.Length);
+        int tempcounter = 0;
         cInventory = this.GetComponent<InventoryClass>();
         cHotBar = this.GetComponent<HotBarClass>();
-        for (int i = 0; i < InitItems.Length; i++)
+        for (int i = 0; i < XML.items.Count; i++)
         {
-            AddItem(InitItems[i], 1);
+            if (XML.items.ElementAt(i).Value.bName == "Hoe" || XML.items.ElementAt(i).Value.bName == "Water Bucket" ||
+                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Wheat Seeds")
+            {
+                /*NEEEEED A REDO LATER AS IT LOOKS LIKE 5 FIVE YEAR OLD HAD A SHIT AND COVERED THE CODE WITH IT*/
+                ItemBase BasicItem = new ItemBase();
+                GameObject SubGameObject = new GameObject(XML.items.ElementAt(i).Value.bName);
+                SubGameObject.transform.parent = ToolItems.transform;
+
+                if (XML.items.ElementAt(i).Value.bName == "Hoe") { BasicItem = SubGameObject.AddComponent<HoeScript>() as HoeScript; }
+                else if (XML.items.ElementAt(i).Value.bName == "Water Bucket") { BasicItem = SubGameObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
+                else if (XML.items.ElementAt(i).Value.bName == "Scythe") { BasicItem = SubGameObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
+                else if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed)
+                { 
+                    BasicItem = SubGameObject.gameObject.AddComponent<PlantSeed>() as PlantSeed;
+                    PlantSeed PC = (PlantSeed)BasicItem;
+                    PC.PlantPrefab = Test;
+                    BasicItem = (ItemBase)PC;
+                }
+                BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
+                                 XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bSellPrice);
+
+                AddItem(BasicItem);
+                //ItemList[tempcounter].SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
+                //                            XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSellPrice);
+                tempcounter++;
+            }
         }
         UpdateUI();
     }
@@ -89,6 +119,7 @@ public class HotBarClass : InventoryAbstractClass
     // Update is called once per frame
     void Update()
     {
+  
         GetCamera();
         if (CoolDown > 0.0f)
         {

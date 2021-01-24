@@ -1,0 +1,34 @@
+<Items>
+<!-- List of Tools -->
+<Item name="Hoe" type="Tool" src-image="" amount = "1" stackable="No" sellPrice=""/>
+<Item name="Water Bucket" type="Tool" src-image="" amount = "1" stackable="No" sellPrice=""/>
+<Item name="Axe" type="Tool" src-image="" amount = "1" stackable="No" sellPrice=""/>
+<Item name="Pickaxe" type="Tool" src-image="" amount = "1" stackable="No" sellPrice=""/>
+<Item name="Scythe" type="Tool" src-image="" amount = "1" stackable="No" sellPrice=""/>
+
+<!-- List of Seeds -->
+<Item name="Potato Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Turnip Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Eggplant Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Strawberry Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Watermelon Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Pumpkin Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Tomato Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Greenbeen Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Wheat Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Pineapple Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Pear Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Honeydew Watermelon Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Corn Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Grapes Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Rasberries Seeds" type="Seed" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+	
+<!-- List of Plants -->
+<Item name="Turnip" type="Plant" src-image="" amount = "1" stackable="Yes" sellPrice="50"/>
+
+<!-- List of Decorations -->
+<Item name="Stone Path" type="Decoration" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Wood Path" type="Decoration" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Torch" type="Decoration" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+<Item name="Fence" type="Decoration" src-image="" amount = "1" stackable="Yes" sellPrice=""/>
+</Items>

@@ -2149,6 +2149,8 @@ MonoBehaviour:
   Manager: {fileID: 194445706}
   TileMapManager: {fileID: 2004405244}
   LoadManager: {fileID: 678973975}
+  ItemManager: {fileID: 964482012}
+  XML: {fileID: 964482013}
 --- !u!4 &434586524
 Transform:
   m_ObjectHideFlags: 0
@@ -3800,6 +3802,10 @@ PrefabInstance:
       propertyPath: Plants.Array.data[0]
       value: 
       objectReference: {fileID: 7598171935107267874, guid: 434ddf0087fb9564ba55ec255bf8408c, type: 3}
+    - target: {fileID: 5416748665142904400, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: XML
+      value: 
+      objectReference: {fileID: 964482013}
     - target: {fileID: 5416748665142904401, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23405021
@@ -3859,6 +3865,10 @@ PrefabInstance:
     - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
       propertyPath: InitItems.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: ItemTemplates.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
       propertyPath: ImageSlots.Array.data[0]
@@ -3964,6 +3974,26 @@ PrefabInstance:
       propertyPath: InitItems.Array.data[3]
       value: 
       objectReference: {fileID: 4689316389021365787, guid: 60a8e748ce207f7469e140f06c6f5198, type: 3}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: XML
+      value: 
+      objectReference: {fileID: 964482013}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: ItemTemplates.Array.data[0]
+      value: 
+      objectReference: {fileID: 8359689081446727976, guid: 5553eb8aecc60c64aad778ee3e5def35, type: 3}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: ItemTemplates.Array.data[1]
+      value: 
+      objectReference: {fileID: 7051109969331555126, guid: 5e9d15eb80f16494db14b00ce02b426c, type: 3}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: ToolItems
+      value: 
+      objectReference: {fileID: 1365246139}
+    - target: {fileID: 5416748665142904407, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
+      propertyPath: Test
+      value: 
+      objectReference: {fileID: 5710775666756206111, guid: bad3278719b42cf429ca4290d9df27cd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
 --- !u!1 &743174174
@@ -5220,6 +5250,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948747691}
   m_CullTransparentMesh: 0
+--- !u!1 &964482012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964482014}
+  - component: {fileID: 964482013}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: ItemManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &964482013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964482012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aae21ada7a05ef4b811f6b7643cd18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &964482014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964482012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47458136, y: 0.20116425, z: -126.998375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990689448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6806,6 +6879,36 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1365246139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365246142}
+  m_Layer: 0
+  m_Name: TemplateTools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1365246142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365246139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1989766348}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1365443008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11581,6 +11684,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662544fa9eab3354ba6101c039b5a7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bItemType: 0
+  bImage: {fileID: 0}
+  bName: 
+  bAmount: 0
+  bStackable: 0
+  bSrcImage: 
+  bSellPrice: 0
   cInventory: {fileID: 194445708}
   grid: {fileID: 0}
   tileMap: {fileID: 0}
@@ -11801,6 +11911,11 @@ CanvasRenderer:
 --- !u!1 &1989766343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1847301458357542601, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
+  m_PrefabInstance: {fileID: 1847301459741192718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1989766348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1847301458357542592, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
   m_PrefabInstance: {fileID: 1847301459741192718}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1993548141
@@ -12374,6 +12489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 1847301458640490497, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
+      propertyPath: ItemManager
+      value: 
+      objectReference: {fileID: 964482013}
     - target: {fileID: 7611880277222579907, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
       propertyPath: m_TagString
       value: Tools

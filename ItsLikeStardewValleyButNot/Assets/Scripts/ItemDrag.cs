@@ -62,6 +62,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cInventory.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
                     cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
                     cInventory.cInventory.UpdateUI();
                     cHotBar.cHotBar.UpdateUI();
@@ -82,6 +83,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cHotBar.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
                     cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
                     cInventory.cHotBar.UpdateUI();
                     cHotBar.cInventory.UpdateUI();
@@ -116,6 +118,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cHotBar.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
                     cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
                     cInventory.cInventory.UpdateUI();
                     cHotBar.cHotBar.UpdateUI();
@@ -136,6 +139,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
+                    cInventory.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
                     cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
                     cHotBar.cInventory.UpdateUI();
                     cInventory.cHotBar.UpdateUI();

@@ -5,8 +5,10 @@ using UnityEngine;
 
 public abstract class InventoryAbstractClass : MonoBehaviour
 {
+    public XMLParser XML;
     public ItemBase[] ItemList;
     public int MaxCapacity;
+    public GameObject ToolItems;
     public bool[] Markers;
     public InventoryClass cInventory;
     public HotBarClass cHotBar;
@@ -51,6 +53,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
             {
                 Markers[i] = true;
             }
+            Markers[i] = false;
         }
         return true;
     }
@@ -73,7 +76,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
     {
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (ItemList[i] != null && ItemName == ItemList[i].name)
+            if (Markers[i] && ItemName == ItemList[i].GetName())
             {
                 return true;
             }
@@ -113,14 +116,13 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         return false;
     }
 
-    public bool AddItem(ItemBase Item, int Amount)
+    public bool AddItem(ItemBase Item)
     {
         for (int i = 0; i < ItemList.Length; i++)
         {
             if(Markers[i] == false)
             {
                 ItemList[i] = Item;
-                ItemList[i].AddAmount(Amount);
                 Markers[i] = true;
                 UpdateUI();
                 return true;
@@ -133,7 +135,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (Name == ItemList[i].name)
+            if (Name == ItemList[i].GetName())
             {
                 int temp = ItemList[i].GetAmount();
                 temp += Amount;

@@ -9,6 +9,7 @@ public abstract class PlantAbstractClass : ItemBase
     public int mCurrentDays;
     public int mGrowthTime;
     public bool mHarvestable;
+    public string XMLName;
     public bool mWatered;
     public int mSpriteIndex;
     public bool mGrowth = false;

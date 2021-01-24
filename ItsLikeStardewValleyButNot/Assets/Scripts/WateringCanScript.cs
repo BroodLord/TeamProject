@@ -6,12 +6,6 @@ using UnityEngine.Tilemaps;
 public class WateringCanScript : ToolScript
 {
     public TileDictionaryClass Dictioary;
-    public TileBase wateredTile;
-
-    private void Start()
-    {
-        mAmount = 0;
-    }
     public override void useTool()
     {
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
@@ -23,9 +17,9 @@ public class WateringCanScript : ToolScript
             // Shows the name of the tile at the specified coordinates    
             if (!Dictioary.TileMapData[posInt].IsWatered())
             {
-                Debug.Log(tileMap.GetTile(posInt).name);
+                //Debug.Log(tileMap.GetTile(posInt).name);
                 Debug.Log("This is watered");
-                Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, wateredTile);
+                Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
                 Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);
                 Dictioary.TileMapData[posInt].SetWatered(true);
                 PlantAbstractClass P = Dictioary.TileMapData[posInt].GetPlant();
