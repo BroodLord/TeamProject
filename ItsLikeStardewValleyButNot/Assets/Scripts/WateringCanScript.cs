@@ -18,6 +18,9 @@ public class WateringCanScript : ToolScript
             if (!Dictioary.TileMapData[posInt].IsWatered())
             {
                 //Debug.Log(tileMap.GetTile(posInt).name);
+                AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+                Audio.clip = GetSoundEffect();
+                Audio.Play();
                 Debug.Log("This is watered");
                 Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
                 Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);

@@ -20,22 +20,29 @@ public class ItemBase : DefaultItemBase
     protected int mAmount;
     protected bool mStackable;
     protected GameObject mPrefab;
+    public AudioClip mSoundEffect;
     protected string mSrcImage;
     protected float mSellPrice;
     private string TempAssetPath = "TEMP ASSETS/";
 
-    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, TileBase Tile, GameObject prefab, float SellPrice)
+    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
     {
-        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Tile, prefab, SellPrice);
+        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Audio, Tile, prefab, SellPrice);
         mItemType = bItemType;
         mImage = bImage;
         mPrefab = prefab;
         mTile = bTile;
         mName = bName;
         mAmount = bAmount;
+        mSoundEffect = bSoundEffect;
         mSrcImage = bSrcImage;
         mStackable = bStackable;
         mSellPrice = bSellPrice;
+    }
+
+    public AudioClip GetSoundEffect()
+    {
+        return mSoundEffect;
     }
 
     public TileBase GetTile()

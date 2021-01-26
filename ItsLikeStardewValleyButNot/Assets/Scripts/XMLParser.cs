@@ -31,6 +31,7 @@ public class XMLParser : MonoBehaviour
             string stackable = ItemsXML.Attributes.GetNamedItem("stackable").Value;
             string prefab = ItemsXML.Attributes.GetNamedItem("Prefab").Value;
             string TileName = ItemsXML.Attributes.GetNamedItem("tile-src-image").Value;
+            string SoundEffectName = ItemsXML.Attributes.GetNamedItem("sound-effect").Value;
             bool StackableResult = false;
             float sellPrice;
             ItemBase.ItemTypes Item = ItemBase.ItemTypes.Tool;
@@ -78,8 +79,10 @@ public class XMLParser : MonoBehaviour
             Path = "TEMP ASSETS/" + prefab;
             var Prefab = Resources.Load(Path);
             GameObject Pre = (GameObject)Prefab;
+            Path = "TEMP ASSETS/" + SoundEffectName;
+            AudioClip Audio = Resources.Load<AudioClip>(Path);
             ItemBase temp = new ItemBase();
-            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Tile, Pre, sellPrice);
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
             items.Add(name, temp);
 
         }

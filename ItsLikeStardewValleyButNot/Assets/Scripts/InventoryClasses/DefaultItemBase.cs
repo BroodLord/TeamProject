@@ -14,6 +14,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     public bool bStackable;
     public string bSrcImage;
     public GameObject bPrefab;
+    public AudioClip bSoundEffect;
     public TileBase bTile;
     public float bSellPrice;
 
@@ -22,7 +23,7 @@ public abstract class DefaultItemBase : MonoBehaviour
         return ItemTypes.Tool;
     }
 
-    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, TileBase Tile, GameObject prefab, float SellPrice)
+    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
     {
         bItemType = ItemType;
         if (ItemType != ItemTypes.Plant)
@@ -36,6 +37,7 @@ public abstract class DefaultItemBase : MonoBehaviour
         }
         bTile = Tile;
         bPrefab = prefab;
+        bSoundEffect = Audio;
         bName = Name;
         bAmount = Amount;
         bSrcImage = SrcImage;

@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 public class HoeScript : ToolScript
 {
     public TileDictionaryClass Dictioary;
-
     public override void useTool()
     {
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
@@ -15,8 +14,11 @@ public class HoeScript : ToolScript
         Vector3Int posInt = grid.LocalToCell(pos);
         if (!Dictioary.TileMapData.ContainsKey(posInt))
         {
-            // Shows the name of the tile at the specified coordinates            
-            Debug.Log(tileMap.GetTile(posInt).name);
+            // Shows the name of the tile at the specified coordinates#
+            //Debug.Log(tileMap.GetTile(posInt).name);
+            AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+            Audio.clip = GetSoundEffect();
+            Audio.Play();
             Debug.Log("This is hoeing");
             TileDataClass Temp = new TileDataClass();
             Dictioary.TileMapData.Add(posInt, Temp);

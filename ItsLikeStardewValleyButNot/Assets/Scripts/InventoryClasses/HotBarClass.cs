@@ -100,8 +100,8 @@ public class HotBarClass : InventoryAbstractClass
                 else if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed){ BasicItem = SubGameObject.gameObject.AddComponent<PlantSeed>() as PlantSeed;}
 
                 BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
-                                        XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bTile,
-                                        XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
+                                        XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
+                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
 
                 AddItem(BasicItem);
                 tempcounter++;

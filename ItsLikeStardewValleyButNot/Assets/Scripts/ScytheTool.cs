@@ -31,7 +31,8 @@ public class ScytheTool : ToolScript
             if(i.Key.Equals(Name))
             {
                 ItemBase PlantItem = new ItemBase();
-                PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
+                PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage, 
+                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
                 return PlantItem;
             }
         }
@@ -52,6 +53,9 @@ public class ScytheTool : ToolScript
                 cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
                 // Shows the name of the tile at the specified coordinates            
                 //Debug.Log(tileMap.GetTile(posInt).name);
+                AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+                Audio.clip = GetSoundEffect();
+                Audio.Play();
                 Debug.Log("GATHERED PLANT");
                 InventoryAssessment(GetPlantItem(Plant.XMLName), posInt);
                 Plant.DestoryPlant();

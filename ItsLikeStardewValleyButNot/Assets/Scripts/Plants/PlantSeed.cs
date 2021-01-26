@@ -20,6 +20,9 @@ public class PlantSeed : ToolScript
             // Shows the name of the tile at the specified coordinates  
             ID = posInt;
             //Debug.Log(tileMap.GetTile(posInt).name);
+            AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+            Audio.clip = GetSoundEffect();
+            Audio.Play();
             Debug.Log("Seed Planted");
             GameObject Clone;
             Clone = Instantiate(PlantPrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
