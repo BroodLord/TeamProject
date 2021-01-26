@@ -58,7 +58,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     return;
                 }
-                if (cInventory.ItemList[transform.parent.GetSiblingIndex()] == null)
+                if (cInventory.Markers[transform.parent.GetSiblingIndex()] == false)
                 {
                     cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
@@ -79,7 +79,17 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             else
             {
                 if (DropedItem == null) { DropedItem = cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()]; }
-                if (cInventory.ItemList[transform.parent.GetSiblingIndex()] == null)
+                if (cInventory.Markers[transform.parent.GetSiblingIndex()])
+                {
+                    ItemBase TempItem = cInventory.ItemList[transform.parent.GetSiblingIndex()];
+                    cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
+                    //cHotBar.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
+                    cHotBar.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = TempItem;
+                    cInventory.cHotBar.UpdateUI();
+                    cHotBar.cInventory.UpdateUI();
+                }
+                else
                 {
                     cInventory.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cInventory.Markers[transform.parent.GetSiblingIndex()] = true;
@@ -114,7 +124,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 {
                     return;
                 }
-                if (cHotBar.ItemList[transform.parent.GetSiblingIndex()] == null)
+                if (cHotBar.Markers[transform.parent.GetSiblingIndex()] == false)
                 {
                     cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
@@ -135,7 +145,18 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             else
             {
                 if (DropedItem == null) { DropedItem = cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()]; }
-                if (cHotBar.ItemList[transform.parent.GetSiblingIndex()] == null)
+                if (cHotBar.Markers[transform.parent.GetSiblingIndex()])
+                {
+                    ItemBase TempItem = cHotBar.ItemList[transform.parent.GetSiblingIndex()];
+                    cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
+                    cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
+                    //cInventory.Markers[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = false;
+                    cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = TempItem;
+                    cHotBar.cInventory.UpdateUI();
+                    cInventory.cHotBar.UpdateUI();
+
+                }
+                else
                 {
                     cHotBar.ItemList[transform.parent.GetSiblingIndex()] = DropedItem;
                     cHotBar.Markers[transform.parent.GetSiblingIndex()] = true;
@@ -143,7 +164,6 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                     cInventory.ItemList[eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.GetSiblingIndex()] = null;
                     cHotBar.cInventory.UpdateUI();
                     cInventory.cHotBar.UpdateUI();
-
                 }
             }
         }
