@@ -92,7 +92,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
                {
                    ItemList[i] = null;
                     Markers[i] = false;
-                UpdateUI();
+                    UpdateUI();
                     return true;
                }
            }

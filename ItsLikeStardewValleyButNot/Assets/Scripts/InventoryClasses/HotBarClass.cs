@@ -81,13 +81,12 @@ public class HotBarClass : InventoryAbstractClass
         Resize(10);
         //for (int i = 0; i < 4; i++) {ItemBase BasicItem = gameObject.AddComponent<ItemBase>() as ItemBase; AddItem(BasicItem); }
         Debug.Log(ItemList.Length);
-        int tempcounter = 0;
         cInventory = this.GetComponent<InventoryClass>();
         cHotBar = this.GetComponent<HotBarClass>();
         for (int i = 0; i < XML.items.Count; i++)
         {
             if (XML.items.ElementAt(i).Value.bName == "Hoe" || XML.items.ElementAt(i).Value.bName == "Water Bucket" ||
-                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Wheat Seeds")
+                XML.items.ElementAt(i).Value.bName == "Scythe")
             {
                 /*NEEEEED A REDO LATER AS IT LOOKS LIKE 5 FIVE YEAR OLD HAD A SHIT AND COVERED THE CODE WITH IT*/
                 ItemBase BasicItem = new ItemBase();
@@ -104,7 +103,6 @@ public class HotBarClass : InventoryAbstractClass
                                         XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
 
                 AddItem(BasicItem);
-                tempcounter++;
             }
         }
         UpdateUI();

@@ -18,6 +18,9 @@ public class PlantSeed : ToolScript
         if (Dictioary.TileMapData.ContainsKey(posInt) && !Dictioary.TileMapData[posInt].HasPlant())
         {
             // Shows the name of the tile at the specified coordinates  
+            this.SubstractAmount(1);
+            HotBarClass HotBar = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<HotBarClass>();
+            if (this.GetAmount() <= 0) { HotBar.RemoveItem(this.GetName()); }
             ID = posInt;
             //Debug.Log(tileMap.GetTile(posInt).name);
             AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();

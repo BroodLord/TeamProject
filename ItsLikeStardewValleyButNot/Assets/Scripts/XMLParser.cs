@@ -85,6 +85,8 @@ public class XMLParser : MonoBehaviour
             temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
             items.Add(name, temp);
 
+
+            //HONEYD,PEAR,PINEAPPLE
         }
             
     }

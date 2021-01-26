@@ -77,7 +77,11 @@ public class ItemBase : DefaultItemBase
     public void SetName(string ItemName) { mName = ItemName; }
     public void SetAmount(int ItemAmount) { mAmount = ItemAmount; }
     public void AddAmount(int ItemAmount) { mAmount += ItemAmount; }
-    public void SubstractAmount(int ItemAmount) { mAmount -= ItemAmount; }
+    public void SubstractAmount(int ItemAmount)
+    { 
+        mAmount -= ItemAmount; 
+
+    }
     public void SetType(ItemTypes Type) { mItemType = Type; }
     public void SetImage(string image) { mSrcImage = image; }
     public void SetStackable(bool stackable) { mStackable = stackable; }

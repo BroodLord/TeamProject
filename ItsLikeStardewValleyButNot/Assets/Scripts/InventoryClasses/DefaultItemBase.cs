@@ -26,7 +26,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
     {
         bItemType = ItemType;
-        if (ItemType != ItemTypes.Plant)
+        if (ItemType != ItemTypes.Plant && ItemType != ItemTypes.Seed)
         {
             string Path = "TEMP ASSETS/" + SrcImage;
             bImage = Resources.Load<Sprite>(Path);
