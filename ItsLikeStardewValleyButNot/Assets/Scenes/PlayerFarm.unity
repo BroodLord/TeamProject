@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Town
   Load: {fileID: 0}
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!19719996 &75182681
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -12944,6 +12945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Farmland
   Load: {fileID: 0}
+  LoadPosition: {x: -7.5, y: 2.5, z: 0.1}
 --- !u!483693784 &1561562663
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -13298,6 +13300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: PlayerRoom
   Load: {fileID: 0}
+  LoadPosition: {x: 0.6, y: 1, z: 0.1}
 --- !u!1 &1731866886
 GameObject:
   m_ObjectHideFlags: 0
