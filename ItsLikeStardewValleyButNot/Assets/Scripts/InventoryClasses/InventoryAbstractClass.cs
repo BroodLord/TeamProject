@@ -86,16 +86,19 @@ public abstract class InventoryAbstractClass : MonoBehaviour
    public bool RemoveItem(string Name)
    {
 
-           for (int i = 0; i < ItemList.Length; i++)
-           {
-               if (Name == ItemList[i].name)
-               {
-                   ItemList[i] = null;
+        for (int i = 0; i < ItemList.Length; i++)
+        {
+            if (Markers[i] == true)
+            {
+                if (Name == ItemList[i].name)
+                {
+                    ItemList[i] = null;
                     Markers[i] = false;
                     UpdateUI();
                     return true;
-               }
-           }
+                }
+            }
+        }
 
        return false;
    }
