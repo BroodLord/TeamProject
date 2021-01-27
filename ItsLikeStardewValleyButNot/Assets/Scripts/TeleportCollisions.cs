@@ -6,9 +6,11 @@ public class TeleportCollisions : MonoBehaviour
 {
     public string LevelName;
     public LoadLevel Load;
+    [SerializeField] public Vector3 LoadPosition;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
-        Load.TransferLevel(LevelName);
+        Load.TransferLevel(LevelName, LoadPosition);
     }
 }
