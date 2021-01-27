@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Town
   Load: {fileID: 0}
+  LoadPosition: {x: -4, y: 0, z: 0.1}
 --- !u!19719996 &75182681
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -12872,6 +12873,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bItemType: 0
+  bImage: {fileID: 0}
+  bName: 
+  bAmount: 0
+  bStackable: 0
+  bSrcImage: 
+  bPrefab: {fileID: 0}
+  bTile: {fileID: 0}
+  bSellPrice: 0
   cInventory: {fileID: 0}
   grid: {fileID: 0}
   tileMap: {fileID: 0}
@@ -13181,6 +13190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Farmland
   Load: {fileID: 0}
+  LoadPosition: {x: 8, y: -2.5, z: 0.1}
 --- !u!483693784 &1561562663
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -13535,6 +13545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: PlayerRoom
   Load: {fileID: 0}
+  LoadPosition: {x: 0.6, y: 1, z: 0.1}
 --- !u!1 &1731866886
 GameObject:
   m_ObjectHideFlags: 0

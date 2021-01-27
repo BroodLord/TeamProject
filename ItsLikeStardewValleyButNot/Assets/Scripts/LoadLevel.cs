@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
-    public TileBase TiledTiled;
+    public TileBase TilledTile;
     public Animator Transition;
     public bool NewLevel;
     public Canvas UICanvas;
@@ -19,12 +19,14 @@ public class LoadLevel : MonoBehaviour
     public InventoryClass InventoryRef;
     public HotBarClass HotBarRef;
     public TileDictionaryClass Dictionary;
+    public Vector3 StartLocation;
     // Start is called before the first frame update
 
-    public void TransferLevel(string LevelName)
+    public void TransferLevel(string LevelName, Vector3 startLoc)
     {
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
+        StartLocation = startLoc;
         if (LevelName != "PlayerFarm")
         {
             foreach (var V in Dictionary.TileMapData)
@@ -76,6 +78,7 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
+            Player.transform.position = StartLocation;
             foreach (var V in Dictionary.TileMapData)
             {
                 if (V.Value.Clone != null)
@@ -98,14 +101,14 @@ public class LoadLevel : MonoBehaviour
                         if (P.mGrowth == true)
                         {
                             v.Value.SetWatered(false); P.mGrowth = false;
-                            v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                            v.Value.TileMap.SetTile(v.Key, TilledTile);
                         }
                     }
                     else
                     {
                         v.Value.SetWatered(false);
                         PlantAbstractClass P = v.Value.GetPlant();
-                        v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                        v.Value.TileMap.SetTile(v.Key, TilledTile);
                     }
                 }
             }
