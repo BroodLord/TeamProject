@@ -23,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Farmland.unity
     guid: 4bc820e764bfd954a91ba00546a46fd5
-  - enabled: 1
-    path: Assets/Scenes/Forest.unity
-    guid: 63e0599ab7418704fb88835a168185a3
   m_configObjects: {}
