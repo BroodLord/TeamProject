@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
-    public TileBase TiledTiled;
+    public TileBase TilledTiled;
     public Animator Transition;
     public bool NewLevel;
     public Canvas UICanvas;
@@ -98,14 +98,15 @@ public class LoadLevel : MonoBehaviour
                         if (P.mGrowth == true)
                         {
                             v.Value.SetWatered(false); P.mGrowth = false;
-                            v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                            v.Value.TileMap.SetTile(v.Key, TilledTiled);
                         }
                     }
+                    /*BUG OCCURS HERE: */
                     else
                     {
                         v.Value.SetWatered(false);
                         PlantAbstractClass P = v.Value.GetPlant();
-                        v.Value.TileMap.SetTile(v.Key, TiledTiled);
+                        v.Value.TileMap.SetTile(v.Key, TilledTiled);
                     }
                 }
             }
