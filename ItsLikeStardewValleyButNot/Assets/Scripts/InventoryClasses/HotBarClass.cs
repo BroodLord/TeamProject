@@ -267,7 +267,7 @@ public class HotBarClass : InventoryAbstractClass
                 {
                     Debug.Log("PLEASE SELECT A VALID TOOL");
                 }
-                else
+                else if(tool.GetAmount() > 0)
                 {
                     if (camera == null) { GetCamera(); }
                     mouseWorldPoint = camera.ScreenToWorldPoint(Input.mousePosition);
