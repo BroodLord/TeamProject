@@ -10,14 +10,10 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
-<<<<<<< HEAD
-    public TileBase TilledTiled;
-=======
     public TileBase TilledTile;
->>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
     public Animator Transition;
     public bool NewLevel;
-    public Canvas UICanvas;
+    public GameObject UICanvas;
     public EventSystem EventSystemRef;
     public GameObject Player;
     public InventoryClass InventoryRef;
@@ -43,9 +39,11 @@ public class LoadLevel : MonoBehaviour
         }
         Player = GameObject.FindGameObjectWithTag("Player");
         DontDestroyOnLoad(Player);
-        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
+        UICanvas = GameObject.FindGameObjectWithTag("Canvas");
+        DontDestroyOnLoad(UICanvas);
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
         GameObject Manager = GameObject.FindGameObjectWithTag("InventoryManager");
+        UICanvas.SetActive(false);
         InventoryClass Invent = Manager.GetComponent<InventoryClass>();
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         for (int i = 0; i < Invent.ItemList.Length; i++)
@@ -83,6 +81,7 @@ public class LoadLevel : MonoBehaviour
         if (asyncLoad.isDone)
         {
             Player.transform.position = StartLocation;
+            UICanvas.SetActive(true);
             foreach (var V in Dictionary.TileMapData)
             {
                 if (V.Value.Clone != null)
@@ -105,11 +104,7 @@ public class LoadLevel : MonoBehaviour
                         if (P.mGrowth == true)
                         {
                             v.Value.SetWatered(false); P.mGrowth = false;
-<<<<<<< HEAD
-                            v.Value.TileMap.SetTile(v.Key, TilledTiled);
-=======
                             v.Value.TileMap.SetTile(v.Key, TilledTile);
->>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
                         }
                     }
                     /*BUG OCCURS HERE: */
@@ -117,11 +112,7 @@ public class LoadLevel : MonoBehaviour
                     {
                         v.Value.SetWatered(false);
                         PlantAbstractClass P = v.Value.GetPlant();
-<<<<<<< HEAD
-                        v.Value.TileMap.SetTile(v.Key, TilledTiled);
-=======
                         v.Value.TileMap.SetTile(v.Key, TilledTile);
->>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
                     }
                 }
             }
