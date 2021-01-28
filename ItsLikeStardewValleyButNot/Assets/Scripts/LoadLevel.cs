@@ -10,7 +10,11 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
+<<<<<<< HEAD
     public TileBase TilledTiled;
+=======
+    public TileBase TilledTile;
+>>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
     public Animator Transition;
     public bool NewLevel;
     public Canvas UICanvas;
@@ -19,12 +23,14 @@ public class LoadLevel : MonoBehaviour
     public InventoryClass InventoryRef;
     public HotBarClass HotBarRef;
     public TileDictionaryClass Dictionary;
+    public Vector3 StartLocation;
     // Start is called before the first frame update
 
-    public void TransferLevel(string LevelName)
+    public void TransferLevel(string LevelName, Vector3 startLoc)
     {
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
+        StartLocation = startLoc;
         if (LevelName != "PlayerFarm")
         {
             foreach (var V in Dictionary.TileMapData)
@@ -76,6 +82,7 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
+            Player.transform.position = StartLocation;
             foreach (var V in Dictionary.TileMapData)
             {
                 if (V.Value.Clone != null)
@@ -98,7 +105,11 @@ public class LoadLevel : MonoBehaviour
                         if (P.mGrowth == true)
                         {
                             v.Value.SetWatered(false); P.mGrowth = false;
+<<<<<<< HEAD
                             v.Value.TileMap.SetTile(v.Key, TilledTiled);
+=======
+                            v.Value.TileMap.SetTile(v.Key, TilledTile);
+>>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
                         }
                     }
                     /*BUG OCCURS HERE: */
@@ -106,7 +117,11 @@ public class LoadLevel : MonoBehaviour
                     {
                         v.Value.SetWatered(false);
                         PlantAbstractClass P = v.Value.GetPlant();
+<<<<<<< HEAD
                         v.Value.TileMap.SetTile(v.Key, TilledTiled);
+=======
+                        v.Value.TileMap.SetTile(v.Key, TilledTile);
+>>>>>>> parent of 47dbd36... Revert "Merge branch 'JaysBranch' into Test"
                     }
                 }
             }
