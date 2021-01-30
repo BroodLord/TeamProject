@@ -9,9 +9,11 @@ public class Clock : MonoBehaviour
     /*UI Components for Text on the Canvus*/
     public TextMeshProUGUI[] TimeUIText;
     public TextMeshProUGUI[] DateUIText;
+    private SellChestClass cChest;
     public TimeFormats ClockTimeFormat = TimeFormats.Hour_24;
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
     public float SecondsPerMin = 1;
+    public TextMeshProUGUI[] GoldText;
     
 
     /*Strings which will be assigned to the UI*/
@@ -39,6 +41,7 @@ public class Clock : MonoBehaviour
         Month = 5;
         Year = 2020;
         if(Hour < 12) { AM = true; }
+        cChest = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<SellChestClass>();
         SetTextStrings();
     }
     public void NightUpdate()
@@ -47,14 +50,29 @@ public class Clock : MonoBehaviour
         Min = -1;
         Hour = 8;
         ++Day;
+        float TempGold = 0;
+        for(int i = 0; i < cChest.ItemList.Length; i++)
+        {
+            if(cChest.Markers[i])
+            {
+                TempGold += cChest.ItemList[i].GetSellPrice() * cChest.ItemList[i].GetAmount();
+                cChest.ItemList[i] = null;
+                
+            }
+        }
+        string Output = "Gold: " + TempGold.ToString();
+        for (int i = 0; i < GoldText.Length; i++)
+        {
+            GoldText[i].text = Output;
+        }
 
         // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
-        foreach(var v in Dictioary.TileMapData)
+        foreach (var v in Dictioary.TileMapData)
         {
             if(v.Value.HasPlant())
             {
                 PlantAbstractClass P = v.Value.GetPlant();
-                P.UpdatePlant(6);
+                P.UpdatePlant(3);
             }
         }
     }
