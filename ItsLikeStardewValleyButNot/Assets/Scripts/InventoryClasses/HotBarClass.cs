@@ -13,7 +13,6 @@ public class HotBarClass : InventoryAbstractClass
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public ItemBase[] InitItems;
-    public GameObject Test;
     private Vector3 mouseWorldPoint;
     public Camera camera;
     private float CoolDown;
@@ -92,16 +91,16 @@ public class HotBarClass : InventoryAbstractClass
                 ItemBase BasicItem = new ItemBase();
                 GameObject SubGameObject = new GameObject(XML.items.ElementAt(i).Value.bName);
                 SubGameObject.transform.parent = ToolItems.transform;
-
+        
                 if (XML.items.ElementAt(i).Value.bName == "Hoe") { BasicItem = SubGameObject.AddComponent<HoeScript>() as HoeScript; }
                 else if (XML.items.ElementAt(i).Value.bName == "Water Bucket") { BasicItem = SubGameObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
                 else if (XML.items.ElementAt(i).Value.bName == "Scythe") { BasicItem = SubGameObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
                 else if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed){ BasicItem = SubGameObject.gameObject.AddComponent<PlantSeed>() as PlantSeed;}
-
+        
                 BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
                                         XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
                                         XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
-
+        
                 AddItem(BasicItem);
             }
         }

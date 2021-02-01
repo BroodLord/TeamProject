@@ -23,6 +23,7 @@ TagManager:
   - Icon
   - ItemManager
   - SellChest
+  - Shop
   layers:
   - Default
   - TransparentFX

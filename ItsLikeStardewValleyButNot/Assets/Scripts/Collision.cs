@@ -9,6 +9,7 @@ public class Collision : MonoBehaviour
     XMLParser ItemManager;
     public InventoryClass cInventory;
     public SellChestClass cChest;
+    public GameObject ShopUI;
     public Clock cClock;
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,10 @@ public class Collision : MonoBehaviour
                 cInventory.DisabledNEnable();
             }
         }
+        if (collision.gameObject.tag == "Shop")
+        {
+            ShopUI.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -70,6 +75,10 @@ public class Collision : MonoBehaviour
             {
                 cInventory.DisabledNEnable();
             }
+        }
+        if (collision.gameObject.tag == "Shop")
+        {
+            ShopUI.SetActive(false);
         }
     }
 }
