@@ -65,9 +65,12 @@ public class Clock : MonoBehaviour
                 float Temp = cChest.ItemList[i].GetSellPrice() * cChest.ItemList[i].GetAmount();
                 GoldManager.AddAmount(Temp);
                 cChest.ItemList[i] = null;
-                
+     
+
+
             }
         }
+        cChest.ResetMarkers();
         string Output = "Gold: " + GoldManager.GetMoney().ToString();
         for (int i = 0; i < GoldText.Length; i++)
         {

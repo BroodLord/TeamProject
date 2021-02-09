@@ -138,7 +138,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (Name == ItemList[i].GetName())
+            if (ItemList[i] != null && Name == ItemList[i].GetName())
             {
                 int temp = ItemList[i].GetAmount();
                 temp += Amount;
