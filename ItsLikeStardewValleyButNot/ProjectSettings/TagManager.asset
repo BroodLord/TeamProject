@@ -22,6 +22,9 @@ TagManager:
   - Turnip
   - Icon
   - ItemManager
+  - Waypoints
+  - Grid
+  - Non-Walkable
   layers:
   - Default
   - TransparentFX

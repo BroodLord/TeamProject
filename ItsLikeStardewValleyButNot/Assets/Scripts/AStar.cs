@@ -16,12 +16,7 @@ public class AStar : MonoBehaviour
 
     private void Awake()
     {
-        placer = this.GetComponent<JunkPlacer>();
-        placer.PlaceTrees();
-
-        npcPathfind(Vector3Int.RoundToInt(this.transform.position), Vector3Int.RoundToInt(goal.transform.position), Nonwalkable, grid);
-        
-
+        //npcPathfind(Vector3Int.RoundToInt(this.transform.position), Vector3Int.RoundToInt(goal.transform.position), Nonwalkable, grid);
     }
     public List<Node> npcPathfind(Vector3Int Start, Vector3Int Goal, Tilemap nonWalkable, Grid grid)
     {
@@ -69,33 +64,45 @@ public class AStar : MonoBehaviour
             if (nonWalkable.GetTile(up) == null)
             {
                 Temp = new Node(up);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!openList.Contains(Temp) || !closedList.Contains(Temp))
+                {
+                    Temp.parent = currentNode;
+                    //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(right) == null)
             {
                 Temp = new Node(right);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!openList.Contains(Temp) || !closedList.Contains(Temp))
+                {
+                    Temp.parent = currentNode;
+                    //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(down) == null)
             {
                 Temp = new Node(down);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!openList.Contains(Temp) || !closedList.Contains(Temp))
+                {
+                    Temp.parent = currentNode;
+                    //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(left) == null)
             {
                 Temp = new Node(left);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!openList.Contains(Temp) || !closedList.Contains(Temp))
+                {
+                    Temp.parent = currentNode;
+                    //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
+                    openList.Add(Temp);
+                }
             }
 
 

@@ -5,22 +5,24 @@ using UnityEngine.Tilemaps;
 
 public class JunkPlacer : MonoBehaviour
 {
-    public Grid grid;
-    public Tilemap tileMap;
-    public Sprite dirtSprite;
+    private Grid grid;
+    private Tilemap tileMap;
+    public TileBase dirtSprite;
     public TileBase treeTile;
-    public Tilemap nonWalkableTileMap;
+    private Tilemap nonWalkableTileMap;
 
-    protected void awake()
+    protected void start()
     {
-        //grid = FindObjectOfType<Grid>();
-        //tileMap = FindObjectOfType<Tilemap>();
+        grid = FindObjectOfType<Grid>();
+        tileMap = GameObject.FindGameObjectWithTag("Floor").GetComponent<Tilemap>();
+        nonWalkableTileMap = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
+
     }
 
     public void PlaceTrees()
     {
-        Vector3 worldMin = tileMap.transform.TransformPoint(tileMap.localBounds.min);
-        Vector3 worldMax = tileMap.transform.TransformPoint(tileMap.localBounds.max);
+        Vector3 worldMin = tileMap.transform.TransformPoint(grid.LocalToCell(tileMap.localBounds.min));
+        Vector3 worldMax = tileMap.transform.TransformPoint(grid.LocalToCell(tileMap.localBounds.max));
 
 
         for (int x = (int)worldMin.x; x < (int)worldMax.x; x++)
