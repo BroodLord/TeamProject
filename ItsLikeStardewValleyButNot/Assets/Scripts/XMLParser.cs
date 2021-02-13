@@ -12,7 +12,8 @@ public class XMLParser : MonoBehaviour
     void Start()
     {
         XmlDocument newXml = new XmlDocument();
-        newXml.Load("Assets/Scripts/XML Files/Item File.xml");
+       // string Test = Application.streamingAssetsPath;
+        newXml.Load(Application.dataPath + "\\StreamingAssets\\XML Files\\Item File.xml");
         parseXML(newXml);
     }
 

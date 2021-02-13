@@ -2677,9 +2677,10 @@ MonoBehaviour:
   - {fileID: 453529366}
   ClockTimeFormat: 1
   ClockDateFormat: 1
-  SecondsPerMin: 5
+  SecondsPerMin: 2.5
   GoldText:
   - {fileID: 1241413091}
+  PauseMenuScript: {fileID: 310731303}
 --- !u!114 &310731301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3457,6 +3458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af62d518c6ccb4459e1acf0856c4ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cClock: {fileID: 310731300}
+  MoneyUpdate: {fileID: 1001331510}
+  ReportUI: {fileID: 1001331506}
   PauseMenuScript: {fileID: 310731303}
   SleepUI: {fileID: 371377630}
 --- !u!1 &378027729
@@ -7169,7 +7173,7 @@ GameObject:
   - component: {fileID: 742223128}
   - component: {fileID: 742223127}
   m_Layer: 5
-  m_Name: No Button
+  m_Name: Next Day Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7237,7 +7241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 742223128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371377634}
+        m_TargetAssemblyTypeName: SleepButtonManager, Assembly-CSharp
+        m_MethodName: NextDayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &742223128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10648,6 +10664,7 @@ GameObject:
   - component: {fileID: 1001331507}
   - component: {fileID: 1001331509}
   - component: {fileID: 1001331508}
+  - component: {fileID: 1001331510}
   m_Layer: 5
   m_Name: AfterDay-ReportUI
   m_TagString: Untagged
@@ -10716,6 +10733,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001331506}
   m_CullTransparentMesh: 0
+--- !u!114 &1001331510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001331506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e68daea783ebb4a901b6df611f102c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoldManager: {fileID: 1989766349}
+  cChest: {fileID: 194445707}
+  Text: {fileID: 185163111}
 --- !u!1 &1007814815
 GameObject:
   m_ObjectHideFlags: 0
@@ -11528,7 +11560,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1798239895}
   m_HandleRect: {fileID: 1798239894}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14100,8 +14132,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 312.28864, y: 4}
+  m_AnchoredPosition: {x: 9.9999695, y: -0.000030517578}
+  m_SizeDelta: {x: 312.28864, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1333149047
 MonoBehaviour:
@@ -19510,7 +19542,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22403,7 +22435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2059870293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22420,10 +22452,10 @@ RectTransform:
   m_Father: {fileID: 310731299}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 54, y: 6.76001}
-  m_SizeDelta: {x: -884.33154, y: -209.7873}
+  m_SizeDelta: {x: 351.66846, y: 346.2127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059870294
 MonoBehaviour:
