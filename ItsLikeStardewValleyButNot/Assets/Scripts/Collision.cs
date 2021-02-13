@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
+    public PauseMenu PauseMenuScript;
+    public GameObject SleepUI;
     XMLParser ItemManager;
     public InventoryClass cInventory;
     public SellChestClass cChest;
@@ -50,8 +52,10 @@ public class Collision : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bed")
         {
-            cClock.NightUpdate();
-            Debug.Log("COLLISION!");
+            SleepUI.SetActive(true);
+            PauseMenuScript.GameIsPaused = true;
+            //cClock.NightUpdate();
+            //Debug.Log("COLLISION!");
         }
         if (collision.gameObject.tag == "SellChest")
         {

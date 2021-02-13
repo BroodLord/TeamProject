@@ -21,6 +21,7 @@ public class Clock : MonoBehaviour
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
     public float SecondsPerMin = 1;
     public TextMeshProUGUI[] GoldText;
+    public PauseMenu PauseMenuScript;
     public Dictionary<string, ItemBase> Items;
 
     /*Strings which will be assigned to the UI*/
@@ -91,41 +92,44 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string Output = "Gold: " + GoldManager.GetMoney().ToString();
-        for (int i = 0; i < GoldText.Length; i++)
+        if (!PauseMenuScript.GameIsPaused)
         {
-            GoldText[i].text = Output;
-        }
-        /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
-        if (TimeTimer >= SecondsPerMin)
-        {
-            ++Min;
-            if (Min >= MaxMin)
+            string Output = "Gold: " + GoldManager.GetMoney().ToString();
+            for (int i = 0; i < GoldText.Length; i++)
             {
-                Min = 0;
-                ++Hour;
-                if(Hour >= MaxHour)
+                GoldText[i].text = Output;
+            }
+            /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
+            if (TimeTimer >= SecondsPerMin)
+            {
+                ++Min;
+                if (Min >= MaxMin)
                 {
-                    Hour = 0;
-                    ++Day;
-                    if(Day >= MaxDay)
+                    Min = 0;
+                    ++Hour;
+                    if (Hour >= MaxHour)
                     {
-                        Day = 1;
-                        ++Month;
-                        if(Month >= MaxMouth)
+                        Hour = 0;
+                        ++Day;
+                        if (Day >= MaxDay)
                         {
-                            Month = 1;
-                            ++Year;
+                            Day = 1;
+                            ++Month;
+                            if (Month >= MaxMouth)
+                            {
+                                Month = 1;
+                                ++Year;
+                            }
                         }
                     }
                 }
+                SetTextStrings(); // Function call for setting the strings.
+                TimeTimer = 0;
             }
-            SetTextStrings(); // Function call for setting the strings.
-            TimeTimer = 0;
-        }
-        else
-        {
-            TimeTimer += Time.deltaTime;
+            else
+            {
+                TimeTimer += Time.deltaTime;
+            }
         }
     }
 
