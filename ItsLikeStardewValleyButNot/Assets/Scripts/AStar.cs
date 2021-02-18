@@ -14,12 +14,14 @@ public class AStar : MonoBehaviour
     public Tilemap Nonwalkable;
     JunkPlacer placer;
 
+    //work, please :'(
     public List<Node> npcPathfind(Vector3Int Start, Vector3Int Goal, Tilemap nonWalkable, Grid grid)
     {
         List<Node> openList = new List<Node>();
         List<Node> closedList = new List<Node>();
         List<Node> result = new List<Node>();
 
+        //start node is created and a world and grid position is created, Node is custom created as i dont think the grid has its own
         Node startNode = new Node(grid.WorldToCell(Start));
         startNode.worldPosition = Start;
         Vector3Int goal = grid.WorldToCell(Goal);
@@ -37,7 +39,7 @@ public class AStar : MonoBehaviour
             openList.Remove(currentNode);
             
 
-            //check to see if current is the goal, if so end
+            //check to see if current is the goal, if so reverse the path and return the result
             if (currentNode.gridPosition == goal)
             {
                 bool foundStart = false;
@@ -60,6 +62,7 @@ public class AStar : MonoBehaviour
                 return result;
             }
 
+            //checks all directions
             Vector3Int up = new Vector3Int(currentNode.gridPosition.x, currentNode.gridPosition.y + 1, 0);
             Vector3Int right = new Vector3Int(currentNode.gridPosition.x + 1, currentNode.gridPosition.y , 0);
             Vector3Int down = new Vector3Int(currentNode.gridPosition.x, currentNode.gridPosition.y - 1, 0);
@@ -67,16 +70,16 @@ public class AStar : MonoBehaviour
 
             Node Temp;
 
-            //need to stop the adding of the same tile  
-
-            //if not add up, right, down, left to open list 
+            //add up, right, down, left to open list if nothing is blocking
             if (nonWalkable.GetTile(up) == null)
             {
                 Temp = new Node(up);
 
+                //check open and closed list
                 if (!searchList(openList, Temp.gridPosition.x, Temp.gridPosition.y) && !searchList(closedList, Temp.gridPosition.x, Temp.gridPosition.y))
                 {
                     Temp.parent = currentNode;
+                    //all nodes should have a world position and a grid position
                     Temp.worldPosition = grid.CellToWorld(Temp.gridPosition);
                     openList.Add(Temp);
                 }
@@ -117,6 +120,7 @@ public class AStar : MonoBehaviour
 
             closedList.Add(currentNode);
 
+            //sorts based on distance to the goal
             openList.Sort((x, y) => { return (goal - x.gridPosition).sqrMagnitude.CompareTo((goal - y.gridPosition).sqrMagnitude); });
 
             //Debug.Log(openList.Count);
@@ -137,32 +141,6 @@ public class AStar : MonoBehaviour
         }
         return false;
     }
-    //static void insertSort(List<Node> list)
-    //{
-    //    int n = list.Count;
-    //    int flag;
-    //
-    //    Node val;
-    //
-    //    if (list.Count > 1)
-    //    {
-    //        for (int i = 1; i < n; i++)
-    //        {
-    //            val = list[i];
-    //            flag = 0;
-    //            for (int j = i - 1; j >= 0 && flag != 1;)
-    //            {
-    //                if (val.totalCost < list[j].totalCost)
-    //                {
-    //                    list[j + 1] = list[j];
-    //                    j--;
-    //                    list[j + 1] = val;
-    //                }
-    //                else flag = 1;
-    //            }
-    //        }
-    //    }
-    //}
 }
 
 

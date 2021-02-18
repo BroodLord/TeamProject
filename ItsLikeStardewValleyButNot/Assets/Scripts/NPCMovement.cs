@@ -7,17 +7,22 @@ using UnityEngine.Tilemaps;
 public class NPCMovement : MonoBehaviour
 {
     private AStar pathfinding;
-    private Transform[] waypoints;
-    private GameObject waypointMaster;
-    private Vector3 target;
+    private Transform[] waypoints;          //the list of waypoints, 0 is the parent
+    private GameObject waypointMaster;      //parent of waypoints
+    private Vector3 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
     private Tilemap nonWalkable;
     private Grid grid;
-    private List<Node> currentPath;
+    //current path is a list of every cell from NPC to Target
+    private List<Node> currentPath;         //calculated by the npcPathfind call in state 3
     [SerializeField]private int currentState;
     [SerializeField]private float NPCSpeed = 0.2f;
-    private int pathIndex;
-    private int waypointIndex;
+    private int pathIndex;                  //current cell on the path
+    private int waypointIndex;              //current waypoint thats being targeted 
     float timer = 2.0f;
+    int[] Times;
+    int timeIndex;
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +34,16 @@ public class NPCMovement : MonoBehaviour
         target = waypoints[waypointIndex].position;
         nonWalkable = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        Times = new int[]{ 9, 10, 11, 12 };
 
+        timeIndex = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
         //perform A*
         //whilst there is a target and the npc hasnt reached the target do nothing
         //if there isnt a target or the npc reaches a target, go into a waiting state (until a certain time possibly) then cycle to the next target 
@@ -44,17 +53,20 @@ public class NPCMovement : MonoBehaviour
          {
              //Movement State
              case 1:
-                 //follow the determined path
+                 //follow the determined path until it gets to the next cell in the path or the last one, then it will select the next waypoint to target
                  if (pathIndex >= currentPath.Count)
                  {
+                    //waypoint target destination is reached
                     waypointIndex++;
                     target = waypoints[waypointIndex].position;
                     currentState = 2;
                  }
+                 //if the NPC is close enough to the next cell in the path
                  else if (Vector3.Distance(this.transform.position, currentPath[pathIndex].worldPosition) < 0.01f)
                  {
                      pathIndex++;
                  }
+                 //where actual movement is done
                  else
                  {
                      Vector2 v2;
@@ -62,44 +74,45 @@ public class NPCMovement : MonoBehaviour
                      v2.y = currentPath[pathIndex].worldPosition.y;
                      this.transform.position = Vector2.MoveTowards(this.transform.position, v2, movement);
                  }
-                 //when the destination is reached go to 2
                  break;
              //Waiting state
              case 2:
-                //wait until the given time
-                
-                timer -= Time.deltaTime;
-                if (timer < 0)
-                {
-                    timer = 2.0f;
-                    currentState = 3;
-                }
+                //just a timer to wait that needs to be replaced with checking the clock time 
+               timer -= Time.deltaTime;
+               if (timer < 0)
+               {
+                   timer = 2.0f;
+                   currentState = 3;
+               }
                  //go to 3
                  
                  break;
              //Path search state
              case 3:
-                 //find and update new path
+                 //NPC and target positions are turned to Vector3Ints as the A* cant use floats when converting to grid space
                  Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
                  Vector3Int targetV3I = Vector3Int.FloorToInt(target);
 
-                 currentPath = pathfinding.npcPathfind(thisV3I, targetV3I, nonWalkable, grid);
+                //find and update new path
+                currentPath = pathfinding.npcPathfind(thisV3I, targetV3I, nonWalkable, grid);
+
+                
                 if (currentPath == null)
                 {
                     Debug.Log("shits gone tits up");
                     Debug.Break();
                 }
-                
+
+                for (int i = 0; i < currentPath.Count - 1; i++)
+                {
+                    Debug.DrawLine(currentPath[i].worldPosition, currentPath[i + 1].worldPosition, Color.red, 50.0f);
+                }
+
                  //reset path index
                  pathIndex = 0;
                  //go back to case 1
                  currentState = 1;
                  break;
          }
-
-        //Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
-        //Vector3Int targetV3I = Vector3Int.FloorToInt(target);
-        //currentPath = pathfinding.npcPathfind(thisV3I, targetV3I, nonWalkable, grid);
-        //Debug.Log(currentPath[0].worldPosition);
     }
 }
