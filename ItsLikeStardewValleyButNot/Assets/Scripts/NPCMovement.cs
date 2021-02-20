@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
+/*So turns out the Astar works and isn't the problem, unity has some dumb fucking scaling issues and we upscaled the whole fucking game so this fucker will work... fuck unity*/
+
+
 public class NPCMovement : MonoBehaviour
 {
     private AStar pathfinding;
