@@ -27,6 +27,7 @@ public class AStar : MonoBehaviour
         Vector3Int goal = grid.WorldToCell(Goal);
 
 
+
         openList.Add(startNode);
         Node currentNode = openList[0];
 

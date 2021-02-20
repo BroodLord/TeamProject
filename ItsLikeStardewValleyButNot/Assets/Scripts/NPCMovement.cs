@@ -8,10 +8,12 @@ public class NPCMovement : MonoBehaviour
 {
     private AStar pathfinding;
     private Transform[] waypoints;          //the list of waypoints, 0 is the parent
+    public GameObject[] WaypointsObjects;
     private GameObject waypointMaster;      //parent of waypoints
     private Vector3 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
     private Tilemap nonWalkable;
     private Grid grid;
+    public TileBase Tile;
     //current path is a list of every cell from NPC to Target
     private List<Node> currentPath;         //calculated by the npcPathfind call in state 3
     [SerializeField]private int currentState;
@@ -32,6 +34,7 @@ public class NPCMovement : MonoBehaviour
         waypoints = waypointMaster.gameObject.GetComponentsInChildren<Transform>();
         waypointIndex = 1;
         target = waypoints[waypointIndex].position;
+
         nonWalkable = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         Times = new int[]{ 9, 10, 11, 12 };
@@ -62,7 +65,7 @@ public class NPCMovement : MonoBehaviour
                     currentState = 2;
                  }
                  //if the NPC is close enough to the next cell in the path
-                 else if (Vector3.Distance(this.transform.position, currentPath[pathIndex].worldPosition) < 0.01f)
+                 else if (this.transform.position == currentPath[pathIndex].worldPosition)
                  {
                      pathIndex++;
                  }
@@ -89,10 +92,11 @@ public class NPCMovement : MonoBehaviour
                  break;
              //Path search state
              case 3:
-                 //NPC and target positions are turned to Vector3Ints as the A* cant use floats when converting to grid space
-                 Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
-                 Vector3Int targetV3I = Vector3Int.FloorToInt(target);
 
+                 //NPC and target positions are turned to Vector3Ints as the A* cant use floats when converting to grid space
+                 //Mathf.CeilToInt()
+                Vector3Int targetV3I = Vector3Int.FloorToInt(target);
+                 Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
                 //find and update new path
                 currentPath = pathfinding.npcPathfind(thisV3I, targetV3I, nonWalkable, grid);
 
