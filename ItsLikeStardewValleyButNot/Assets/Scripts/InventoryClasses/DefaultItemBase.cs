@@ -26,10 +26,14 @@ public abstract class DefaultItemBase : MonoBehaviour
     public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
     {
         bItemType = ItemType;
-        if (ItemType != ItemTypes.Plant && ItemType != ItemTypes.Seed)
+        if (ItemType != ItemTypes.Plant && ItemType != ItemTypes.Seed && ItemType != ItemTypes.Ore)
         {
             string Path = "TEMP ASSETS/" + SrcImage;
             bImage = Resources.Load<Sprite>(Path);
+        }
+        else if (ItemType == ItemTypes.Ore)
+        {
+            bImage = GetOreFromSheet(SrcImage);
         }
         else
         {
@@ -45,6 +49,17 @@ public abstract class DefaultItemBase : MonoBehaviour
         bSellPrice = SellPrice;
 
 
+    }
+    private Sprite GetOreFromSheet(string SrcImage)
+    {
+        Sprite[] Sprites;
+        Sprites = Resources.LoadAll<Sprite>("TEMP ASSETS/roguelikeitems");
+        for (int i = 0; i < Sprites.Length; i++)
+        {
+            if (Sprites[i].name == SrcImage)
+                return Sprites[i];
+        }
+        return null;
     }
 
     private Sprite GetSpriteFromSheet(string SrcImage)

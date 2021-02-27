@@ -13,7 +13,7 @@ public class JunkPlacer : MonoBehaviour
     public Tilemap nonWalkableTileMap;
     public XMLParser XML;
     public TileDictionaryClass Dictioary;
-    public Dictionary<Vector3Int, ItemBase> DataBase;
+    //public Dictionary<Vector3Int, ItemBase> DataBase;
 
     protected void awake()
     {
@@ -26,7 +26,7 @@ public class JunkPlacer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
-        DataBase = new Dictionary<Vector3Int, ItemBase>();
+        //DataBase = new Dictionary<Vector3Int, ItemBase>();
         PlaceRocks();
     }
 
@@ -67,7 +67,7 @@ public class JunkPlacer : MonoBehaviour
             for (int y = (int)worldMin.y; y < (int)worldMax.y; y++)
             {
                 Vector3 pos = new Vector3(x, y, 0);
-                Vector3Int posInt = grid.LocalToCell(pos);
+                Vector3Int posInt = grid.WorldToCell(pos);
                 if (Random.Range(1, 100) <= 40 && tileMap.GetSprite(posInt) == dirtSprite)
                 {
                     //nonWalkableTileMap.SetTile(posInt, treeTile);
@@ -85,7 +85,7 @@ public class JunkPlacer : MonoBehaviour
                         XML.items.ElementAt(ItemIndex).Value.bTile, XML.items.ElementAt(ItemIndex).Value.bPrefab, XML.items.ElementAt(ItemIndex).Value.bSellPrice);
 
                     Dictioary.TileMapData[posInt].SetOre(Item);
-                    DataBase.Add(posInt, Item);
+                    //DataBase.Add(posInt, Item);
                 }
 
             }

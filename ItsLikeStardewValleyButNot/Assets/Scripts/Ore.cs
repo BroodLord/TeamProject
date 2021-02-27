@@ -11,6 +11,6 @@ public class Ore : OreAbstractClass
 
     public override void DestoryOre()
     {
-        Destroy(this.gameObject);
+        //this.GetComponent(OreAbstractClass)
     }
 }

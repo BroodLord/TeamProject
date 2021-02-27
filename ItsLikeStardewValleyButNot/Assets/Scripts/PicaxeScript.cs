@@ -28,33 +28,24 @@ public class PicaxeScript : ToolScript
         //Dictioary.TileMapData.Add(ID, Temp);
     }
 
-    public ItemBase GetRockItem(string Name)
+    public ItemBase GetRockItem(OreAbstractClass ore)
     {
         ToolItems = GameObject.Find("TemplateTools");
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
-        GameObject SubGameObject = new GameObject(Name);
+        GameObject SubGameObject = new GameObject(ore.XMLName);
         SubGameObject.transform.parent = ToolItems.transform;
-        foreach (var i in XML.items)
-        {
-            if (i.Key.Equals(Name))
-            {
-                ItemBase PlantItem = SubGameObject.gameObject.AddComponent<ItemBase>() as ItemBase;
-                PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage,
-                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
-                return PlantItem;
-            }
-        }
-        return null;
+        ItemBase PlantItem = ore;
+        return PlantItem;
     }
 
     public override void useTool()
     {
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
-        rockPlacer = GameObject.FindGameObjectWithTag("Rockplacer").GetComponent<JunkPlacer>();
+        //rockPlacer = GameObject.FindGameObjectWithTag("Rockplacer").GetComponent<JunkPlacer>();
         cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         //TODO - when we add more grids and tilemaps, this will break
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int posInt = grid.LocalToCell(pos);
+        Vector3Int posInt = grid.WorldToCell(pos);
         if (Dictioary.TileMapData[posInt].HasOre())
         {
                 OreAbstractClass Ore = Dictioary.TileMapData[posInt].GetOre();
@@ -62,10 +53,8 @@ public class PicaxeScript : ToolScript
                 Audio.clip = GetSoundEffect();
                 Audio.Play();
                 Debug.Log("GATHERED ORE");
-                InventoryAssessment(GetRockItem(Ore.XMLName), posInt);
-                Ore.DestoryOre();
-                rockPlacer.DataBase.Remove(posInt);
-                TileMap.SetTile(posInt, this.GetTile());
+                InventoryAssessment(GetRockItem(Ore), posInt);
+                Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
         }
         //if ()
         //{
