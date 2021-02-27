@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public abstract class DefaultItemBase : MonoBehaviour
 {
-    public enum ItemTypes { Tool, Plant, Seed, Decoration }
+    public enum ItemTypes { Tool, Plant, Ore, Seed, Decoration }
     public ItemTypes bItemType;
     public Sprite bImage;
     public string bName;

@@ -6,6 +6,7 @@ using UnityEngine;
 public class TileDataClass : MonoBehaviour
 {
     private PlantAbstractClass Plant;
+    private OreAbstractClass Ore;
     public Tilemap TileMap;
     public TileBase Tile;
     public GameObject Clone;
@@ -25,6 +26,25 @@ public class TileDataClass : MonoBehaviour
         TileMap = GameObject.Find("Floor").GetComponent<Tilemap>();
         Plant = null;
         Watered = false;
+    }
+
+    public bool HasOre()
+    {
+        if (Ore != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public OreAbstractClass GetOre()
+    {
+        return Ore;
+    }
+
+    public void SetOre(OreAbstractClass P)
+    {
+        Ore = P;
     }
 
     public bool HasPlant()

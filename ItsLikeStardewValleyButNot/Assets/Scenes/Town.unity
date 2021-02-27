@@ -40483,9 +40483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4285ca39f083a9c43ad49408a7e88808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: PlayerRoom
+  LevelName: Mines
   Load: {fileID: 0}
-  LoadPosition: {x: 0, y: 0, z: 0}
+  LoadPosition: {x: 9, y: 12, z: 0}
 --- !u!19719996 &1911939674
 TilemapCollider2D:
   m_ObjectHideFlags: 0

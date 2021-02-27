@@ -58,6 +58,10 @@ public class XMLParser : MonoBehaviour
             {
                 Item = ItemBase.ItemTypes.Seed;
             }
+            else if (itemType == "Ore")
+            {
+                Item = ItemBase.ItemTypes.Ore;
+            }
             else if (itemType == "Decoration")
             {
                 Item = ItemBase.ItemTypes.Decoration;
@@ -85,9 +89,6 @@ public class XMLParser : MonoBehaviour
             ItemBase temp = new ItemBase();
             temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
             items.Add(name, temp);
-
-
-            //HONEYD,PEAR,PINEAPPLE
         }
             
     }

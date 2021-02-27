@@ -1,580 +1,586 @@
 fileFormatVersion: 2
-guid: 128e21818877848459ec56b1bed1f58a
+guid: b20dff1da4405214eae3a3aa60c907a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3590520350925538535
-    second: Fulltilemap_0
+      213: 5786248460588832156
+    second: roguelikeitems_0
   - first:
-      213: 4084338459265099741
-    second: Fulltilemap_1
+      213: -6100301934867516981
+    second: roguelikeitems_1
   - first:
-      213: -4503592412715075763
-    second: Fulltilemap_2
+      213: 2890575639023603587
+    second: roguelikeitems_2
   - first:
-      213: 2333312504788290657
-    second: Fulltilemap_3
+      213: 7622277309764017006
+    second: roguelikeitems_3
   - first:
-      213: 588031265375491042
-    second: Fulltilemap_4
+      213: 3045428515557027865
+    second: roguelikeitems_4
   - first:
-      213: -3472517428291219460
-    second: Fulltilemap_5
+      213: 1182313012388231118
+    second: roguelikeitems_5
   - first:
-      213: 3499606629958328744
-    second: Fulltilemap_6
+      213: 3008645933168865818
+    second: roguelikeitems_6
   - first:
-      213: -3482625244399873943
-    second: Fulltilemap_7
+      213: -8860710067245468218
+    second: roguelikeitems_7
   - first:
-      213: -5344625874471432044
-    second: Fulltilemap_8
+      213: -6220872625417139915
+    second: roguelikeitems_8
   - first:
-      213: 1574505732933018349
-    second: Fulltilemap_9
+      213: -4366780320503853162
+    second: roguelikeitems_9
   - first:
-      213: -6607837858458997432
-    second: Fulltilemap_10
+      213: -3569325987672878293
+    second: roguelikeitems_10
   - first:
-      213: 7664171899649161098
-    second: Fulltilemap_11
+      213: 7502750004089872744
+    second: roguelikeitems_11
   - first:
-      213: 1209249787410086625
-    second: Fulltilemap_12
+      213: -4015618376040094268
+    second: roguelikeitems_12
   - first:
-      213: -1913279565475540190
-    second: Fulltilemap_13
+      213: 8741602864925488932
+    second: roguelikeitems_13
   - first:
-      213: -7914547711426798379
-    second: Fulltilemap_14
+      213: 2396635897296030708
+    second: roguelikeitems_14
   - first:
-      213: 7265650893051991567
-    second: Fulltilemap_15
+      213: 6972551508520280654
+    second: roguelikeitems_15
   - first:
-      213: -4545018272197962481
-    second: Fulltilemap_16
+      213: -5232538134608421308
+    second: roguelikeitems_16
   - first:
-      213: -2289430360874630909
-    second: Fulltilemap_17
+      213: 1064241264874364920
+    second: roguelikeitems_17
   - first:
-      213: -9007515997336718310
-    second: Fulltilemap_18
+      213: -9021702216150894085
+    second: roguelikeitems_18
   - first:
-      213: -6956224436045709918
-    second: Fulltilemap_19
+      213: -4663133007799939943
+    second: roguelikeitems_19
   - first:
-      213: -1758670037132068687
-    second: Fulltilemap_20
+      213: 5105014834286726108
+    second: roguelikeitems_20
   - first:
-      213: -1160226670750068913
-    second: Fulltilemap_21
+      213: 1229741282281883554
+    second: roguelikeitems_21
   - first:
-      213: 8192191787789239272
-    second: Fulltilemap_22
+      213: -4211939078310032478
+    second: roguelikeitems_22
   - first:
-      213: 1779008291174114512
-    second: Fulltilemap_23
+      213: 9035318312917667809
+    second: roguelikeitems_23
   - first:
-      213: -1544943659601453190
-    second: Fulltilemap_24
+      213: -7809337437667952992
+    second: roguelikeitems_24
   - first:
-      213: -8999219013263972585
-    second: Fulltilemap_25
+      213: -631330396743391148
+    second: roguelikeitems_25
   - first:
-      213: 6957351827239075134
-    second: Fulltilemap_26
+      213: -1912690744335682919
+    second: roguelikeitems_26
   - first:
-      213: -1566514216501007355
-    second: Fulltilemap_27
+      213: 2889428959074088571
+    second: roguelikeitems_27
   - first:
-      213: -3291772149868946309
-    second: Fulltilemap_28
+      213: -1717757112458516207
+    second: roguelikeitems_28
   - first:
-      213: 296084970474347161
-    second: Fulltilemap_29
+      213: -1467233683780619487
+    second: roguelikeitems_29
   - first:
-      213: 362798206412744502
-    second: Fulltilemap_30
+      213: 1208729602029812823
+    second: roguelikeitems_30
   - first:
-      213: 7531610810938501707
-    second: Fulltilemap_31
+      213: 3171012057831008986
+    second: roguelikeitems_31
   - first:
-      213: -894080705188091361
-    second: Fulltilemap_32
+      213: 7960038367845498682
+    second: roguelikeitems_32
   - first:
-      213: 3933110340387375791
-    second: Fulltilemap_33
+      213: -2768705278377058119
+    second: roguelikeitems_33
   - first:
-      213: -4348100340702768128
-    second: Fulltilemap_34
+      213: -7711221548071056586
+    second: roguelikeitems_34
   - first:
-      213: -4159731266181866424
-    second: Fulltilemap_35
+      213: 1465787036119439438
+    second: roguelikeitems_35
   - first:
-      213: -856167186997896021
-    second: Fulltilemap_36
+      213: -2182010335692100286
+    second: roguelikeitems_36
   - first:
-      213: -2399725458910947422
-    second: Fulltilemap_37
+      213: 5071088702517225425
+    second: roguelikeitems_37
   - first:
-      213: 4919582558457696744
-    second: Fulltilemap_38
+      213: -1043896582243994017
+    second: roguelikeitems_38
   - first:
-      213: 211692567540162215
-    second: Fulltilemap_39
+      213: 151148096999907148
+    second: roguelikeitems_39
   - first:
-      213: -8010833162005749615
-    second: Fulltilemap_40
+      213: 7825044478356188236
+    second: roguelikeitems_40
   - first:
-      213: 5818452572169583795
-    second: Fulltilemap_41
+      213: -5443176891660902369
+    second: roguelikeitems_41
   - first:
-      213: 8220893373655919355
-    second: Fulltilemap_42
+      213: -8123387816349118897
+    second: roguelikeitems_42
   - first:
-      213: 4953214446683589341
-    second: Fulltilemap_43
+      213: -6651836021098864036
+    second: roguelikeitems_43
   - first:
-      213: -754828334228634870
-    second: Fulltilemap_44
+      213: -8458715595561043805
+    second: roguelikeitems_44
   - first:
-      213: 8243295332653967153
-    second: Fulltilemap_45
+      213: 1178821586809743685
+    second: roguelikeitems_45
   - first:
-      213: -5759227495677249512
-    second: Fulltilemap_46
+      213: 2182134533958552500
+    second: roguelikeitems_46
   - first:
-      213: 3451277679883871877
-    second: Fulltilemap_47
+      213: 1133410264010472436
+    second: roguelikeitems_47
   - first:
-      213: 1645984965476986119
-    second: Fulltilemap_48
+      213: -6852099883822875376
+    second: roguelikeitems_48
   - first:
-      213: 7757875185934865916
-    second: Fulltilemap_49
+      213: 572683950740441514
+    second: roguelikeitems_49
   - first:
-      213: 910279464647399
-    second: Fulltilemap_50
+      213: -174604667901911216
+    second: roguelikeitems_50
   - first:
-      213: 985072993119178710
-    second: Fulltilemap_51
+      213: 466061199892534620
+    second: roguelikeitems_51
   - first:
-      213: -2461236634157955977
-    second: Fulltilemap_52
+      213: 2604776321433222153
+    second: roguelikeitems_52
   - first:
-      213: 667215729807627073
-    second: Fulltilemap_53
+      213: 2066756594889815592
+    second: roguelikeitems_53
   - first:
-      213: -1643417770733408543
-    second: Fulltilemap_54
+      213: -8146987450104627578
+    second: roguelikeitems_54
   - first:
-      213: -1155952732736115512
-    second: Fulltilemap_55
+      213: -610825733191151680
+    second: roguelikeitems_55
   - first:
-      213: 1033904983179664021
-    second: Fulltilemap_56
+      213: -2458288211760996117
+    second: roguelikeitems_56
   - first:
-      213: -4109676035466288290
-    second: Fulltilemap_57
+      213: -2434514170095436410
+    second: roguelikeitems_57
   - first:
-      213: -1153914276728989855
-    second: Fulltilemap_58
+      213: 1067755248417415885
+    second: roguelikeitems_58
   - first:
-      213: -3882687502261694429
-    second: Fulltilemap_59
+      213: -5959207977718311317
+    second: roguelikeitems_59
   - first:
-      213: -2961499457444811807
-    second: Fulltilemap_60
+      213: 3156651111650854973
+    second: roguelikeitems_60
   - first:
-      213: 3047688143632422590
-    second: Fulltilemap_61
+      213: 5614966105184638380
+    second: roguelikeitems_61
   - first:
-      213: -5225796281889856228
-    second: Fulltilemap_62
+      213: -6224836212712267137
+    second: roguelikeitems_62
   - first:
-      213: -7328467106343547404
-    second: Fulltilemap_63
+      213: 3994805371664618572
+    second: roguelikeitems_63
   - first:
-      213: -3847498867237739317
-    second: Fulltilemap_64
+      213: -2454215593733916435
+    second: roguelikeitems_64
   - first:
-      213: 8856925110971097590
-    second: Fulltilemap_65
+      213: 4515602763192792140
+    second: roguelikeitems_65
   - first:
-      213: 4238066509345486896
-    second: Fulltilemap_66
+      213: 1727976464042475106
+    second: roguelikeitems_66
   - first:
-      213: 5841411070006644095
-    second: Fulltilemap_67
+      213: 7813872217158548730
+    second: roguelikeitems_67
   - first:
-      213: -7081145221774414889
-    second: Fulltilemap_68
+      213: 1768602685712073393
+    second: roguelikeitems_68
   - first:
-      213: 7334389899142633960
-    second: Fulltilemap_69
+      213: -3086275755462119284
+    second: roguelikeitems_69
   - first:
-      213: 3470247038785203659
-    second: Fulltilemap_70
+      213: 7414555295978629179
+    second: roguelikeitems_70
   - first:
-      213: -1215350188752421383
-    second: Fulltilemap_71
+      213: -4655585833570778569
+    second: roguelikeitems_71
   - first:
-      213: -3553221590548053313
-    second: Fulltilemap_72
+      213: -964682085576318144
+    second: roguelikeitems_72
   - first:
-      213: -4124500159255864269
-    second: Fulltilemap_73
+      213: -1764642174700005890
+    second: roguelikeitems_73
   - first:
-      213: 3151427677874607334
-    second: Fulltilemap_74
+      213: -5182196561078861849
+    second: roguelikeitems_74
   - first:
-      213: -8626552522173684289
-    second: Fulltilemap_75
+      213: -4207394340809760244
+    second: roguelikeitems_75
   - first:
-      213: 1218681696873082955
-    second: Fulltilemap_76
+      213: -6645056536653604782
+    second: roguelikeitems_76
   - first:
-      213: -2643115979499103647
-    second: Fulltilemap_77
+      213: -2186920395880949784
+    second: roguelikeitems_77
   - first:
-      213: 1466632995466803020
-    second: Fulltilemap_78
+      213: 6192312821776931318
+    second: roguelikeitems_78
   - first:
-      213: 5549772226941306750
-    second: Fulltilemap_79
+      213: 7390877131248708581
+    second: roguelikeitems_79
   - first:
-      213: 7846521787609732396
-    second: Fulltilemap_80
+      213: -7470800371356827753
+    second: roguelikeitems_80
   - first:
-      213: 415378186810337652
-    second: Fulltilemap_81
+      213: 611619678665254519
+    second: roguelikeitems_81
   - first:
-      213: 3527932631502320338
-    second: Fulltilemap_82
+      213: -3552189127711459470
+    second: roguelikeitems_82
   - first:
-      213: 953113773146500339
-    second: Fulltilemap_83
+      213: 98327405696554537
+    second: roguelikeitems_83
   - first:
-      213: -4873850766203386578
-    second: Fulltilemap_84
+      213: -4944147984715100182
+    second: roguelikeitems_84
   - first:
-      213: 5282619634703539919
-    second: Fulltilemap_85
+      213: 518002527297650003
+    second: roguelikeitems_85
   - first:
-      213: -5727161399881140675
-    second: Fulltilemap_86
+      213: 6161218260212730820
+    second: roguelikeitems_86
   - first:
-      213: 7201102927545265213
-    second: Fulltilemap_87
+      213: -7107710588982011371
+    second: roguelikeitems_87
   - first:
-      213: -2145157787967706211
-    second: Fulltilemap_88
+      213: 3332553517863857686
+    second: roguelikeitems_88
   - first:
-      213: 4424855802136217161
-    second: Fulltilemap_89
+      213: -1288797394176773154
+    second: roguelikeitems_89
   - first:
-      213: 7506444367400657263
-    second: Fulltilemap_90
+      213: -3863502836797267595
+    second: roguelikeitems_90
   - first:
-      213: 4229752411854078849
-    second: Fulltilemap_91
+      213: 998144437415630953
+    second: roguelikeitems_91
   - first:
-      213: 8074592231800530085
-    second: Fulltilemap_92
+      213: -4184117239326914467
+    second: roguelikeitems_92
   - first:
-      213: -3741939424036290055
-    second: Fulltilemap_93
+      213: -4255651771927157371
+    second: roguelikeitems_93
   - first:
-      213: 4668263330397132935
-    second: Fulltilemap_94
+      213: -7245610558870393668
+    second: roguelikeitems_94
   - first:
-      213: 8067872528597131414
-    second: Fulltilemap_95
+      213: 7239363318399003286
+    second: roguelikeitems_95
   - first:
-      213: -2594545226355191381
-    second: Fulltilemap_96
+      213: -8947042600314008167
+    second: roguelikeitems_96
   - first:
-      213: 5621086326077566081
-    second: Fulltilemap_97
+      213: -1654708158425981466
+    second: roguelikeitems_97
   - first:
-      213: -1771081543544929196
-    second: Fulltilemap_98
+      213: -1023449853196942615
+    second: roguelikeitems_98
   - first:
-      213: -5436965332157415336
-    second: Fulltilemap_99
+      213: -6234978685237879147
+    second: roguelikeitems_99
   - first:
-      213: -839964055051134809
-    second: Fulltilemap_100
+      213: -8789819435778993613
+    second: roguelikeitems_100
   - first:
-      213: -1727193625972603337
-    second: Fulltilemap_101
+      213: 8428307830435615696
+    second: roguelikeitems_101
   - first:
-      213: -3344805486120443869
-    second: Fulltilemap_102
+      213: 7073572992877385368
+    second: roguelikeitems_102
   - first:
-      213: -3623288206743400208
-    second: Fulltilemap_103
+      213: -2148738754041077324
+    second: roguelikeitems_103
   - first:
-      213: 1845932204966949667
-    second: Fulltilemap_104
+      213: 4898563026762817124
+    second: roguelikeitems_104
   - first:
-      213: 7020436992707092624
-    second: Fulltilemap_105
+      213: 5886393553040393390
+    second: roguelikeitems_105
   - first:
-      213: 6518477294525261911
-    second: Fulltilemap_106
+      213: 8843978169883761339
+    second: roguelikeitems_106
   - first:
-      213: 37277176321333807
-    second: Fulltilemap_107
+      213: -7150854611838991453
+    second: roguelikeitems_107
   - first:
-      213: -2867470218453225079
-    second: Fulltilemap_108
+      213: 4964851560782374217
+    second: roguelikeitems_108
   - first:
-      213: 7873732132359800303
-    second: Fulltilemap_109
+      213: -6351566607315808771
+    second: roguelikeitems_109
   - first:
-      213: -764072669596786210
-    second: Fulltilemap_110
+      213: 683207436011926516
+    second: roguelikeitems_110
   - first:
-      213: 2189236905081693842
-    second: Fulltilemap_111
+      213: 7333823870327866089
+    second: roguelikeitems_111
   - first:
-      213: -1442880054701484676
-    second: Fulltilemap_112
+      213: 439392696399361897
+    second: roguelikeitems_112
   - first:
-      213: 7151760565866861487
-    second: Fulltilemap_113
+      213: -8934063800226363005
+    second: roguelikeitems_113
   - first:
-      213: -2984603148078638716
-    second: Fulltilemap_114
+      213: 8799331346380755975
+    second: roguelikeitems_114
   - first:
-      213: 1851943517637986423
-    second: Fulltilemap_115
+      213: 498649554668762341
+    second: roguelikeitems_115
   - first:
-      213: 7034500552470672609
-    second: Fulltilemap_116
+      213: 341733201157852922
+    second: roguelikeitems_116
   - first:
-      213: 8801124472751424335
-    second: Fulltilemap_117
+      213: -6404304953264236906
+    second: roguelikeitems_117
   - first:
-      213: 855976077816799058
-    second: Fulltilemap_118
+      213: -3352289292988342489
+    second: roguelikeitems_118
   - first:
-      213: -4146997776373178159
-    second: Fulltilemap_119
+      213: -4816295971151624872
+    second: roguelikeitems_119
   - first:
-      213: -2097015207876800700
-    second: Fulltilemap_120
+      213: 6456552821615767908
+    second: roguelikeitems_120
   - first:
-      213: 4406493093011689264
-    second: Fulltilemap_121
+      213: 7436263057756100572
+    second: roguelikeitems_121
   - first:
-      213: 121272741026565135
-    second: Fulltilemap_122
+      213: 6697685627181721153
+    second: roguelikeitems_122
   - first:
-      213: -2508171486553511056
-    second: Fulltilemap_123
+      213: -1990304278425149406
+    second: roguelikeitems_123
   - first:
-      213: -7420341846767478290
-    second: Fulltilemap_124
+      213: 1498761182286096725
+    second: roguelikeitems_124
   - first:
-      213: 6979234050840187890
-    second: Fulltilemap_125
+      213: 6428547976167035219
+    second: roguelikeitems_125
   - first:
-      213: 3496609554648326510
-    second: Fulltilemap_126
+      213: -2974297893697859306
+    second: roguelikeitems_126
   - first:
-      213: -2115787438481385307
-    second: Fulltilemap_127
+      213: 6627959511736994385
+    second: roguelikeitems_127
   - first:
-      213: 4837252395146868200
-    second: Fulltilemap_128
+      213: 7209405522989167864
+    second: roguelikeitems_128
   - first:
-      213: 1031888171917423959
-    second: Fulltilemap_129
+      213: 14351097548626790
+    second: roguelikeitems_129
   - first:
-      213: 6778737642270897865
-    second: Fulltilemap_130
+      213: -4231790405853422985
+    second: roguelikeitems_130
   - first:
-      213: 3507189655256265538
-    second: Fulltilemap_131
+      213: 5011894087249560131
+    second: roguelikeitems_131
   - first:
-      213: -5074991151187080251
-    second: Fulltilemap_132
+      213: 3670242271967795648
+    second: roguelikeitems_132
   - first:
-      213: 8653707736734041151
-    second: Fulltilemap_133
+      213: -3621983067966343363
+    second: roguelikeitems_133
   - first:
-      213: -1967308144040437703
-    second: Fulltilemap_134
+      213: -4789471759175839616
+    second: roguelikeitems_134
   - first:
-      213: 3833348848893850824
-    second: Fulltilemap_135
+      213: -3894112613718088472
+    second: roguelikeitems_135
   - first:
-      213: 777752048158496448
-    second: Fulltilemap_136
+      213: 4090773430991877999
+    second: roguelikeitems_136
   - first:
-      213: 3481657442339610461
-    second: Fulltilemap_137
+      213: 5127354128253873102
+    second: roguelikeitems_137
   - first:
-      213: 974883063338851069
-    second: Fulltilemap_138
+      213: 4693924805990947888
+    second: roguelikeitems_138
   - first:
-      213: -1529256846065280698
-    second: Fulltilemap_139
+      213: 5767837667700256361
+    second: roguelikeitems_139
   - first:
-      213: -1455892851279198342
-    second: Fulltilemap_140
+      213: -5676312157698576710
+    second: roguelikeitems_140
   - first:
-      213: -6283321940364297978
-    second: Fulltilemap_141
+      213: 5281326655419403437
+    second: roguelikeitems_141
   - first:
-      213: 21636737907960448
-    second: Fulltilemap_142
+      213: -7766777112945323239
+    second: roguelikeitems_142
   - first:
-      213: -5764079822196217904
-    second: Fulltilemap_143
+      213: 1352831844324579089
+    second: roguelikeitems_143
   - first:
-      213: -9210492366157672891
-    second: Fulltilemap_144
+      213: -3870916149372629811
+    second: roguelikeitems_144
   - first:
-      213: -830781791994434302
-    second: Fulltilemap_145
+      213: -677512913134744500
+    second: roguelikeitems_145
   - first:
-      213: -6834594332802802860
-    second: Fulltilemap_146
+      213: -6711770530570057321
+    second: roguelikeitems_146
   - first:
-      213: 2781782959383923833
-    second: Fulltilemap_147
+      213: 7294954860710672295
+    second: roguelikeitems_147
   - first:
-      213: 5015407381020249622
-    second: Fulltilemap_148
+      213: -7624529004083634969
+    second: roguelikeitems_148
   - first:
-      213: 182513874811787716
-    second: Fulltilemap_149
+      213: -6271575659625150586
+    second: roguelikeitems_149
   - first:
-      213: 5440664312429252881
-    second: Fulltilemap_150
+      213: 4621404988872541734
+    second: roguelikeitems_150
   - first:
-      213: -8269829230148845063
-    second: Fulltilemap_151
+      213: -5929452138757002481
+    second: roguelikeitems_151
   - first:
-      213: -3812237281124500166
-    second: Fulltilemap_152
+      213: -2561281892605246340
+    second: roguelikeitems_152
   - first:
-      213: 2173468204615515154
-    second: Fulltilemap_153
+      213: -6491380683623682671
+    second: roguelikeitems_153
   - first:
-      213: -4964872210031546112
-    second: Fulltilemap_154
+      213: -6587628289872118346
+    second: roguelikeitems_154
   - first:
-      213: -3675137833401559900
-    second: Fulltilemap_155
+      213: -6542757716848618614
+    second: roguelikeitems_155
   - first:
-      213: 3135116472112970315
-    second: Fulltilemap_156
+      213: 5332865230346846533
+    second: roguelikeitems_156
   - first:
-      213: -3110885486433828459
-    second: Fulltilemap_157
+      213: -1855789924996760358
+    second: roguelikeitems_157
   - first:
-      213: -1740290104906474211
-    second: Fulltilemap_158
+      213: -6664274196718514445
+    second: roguelikeitems_158
   - first:
-      213: -6978685911127141879
-    second: Fulltilemap_159
+      213: -2046105579474861117
+    second: roguelikeitems_159
   - first:
-      213: 7920739470380897596
-    second: Fulltilemap_160
+      213: 2241540800713797428
+    second: roguelikeitems_160
   - first:
-      213: 8706317172125293620
-    second: Fulltilemap_161
+      213: 5073256630127162947
+    second: roguelikeitems_161
   - first:
-      213: 2495492361617410585
-    second: Fulltilemap_162
+      213: 8227552562717936877
+    second: roguelikeitems_162
   - first:
-      213: -8225191638870374020
-    second: Fulltilemap_163
+      213: -8122629653086756257
+    second: roguelikeitems_163
   - first:
-      213: -6584016476124686621
-    second: Fulltilemap_164
+      213: 5666562085679601472
+    second: roguelikeitems_164
   - first:
-      213: 393402353638271358
-    second: Fulltilemap_165
+      213: 2150524048286702410
+    second: roguelikeitems_165
   - first:
-      213: 6648865556523427470
-    second: Fulltilemap_166
+      213: 2294460610219471581
+    second: roguelikeitems_166
   - first:
-      213: -2139648680787858434
-    second: Fulltilemap_167
+      213: 8948807650805991641
+    second: roguelikeitems_167
   - first:
-      213: 3352792422570195443
-    second: Fulltilemap_168
+      213: -3928262467028987026
+    second: roguelikeitems_168
   - first:
-      213: -8121239804489334530
-    second: Fulltilemap_169
+      213: 5769104080114592155
+    second: roguelikeitems_169
   - first:
-      213: 3593452926906906010
-    second: Fulltilemap_170
+      213: 7326601240900920557
+    second: roguelikeitems_170
   - first:
-      213: 3005182128741849501
-    second: Fulltilemap_171
+      213: -2891329419752394472
+    second: roguelikeitems_171
   - first:
-      213: -6584642434042844386
-    second: Fulltilemap_172
+      213: 4262991925764908395
+    second: roguelikeitems_172
   - first:
-      213: 8267333403774196254
-    second: Fulltilemap_173
+      213: 7560189014438540925
+    second: roguelikeitems_173
   - first:
-      213: -4622714514747273376
-    second: Fulltilemap_174
+      213: -1695863825285149156
+    second: roguelikeitems_174
   - first:
-      213: -2418351531104641843
-    second: Fulltilemap_175
+      213: -3530798324757361716
+    second: roguelikeitems_175
   - first:
-      213: -8990814473383697132
-    second: Fulltilemap_176
+      213: -4659671166698543637
+    second: roguelikeitems_176
   - first:
-      213: -7277299337846483113
-    second: Fulltilemap_177
+      213: -7805572020948263271
+    second: roguelikeitems_177
   - first:
-      213: -9125307945911697144
-    second: Fulltilemap_178
+      213: -7045287644835032355
+    second: roguelikeitems_178
   - first:
-      213: 8688560759563636151
-    second: Fulltilemap_179
+      213: -319862700543992521
+    second: roguelikeitems_179
   - first:
-      213: -7925030773252404542
-    second: Fulltilemap_180
+      213: 3800374004105114665
+    second: roguelikeitems_180
   - first:
-      213: 4543287853772687641
-    second: Fulltilemap_181
+      213: -2734440890014416768
+    second: roguelikeitems_181
   - first:
-      213: 5079625285973342298
-    second: Fulltilemap_182
+      213: -1383706710106250191
+    second: roguelikeitems_182
   - first:
-      213: 3107016747266068003
-    second: Fulltilemap_183
+      213: -5679564218712248794
+    second: roguelikeitems_183
   - first:
-      213: 7209966657337145593
-    second: Fulltilemap_184
+      213: 5121140597741642268
+    second: roguelikeitems_184
   - first:
-      213: -3482865383591827753
-    second: Fulltilemap_185
+      213: 6932378452087618321
+    second: roguelikeitems_185
   - first:
-      213: 3123798226613704158
-    second: Fulltilemap_186
+      213: 5664102782955408418
+    second: roguelikeitems_186
   - first:
-      213: 6043362827538704318
-    second: Fulltilemap_187
+      213: 645464439029500249
+    second: roguelikeitems_187
   - first:
-      213: -3856362374162022066
-    second: Fulltilemap_188
+      213: -3712470566830054415
+    second: roguelikeitems_188
   - first:
-      213: 7121218578960901247
-    second: Fulltilemap_189
+      213: -6172193056791255061
+    second: roguelikeitems_189
   - first:
-      213: -3012025603016702743
-    second: Fulltilemap_190
+      213: -3826573689053516219
+    second: roguelikeitems_190
+  - first:
+      213: 4284962405150526408
+    second: roguelikeitems_191
+  - first:
+      213: 6252951114005466024
+    second: roguelikeitems_192
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -619,7 +625,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -662,2533 +668,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fulltilemap_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91bb544a3c8eb2ec0800000000000000
-      internalID: -3590520350925538535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd766fe503c7ea830800000000000000
-      internalID: 4084338459265099741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4739facf860081c0800000000000000
-      internalID: -4503592412715075763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16c02e55c57916020800000000000000
-      internalID: 2333312504788290657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e39781025b192800800000000000000
-      internalID: 588031265375491042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cff49521cc32fcfc0800000000000000
-      internalID: -3472517428291219460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a1a44030b9119030800000000000000
-      internalID: 3499606629958328744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 960dcbdbaca3bafc0800000000000000
-      internalID: -3482625244399873943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 490d4ce851314d5b0800000000000000
-      internalID: -5344625874471432044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de2e94c3f94c9d510800000000000000
-      internalID: 1574505732933018349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_10
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84d6c214a7e3c44a0800000000000000
-      internalID: -6607837858458997432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_11
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a877e187cbb9c5a60800000000000000
-      internalID: 7664171899649161098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_12
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ea7b47564e18c010800000000000000
-      internalID: 1209249787410086625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_13
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22311d74f5aa275e0800000000000000
-      internalID: -1913279565475540190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_14
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dc568e1ac0e92290800000000000000
-      internalID: -7914547711426798379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_15
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f061d5efdf6c4d460800000000000000
-      internalID: 7265650893051991567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f051bf346f9dce0c0800000000000000
-      internalID: -4545018272197962481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_17
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 301c21a773f4a30e0800000000000000
-      internalID: -2289430360874630909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_18
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a14b81e9cefdef280800000000000000
-      internalID: -9007515997336718310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_19
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ad7a972bb6867f90800000000000000
-      internalID: -6956224436045709918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_20
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b8be974be2f797e0800000000000000
-      internalID: -1758670037132068687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_21
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4f02077dfb06efe0800000000000000
-      internalID: -1160226670750068913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e3cc03e60380b170800000000000000
-      internalID: 8192191787789239272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_23
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d468ef7d9e40b810800000000000000
-      internalID: 1779008291174114512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_24
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7f96735de14f8ae0800000000000000
-      internalID: -1544943659601453190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_25
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 717a572ccf95c1380800000000000000
-      internalID: -8999219013263972585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_26
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3dffff00aa7d8060800000000000000
-      internalID: 6957351827239075134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_27
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50cabddae9f924ae0800000000000000
-      internalID: -1566514216501007355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_28
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7c99859ba64152d0800000000000000
-      internalID: -3291772149868946309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_29
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99a947046b7eb1400800000000000000
-      internalID: 296084970474347161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_30
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 637616aeb0be80500800000000000000
-      internalID: 362798206412744502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_31
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4a2b7cd028a58860800000000000000
-      internalID: 7531610810938501707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_32
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1aabbee5569793f0800000000000000
-      internalID: -894080705188091361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_33
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faa843d1407359630800000000000000
-      internalID: 3933110340387375791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_34
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00418a007c178a3c0800000000000000
-      internalID: -4348100340702768128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_35
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84cd42ed37aa546c0800000000000000
-      internalID: -4159731266181866424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_36
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bac15a6ca784e14f0800000000000000
-      internalID: -856167186997896021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_37
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a7d62fc86672bed0800000000000000
-      internalID: -2399725458910947422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_38
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e11418954ed54440800000000000000
-      internalID: 4919582558457696744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_39
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ae52d1c44510f200800000000000000
-      internalID: 211692567540162215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_40
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1906abfaeadc3d090800000000000000
-      internalID: -8010833162005749615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_41
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bc30a279cb4fb050800000000000000
-      internalID: 5818452572169583795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_42
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfaaf1997fa761270800000000000000
-      internalID: 8220893373655919355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_43
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dda88e6cb4a5db440800000000000000
-      internalID: 4953214446683589341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_44
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0307e711af4685f0800000000000000
-      internalID: -754828334228634870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_45
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 137a9712e61166270800000000000000
-      internalID: 8243295332653967153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_46
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 818be7b3b1d1310b0800000000000000
-      internalID: -5759227495677249512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_47
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58666b2a3c665ef20800000000000000
-      internalID: 3451277679883871877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_48
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70da3e4fa96b7d610800000000000000
-      internalID: 1645984965476986119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_49
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf5177de06289ab60800000000000000
-      internalID: 7757875185934865916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_50
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eaf224f4eb330000800000000000000
-      internalID: 910279464647399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_51
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6df03b80baeabad00800000000000000
-      internalID: 985072993119178710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_52
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77446d8425ee7ddd0800000000000000
-      internalID: -2461236634157955977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_53
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1439cb3db2d624900800000000000000
-      internalID: 667215729807627073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_54
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1eeeed5ae386139e0800000000000000
-      internalID: -1643417770733408543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_55
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cc2f143d1b35ffe0800000000000000
-      internalID: -1155952732736115512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_56
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59a1ee5ba1b295e00800000000000000
-      internalID: 1033904983179664021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_57
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e53a8147b6f77f6c0800000000000000
-      internalID: -4109676035466288290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_58
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 167115a34197cffe0800000000000000
-      internalID: -1153914276728989855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_59
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 320d7ddb94ced1ac0800000000000000
-      internalID: -3882687502261694429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_60
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1eb6d742fe3a6e6d0800000000000000
-      internalID: -2961499457444811807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_61
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb6516328309b4a20800000000000000
-      internalID: 3047688143632422590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_62
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c15e56518fd3a77b0800000000000000
-      internalID: -5225796281889856228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_63
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fd0242aefd0c4a90800000000000000
-      internalID: -7328467106343547404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_64
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc4a3984a20fa9ac0800000000000000
-      internalID: -3847498867237739317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_65
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f16ba1667e1aea70800000000000000
-      internalID: 8856925110971097590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_66
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03874083903a0da30800000000000000
-      internalID: 4238066509345486896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_67
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7dc7c64b6cd01150800000000000000
-      internalID: 5841411070006644095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_68
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7db6e2530f7babd90800000000000000
-      internalID: -7081145221774414889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_69
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e91c9601ccf8c560800000000000000
-      internalID: 7334389899142633960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_70
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcda4adab4bc82030800000000000000
-      internalID: 3470247038785203659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_71
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fd35b94175322fe0800000000000000
-      internalID: -1215350188752421383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_72
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb282270acb60bec0800000000000000
-      internalID: -3553221590548053313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_73
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33c138b25f4d2c6c0800000000000000
-      internalID: -4124500159255864269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_74
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e4dc0ba6ce1cbb20800000000000000
-      internalID: 3151427677874607334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_75
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb5669fbf24584880800000000000000
-      internalID: -8626552522173684289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_76
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b40f364eb80a9e010800000000000000
-      internalID: 1218681696873082955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_77
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16a1ccd3504c15bd0800000000000000
-      internalID: -2643115979499103647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_78
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c477aa650f68a5410800000000000000
-      internalID: 1466632995466803020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_79
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e774a2bbf60c40d40800000000000000
-      internalID: 5549772226941306750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_80
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2557d04ef174ec60800000000000000
-      internalID: 7846521787609732396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_81
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 479a6489248b3c500800000000000000
-      internalID: 415378186810337652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_82
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d2743c590cb5f030800000000000000
-      internalID: 3527932631502320338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_83
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fcede64de32a3d00800000000000000
-      internalID: 953113773146500339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_84
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e258e280d8a9c5cb0800000000000000
-      internalID: -4873850766203386578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_85
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fce120ab192af4940800000000000000
-      internalID: 5282619634703539919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_86
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3671c4fc090580b0800000000000000
-      internalID: -5727161399881140675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_87
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3c6c53a5f47fe360800000000000000
-      internalID: 7201102927545265213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_88
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9ba50d7b5eda32e0800000000000000
-      internalID: -2145157787967706211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_89
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 946c7ac78ee386d30800000000000000
-      internalID: 4424855802136217161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_90
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f61e52d916f3c2860800000000000000
-      internalID: 7506444367400657263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_91
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1830a6c886913ba30800000000000000
-      internalID: 4229752411854078849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_92
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a469929ad6be0070800000000000000
-      internalID: 8074592231800530085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_93
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f189436be5f11cc0800000000000000
-      internalID: -3741939424036290055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_94
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7889d46f3c009c040800000000000000
-      internalID: 4668263330397132935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_95
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6902a20c157d6ff60800000000000000
-      internalID: 8067872528597131414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_96
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba1d965fcd25efbd0800000000000000
-      internalID: -2594545226355191381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_97
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18ca8a55b3c120e40800000000000000
-      internalID: 5621086326077566081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_98
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45401c048badb67e0800000000000000
-      internalID: -1771081543544929196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_99
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 850c4a036d40c84b0800000000000000
-      internalID: -5436965332157415336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_100
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a8949a6429d754f0800000000000000
-      internalID: -839964055051134809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_101
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73685995c86c708e0800000000000000
-      internalID: -1727193625972603337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_102
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3206305c12dd491d0800000000000000
-      internalID: -3344805486120443869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_103
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f0923ea29e77bdc0800000000000000
-      internalID: -3623288206743400208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_104
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 323328c6f811e9910800000000000000
-      internalID: 1845932204966949667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_105
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 090615ebf3a9d6160800000000000000
-      internalID: 7020436992707092624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_106
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 758a0a02098467a50800000000000000
-      internalID: 6518477294525261911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_107
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2adcd4f46f648000800000000000000
-      internalID: 37277176321333807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_108
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98175116703b438d0800000000000000
-      internalID: -2867470218453225079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_109
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe582e558ad154d60800000000000000
-      internalID: 7873732132359800303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_110
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed1691a84f77565f0800000000000000
-      internalID: -764072669596786210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_111
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 296e198bd5bb16e10800000000000000
-      internalID: 2189236905081693842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_112
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7595062c3cd9fbe0800000000000000
-      internalID: -1442880054701484676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_113
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa3142fc758204360800000000000000
-      internalID: 7151760565866861487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_114
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 489924bff3f8496d0800000000000000
-      internalID: -2984603148078638716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_115
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77846e831dc63b910800000000000000
-      internalID: 1851943517637986423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_116
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e4bd4a6bf09f9160800000000000000
-      internalID: 7034500552470672609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_117
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f43885ed310e32a70800000000000000
-      internalID: 8801124472751424335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_118
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25f908625b901eb00800000000000000
-      internalID: 855976077816799058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_119
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d021fe7e77e276c0800000000000000
-      internalID: -4146997776373178159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_120
+      name: roguelikeitems_0
       rect:
         serializedVersion: 2
         x: 0
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3196,20 +682,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44f49e567c7e5e2e0800000000000000
-      internalID: -2097015207876800700
+      spriteID: c955c8b6152ec4050800000000000000
+      internalID: 5786248460588832156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_121
+      name: roguelikeitems_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1f79506bf575ba0800000000000000
+      internalID: -6100301934867516981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_2
       rect:
         serializedVersion: 2
         x: 32
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3217,20 +724,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f8c2a1f12072d30800000000000000
-      internalID: 4406493093011689264
+      spriteID: 38f46609a336d1820800000000000000
+      internalID: 2890575639023603587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_122
+      name: roguelikeitems_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b110424d4c7c960800000000000000
+      internalID: 7622277309764017006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_4
       rect:
         serializedVersion: 2
         x: 64
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3238,20 +766,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0c83d95ae8dea100800000000000000
-      internalID: 121272741026565135
+      spriteID: 9103f9a7919834a20800000000000000
+      internalID: 3045428515557027865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_123
+      name: roguelikeitems_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7f8bcab6b686010800000000000000
+      internalID: 1182313012388231118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_6
       rect:
         serializedVersion: 2
         x: 96
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3259,20 +808,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07be634625f213dd0800000000000000
-      internalID: -2508171486553511056
+      spriteID: a123475298bd0c920800000000000000
+      internalID: 3008645933168865818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_124
+      name: roguelikeitems_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c53b10d32f680580800000000000000
+      internalID: -8860710067245468218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_8
       rect:
         serializedVersion: 2
         x: 128
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3280,20 +850,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee9557fa766a50990800000000000000
-      internalID: -7420341846767478290
+      spriteID: 5394f098e450ba9a0800000000000000
+      internalID: -6220872625417139915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_125
+      name: roguelikeitems_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f83384f641663c0800000000000000
+      internalID: -4366780320503853162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_10
       rect:
         serializedVersion: 2
         x: 160
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3301,20 +892,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f3d3a444683bd060800000000000000
-      internalID: 6979234050840187890
+      spriteID: b231031ece4377ec0800000000000000
+      internalID: -3569325987672878293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_126
+      name: roguelikeitems_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8616650a06f1f1860800000000000000
+      internalID: 7502750004089872744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_12
       rect:
         serializedVersion: 2
         x: 192
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3322,20 +934,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61ec073dd3768030800000000000000
-      internalID: 3496609554648326510
+      spriteID: 4c56996dc58a548c0800000000000000
+      internalID: -4015618376040094268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_127
+      name: roguelikeitems_13
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
-        width: 32
-        height: 32
+        x: 0
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3343,20 +955,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a8551dd88633a2e0800000000000000
-      internalID: -2115787438481385307
+      spriteID: 427bb6b9d79605970800000000000000
+      internalID: 8741602864925488932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_128
+      name: roguelikeitems_14
       rect:
         serializedVersion: 2
-        x: 256
-        y: 224
-        width: 32
-        height: 32
+        x: 16
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3364,20 +976,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e5f2adac6f512340800000000000000
-      internalID: 4837252395146868200
+      spriteID: 4fb874296af824120800000000000000
+      internalID: 2396635897296030708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_129
+      name: roguelikeitems_15
       rect:
         serializedVersion: 2
-        x: 384
-        y: 224
-        width: 32
-        height: 32
+        x: 32
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3385,20 +997,230 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755b01f33d0025e00800000000000000
-      internalID: 1031888171917423959
+      spriteID: e422773a7aa73c060800000000000000
+      internalID: 6972551508520280654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_130
+      name: roguelikeitems_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44edafc2a4a4267b0800000000000000
+      internalID: -5232538134608421308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff1624bac1f4ce00800000000000000
+      internalID: 1064241264874364920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_18
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9b8f822a97cc280800000000000000
+      internalID: -9021702216150894085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c8fa95c39394fb0800000000000000
+      internalID: -4663133007799939943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb82cab1f7a8d640800000000000000
+      internalID: 5105014834286726108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a78b084e2be01110800000000000000
+      internalID: 1229741282281883554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_22
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab8ebd59bf2c85c0800000000000000
+      internalID: -4211939078310032478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef0a0a6226e36d70800000000000000
+      internalID: 9035318312917667809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_24
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a674a0e9f8af9390800000000000000
+      internalID: -7809337437667952992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458243e59501d37f0800000000000000
+      internalID: -631330396743391148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_26
       rect:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3406,20 +1228,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c6302968f9e21e50800000000000000
-      internalID: 6778737642270897865
+      spriteID: 992b1b2e6e1c475e0800000000000000
+      internalID: -1912690744335682919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_131
+      name: roguelikeitems_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7676555450591820800000000000000
+      internalID: 2889428959074088571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_28
       rect:
         serializedVersion: 2
         x: 32
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3427,20 +1270,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2437979d86a0ca030800000000000000
-      internalID: 3507189655256265538
+      spriteID: 119628dd10d4928e0800000000000000
+      internalID: -1717757112458516207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_132
+      name: roguelikeitems_29
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123b4c30db653abe0800000000000000
+      internalID: -1467233683780619487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_30
       rect:
         serializedVersion: 2
         x: 64
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3448,20 +1312,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb4e3bbf620299b0800000000000000
-      internalID: -5074991151187080251
+      spriteID: 75c7c7e3b2546c010800000000000000
+      internalID: 1208729602029812823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_133
+      name: roguelikeitems_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada6f757aa2b10c20800000000000000
+      internalID: 3171012057831008986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_32
       rect:
         serializedVersion: 2
         x: 96
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3469,20 +1354,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3405165655281870800000000000000
-      internalID: 8653707736734041151
+      spriteID: a3f39e1b8bcb77e60800000000000000
+      internalID: 7960038367845498682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_134
+      name: roguelikeitems_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b02692f7359399d0800000000000000
+      internalID: -2768705278377058119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_34
       rect:
         serializedVersion: 2
         x: 128
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3490,20 +1396,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9389cbe8aa7b2b4e0800000000000000
-      internalID: -1967308144040437703
+      spriteID: 63b03ea9bdc3cf490800000000000000
+      internalID: -7711221548071056586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_135
+      name: roguelikeitems_35
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4895441b85875410800000000000000
+      internalID: 1465787036119439438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_36
       rect:
         serializedVersion: 2
         x: 160
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3511,20 +1438,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c47876d77ac23530800000000000000
-      internalID: 3833348848893850824
+      spriteID: 24d67d41921f7b1e0800000000000000
+      internalID: -2182010335692100286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_136
+      name: roguelikeitems_37
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d72902ae40206640800000000000000
+      internalID: 5071088702517225425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_38
       rect:
         serializedVersion: 2
         x: 192
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3532,20 +1480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c6d1d9fd512bca00800000000000000
-      internalID: 777752048158496448
+      spriteID: f563a19d6955381f0800000000000000
+      internalID: -1043896582243994017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_137
+      name: roguelikeitems_39
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
-        width: 32
-        height: 32
+        x: 0
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3553,20 +1501,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5f5f384ff4515030800000000000000
-      internalID: 3481657442339610461
+      spriteID: c4fd726b46cf81200800000000000000
+      internalID: 151148096999907148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_138
+      name: roguelikeitems_40
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
-        width: 32
-        height: 32
+        x: 16
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3574,20 +1522,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfa5bdf1bfa778d00800000000000000
-      internalID: 974883063338851069
+      spriteID: c4c6d048e74289c60800000000000000
+      internalID: 7825044478356188236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_139
+      name: roguelikeitems_41
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
-        width: 32
-        height: 32
+        x: 32
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3595,20 +1543,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649d1f7300df6cae0800000000000000
-      internalID: -1529256846065280698
+      spriteID: f10efeac473f574b0800000000000000
+      internalID: -5443176891660902369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_140
+      name: roguelikeitems_42
       rect:
         serializedVersion: 2
-        x: 320
-        y: 192
-        width: 32
-        height: 32
+        x: 48
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3616,20 +1564,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7709785a21abcbe0800000000000000
-      internalID: -1455892851279198342
+      spriteID: f4e46c112dde34f80800000000000000
+      internalID: -8123387816349118897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_141
+      name: roguelikeitems_43
       rect:
         serializedVersion: 2
-        x: 352
-        y: 192
-        width: 32
-        height: 32
+        x: 64
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3637,20 +1585,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 609fa275cf72dc8a0800000000000000
-      internalID: -6283321940364297978
+      spriteID: c52214ab16eefa3a0800000000000000
+      internalID: -6651836021098864036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_142
+      name: roguelikeitems_44
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 32
-        height: 32
+        x: 80
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3658,20 +1606,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08a2a1d9f7edc4000800000000000000
-      internalID: 21636737907960448
+      spriteID: 3a8f6866bfa9c9a80800000000000000
+      internalID: -8458715595561043805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_143
+      name: roguelikeitems_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5496b5fccf30c5010800000000000000
+      internalID: 1178821586809743685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_46
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb46b41ccf784e10800000000000000
+      internalID: 2182134533958552500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb302b41aeaabf00800000000000000
+      internalID: 1133410264010472436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_48
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dfd3ba57378e0a0800000000000000
+      internalID: -6852099883822875376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_49
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9837cd40592f700800000000000000
+      internalID: 572683950740441514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_50
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fd499cafda39df0800000000000000
+      internalID: -174604667901911216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55df272138c77600800000000000000
+      internalID: 466061199892534620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_52
       rect:
         serializedVersion: 2
         x: 0
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3679,20 +1774,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d76ffce0ffd100b0800000000000000
-      internalID: -5764079822196217904
+      spriteID: 90c306e7346062420800000000000000
+      internalID: 2604776321433222153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_144
+      name: roguelikeitems_53
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8267a934c289eac10800000000000000
+      internalID: 2066756594889815592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_54
       rect:
         serializedVersion: 2
         x: 32
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3700,20 +1816,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54e89b40ef1cd2080800000000000000
-      internalID: -9210492366157672891
+      spriteID: 68eb2f6241610fe80800000000000000
+      internalID: -8146987450104627578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_145
+      name: roguelikeitems_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf49716b39e587f0800000000000000
+      internalID: -610825733191151680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_56
       rect:
         serializedVersion: 2
         x: 64
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3721,20 +1858,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20d2f42ac587874f0800000000000000
-      internalID: -830781791994434302
+      spriteID: be0a47e55e762edd0800000000000000
+      internalID: -2458288211760996117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_146
+      name: roguelikeitems_57
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d7ecac24ed63ed0800000000000000
+      internalID: -2434514170095436410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_58
       rect:
         serializedVersion: 2
         x: 96
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3742,20 +1900,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45b14616aa4a621a0800000000000000
-      internalID: -6834594332802802860
+      spriteID: dc2aaf0cdbd61de00800000000000000
+      internalID: 1067755248417415885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_147
+      name: roguelikeitems_59
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b661d61eae3ac4da0800000000000000
+      internalID: -5959207977718311317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_60
       rect:
         serializedVersion: 2
         x: 128
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3763,20 +1942,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97c4050fcd0ea9620800000000000000
-      internalID: 2781782959383923833
+      spriteID: d388acd167daecb20800000000000000
+      internalID: 3156651111650854973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_148
+      name: roguelikeitems_61
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5936d5ced5ced40800000000000000
+      internalID: 5614966105184638380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_62
       rect:
         serializedVersion: 2
         x: 160
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3784,20 +1984,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61e8595b07e4a9540800000000000000
-      internalID: 5015407381020249622
+      spriteID: f722c44f170fc99a0800000000000000
+      internalID: -6224836212712267137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_149
+      name: roguelikeitems_63
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4454e4f156607730800000000000000
+      internalID: 3994805371664618572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_64
       rect:
         serializedVersion: 2
         x: 192
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3805,20 +2026,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c99cb2f66b688200800000000000000
-      internalID: 182513874811787716
+      spriteID: de8f345abefd0fdd0800000000000000
+      internalID: -2454215593733916435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_150
+      name: roguelikeitems_65
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 32
-        height: 32
+        x: 0
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3826,20 +2047,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1119d74cd5f118b40800000000000000
-      internalID: 5440664312429252881
+      spriteID: c44f0e6d9c4aaae30800000000000000
+      internalID: 4515602763192792140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_151
+      name: roguelikeitems_66
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ebc7750710bf710800000000000000
+      internalID: 1727976464042475106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc7700c163707c60800000000000000
+      internalID: 7813872217158548730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_68
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b28baea5c65b8810800000000000000
+      internalID: 1768602685712073393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80b7cc5d885b25d0800000000000000
+      internalID: -3086275755462119284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_70
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b382c48f1cac5e660800000000000000
+      internalID: 7414555295978629179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_71
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7324ca8c959046fb0800000000000000
+      internalID: -4655585833570778569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_72
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0436a0811c2cc92f0800000000000000
+      internalID: -964682085576318144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef55555aa4bb287e0800000000000000
+      internalID: -1764642174700005890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efb4a42fa32518b0800000000000000
+      internalID: -5182196561078861849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_75
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02ab0683255c95c0800000000000000
+      internalID: -4207394340809760244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_76
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258df54794408c3a0800000000000000
+      internalID: -6645056536653604782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_77
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7957b9c7f76a1e0800000000000000
+      internalID: -2186920395880949784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_78
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3847,20 +2320,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f106df612aab3d80800000000000000
-      internalID: -8269829230148845063
+      spriteID: 6f95c1004b38fe550800000000000000
+      internalID: 6192312821776931318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_152
+      name: roguelikeitems_79
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb23a2a79ba19660800000000000000
+      internalID: 7390877131248708581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_80
       rect:
         serializedVersion: 2
         x: 32
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3868,20 +2362,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3db2131466381bc0800000000000000
-      internalID: -3812237281124500166
+      spriteID: 79f7b6de4a2625890800000000000000
+      internalID: -7470800371356827753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_153
+      name: roguelikeitems_81
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7762b747bd8ec7800800000000000000
+      internalID: 611619678665254519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_82
       rect:
         serializedVersion: 2
         x: 64
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3889,20 +2404,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21cb6ba01d5b92e10800000000000000
-      internalID: 2173468204615515154
+      spriteID: 277f0c30fc614bec0800000000000000
+      internalID: -3552189127711459470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_154
+      name: roguelikeitems_83
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9269a3821445d5100800000000000000
+      internalID: 98327405696554537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_84
       rect:
         serializedVersion: 2
         x: 96
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3910,20 +2446,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0017cdda70b391bb0800000000000000
-      internalID: -4964872210031546112
+      spriteID: aefc7166a9bd26bb0800000000000000
+      internalID: -4944147984715100182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_155
+      name: roguelikeitems_85
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35db458dd80503700800000000000000
+      internalID: 518002527297650003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_86
       rect:
         serializedVersion: 2
         x: 128
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3931,20 +2488,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4508bbc994ffcc0800000000000000
-      internalID: -3675137833401559900
+      spriteID: 4cb41a73d5b018550800000000000000
+      internalID: 6161218260212730820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_156
+      name: roguelikeitems_87
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ad179a0e65c5d90800000000000000
+      internalID: -7107710588982011371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_88
       rect:
         serializedVersion: 2
         x: 160
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3952,20 +2530,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4af4c122db228b20800000000000000
-      internalID: 3135116472112970315
+      spriteID: 61ee04394cb9f3e20800000000000000
+      internalID: 3332553517863857686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_157
+      name: roguelikeitems_89
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3f4ac29954d1ee0800000000000000
+      internalID: -1288797394176773154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_90
       rect:
         serializedVersion: 2
         x: 192
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3973,20 +2572,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591813cd12ae3d4d0800000000000000
-      internalID: -3110885486433828459
+      spriteID: 5712cffb3a4126ac0800000000000000
+      internalID: -3863502836797267595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_158
+      name: roguelikeitems_91
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
-        width: 32
-        height: 32
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3994,20 +2593,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d1ceabe5f39d7e0800000000000000
-      internalID: -1740290104906474211
+      spriteID: 968d0b2d31f1add00800000000000000
+      internalID: 998144437415630953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_159
+      name: roguelikeitems_92
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58c45b0a870fe5c0800000000000000
+      internalID: -4184117239326914467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_93
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5852586c243e0f4c0800000000000000
+      internalID: -4255651771927157371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_94
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbce5b9e59b627b90800000000000000
+      internalID: -7245610558870393668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_95
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a6a211592677460800000000000000
+      internalID: 7239363318399003286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_96
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d0ff19828b5d380800000000000000
+      internalID: -8947042600314008167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_97
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed141a62bb4909e0800000000000000
+      internalID: -1654708158425981466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_98
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e245cee7c9fbc1f0800000000000000
+      internalID: -1023449853196942615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_99
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e934c8be7e879a0800000000000000
+      internalID: -6234978685237879147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_100
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332919a2bc9440680800000000000000
+      internalID: -8789819435778993613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_101
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d312c2115d57f470800000000000000
+      internalID: 8428307830435615696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_102
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896d04dd8216a2260800000000000000
+      internalID: 7073572992877385368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_103
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1244adc752e22e0800000000000000
+      internalID: -2148738754041077324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_104
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4015,20 +2866,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9025e34732ab62f90800000000000000
-      internalID: -6978685911127141879
+      spriteID: 46e5f008e113bf340800000000000000
+      internalID: 4898563026762817124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_160
+      name: roguelikeitems_105
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea44f11cfbba0b150800000000000000
+      internalID: 5886393553040393390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_106
       rect:
         serializedVersion: 2
         x: 32
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4036,20 +2908,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c35187a159e1ced60800000000000000
-      internalID: 7920739470380897596
+      spriteID: bba1b31c94f1cba70800000000000000
+      internalID: 8843978169883761339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_161
+      name: roguelikeitems_107
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a38fdc0e9f03cc90800000000000000
+      internalID: -7150854611838991453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_108
       rect:
         serializedVersion: 2
         x: 64
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4057,20 +2950,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c596a075d03d870800000000000000
-      internalID: 8706317172125293620
+      spriteID: 9452afa8032b6e440800000000000000
+      internalID: 4964851560782374217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_162
+      name: roguelikeitems_109
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd45bb92d3bad7a0800000000000000
+      internalID: -6351566607315808771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_110
       rect:
         serializedVersion: 2
         x: 96
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4078,20 +2992,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a08e9c415c1a220800000000000000
-      internalID: 2495492361617410585
+      spriteID: 4f375631b8d3b7900800000000000000
+      internalID: 683207436011926516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_163
+      name: roguelikeitems_111
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e24c2c24f9f6c560800000000000000
+      internalID: 7333823870327866089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_112
       rect:
         serializedVersion: 2
         x: 128
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4099,20 +3034,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c794e9b88cf3add80800000000000000
-      internalID: -8225191638870374020
+      spriteID: 967f8c15459091600800000000000000
+      internalID: 439392696399361897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_164
+      name: roguelikeitems_113
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389c4d2fe44d30480800000000000000
+      internalID: -8934063800226363005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_114
       rect:
         serializedVersion: 2
         x: 160
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4120,20 +3076,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e6d44906efd0a4a0800000000000000
-      internalID: -6584016476124686621
+      spriteID: 7041cf91d318d1a70800000000000000
+      internalID: 8799331346380755975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_165
+      name: roguelikeitems_115
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e43075c02f8be600800000000000000
+      internalID: 498649554668762341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_116
       rect:
         serializedVersion: 2
         x: 192
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4141,20 +3118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7969663b55a57500800000000000000
-      internalID: 393402353638271358
+      spriteID: afe88fe29841eb400800000000000000
+      internalID: 341733201157852922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_166
+      name: roguelikeitems_117
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
-        height: 32
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4162,20 +3139,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e86a8e71ff3854c50800000000000000
-      internalID: 6648865556523427470
+      spriteID: 696196393965f17a0800000000000000
+      internalID: -6404304953264236906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_167
+      name: roguelikeitems_118
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f951336a64a71d0800000000000000
+      internalID: -3352289292988342489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_119
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855cc520554192db0800000000000000
+      internalID: -4816295971151624872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_120
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46134fd35984a9950800000000000000
+      internalID: 6456552821615767908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_121
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd799ed1ad9e23760800000000000000
+      internalID: 7436263057756100572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_122
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146e7619795f2fc50800000000000000
+      internalID: 6697685627181721153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_123
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2206789cdc40164e0800000000000000
+      internalID: -1990304278425149406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_124
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559ae41ca5bacc410800000000000000
+      internalID: 1498761182286096725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_125
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3511efc035ac63950800000000000000
+      internalID: 6428547976167035219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_126
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61152fdf2db29b6d0800000000000000
+      internalID: -2974297893697859306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_127
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a41ca3f0e3bfb50800000000000000
+      internalID: 6627959511736994385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_128
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f432874024fc0460800000000000000
+      internalID: 7209405522989167864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_129
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bd5874f3cf23000800000000000000
+      internalID: 14351097548626790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_130
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4183,20 +3412,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efba1857cd07e42e0800000000000000
-      internalID: -2139648680787858434
+      spriteID: 77a533ffb09a545c0800000000000000
+      internalID: -4231790405853422985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_168
+      name: roguelikeitems_131
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34204624e13dd8540800000000000000
+      internalID: 5011894087249560131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_132
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4204,20 +3454,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f9fae8c1f2878e20800000000000000
-      internalID: 3352792422570195443
+      spriteID: 0c9534c86e15fe230800000000000000
+      internalID: 3670242271967795648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_169
+      name: roguelikeitems_133
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37f26bf6912cbdc0800000000000000
+      internalID: -3621983067966343363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_134
       rect:
         serializedVersion: 2
         x: 64
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4225,20 +3496,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef086ad0d6f8b4f80800000000000000
-      internalID: -8121239804489334530
+      spriteID: 0801f8c8fc0688db0800000000000000
+      internalID: -4789471759175839616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_170
+      name: roguelikeitems_135
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e427ffa53555f9c0800000000000000
+      internalID: -3894112613718088472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_136
       rect:
         serializedVersion: 2
         x: 96
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4246,20 +3538,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a95bf59e5628ed130800000000000000
-      internalID: 3593452926906906010
+      spriteID: f6770eaf2c855c830800000000000000
+      internalID: 4090773430991877999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_171
+      name: roguelikeitems_137
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb643ce965082740800000000000000
+      internalID: 5127354128253873102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_138
       rect:
         serializedVersion: 2
         x: 128
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4267,20 +3580,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d999205593d84b920800000000000000
-      internalID: 3005182128741849501
+      spriteID: 03c1c77ddbb242140800000000000000
+      internalID: 4693924805990947888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_172
+      name: roguelikeitems_139
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e2469acc97b0050800000000000000
+      internalID: 5767837667700256361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_140
       rect:
         serializedVersion: 2
         x: 160
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4288,20 +3622,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ba9e9d796ae94a0800000000000000
-      internalID: -6584642434042844386
+      spriteID: abe252eba20b931b0800000000000000
+      internalID: -5676312157698576710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_173
+      name: roguelikeitems_141
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac43178c9a0b4940800000000000000
+      internalID: 5281326655419403437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_142
       rect:
         serializedVersion: 2
         x: 192
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4309,20 +3664,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1a9ea3bde77bb270800000000000000
-      internalID: 8267333403774196254
+      spriteID: 913924dad5dd63490800000000000000
+      internalID: -7766777112945323239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_174
+      name: roguelikeitems_143
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4330,20 +3685,251 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06f427a14a1d8dfb0800000000000000
-      internalID: -4622714514747273376
+      spriteID: 1179dc1156936c210800000000000000
+      internalID: 1352831844324579089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_175
+      name: roguelikeitems_144
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc4259654eb74ac0800000000000000
+      internalID: -3870916149372629811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_145
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c0dd9589df896f0800000000000000
+      internalID: -677512913134744500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_146
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799cf6f43400bd2a0800000000000000
+      internalID: -6711770530570057321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_147
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a73b25abc2ec3560800000000000000
+      internalID: 7294954860710672295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_148
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec9eeb644b303690800000000000000
+      internalID: -7624529004083634969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_149
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6878e027a23e6f8a0800000000000000
+      internalID: -6271575659625150586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_150
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62647f42a57822040800000000000000
+      internalID: 4621404988872541734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_151
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b65b402ba56bda0800000000000000
+      internalID: -5929452138757002481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_152
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74cf9d50bf747cd0800000000000000
+      internalID: -2561281892605246340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_153
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d27ca39abf9e5a0800000000000000
+      internalID: -6491380683623682671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_154
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdbbdd19fa0494a0800000000000000
+      internalID: -6587628289872118346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_155
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4351,20 +3937,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc5c7e681a407ed0800000000000000
-      internalID: -2418351531104641843
+      spriteID: a83dac385847335a0800000000000000
+      internalID: -6542757716848618614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_176
+      name: roguelikeitems_156
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5410bd91ca4220a40800000000000000
+      internalID: 5332865230346846533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_157
       rect:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4372,20 +3979,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41526803fd53a3380800000000000000
-      internalID: -8990814473383697132
+      spriteID: adcb1d645e8ee36e0800000000000000
+      internalID: -1855789924996760358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_177
+      name: roguelikeitems_158
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe8aca4dedb383a0800000000000000
+      internalID: -6664274196718514445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_159
       rect:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4393,20 +4021,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 757997b1fc6d10b90800000000000000
-      internalID: -7277299337846483113
+      spriteID: 3c3c472f0d5ca93e0800000000000000
+      internalID: -2046105579474861117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_178
+      name: roguelikeitems_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f27186b7d8b1f10800000000000000
+      internalID: 2241540800713797428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_161
       rect:
         serializedVersion: 2
         x: 96
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4414,20 +4063,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80142e965c46c5180800000000000000
-      internalID: -9125307945911697144
+      spriteID: 346ff1d9604d76640800000000000000
+      internalID: 5073256630127162947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_179
+      name: roguelikeitems_162
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec48afd6732e2270800000000000000
+      internalID: 8227552562717936877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_163
       rect:
         serializedVersion: 2
         x: 128
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4435,20 +4105,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bd40331af7f39870800000000000000
-      internalID: 8688560759563636151
+      spriteID: f52a5b5bd5f964f80800000000000000
+      internalID: -8122629653086756257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_180
+      name: roguelikeitems_164
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04711a6b13ca3ae40800000000000000
+      internalID: 5666562085679601472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_165
       rect:
         serializedVersion: 2
         x: 160
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4456,20 +4147,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ca40461082a40290800000000000000
-      internalID: -7925030773252404542
+      spriteID: a4b501b5a3238dd10800000000000000
+      internalID: 2150524048286702410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_181
+      name: roguelikeitems_166
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2f147b4cf87df10800000000000000
+      internalID: 2294460610219471581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_167
       rect:
         serializedVersion: 2
         x: 192
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4477,20 +4189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 919c77c4b300d0f30800000000000000
-      internalID: 4543287853772687641
+      spriteID: 9d8c695452d803c70800000000000000
+      internalID: 8948807650805991641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_182
+      name: roguelikeitems_168
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4498,20 +4210,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a58788ad8447e7640800000000000000
-      internalID: 5079625285973342298
+      spriteID: e63dc3c59120c79c0800000000000000
+      internalID: -3928262467028987026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_183
+      name: roguelikeitems_169
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99ac774899ff0050800000000000000
+      internalID: 5769104080114592155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_170
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4e5d6b2015da560800000000000000
+      internalID: 7326601240900920557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_171
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811b50f263fefd7d0800000000000000
+      internalID: -2891329419752394472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_172
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b656397f190392b30800000000000000
+      internalID: 4262991925764908395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_173
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d767b606adf2be860800000000000000
+      internalID: 7560189014438540925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_174
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e817206d41778e0800000000000000
+      internalID: -1695863825285149156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_175
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb0b4f61a5100fc0800000000000000
+      internalID: -3530798324757361716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5adca03c5855fb0800000000000000
+      internalID: -4659671166698543637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_177
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e96a64a990da390800000000000000
+      internalID: -7805572020948263271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_178
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2d82de63c1a3e90800000000000000
+      internalID: -7045287644835032355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_179
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d9d2d819e9f8bf0800000000000000
+      internalID: -319862700543992521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_180
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92470508504adb430800000000000000
+      internalID: 3800374004105114665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_181
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4519,20 +4483,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32ecbfb15475e1b20800000000000000
-      internalID: 3107016747266068003
+      spriteID: 080436b8f705d0ad0800000000000000
+      internalID: -2734440890014416768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_184
+      name: roguelikeitems_182
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134eace04161ccce0800000000000000
+      internalID: -1383706710106250191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_183
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4540,20 +4525,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f8bdfc8972fe0460800000000000000
-      internalID: 7209966657337145593
+      spriteID: 62e23a84f622e21b0800000000000000
+      internalID: -5679564218712248794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_185
+      name: roguelikeitems_184
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12e83d9d32f11740800000000000000
+      internalID: 5121140597741642268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_185
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4561,20 +4567,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6218af2606aafc0800000000000000
-      internalID: -3482865383591827753
+      spriteID: 11b314d0971c43060800000000000000
+      internalID: 6932378452087618321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_186
+      name: roguelikeitems_186
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4582,20 +4588,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed51e4fbfe5f95b20800000000000000
-      internalID: 3123798226613704158
+      spriteID: 22ccb5da87fea9e40800000000000000
+      internalID: 5664102782955408418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_187
+      name: roguelikeitems_187
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959008bcc7625f800800000000000000
+      internalID: 645464439029500249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_188
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4603,20 +4630,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7ae38f8765ed350800000000000000
-      internalID: 6043362827538704318
+      spriteID: 1f3600160b7aa7cc0800000000000000
+      internalID: -3712470566830054415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_188
+      name: roguelikeitems_189
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be723d4dd17f75aa0800000000000000
+      internalID: -6172193056791255061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_190
       rect:
         serializedVersion: 2
         x: 160
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4624,20 +4672,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4104e24ad27b7ac0800000000000000
-      internalID: -3856362374162022066
+      spriteID: 54eeb1df08745eac0800000000000000
+      internalID: -3826573689053516219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fulltilemap_189
+      name: roguelikeitems_191
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb86e2da9e377b30800000000000000
+      internalID: 4284962405150526408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeitems_192
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4645,29 +4714,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7460e65196a3d260800000000000000
-      internalID: 7121218578960901247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fulltilemap_190
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e4cec52ca22336d0800000000000000
-      internalID: -3012025603016702743
+      spriteID: 8abcd2c98e1f6c650800000000000000
+      internalID: 6252951114005466024
       vertices: []
       indices: 
       edges: []

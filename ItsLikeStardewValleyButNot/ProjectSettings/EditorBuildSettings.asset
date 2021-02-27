@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 63e0599ab7418704fb88835a168185a3
+  - enabled: 1
+    path: Assets/Scenes/Mines.unity
+    guid: f6d08af7dd69c394780e93f794fd80dd
   m_configObjects: {}
