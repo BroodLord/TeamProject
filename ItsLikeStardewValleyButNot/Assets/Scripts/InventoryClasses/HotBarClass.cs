@@ -13,7 +13,6 @@ public class HotBarClass : InventoryAbstractClass
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public ItemBase[] InitItems;
-    public GameObject Test;
     private Vector3 mouseWorldPoint;
     public Camera camera;
     private float CoolDown;
@@ -86,22 +85,23 @@ public class HotBarClass : InventoryAbstractClass
         for (int i = 0; i < XML.items.Count; i++)
         {
             if (XML.items.ElementAt(i).Value.bName == "Hoe" || XML.items.ElementAt(i).Value.bName == "Water Bucket" ||
-                XML.items.ElementAt(i).Value.bName == "Scythe")
+                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Pickaxe")
             {
                 /*NEEEEED A REDO LATER AS IT LOOKS LIKE 5 FIVE YEAR OLD HAD A SHIT AND COVERED THE CODE WITH IT*/
                 ItemBase BasicItem = new ItemBase();
                 GameObject SubGameObject = new GameObject(XML.items.ElementAt(i).Value.bName);
                 SubGameObject.transform.parent = ToolItems.transform;
-
+        
                 if (XML.items.ElementAt(i).Value.bName == "Hoe") { BasicItem = SubGameObject.AddComponent<HoeScript>() as HoeScript; }
                 else if (XML.items.ElementAt(i).Value.bName == "Water Bucket") { BasicItem = SubGameObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
                 else if (XML.items.ElementAt(i).Value.bName == "Scythe") { BasicItem = SubGameObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
+                else if (XML.items.ElementAt(i).Value.bName == "Pickaxe") { BasicItem = SubGameObject.gameObject.AddComponent<PicaxeScript>() as PicaxeScript; }
                 else if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed){ BasicItem = SubGameObject.gameObject.AddComponent<PlantSeed>() as PlantSeed;}
-
+        
                 BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
                                         XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
                                         XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
-
+        
                 AddItem(BasicItem);
             }
         }
@@ -267,7 +267,7 @@ public class HotBarClass : InventoryAbstractClass
                 {
                     Debug.Log("PLEASE SELECT A VALID TOOL");
                 }
-                else
+                else if(tool.GetAmount() > 0)
                 {
                     if (camera == null) { GetCamera(); }
                     mouseWorldPoint = camera.ScreenToWorldPoint(Input.mousePosition);

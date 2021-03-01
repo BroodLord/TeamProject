@@ -23,7 +23,8 @@ public class Test : MonoBehaviour
         DontDestroyOnLoad(LoadManager);
         DontDestroyOnLoad(ItemManager);
         DontDestroyOnLoad(XML);
-
-        SceneManager.LoadScene("PlayerFarm");
+        /*TEST REMOVE AFTER*/
+        Player.transform.position = new Vector3(9, 12, 0);
+        SceneManager.LoadScene("Mines");
     }
 }

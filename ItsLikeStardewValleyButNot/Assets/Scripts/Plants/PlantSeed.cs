@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlantSeed : ToolScript
@@ -15,7 +16,7 @@ public class PlantSeed : ToolScript
         //TODO - when we add more grids and tilemaps, this will break
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
-        if (Dictioary.TileMapData.ContainsKey(posInt) && !Dictioary.TileMapData[posInt].HasPlant())
+        if (Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt) && !Dictioary.TileMapData.ElementAt(0).Value[posInt].HasPlant())
         {
             // Shows the name of the tile at the specified coordinates  
             this.SubstractAmount(1);
@@ -33,9 +34,9 @@ public class PlantSeed : ToolScript
             TempPlant.ID = ID;
             TempPlant.pos = pos;
             TempPlant.AddAmount(1);
-            Dictioary.TileMapData[posInt].SetPlant(TempPlant);
-            Dictioary.TileMapData[posInt].Clone = Clone;
-            if (Dictioary.TileMapData[posInt].IsWatered()) { TempPlant.mWatered = true; }
+            Dictioary.TileMapData.ElementAt(0).Value[posInt].SetPlant(TempPlant);
+            Dictioary.TileMapData.ElementAt(0).Value[posInt].Clone = Clone;
+            if (Dictioary.TileMapData.ElementAt(0).Value[posInt].IsWatered()) { TempPlant.mWatered = true; }
             else { TempPlant.mWatered = false; }
         }
         else

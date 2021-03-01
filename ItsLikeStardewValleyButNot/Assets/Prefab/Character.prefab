@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847301458357542592}
   - component: {fileID: 1847301458357542595}
+  - component: {fileID: 6471840859265186636}
   - component: {fileID: 1847301458357542594}
   - component: {fileID: 1847301458357542599}
   - component: {fileID: 1847301458357542598}
@@ -33,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 1847301458640490496}
   - {fileID: 1847301459179839082}
-  - {fileID: 76259800742077449}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,6 +88,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6471840859265186636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847301458357542601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b40e1c83896da4a9e5640e68f325aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingGold: 500
 --- !u!114 &1847301458357542594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,8 +118,6 @@ MonoBehaviour:
   cInventory: {fileID: 0}
   moveSpeed: 0.001
   interactRange: 3
-  tool: {fileID: 0}
-  camera: {fileID: 0}
 --- !u!50 &1847301458357542599
 Rigidbody2D:
   serializedVersion: 4
@@ -218,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cInventory: {fileID: 0}
+  cChest: {fileID: 0}
   cClock: {fileID: 0}
 --- !u!1 &1847301459179839087
 GameObject:
@@ -302,71 +314,3 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847301459179839087}
   m_Enabled: 1
---- !u!1 &7611880277222579907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 76259800742077449}
-  - component: {fileID: 154314184452160559}
-  - component: {fileID: 1334398864764677383}
-  m_Layer: 0
-  m_Name: Tools
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &76259800742077449
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611880277222579907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1847301458357542592}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &154314184452160559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611880277222579907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91058d51d397fa14c83b0412a7389df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cInventory: {fileID: 0}
-  mItemType: 0
-  grid: {fileID: 0}
-  tileMap: {fileID: 0}
-  Dictioary: {fileID: 0}
-  tilledTile: {fileID: 11400000, guid: 93e25be957bb56b4a84f6b33da6cde3f, type: 2}
---- !u!114 &1334398864764677383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611880277222579907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0b9ed01383480547935ad92b799a36e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cInventory: {fileID: 0}
-  mItemType: 0
-  grid: {fileID: 0}
-  tileMap: {fileID: 0}
-  Dictioary: {fileID: 0}
-  wateredTile: {fileID: 11400000, guid: 21d89a4af94faaf4982a1055df9b9953, type: 2}

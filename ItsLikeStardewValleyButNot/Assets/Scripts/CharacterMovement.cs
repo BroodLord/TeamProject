@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-
+    public PauseMenu PauseMenuScript;
     public GameObject thisObject;
     public Animator PlayerAnim;
     private float CoolDown;
@@ -57,7 +57,7 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        if (!actionLocked)
+        if (!actionLocked && !PauseMenuScript.GameIsPaused)
         {
 
             if (Input.GetKey(KeyCode.W))

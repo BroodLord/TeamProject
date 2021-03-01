@@ -22,9 +22,9 @@ TagManager:
   - Turnip
   - Icon
   - ItemManager
-  - Waypoints
-  - Grid
-  - Non-Walkable
+  - SellChest
+  - Shop
+  - Rockplacer
   layers:
   - Default
   - TransparentFX

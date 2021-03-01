@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class InventoryAbstractClass : MonoBehaviour
 {
     public XMLParser XML;
+    public GameObject PlayerTools;
     public ItemBase[] ItemList;
     public int MaxCapacity;
     public GameObject ToolItems;
@@ -83,6 +84,13 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         }
         return false;
     }
+
+    //private void RemoveToolFromPlayer(int Index)
+    //{
+    //    ItemBase Item = ItemList[Index];
+    //    PlayerTools.GetComponent(Item);
+    //}
+
    public bool RemoveItem(string Name)
    {
 
@@ -92,6 +100,8 @@ public abstract class InventoryAbstractClass : MonoBehaviour
             {
                 if (Name == ItemList[i].name)
                 {
+                    //RemoveToolFromPlayer(i);
+                    Destroy(ItemList[i]);
                     ItemList[i] = null;
                     Markers[i] = false;
                     UpdateUI();
@@ -138,7 +148,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
         for (int i = 0; i < ItemList.Length; i++)
         {
-            if (Name == ItemList[i].GetName())
+            if (ItemList[i] != null && Name == ItemList[i].GetName())
             {
                 int temp = ItemList[i].GetAmount();
                 temp += Amount;

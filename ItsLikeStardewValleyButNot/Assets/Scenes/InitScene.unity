@@ -1438,7 +1438,7 @@ MonoBehaviour:
   - {fileID: 0}
   MaxCapacity: 32
   ToolItems: {fileID: 1365246139}
-  Markers: 
+  Markers: 0000000000000000000000000000000000000000000000000000000000000000
   cInventory: {fileID: 194445708}
   cHotBar: {fileID: 194445709}
   ImageSlots:
@@ -1485,7 +1485,6 @@ MonoBehaviour:
   - {fileID: 287353624}
   BackgroundImage: {fileID: 21300000, guid: a454050719005b444b59a84eaafba779, type: 3}
   ImageParent: {fileID: 87818901}
-  UIEnabled: 0
 --- !u!114 &194445708 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5416748665142904400, guid: 35e23007dc23caa41989b0810c2fcd6e, type: 3}
@@ -2670,6 +2669,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dictioary: {fileID: 2004405245}
+  GoldManager: {fileID: 1989766349}
+  ParentShopSlot: {fileID: 1333149045}
+  ShopSlot: {fileID: 649798942582808981, guid: d6c65b65532bc64499c4a8298b7e98ff, type: 3}
   TimeUIText:
   - {fileID: 45748413}
   DateUIText:
@@ -2677,6 +2679,9 @@ MonoBehaviour:
   ClockTimeFormat: 1
   ClockDateFormat: 1
   SecondsPerMin: 2.5
+  GoldText:
+  - {fileID: 1241413091}
+  PauseMenuScript: {fileID: 310731303}
 --- !u!114 &310731301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10741,7 +10746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e68daea783ebb4a901b6df611f102c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoldManager: {fileID: 0}
+  GoldManager: {fileID: 1989766349}
   cChest: {fileID: 194445707}
   Text: {fileID: 185163111}
 --- !u!1 &1007814815
@@ -22052,6 +22057,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1847301458357542592, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
   m_PrefabInstance: {fileID: 1847301459741192718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1989766349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6471840859265186636, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
+  m_PrefabInstance: {fileID: 1847301459741192718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989766343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b40e1c83896da4a9e5640e68f325aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1993548141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23145,18 +23161,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 76259800742077449, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 154314184452160559, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
       propertyPath: Dictioary
       value: 
-      objectReference: {fileID: 2004405245}
+      objectReference: {fileID: 0}
     - target: {fileID: 1334398864764677383, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
       propertyPath: Dictioary
       value: 
-      objectReference: {fileID: 2004405245}
+      objectReference: {fileID: 0}
     - target: {fileID: 1847301458357542592, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0039658844
