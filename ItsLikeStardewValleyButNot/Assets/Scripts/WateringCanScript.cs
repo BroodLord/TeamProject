@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.Tilemaps;
 
 public class WateringCanScript : ToolScript
@@ -12,20 +13,20 @@ public class WateringCanScript : ToolScript
         //TODO - when we add more grids and tilemaps, this will break
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
-        if (Dictioary.TileMapData.ContainsKey(posInt))
+        if (Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt))
         {
             // Shows the name of the tile at the specified coordinates    
-            if (!Dictioary.TileMapData[posInt].IsWatered())
+            if (!Dictioary.TileMapData.ElementAt(0).Value[posInt].IsWatered())
             {
                 //Debug.Log(tileMap.GetTile(posInt).name);
                 AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
                 Audio.clip = GetSoundEffect();
                 Audio.Play();
                 Debug.Log("This is watered");
-                Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
-                Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);
-                Dictioary.TileMapData[posInt].SetWatered(true);
-                PlantAbstractClass P = Dictioary.TileMapData[posInt].GetPlant();
+                Dictioary.TileMapData.ElementAt(0).Value[posInt].TileMap.SetTile(posInt, GetTile());
+                Dictioary.TileMapData.ElementAt(0).Value[posInt].Tile = tileMap.GetTile(posInt);
+                Dictioary.TileMapData.ElementAt(0).Value[posInt].SetWatered(true);
+                PlantAbstractClass P = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
             }
             else
             {

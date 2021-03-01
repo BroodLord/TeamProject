@@ -50,9 +50,9 @@ public class ScytheTool : ToolScript
         //TODO - when we add more grids and tilemaps, this will break
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
-        if (Dictioary.TileMapData[posInt].HasPlant())
+        if (Dictioary.TileMapData.ElementAt(0).Value[posInt].HasPlant())
         {
-            PlantAbstractClass Plant = Dictioary.TileMapData[posInt].GetPlant();
+            PlantAbstractClass Plant = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
             if (Plant.mHarvestable)
             {
                 cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();

@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
-using UnityEngine.Tilemaps;
-using TMPro;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 
 
@@ -27,13 +26,19 @@ public class LoadLevel : MonoBehaviour
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         StartLocation = startLoc;
+        DontDestroyOnLoad(Dictionary);
         if (LevelName != "PlayerFarm")
         {
-            foreach (var V in Dictionary.TileMapData)
+            foreach (var BaseV in Dictionary.TileMapData)
             {
-                if (V.Value.Clone != null)
+
+
+                foreach (var ChildV in BaseV.Value)
                 {
-                    DontDestroyOnLoad(V.Value.Clone);
+                    if (ChildV.Value.Clone != null)
+                    {
+                        DontDestroyOnLoad(ChildV.Value.Clone);
+                    }
                 }
             }
         }
@@ -59,7 +64,7 @@ public class LoadLevel : MonoBehaviour
         DontDestroyOnLoad(Manager);
         LoadNextLevel(LevelName);
     }
-    
+
 
     public void LoadNextLevel(string LevelName)
     {
@@ -80,39 +85,42 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
-            Player.transform.position = StartLocation;
             UICanvas.SetActive(true);
-            foreach (var V in Dictionary.TileMapData)
+            foreach (var BaseV in Dictionary.TileMapData)
             {
-                if (V.Value.Clone != null)
+
+
+                foreach (var ChildV in BaseV.Value)
                 {
-                    V.Value.Clone.SetActive(false);
-                    DontDestroyOnLoad(V.Value.Clone);
+                    ChildV.Value.Clone.SetActive(false);
+                    DontDestroyOnLoad(ChildV.Value.Clone);
                 }
             }
+            Player.transform.position = StartLocation;
             if (LevelName == "PlayerFarm")
             {
-                foreach (var v in Dictionary.TileMapData)
+                foreach (var Childv in Dictionary.TileMapData.ElementAt(0).Value)
                 {
-                    v.Value.GetTileMap();
-                    v.Value.TileMap.SetTile(v.Key, v.Value.Tile);
-                    if (v.Value.Clone != null)
+                    Childv.Value.GetTileMap();
+                    Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+                    if (Childv.Value.Clone != null)
                     {
-                        v.Value.Clone.SetActive(true);
-                        PlantAbstractClass P = v.Value.GetPlant();
+                        Childv.Value.Clone.SetActive(true);
+                        PlantAbstractClass P = Childv.Value.GetPlant();
                         P.UpdatePlantSprite();
                         if (P.mGrowth == true)
                         {
-                            v.Value.SetWatered(false); P.mGrowth = false;
-                            v.Value.TileMap.SetTile(v.Key, TilledTile);
+                            Childv.Value.SetWatered(false);
+                            P.mGrowth = false;
+                            Childv.Value.TileMap.SetTile(Childv.Key, TilledTile);
                         }
                     }
                     /*BUG OCCURS HERE: */
                     else
                     {
-                        v.Value.SetWatered(false);
-                        PlantAbstractClass P = v.Value.GetPlant();
-                        v.Value.TileMap.SetTile(v.Key, TilledTile);
+                        Childv.Value.SetWatered(false);
+                        PlantAbstractClass P = Childv.Value.GetPlant();
+                        Childv.Value.TileMap.SetTile(Childv.Key, TilledTile);
                     }
                 }
             }

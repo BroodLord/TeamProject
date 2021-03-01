@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
@@ -28,10 +29,10 @@ public class TurnipClass : PlantAbstractClass
             {
                 Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
             }
-            PlantAbstractClass P = Dictioary.TileMapData[ID].GetPlant();
+            PlantAbstractClass P = Dictioary.TileMapData.ElementAt(0).Value[ID].GetPlant();
             P.mGrowth = true;
             if (!P.mWatered) { DestoryPlant(); }
-            else { Dictioary.TileMapData[ID].SetWatered(false); }
+            else { Dictioary.TileMapData.ElementAt(0).Value[ID].SetWatered(false); }
             CurrentDays += DayAmount;
             if (CurrentDays >= 0 && CurrentDays < 1)
             {
@@ -60,8 +61,8 @@ public class TurnipClass : PlantAbstractClass
             Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         }
         Seeds = GameObject.FindObjectOfType<PlantSeed>();
-        PlantAbstractClass PrefabTurnip = Dictioary.TileMapData[ID].GetPlant();
-        SpriteRenderer S = Dictioary.TileMapData[ID].Clone.GetComponent<SpriteRenderer>();
+        PlantAbstractClass PrefabTurnip = Dictioary.TileMapData.ElementAt(0).Value[ID].GetPlant();
+        SpriteRenderer S = Dictioary.TileMapData.ElementAt(0).Value[ID].Clone.GetComponent<SpriteRenderer>();
         S.sprite = PrefabTurnip.mGrowthSprites[PrefabTurnip.mSpriteIndex];
 
     }

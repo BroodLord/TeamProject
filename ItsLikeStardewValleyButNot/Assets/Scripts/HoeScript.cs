@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.Tilemaps;
 
 public class HoeScript : ToolScript
@@ -12,7 +13,7 @@ public class HoeScript : ToolScript
         //TODO - when we add more grids and tilemaps, this will break
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
-        if (!Dictioary.TileMapData.ContainsKey(posInt))
+        if (!Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt))
         {
             // Shows the name of the tile at the specified coordinates#
             //Debug.Log(tileMap.GetTile(posInt).name);
@@ -21,9 +22,9 @@ public class HoeScript : ToolScript
             Audio.Play();
             Debug.Log("This is hoeing");
             TileDataClass Temp = new TileDataClass();
-            Dictioary.TileMapData.Add(posInt, Temp);
-            Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
-            Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);
+            Dictioary.TileMapData.ElementAt(0).Value.Add(posInt, Temp);
+            Dictioary.TileMapData.ElementAt(0).Value[posInt].TileMap.SetTile(posInt, GetTile());
+            Dictioary.TileMapData.ElementAt(0).Value[posInt].Tile = tileMap.GetTile(posInt);
         }
         else
         {

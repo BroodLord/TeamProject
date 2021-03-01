@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class JunkPlacer : MonoBehaviour
@@ -58,6 +59,11 @@ public class JunkPlacer : MonoBehaviour
 
     public void PlaceRocks()
     {
+        int INDEX = 0;
+        if (SceneManager.GetActiveScene().name == "Mines") { INDEX = 1;}
+        else if (SceneManager.GetActiveScene().name == "Mines1") { INDEX = 2; }
+        else if (SceneManager.GetActiveScene().name == "Mines2") { INDEX = 3; }
+
         Vector3 worldMin = tileMap.transform.TransformPoint(tileMap.localBounds.min);
         Vector3 worldMax = tileMap.transform.TransformPoint(tileMap.localBounds.max);
 
@@ -72,9 +78,9 @@ public class JunkPlacer : MonoBehaviour
                 {
                     //nonWalkableTileMap.SetTile(posInt, treeTile);
                     TileDataClass Temp = new TileDataClass();
-                    Dictioary.TileMapData.Add(posInt, Temp);
-                    Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, treeTile);
-                    Dictioary.TileMapData[posInt].Tile = tileMap.GetTile(posInt);
+                    Dictioary.TileMapData.ElementAt(INDEX).Value.Add(posInt, Temp);
+                    Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].TileMap.SetTile(posInt, treeTile);
+                    Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].Tile = tileMap.GetTile(posInt);
                     int ItemIndex = Random.Range(35, 43);
                     int RandAmount = Random.Range(1, 5);
                     Ore Item = new Ore();
@@ -84,7 +90,7 @@ public class JunkPlacer : MonoBehaviour
                         XML.items.ElementAt(ItemIndex).Value.bStackable, XML.items.ElementAt(ItemIndex).Value.bSrcImage, XML.items.ElementAt(ItemIndex).Value.bSoundEffect,
                         XML.items.ElementAt(ItemIndex).Value.bTile, XML.items.ElementAt(ItemIndex).Value.bPrefab, XML.items.ElementAt(ItemIndex).Value.bSellPrice);
 
-                    Dictioary.TileMapData[posInt].SetOre(Item);
+                    Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].SetOre(Item);
                     //DataBase.Add(posInt, Item);
                 }
 

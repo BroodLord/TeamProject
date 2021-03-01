@@ -79,7 +79,7 @@ public class Clock : MonoBehaviour
         }
 
         // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
-        foreach (var v in Dictioary.TileMapData)
+        foreach (var v in Dictioary.TileMapData.ElementAt(0).Value)
         {
             if(v.Value.HasPlant())
             {

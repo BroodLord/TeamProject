@@ -46,15 +46,15 @@ public class PicaxeScript : ToolScript
         //TODO - when we add more grids and tilemaps, this will break
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.WorldToCell(pos);
-        if (Dictioary.TileMapData[posInt].HasOre())
+        if (Dictioary.TileMapData.ElementAt(1).Value[posInt].HasOre())
         {
-                OreAbstractClass Ore = Dictioary.TileMapData[posInt].GetOre();
+                OreAbstractClass Ore = Dictioary.TileMapData.ElementAt(1).Value[posInt].GetOre();
                 AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
                 Audio.clip = GetSoundEffect();
                 Audio.Play();
                 Debug.Log("GATHERED ORE");
                 InventoryAssessment(GetRockItem(Ore), posInt);
-                Dictioary.TileMapData[posInt].TileMap.SetTile(posInt, GetTile());
+                Dictioary.TileMapData.ElementAt(1).Value[posInt].TileMap.SetTile(posInt, GetTile());
         }
         //if ()
         //{
