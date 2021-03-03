@@ -14,6 +14,8 @@ public class JunkPlacer : MonoBehaviour
     public Tilemap nonWalkableTileMap;
     public XMLParser XML;
     public TileDictionaryClass Dictioary;
+
+    public Clock cClock;
     //public Dictionary<Vector3Int, ItemBase> DataBase;
 
     protected void awake()
@@ -27,8 +29,48 @@ public class JunkPlacer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
+        cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
         //DataBase = new Dictionary<Vector3Int, ItemBase>();
-        PlaceRocks();
+        if (SceneManager.GetActiveScene().name == "Mines" && cClock.WeeklyReset[0])
+        {
+            cClock.WeeklyReset[0] = false;
+            PlaceRocks();
+        }
+        else if(SceneManager.GetActiveScene().name == "Mines")
+        {
+            foreach (var Childv in Dictioary.TileMapData.ElementAt(1).Value)
+            {
+                Childv.Value.GetTileMap();
+                Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Mines1" && cClock.WeeklyReset[1])
+        {
+            cClock.WeeklyReset[1] = false;
+            PlaceRocks();
+        }
+        else if (SceneManager.GetActiveScene().name == "Mines1")
+        {
+            foreach (var Childv in Dictioary.TileMapData.ElementAt(2).Value)
+            {
+                Childv.Value.GetTileMap();
+                Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Mines2" && cClock.WeeklyReset[2])
+        {
+            cClock.WeeklyReset[2] = false;
+            PlaceRocks();
+        }
+        else if (SceneManager.GetActiveScene().name == "Mines2")
+        {
+            foreach (var Childv in Dictioary.TileMapData.ElementAt(3).Value)
+            {
+                Childv.Value.GetTileMap();
+                Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+            }
+        }
     }
 
     async void SetUp()

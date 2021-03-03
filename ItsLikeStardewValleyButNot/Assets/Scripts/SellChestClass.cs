@@ -65,7 +65,7 @@ public class SellChestClass : InventoryAbstractClass
     {
         UIEnabled = true;
         DisabledNEnable();
-        Resize(20);
+        Resize(16);
         Debug.Log(ItemList.Length);
     }
 

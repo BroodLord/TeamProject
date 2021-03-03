@@ -25,7 +25,6 @@ public class LoadLevel : MonoBehaviour
     {
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
-        StartLocation = startLoc;
         DontDestroyOnLoad(Dictionary);
         if (LevelName != "PlayerFarm")
         {
@@ -48,7 +47,8 @@ public class LoadLevel : MonoBehaviour
         DontDestroyOnLoad(UICanvas);
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
         GameObject Manager = GameObject.FindGameObjectWithTag("InventoryManager");
-        UICanvas.SetActive(false);
+        //UICanvas.SetActive(false);
+        StartLocation = new Vector3(startLoc.x, startLoc.y, startLoc.z);
         InventoryClass Invent = Manager.GetComponent<InventoryClass>();
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         for (int i = 0; i < Invent.ItemList.Length; i++)
@@ -85,18 +85,20 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
-            UICanvas.SetActive(true);
+            //UICanvas = GameObject.FindGameObjectWithTag("Canvas");
+            //UICanvas.SetActive(true);
             foreach (var BaseV in Dictionary.TileMapData)
             {
 
 
-                foreach (var ChildV in BaseV.Value)
+                foreach (var ChildV in Dictionary.TileMapData.ElementAt(0).Value)
                 {
                     ChildV.Value.Clone.SetActive(false);
                     DontDestroyOnLoad(ChildV.Value.Clone);
                 }
             }
             Player.transform.position = StartLocation;
+            Debug.Log(StartLocation);
             if (LevelName == "PlayerFarm")
             {
                 foreach (var Childv in Dictionary.TileMapData.ElementAt(0).Value)

@@ -13301,7 +13301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: PlayerRoom
   Load: {fileID: 0}
-  LoadPosition: {x: 0.6, y: 1, z: 0.1}
+  LoadPosition: {x: 0.6, y: 2, z: 0.1}
 --- !u!1 &1731866886
 GameObject:
   m_ObjectHideFlags: 0

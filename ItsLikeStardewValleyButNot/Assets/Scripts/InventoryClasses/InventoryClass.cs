@@ -69,7 +69,7 @@ public class InventoryClass : InventoryAbstractClass
     {
         UIEnabled = true;
         DisabledNEnable();
-        Resize(20);
+        Resize(24);
         Debug.Log(ItemList.Length);
         cInventory = this.GetComponent<InventoryClass>();
         cHotBar = this.GetComponent<HotBarClass>();

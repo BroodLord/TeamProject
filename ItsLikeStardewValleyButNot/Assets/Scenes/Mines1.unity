@@ -214,29 +214,11 @@ Tilemap:
   m_GameObject: {fileID: 267250516}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 8, y: 10, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: 9, y: 10, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 6, y: 20, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -245,7 +227,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -256,17 +238,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: bd3670fe2250a4a4390b2b670d7777ad, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d6885179f7c9acf4984537ba4dc3d3f4, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: e2e128124064e724696fd569515f61a3, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 362798206412744502, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5759227495677249512, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 3352792422570195443, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4
+  - m_RefCount: 2
     m_Data:
       e00: 1
       e01: 0
@@ -285,7 +267,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4
+  - m_RefCount: 2
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -341,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Mines2
   Load: {fileID: 0}
-  LoadPosition: {x: 0, y: 0, z: 0}
+  LoadPosition: {x: 6, y: 19, z: 0}
 --- !u!1 &409204692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,20 +3319,11 @@ Tilemap:
   m_GameObject: {fileID: 665964030}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 9, y: 10, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 9, y: 20, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3359,7 +3332,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3370,17 +3343,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: bd3670fe2250a4a4390b2b670d7777ad, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d6885179f7c9acf4984537ba4dc3d3f4, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: e2e128124064e724696fd569515f61a3, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 362798206412744502, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5759227495677249512, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 3352792422570195443, guid: 128e21818877848459ec56b1bed1f58a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data:
       e00: 1
       e01: 0
@@ -3399,7 +3372,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3455,7 +3428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Mines
   Load: {fileID: 0}
-  LoadPosition: {x: 0, y: 0, z: 0}
+  LoadPosition: {x: 9, y: 19, z: 0}
 --- !u!1 &996096202
 GameObject:
   m_ObjectHideFlags: 0
@@ -24605,6 +24578,7 @@ MonoBehaviour:
   nonWalkableTileMap: {fileID: 1237728458}
   XML: {fileID: 0}
   Dictioary: {fileID: 0}
+  cClock: {fileID: 0}
 --- !u!4 &1374440359
 Transform:
   m_ObjectHideFlags: 0

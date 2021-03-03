@@ -23,6 +23,7 @@ public class Clock : MonoBehaviour
     public TextMeshProUGUI[] GoldText;
     public PauseMenu PauseMenuScript;
     public Dictionary<string, ItemBase> Items;
+    public bool[] WeeklyReset;
 
     /*Strings which will be assigned to the UI*/
     private string TimeText;
@@ -31,7 +32,7 @@ public class Clock : MonoBehaviour
     /*Boolen for the 12 hour clock for AM/PM*/
     private bool AM;
 
-    int Hour, Min, Day, Month, Year;
+    int Hour, Min, Day, Month, Year, WeekCounter;
     int MaxHour = 24, MaxMin = 60, MaxDay = 30, MaxMouth = 12; // Setting the max an hour, min and months in a day *FOR NOW WE WILL KEEP IT 30 DAYS, CAN CHANGE LATER WITH SEASONS*
 
     float TimeTimer = 0.0f; // Will count amount of time has past.
@@ -43,7 +44,12 @@ public class Clock : MonoBehaviour
     /*Starting values for the clock *THIS CAN BE CHANGED LATER* */
     private void Start()
     {
+        WeeklyReset = new bool[3];
+        WeeklyReset[0] = true;
+        WeeklyReset[1] = true;
+        WeeklyReset[2] = true;
         Hour = 8;
+        WeekCounter = 1;
         Min = 0;
         Day = 1;
         Month = 5;
@@ -55,6 +61,16 @@ public class Clock : MonoBehaviour
     }
     public void NightUpdate()
     {
+        WeekCounter++;
+        if (WeekCounter == 7)
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                WeeklyReset[i] = true;
+            }
+            WeekCounter = 0;
+        }
+
         TimeTimer = SecondsPerMin;
         Min = -1;
         Hour = 8;
@@ -72,7 +88,7 @@ public class Clock : MonoBehaviour
             }
         }
         cChest.ResetMarkers();
-        string Output = "Gold: " + GoldManager.GetMoney().ToString();
+        string Output = GoldManager.GetMoney().ToString();
         for (int i = 0; i < GoldText.Length; i++)
         {
             GoldText[i].text = Output;
@@ -94,7 +110,7 @@ public class Clock : MonoBehaviour
     {
         if (!PauseMenuScript.GameIsPaused)
         {
-            string Output = "Gold: " + GoldManager.GetMoney().ToString();
+            string Output = GoldManager.GetMoney().ToString();
             for (int i = 0; i < GoldText.Length; i++)
             {
                 GoldText[i].text = Output;
