@@ -16,6 +16,7 @@ public class Clock : MonoBehaviour
     /*UI Components for Text on the Canvus*/
     public TextMeshProUGUI[] TimeUIText;
     public TextMeshProUGUI[] DateUIText;
+    public Image Lighting;
     private SellChestClass cChest;
     public TimeFormats ClockTimeFormat = TimeFormats.Hour_24;
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
@@ -54,13 +55,24 @@ public class Clock : MonoBehaviour
         Day = 1;
         Month = 5;
         Year = 2020;
-        if(Hour < 12) { AM = true; }
+        foreach (Transform child in transform)
+        {
+            if (child.tag == "Lighting")
+            {
+                Lighting = child.GetComponent<Image>();
+                break;
+            }
+        }
+        if (Hour < 12) { AM = true; }
         cChest = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<SellChestClass>();
         SetTextStrings();
         AssignShopItems();
     }
     public void NightUpdate()
     {
+        var tempColor = Lighting.color;
+        tempColor.a = 0.0f;
+        Lighting.color = tempColor;
         WeekCounter++;
         if (WeekCounter == 7)
         {
@@ -118,6 +130,10 @@ public class Clock : MonoBehaviour
             /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
             if (TimeTimer >= SecondsPerMin)
             {
+                var tempColor = Lighting.color;
+                tempColor.a += 0.00052083f;
+                Lighting.color = tempColor;
+                //Lighting.color.a = 1f;
                 ++Min;
                 if (Min >= MaxMin)
                 {

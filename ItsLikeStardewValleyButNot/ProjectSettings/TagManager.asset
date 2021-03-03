@@ -25,6 +25,7 @@ TagManager:
   - SellChest
   - Shop
   - Rockplacer
+  - Lighting
   layers:
   - Default
   - TransparentFX
