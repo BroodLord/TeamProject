@@ -20,7 +20,7 @@ public class Clock : MonoBehaviour
     private SellChestClass cChest;
     public TimeFormats ClockTimeFormat = TimeFormats.Hour_24;
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
-    public float SecondsPerMin = 1;
+    public float SecondsPerMin;
     public TextMeshProUGUI GoldText;
     public PauseMenu PauseMenuScript;
     public Dictionary<string, ItemBase> Items;
@@ -124,9 +124,12 @@ public class Clock : MonoBehaviour
             /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
             if (TimeTimer >= SecondsPerMin)
             {
+                /*******************************/
+                /* Change the light so it represents a full realistic lighting, 8am 70% light, 12 100%, 12pm - 2am decrease the light till 30% light */
                 var tempColor = Lighting.color;
-                tempColor.a += 0.00052083f;
+                tempColor.a += 0.00083f;
                 Lighting.color = tempColor;
+                /*********************************/
                 //Lighting.color.a = 1f;
                 ++Min;
                 if (Min >= MaxMin)

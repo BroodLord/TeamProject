@@ -16,13 +16,7 @@ public class JunkPlacer : MonoBehaviour
     public TileDictionaryClass Dictioary;
 
     public Clock cClock;
-    //public Dictionary<Vector3Int, ItemBase> DataBase;
 
-    protected void awake()
-    {
-        //grid = FindObjectOfType<Grid>();
-        //tileMap = FindObjectOfType<Tilemap>();
-    }
 
     IEnumerator Start()
     {

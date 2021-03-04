@@ -35,6 +35,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         CoolDown = 0.0f;
+        //moveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
