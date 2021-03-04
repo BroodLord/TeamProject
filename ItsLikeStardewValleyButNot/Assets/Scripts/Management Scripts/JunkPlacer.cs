@@ -20,7 +20,7 @@ public class JunkPlacer : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
