@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5416748665142904406
+--- !u!1 &967319779916567863
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5416748665142904401}
-  - component: {fileID: 5416748665142904400}
-  - component: {fileID: 5416748665142904407}
+  - component: {fileID: 967319779916567856}
+  - component: {fileID: 967319779916567857}
+  - component: {fileID: 967319779916567862}
+  - component: {fileID: 5062243897196716530}
   m_Layer: 0
-  m_Name: InventoryManager
+  m_Name: InventoryManager 1
   m_TagString: InventoryManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5416748665142904401
+--- !u!4 &967319779916567856
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416748665142904406}
+  m_GameObject: {fileID: 967319779916567863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.23405021, y: 0.49997935, z: -3.201278}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,18 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5416748665142904400
+--- !u!114 &967319779916567857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416748665142904406}
+  m_GameObject: {fileID: 967319779916567863}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ee6277ffa7ffc845a473559005620c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  XML: {fileID: 0}
+  PlayerTools: {fileID: 0}
   ItemList:
   - {fileID: 0}
   - {fileID: 0}
@@ -78,12 +81,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   MaxCapacity: 32
+  ToolItems: {fileID: 0}
   Markers: 0000000000000000000000000000000000000000000000000000000000000000
-  cInventory: {fileID: 5416748665142904400}
-  cHotBar: {fileID: 5416748665142904407}
+  cInventory: {fileID: 967319779916567857}
+  cHotBar: {fileID: 967319779916567862}
   NewLevel: 0
-  Data: {fileID: 0}
   ImageSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -125,19 +132,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
---- !u!114 &5416748665142904407
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: a454050719005b444b59a84eaafba779, type: 3}
+  ImageParent: {fileID: 0}
+--- !u!114 &967319779916567862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416748665142904406}
+  m_GameObject: {fileID: 967319779916567863}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b06b6f8c387761438e9040f0c283e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  XML: {fileID: 0}
+  PlayerTools: {fileID: 0}
   ItemList:
   - {fileID: 0}
   - {fileID: 0}
@@ -172,9 +186,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   MaxCapacity: 32
+  ToolItems: {fileID: 0}
   Markers: 0000000000000000000000000000000000000000000000000000000000000000
-  cInventory: {fileID: 5416748665142904400}
-  cHotBar: {fileID: 5416748665142904407}
+  cInventory: {fileID: 967319779916567857}
+  cHotBar: {fileID: 967319779916567862}
   ImageSlots:
   - {fileID: 0}
   - {fileID: 0}
@@ -197,4 +212,100 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  BackgroundImage: {fileID: 21300000, guid: 150e8cb4f351cde47a9f10507cedea5a, type: 3}
+  BackgroundImage: {fileID: 21300000, guid: a454050719005b444b59a84eaafba779, type: 3}
+  InitItems:
+  - {fileID: 2010106575780384552, guid: b30ee2b9b0c02b24791f35ff9a683156, type: 3}
+  - {fileID: 675424386720185013, guid: 4231ff5563d2f7549b0e7461c1596416, type: 3}
+  - {fileID: 9057770175150199495, guid: 1929ddc0821b23a4f9ec3a63216abbfc, type: 3}
+  - {fileID: 4689316389021365787, guid: 60a8e748ce207f7469e140f06c6f5198, type: 3}
+  camera: {fileID: 0}
+  interactRange: 3
+  tool: {fileID: 0}
+--- !u!114 &5062243897196716530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967319779916567863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8dc143bc7749a47a291e54f6e6754c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XML: {fileID: 0}
+  PlayerTools: {fileID: 0}
+  ItemList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MaxCapacity: 32
+  ToolItems: {fileID: 0}
+  Markers: 0000000000000000000000000000000000000000000000000000000000000000
+  cInventory: {fileID: 967319779916567857}
+  cHotBar: {fileID: 967319779916567862}
+  ImageSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AmountText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: a454050719005b444b59a84eaafba779, type: 3}
+  ImageParent: {fileID: 0}
