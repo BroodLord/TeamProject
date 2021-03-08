@@ -176,36 +176,39 @@ public class Clock : MonoBehaviour
     // RIP AZIR
     void AssignShopItems()
     {
+        // Finds the refs
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
-        for(int i = 0; i < XML.items.Count; i++)
+        ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
+        // Loop through all the XML
+        for (int i = 0; i < XML.items.Count; i++)
         {
+            // if its a seed
             if (XML.items.ElementAt(i).Value.GetType() == DefaultItemBase.ItemTypes.Seed)
             {
+                // Generate a random number to see if that seed will be in the shop
                 int RandomChance = UnityEngine.Random.Range(0, 100);
                 if (RandomChance > 50)
                 {
+                    /*Wanna get the gameobject we will put the component on*/
                     GameObject childObject = Instantiate(ShopSlot) as GameObject;
                     childObject.transform.parent = ParentShopSlot.transform;
+                    /******************************************/
+                    /* Get the image so we can set the sprite to appear there */
                     Image Image = childObject.transform.Find("ImageSlot").transform.Find("ItemImage").GetComponent<Image>();
                     Image.sprite = XML.items.ElementAt(i).Value.GetSpriteImage();
+                    /******************************************/
+                    // Sets the title
                     TextMeshProUGUI TitleText = childObject.transform.Find("Title").GetComponent<TextMeshProUGUI>();
                     TitleText.text = XML.items.ElementAt(i).Value.GetName();
+                    // Sets the price
                     TextMeshProUGUI PriceText = childObject.transform.Find("Price").GetComponent<TextMeshProUGUI>();
                     PriceText.text = "Price: " + XML.items.ElementAt(i).Value.GetSellPrice().ToString();
+                    // Set the desctext
                     TextMeshProUGUI DescText = childObject.transform.Find("Description").GetComponent<TextMeshProUGUI>();
-
-
-                    /*NEEEEED A REDO LATER AS IT LOOKS LIKE 5 FIVE YEAR OLD HAD A SHIT AND COVERED THE CODE WITH IT*/
-                    ItemBase BasicItem = new ItemBase();
-                    if (XML.items.ElementAt(i).Value.bName == "Hoe") { BasicItem = childObject.AddComponent<HoeScript>() as HoeScript; }
-                    else if (XML.items.ElementAt(i).Value.bName == "Water Bucket") { BasicItem = childObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
-                    else if (XML.items.ElementAt(i).Value.bName == "Scythe") { BasicItem = childObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
-                    else if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed) { BasicItem = childObject.gameObject.AddComponent<PlantSeed>() as PlantSeed; }
-                    else { BasicItem = childObject.gameObject.AddComponent<ItemBase>() as ItemBase; }
-
-                    BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
-                                            XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
-                                            XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
+                    // Find what item we are wanting to use and set it up
+                    TypeFinder.TyepFinder(i, childObject).SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
+                                                                        XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
+                                                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
                 }
             }
         }

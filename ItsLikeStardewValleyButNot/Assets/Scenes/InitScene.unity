@@ -2721,7 +2721,7 @@ MonoBehaviour:
   - {fileID: 45748413}
   DateUIText:
   - {fileID: 453529366}
-  Lighting: {fileID: 0}
+  Lighting: {fileID: 1061186989}
   ClockTimeFormat: 1
   ClockDateFormat: 1
   SecondsPerMin: 1
@@ -10577,6 +10577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964482014}
   - component: {fileID: 964482013}
+  - component: {fileID: 964482015}
   m_Layer: 0
   m_Name: ItemManager
   m_TagString: ItemManager
@@ -10610,6 +10611,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964482015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964482012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f10f053f5a9344e924b28662872a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &985621963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10886,8 +10899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e68daea783ebb4a901b6df611f102c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoldManager: {fileID: 0}
-  cChest: {fileID: 0}
+  GoldManager: {fileID: 1674248405}
+  cChest: {fileID: 650536488}
   Text: {fileID: 185163111}
 --- !u!1 &1007814815
 GameObject:

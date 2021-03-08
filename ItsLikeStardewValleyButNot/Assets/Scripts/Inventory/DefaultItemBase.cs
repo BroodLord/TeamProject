@@ -5,6 +5,9 @@ using UnityEngine.Tilemaps;
 
 public abstract class DefaultItemBase : MonoBehaviour
 {
+    const string RogueSpriteSheet = "roguelikeitems";
+    const string CropSpriteSheet  = "Crop_Spritesheet";
+
     // This is the default items properties for each items
     public enum ItemTypes { Tool, Plant, Ore, Seed, Decoration }
     public ItemTypes bItemType;
@@ -38,11 +41,11 @@ public abstract class DefaultItemBase : MonoBehaviour
         // If its an ore or plant then load the sprite from a sprite sheet
         else if (ItemType == ItemTypes.Ore)
         {
-            bImage = GetOreFromSheet(SrcImage);
+            bImage = GetFromSheet(SrcImage, RogueSpriteSheet);
         }
         else
         {
-            bImage = GetSpriteFromSheet(SrcImage);
+            bImage = GetFromSheet(SrcImage, CropSpriteSheet);
         }
 
         bTile = Tile;
@@ -57,24 +60,13 @@ public abstract class DefaultItemBase : MonoBehaviour
 
     }
     // These are the same function but just load from a different sprite sheet, NOTE: This will be azir dead but the base code for it will stay the same
-    private Sprite GetOreFromSheet(string SrcImage)
+
+    private Sprite GetFromSheet(string SrcImage, string SheetName)
     {
         // Loads all the sprite sheet into an array of sprites.
         Sprite[] Sprites;
-        Sprites = Resources.LoadAll<Sprite>("XML Loaded Assets/roguelikeitems");
+        Sprites = Resources.LoadAll<Sprite>("XML Loaded Assets/" + SheetName);
         // Loop through all sprites and if we find the sprite then return it.
-        for (int i = 0; i < Sprites.Length; i++)
-        {
-            if (Sprites[i].name == SrcImage)
-                return Sprites[i];
-        }
-        return null;
-    }
-
-    private Sprite GetSpriteFromSheet(string SrcImage)
-    {
-        Sprite[] Sprites;
-        Sprites = Resources.LoadAll<Sprite>("XML Loaded Assets/Crop_Spritesheet");
         for (int i = 0; i < Sprites.Length; i++)
         {
             if (Sprites[i].name == SrcImage)

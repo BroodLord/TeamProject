@@ -13,12 +13,15 @@ public class BuyItem : MonoBehaviour
         InventoryClass cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         ItemBase Item = new ItemBase();
         ItemBase NewItem = gameObject.GetComponentInParent<ItemBase>();
-
+        ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
+        // Get the object the component will be on and give it a name
         GameObject SubGameObject = new GameObject(NewItem.bName);
         SubGameObject.transform.parent = cInventory.ToolItems.transform;
 
+        // If the player has enough gold
         if (PlayerMoney.GetMoney() >= NewItem.GetSellPrice())
         {
+            // If it has the item and is stackable
             if (cInventory.HasItem(NewItem.GetName()) && NewItem.GetStackable())
             {
                 cInventory.AddAmount(NewItem.GetName(), NewItem.GetAmount());
@@ -26,11 +29,8 @@ public class BuyItem : MonoBehaviour
             }
             else
             {
-                if (NewItem.bName == "Hoe") { Item = SubGameObject.AddComponent<HoeScript>() as HoeScript; }
-                else if (NewItem.bName == "Water Bucket") { Item = SubGameObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
-                else if (NewItem.bName == "Scythe") { Item = SubGameObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
-                else if (NewItem.bItemType == DefaultItemBase.ItemTypes.Seed) { Item = SubGameObject.gameObject.AddComponent<PlantSeed>() as PlantSeed; }
-                else { Item = SubGameObject.gameObject.AddComponent<ItemBase>() as ItemBase; }
+                // Find the type of the item and set it up, after add it to the dictionary.
+                Item = TypeFinder.ItemTyepFinder(NewItem, SubGameObject);
                 Item.SetUpThisItem(NewItem.bItemType, NewItem.bName, NewItem.bAmount,
                                    NewItem.bStackable, NewItem.bSrcImage, NewItem.bSoundEffect,
                                    NewItem.bTile, NewItem.bPrefab, NewItem.bSellPrice);
