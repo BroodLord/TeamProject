@@ -20,16 +20,22 @@ public class JunkPlacer : MonoBehaviour
 
     IEnumerator Start()
     {
+        // Wait for a set time so the game can register what we have loaded into the level
         yield return new WaitForSeconds(0.1f);
+        // Find all the components need.
         Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
         //DataBase = new Dictionary<Vector3Int, ItemBase>();
+        // If the level is the same as the one we want to check and the reset hasn't been done
         if (SceneManager.GetActiveScene().name == "Mines" && cClock.WeeklyReset[0])
         {
+            // Reset the reset to false so it doesn't do it again
             cClock.WeeklyReset[0] = false;
+            // place rocks
             PlaceRocks();
         }
+        // if the level is the same and we have placed rocks before then we want to loop through all the dictionary and place the rocks
         else if(SceneManager.GetActiveScene().name == "Mines")
         {
             foreach (var Childv in Dictioary.TileMapData.ElementAt(1).Value)
@@ -38,7 +44,7 @@ public class JunkPlacer : MonoBehaviour
                 Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
             }
         }
-
+        // Same as above
         if (SceneManager.GetActiveScene().name == "Mines1" && cClock.WeeklyReset[1])
         {
             cClock.WeeklyReset[1] = false;
@@ -52,6 +58,7 @@ public class JunkPlacer : MonoBehaviour
                 Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
             }
         }
+        // Same as above
         if (SceneManager.GetActiveScene().name == "Mines2" && cClock.WeeklyReset[2])
         {
             cClock.WeeklyReset[2] = false;
@@ -67,10 +74,7 @@ public class JunkPlacer : MonoBehaviour
         }
     }
 
-    async void SetUp()
-    {
-    }
-
+    // Loop through the max and mines of the tilemap and set the tile to a tree if we can. (random chance)
     public void PlaceTrees()
     {
         Vector3 worldMin = tileMap.transform.TransformPoint(tileMap.localBounds.min);
@@ -93,8 +97,10 @@ public class JunkPlacer : MonoBehaviour
         
     }
 
+    // Same as the above but with a few edits
     public void PlaceRocks()
     {
+        // we want to have a index so determine what level we are on
         int INDEX = 0;
         if (SceneManager.GetActiveScene().name == "Mines") { INDEX = 1;}
         else if (SceneManager.GetActiveScene().name == "Mines1") { INDEX = 2; }
@@ -113,19 +119,24 @@ public class JunkPlacer : MonoBehaviour
                 if (Random.Range(1, 100) <= 40 && tileMap.GetSprite(posInt) == dirtSprite)
                 {
                     //nonWalkableTileMap.SetTile(posInt, treeTile);
+                    // Create a new slot
                     TileDataClass Temp = new TileDataClass();
+                    // Added the new slot
                     Dictioary.TileMapData.ElementAt(INDEX).Value.Add(posInt, Temp);
+                    // Set that tile sprite 
                     Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].TileMap.SetTile(posInt, treeTile);
+                    // Set the tile to be the one we set
                     Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].Tile = tileMap.GetTile(posInt);
+                    // Generate two random numbers, one for what ore will spawn and then what amount will spawn with it.
                     int ItemIndex = Random.Range(35, 43);
                     int RandAmount = Random.Range(1, 5);
                     Ore Item = new Ore();
                     Item = this.gameObject.AddComponent<Ore>() as Ore;
-
+                    // Sets up and ore item
                     Item.SetUpThisItem(XML.items.ElementAt(ItemIndex).Value.bItemType, XML.items.ElementAt(ItemIndex).Value.bName, RandAmount,
                         XML.items.ElementAt(ItemIndex).Value.bStackable, XML.items.ElementAt(ItemIndex).Value.bSrcImage, XML.items.ElementAt(ItemIndex).Value.bSoundEffect,
                         XML.items.ElementAt(ItemIndex).Value.bTile, XML.items.ElementAt(ItemIndex).Value.bPrefab, XML.items.ElementAt(ItemIndex).Value.bSellPrice);
-
+                    // Set up the item in the rock at the given location.
                     Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].SetOre(Item);
                     //DataBase.Add(posInt, Item);
                 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+// RIP AZIR
+
 public class InitMainCharacter : MonoBehaviour
 {
     public GameObject Player;

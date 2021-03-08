@@ -31,17 +31,19 @@ public class WindowManager : MonoBehaviour
 
     #region Resolution Cycling
 
+    // Sets the text to be the current resolution
     private void SetResolutionText(Resolution Resolution)
     {
         ResolutionText.text = Resolution.width + "x" + Resolution.height;
     }
 
+    // Sets the next resolution
     public void SetNextResolution()
     {
         CurrentResolutionIndex = GetNextWrappedIndex(Resolutions, CurrentResolutionIndex);
         SetResolutionText(Resolutions[CurrentResolutionIndex]);
     }
-
+    // Set the last resolution
     public void SetLastResolution()
     {
         CurrentResolutionIndex = GetLastWrappedIndex(Resolutions, CurrentResolutionIndex);
@@ -52,6 +54,7 @@ public class WindowManager : MonoBehaviour
 
     #region Apply Res
 
+    // sets and Applies the resoultion 
     private void SetAndApplyRes(int NewResoultionIndex)
     {
         CurrentResolutionIndex = NewResoultionIndex;
@@ -75,6 +78,7 @@ public class WindowManager : MonoBehaviour
     #region Helpers
 
     #region Index Wrap Helpers
+    /* Ok so these allow the user to wrap around the whole array, so can go from 1 in the array to 16th or something. */
     private int GetNextWrappedIndex<T>(IList<T> Collection, int CurrentIndex)
     {
         if (Collection.Count < 1) return 0;
@@ -87,10 +91,11 @@ public class WindowManager : MonoBehaviour
         if ((CurrentIndex - 1) < 0) return Collection.Count - 1;
         return (CurrentIndex - 1) % Collection.Count;
     }
+    /*****************************************************************************/
     #endregion
 
     #endregion
-
+    // Gets the current res and sets up the text and res for the game
     private void Start()
     {
         Resolutions = Screen.resolutions;
@@ -99,6 +104,7 @@ public class WindowManager : MonoBehaviour
         SetResolutionText(Resolutions[CurrentResolutionIndex]);
     }
 
+    // Apply changes to the screen
     public void ApplyChanges()
     {
         MainPanel.SetActive(true);
@@ -106,6 +112,7 @@ public class WindowManager : MonoBehaviour
         SetAndApplyRes(CurrentResolutionIndex);
     }
 
+    // Sets the game to fullscreen
     public void SetFullScreen(bool IsFullScreen)
     {
         Screen.fullScreen = IsFullScreen;

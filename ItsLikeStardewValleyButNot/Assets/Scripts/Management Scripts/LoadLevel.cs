@@ -20,6 +20,7 @@ public class LoadLevel : MonoBehaviour
     public TileDictionaryClass Dictionary;
     public Vector3 StartLocation;
     // Start is called before the first frame update
+    // RIP AZIR, FUCKING REEEEEE THIS SHIT MAKES ME SICK, I'M SORRY PAPPI NICK.
 
     public void TransferLevel(string LevelName, Vector3 startLoc)
     {

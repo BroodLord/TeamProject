@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This is pretty easy to understand so it doesn't need commenting
+
 public class MoneyClass : MonoBehaviour
 {
     private float Money;

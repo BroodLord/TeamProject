@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// VIEW THE CORN CLASS
+
 public class WheatClass : PlantAbstractClass
 {
     public int CurrentDays;

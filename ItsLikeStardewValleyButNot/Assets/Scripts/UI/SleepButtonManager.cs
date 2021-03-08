@@ -10,19 +10,20 @@ public class SleepButtonManager : MonoBehaviour
     public PauseMenu PauseMenuScript;
     public GameObject SleepUI;
 
+    // Function used to show a UI that asks the player if they would like to sleep
     public void SleepButton()
     {
         SleepUI.SetActive(false);
         ReportUI.SetActive(true);
         MoneyUpdate.UpdateText();
     }
-
+    // If they player declines then we want to resume the current day
     public void ResumeDay()
     {
        PauseMenuScript.GameIsPaused = false;
        SleepUI.SetActive(false);
     }
-
+    // Loads the next day and does any updates we need to do in the night
     public void NextDayButton()
     {
         cClock.NightUpdate();

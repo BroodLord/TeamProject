@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BuyItem : MonoBehaviour
 {
+    /*RIP AZIR*/
     public void BuyShopItem()
     {
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();

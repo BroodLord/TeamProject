@@ -35,12 +35,12 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         CoolDown = 0.0f;
-        //moveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // View hotbar for cooldown notes
         if(CoolDown > 0.0f)
         {
             CoolDown -= Time.deltaTime;
@@ -57,10 +57,10 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-
+        // if we aren't actionlocked or paused then we can move
         if (!actionLocked && !PauseMenuScript.GameIsPaused)
         {
-
+            /* Move either up, down, left or right, this allow set the bool in the animator */
             if (Input.GetKey(KeyCode.W))
             {
                 PlayerAnim.SetBool("Up", true);
@@ -86,6 +86,8 @@ public class CharacterMovement : MonoBehaviour
                 thisObject.transform.position += new Vector3(moveSpeed + Time.deltaTime, 0, 0);
             }
             else { PlayerAnim.SetBool("Right", false); }
+            /*******************************************************/
+            // Used to show the inventory to the player.
             if (Input.GetKey(KeyCode.I))
             {
                 if (CoolDown <= 0.0f)

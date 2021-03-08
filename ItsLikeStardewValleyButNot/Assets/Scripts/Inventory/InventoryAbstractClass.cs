@@ -13,6 +13,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
     public bool[] Markers;
     public InventoryClass cInventory;
     public HotBarClass cHotBar;
+    // Base set up for the inventory
     public InventoryAbstractClass()
     {
         MaxCapacity = 32;
@@ -22,6 +23,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
     public abstract void UpdateUI();
 
+    // This will loop through the items and return the one the ID
     public ItemBase GetItem(string ID) 
     {
         for(int i = 0; i < ItemList.Length; i++)
@@ -34,6 +36,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         return null;
     }
 
+    // Finds a free space in the inventory
     public int FindFreeSpaceIndex()
     {
         for (int i = 0; i < Markers.Length; i++)
@@ -46,6 +49,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         return -1;
     }
 
+    // Resets all the markers
     public bool ResetMarkers()
     {
         for (int i = 0; i < Markers.Length; i++)
@@ -58,7 +62,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         }
         return true;
     }
-
+    // This will resize the inventory
     public void Resize(int Size)
     {
         MaxCapacity = Size;
@@ -73,6 +77,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         Markers = TempMarkers;
         ResetMarkers();
     }
+    // Check if the item is in the inventory 
     public bool HasItem(string ItemName)
     {
         for (int i = 0; i < ItemList.Length; i++)
@@ -91,6 +96,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
     //    PlayerTools.GetComponent(Item);
     //}
 
+    // this will loop through the items and if we find the correct one then destory the item and reset that slot in the inventory.
    public bool RemoveItem(string Name)
    {
 
@@ -112,7 +118,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
 
        return false;
    }
-
+    // This will remove a set amount from a given item
     public bool RemoveAmount(string Name, int Amount)
     {
         for (int i = 0; i < ItemList.Length; i++)
@@ -128,7 +134,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         }
         return false;
     }
-
+    // Adds an item in an empty space in the inventory
     public bool AddItem(ItemBase Item)
     {
         for (int i = 0; i < ItemList.Length; i++)
@@ -143,6 +149,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         }
        return false;
     }
+    // Adds a set amount to a given item in the inventory
     public bool AddAmount(string Name, int Amount)
     {
 
@@ -159,7 +166,7 @@ public abstract class InventoryAbstractClass : MonoBehaviour
         }
         return false;
     }
-
+    // Check an items amount, not currently used but good to check what amount we have for selling and stuff.
     public int CheckItemAmount(string ID)
     {
 

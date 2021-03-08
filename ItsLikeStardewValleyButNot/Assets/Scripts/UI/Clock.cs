@@ -68,11 +68,15 @@ public class Clock : MonoBehaviour
         SetTextStrings();
         AssignShopItems();
     }
+    // Used when the player goes to bed
     public void NightUpdate()
     {
+        /*Used to reset the global lightning*/
         var tempColor = Lighting.color;
         tempColor.a = 0.0f;
         Lighting.color = tempColor;
+        /************************************/
+        /* This used to counter if it has been a week, used to reset the rocks in the mines currently */
         WeekCounter++;
         if (WeekCounter == 7)
         {
@@ -82,26 +86,33 @@ public class Clock : MonoBehaviour
             }
             WeekCounter = 0;
         }
-
+        /************************************/
         TimeTimer = SecondsPerMin;
         Min = -1;
         Hour = 8;
         ++Day;
+        /* This is used to update the players gold */
         for(int i = 0; i < cChest.ItemList.Length; i++)
         {
+            /*If the current index marker is true then we have something to sell*/
             if(cChest.Markers[i])
             {
+                // An item will have an amount attached so we also want to sell these too
                 float Temp = cChest.ItemList[i].GetSellPrice() * cChest.ItemList[i].GetAmount();
                 GoldManager.AddAmount(Temp);
+                // Reset the current chest slot as it should be empty
                 cChest.ItemList[i] = null;
      
 
 
             }
         }
+        // Reset the markers as they should all be false
         cChest.ResetMarkers();
+        // Update the text
         string Output = GoldManager.GetMoney().ToString();
         GoldText.text = Output;
+        /************************************/
 
         // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
         foreach (var v in Dictioary.TileMapData.ElementAt(0).Value)
@@ -162,6 +173,7 @@ public class Clock : MonoBehaviour
         }
     }
 
+    // RIP AZIR
     void AssignShopItems()
     {
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();

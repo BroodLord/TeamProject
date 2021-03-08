@@ -12,6 +12,8 @@ public class SellChestClass : InventoryAbstractClass
     public Sprite BackgroundImage;
     public GameObject ImageParent;
     private bool UIEnabled;
+
+    // Same as the Hotbar class so look there for ref.
     public override void UpdateUI()
     {
         if (UIEnabled != false)
@@ -44,12 +46,13 @@ public class SellChestClass : InventoryAbstractClass
             }
         }
     }
-
+    // This is used to disable and enable the Inventory UI.
     public void DisabledNEnable()
     {
         if (UIEnabled == false)
         {
             UIEnabled = true;
+            // All the UI is attached to an image so we just disable it.
             ImageParent.gameObject.SetActive(true);
             UpdateUI();
         }
@@ -61,6 +64,7 @@ public class SellChestClass : InventoryAbstractClass
         }
     }
 
+    // Set up the sell chest.
     void Start()
     {
         UIEnabled = true;

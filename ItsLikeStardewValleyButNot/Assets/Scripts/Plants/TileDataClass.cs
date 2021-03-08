@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
+// I don't think this need commenting as its pretty easy to understand but ask me if you have any questions
+
+
 public class TileDataClass : MonoBehaviour
 {
     private PlantAbstractClass Plant;

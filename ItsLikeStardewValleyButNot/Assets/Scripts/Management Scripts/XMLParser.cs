@@ -9,6 +9,7 @@ public class XMLParser : MonoBehaviour
 {
     public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
 
+    // Creates and loads the xml document
     void Start()
     {
         XmlDocument newXml = new XmlDocument();
@@ -26,6 +27,7 @@ public class XMLParser : MonoBehaviour
 
         foreach (XmlNode ItemsXML in constVarList)
         {
+            /*Get the attributes we want for each variable*/
             string name = ItemsXML.Attributes.GetNamedItem("name").Value;
             string itemType = ItemsXML.Attributes.GetNamedItem("type").Value;
             string amount = ItemsXML.Attributes.GetNamedItem("amount").Value;
@@ -36,7 +38,8 @@ public class XMLParser : MonoBehaviour
             bool StackableResult = false;
             float sellPrice;
             ItemBase.ItemTypes Item = ItemBase.ItemTypes.Tool;
-
+            /***************************************************************/
+            // Get the sell price
             if (float.TryParse(ItemsXML.Attributes.GetNamedItem("sellPrice").Value, out float result))
             {
                 sellPrice = result;
@@ -45,7 +48,7 @@ public class XMLParser : MonoBehaviour
             {
                 sellPrice = 0.0f;
             }
-
+            /*Depending on the tool, set up tool with the correct enum*/
             if (itemType == "Tool")
             {
                 Item = ItemBase.ItemTypes.Tool;
@@ -66,11 +69,15 @@ public class XMLParser : MonoBehaviour
             {
                 Item = ItemBase.ItemTypes.Decoration;
             }
-
+            /*****************************************************/
+            // Gets the source image
             string srcImage = ItemsXML.Attributes.GetNamedItem("src-image").Value;
+
+            // Gets the amount of each item
             int CastedAmount = int.Parse(amount);
             int Amount = CastedAmount;
 
+            // Set up if its stackable
             if (stackable == "Yes")
             {
                 StackableResult = true;
@@ -79,14 +86,18 @@ public class XMLParser : MonoBehaviour
             {
                 StackableResult = false;
             }
+            // Loads what tile we want the item to use
             string Path = "XML Loaded Assets/" + TileName;
             TileBase Tile = Resources.Load<TileBase>(Path);
+            // Load a given prefab
             Path = "XML Loaded Assets/" + prefab;
             var Prefab = Resources.Load(Path);
             GameObject Pre = (GameObject)Prefab;
+            // Load the sound effect we want to use
             Path = "XML Loaded Assets/" + SoundEffectName;
             AudioClip Audio = Resources.Load<AudioClip>(Path);
             ItemBase temp = new ItemBase();
+            // Set up the item and add it to the dicitiory for the XML.
             temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
             items.Add(name, temp);
         }

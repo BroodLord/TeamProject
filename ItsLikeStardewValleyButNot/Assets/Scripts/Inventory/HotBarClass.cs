@@ -22,27 +22,34 @@ public class HotBarClass : InventoryAbstractClass
     private float actionLockedTimer = actionLock;
     public ItemBase tool;                         //tool that is currently being used 
     private bool UIEnabled;
+
+    // Function used to update the UI
     public override void UpdateUI()
     {
+        // Loop through all the slots in the UI for the hotbar
         for (int i = 0; i < ImageSlots.Length; i++)
         {
+            // Check the marker and check that the image slot is assigned.
             if (Markers[i] != false && ImageSlots[i] != null)
-                {
+            {
+                /*Set the image to active, get the sprite and set the image and set the amount text*/
                 ImageSlots[i].gameObject.SetActive(true);
                 ImageSlots[i].sprite = ItemList[i].GetSpriteImage();
                 AmountText[i].text = ItemList[i].GetAmount().ToString();
             }
             else
             {
+                // We want to make sure that we set active to false and set the background image
                 if (ImageSlots[i] != null && ImageSlots[i].sprite != null)
                 {
                     ImageSlots[i].gameObject.SetActive(false);
                     ImageSlots[i].sprite = BackgroundImage;
                 }
+                // Set the amount to 0
                 AmountText[i].text = "0";
                 if (Markers[i] == true)
                 {
-
+                    // if for what ever reason the marker is true when nothing is there then set it to false;
                     Markers[i] = false;
                 }
 
@@ -52,12 +59,14 @@ public class HotBarClass : InventoryAbstractClass
         }
     }
 
+    // Gets the camera
     public void GetCamera()
     {
         GameObject Go = GameObject.FindGameObjectWithTag("MainCamera");
         camera = Go.GetComponent<Camera>();
     }
 
+    // Gets the farming Componenets for the grid and tilemap
     private void FindFarmComponenets()
     {
         tool.grid = GameObject.FindGameObjectWithTag("Floor").GetComponentInParent<Grid>();
@@ -72,6 +81,8 @@ public class HotBarClass : InventoryAbstractClass
 
     void Start()
     {
+        // RIP AZIR
+
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         GetCamera();
         tool = new ItemBase();
@@ -106,17 +117,20 @@ public class HotBarClass : InventoryAbstractClass
             }
         }
         UpdateUI();
+        //
     }
 
     // Update is called once per frame
     void Update()
     {
   
-        GetCamera();
+        GetCamera(); // Don't know if we need to do this every frame but hey hoo will look later #RIP AZIR
+        // Reduce the cooldown
         if (CoolDown > 0.0f)
         {
             CoolDown -= Time.deltaTime;
         }
+        // if action is locked then reduce the timer till 0 and reset
         if (actionLocked)
         {
 
@@ -127,7 +141,7 @@ public class HotBarClass : InventoryAbstractClass
                 actionLockedTimer = actionLock;
             }
         }
-
+        /*This is used to assign tools when one of the keys are pressed*/
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             if (Markers[0] != false)
@@ -258,21 +272,28 @@ public class HotBarClass : InventoryAbstractClass
                 tool = new ItemBase();
             }
         }
-
+        /******************************************/
+        /* If we can act */
         if (!actionLocked)
         {
             if (Input.GetMouseButtonDown(0))
             {
+                /*If we don't have an active tool then tell the player*/
                 if (tool == null)
                 {
                     Debug.Log("PLEASE SELECT A VALID TOOL");
                 }
+                /*Make sure that we actually have an amount of the used tool*/
                 else if(tool.GetAmount() > 0)
                 {
+                    // Get the camera if null
                     if (camera == null) { GetCamera(); }
+                    // Get the mouse pos
                     mouseWorldPoint = camera.ScreenToWorldPoint(Input.mousePosition);
+                    // Get the player
                     GameObject Player = GameObject.FindGameObjectWithTag("Player");
                     Debug.Log(Vector2.Distance(Player.transform.position, mouseWorldPoint));
+                    /*If we are in range, the lock our actions and find the farm compoents and then use the tool. */
                     if (Vector2.Distance(Player.transform.position, mouseWorldPoint) < interactRange)
                     {
                         actionLocked = true;

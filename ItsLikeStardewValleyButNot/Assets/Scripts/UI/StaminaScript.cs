@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// NCN
+
 public class StaminaScript : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -4,6 +4,8 @@ using System.Linq;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
+// VIEW THE CORN CLASS
+
 public class TurnipClass : PlantAbstractClass
 {
     public int CurrentDays;

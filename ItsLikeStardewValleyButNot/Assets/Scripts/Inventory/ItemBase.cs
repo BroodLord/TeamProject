@@ -25,6 +25,7 @@ public class ItemBase : DefaultItemBase
     protected float mSellPrice;
     private string TempAssetPath = "XML Loaded Assets/";
 
+    // Sets up the an item that is in the inventory
     public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
     {
         SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Audio, Tile, prefab, SellPrice);
@@ -61,8 +62,6 @@ public class ItemBase : DefaultItemBase
     public void SetSpriteImage(Sprite ItemImage) { mImage = ItemImage; }
     public Sprite GetSpriteImage()
     {
-        //string Path = TempAssetPath + GetSrcImage();
-        //Sprite Sprite = Resources.Load<Sprite>(Path);
         return mImage;
     }
     public string GetName() { return mName; }
