@@ -8,13 +8,15 @@ using UnityEngine.Tilemaps;
 public class XMLParser : MonoBehaviour
 {
     public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
-
+    public Dictionary<string, Vector2[]> NPCWaypoints = new Dictionary<string, Vector2[]>();    //this is here for when multiple characters get added so they can filter out what waypoints 
+    public List<Vector2> townWaypoints;
     void Start()
     {
         XmlDocument newXml = new XmlDocument();
-       // string Test = Application.streamingAssetsPath;
+        // string Test = Application.streamingAssetsPath;
         newXml.Load(Application.dataPath + "\\StreamingAssets\\XML Files\\Item File.xml");
         parseXML(newXml);
+
     }
 
     private void parseXML(XmlDocument data)
@@ -90,9 +92,32 @@ public class XMLParser : MonoBehaviour
             temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
             items.Add(name, temp);
         }
-            
+
+        constVarList = root.SelectNodes("Waypoint");
+
+        foreach (XmlNode ItemsXML in constVarList)
+        {
+            string name = ItemsXML.Attributes.GetNamedItem("name").Value;
+            Vector2 pos;
+            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+            {
+                pos.x = result;
+            }
+            else
+            {
+                pos.x = 0.0f;
+            }
+
+            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
+            {
+                pos.y = result2;
+            }
+            else
+            {
+                pos.y = 0.0f;
+            }
+
+            townWaypoints.Add(pos);
+        }
     }
-    
 }
-
-

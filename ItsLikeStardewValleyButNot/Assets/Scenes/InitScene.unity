@@ -10456,6 +10456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aae21ada7a05ef4b811f6b7643cd18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  townWaypoints: []
 --- !u!4 &964482014
 Transform:
   m_ObjectHideFlags: 0
@@ -23217,6 +23218,10 @@ PrefabInstance:
       propertyPath: PauseMenuScript
       value: 
       objectReference: {fileID: 310731303}
+    - target: {fileID: 1847301458357542594, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
+      propertyPath: moveSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1847301458357542601, guid: 58072f7720ce3d14faf37392a185ce07, type: 3}
       propertyPath: m_Name
       value: Character

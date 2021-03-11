@@ -57,4 +57,12 @@
 	<Item name="Torch" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>
 	<Item name="Fence" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>
 
+	<!-- List of Town Waypoints -->
+	<Waypoint name="MarketWP" x="34.5" y="-5.5" />
+	<Waypoint name="FountainWP" x="29.5" y="-8.5" />
+	<Waypoint name="LakeLeftWP" x="23.5" y="6.5" />
+	<Waypoint name="GravesWP" x="23.5" y="16.5" />
+	<Waypoint name="WaterfallWP" x="31.5" y="22.5" />
+	<Waypoint name="MinesWP" x="13.5" y="14.5" />
+	
 </Items>

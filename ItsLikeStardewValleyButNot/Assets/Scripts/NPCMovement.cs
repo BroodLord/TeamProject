@@ -10,10 +10,7 @@ using UnityEngine.Tilemaps;
 public class NPCMovement : MonoBehaviour
 {
     private AStar pathfinding;
-    private Transform[] waypoints;          //the list of waypoints, 0 is the parent
-    public GameObject[] WaypointsObjects;
-    private GameObject waypointMaster;      //parent of waypoints
-    private Vector3 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
+    private Vector2 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
     private Tilemap nonWalkable;
     private Grid grid;
     public TileBase Tile;
@@ -23,26 +20,28 @@ public class NPCMovement : MonoBehaviour
     [SerializeField]private float NPCSpeed = 0.2f;
     private int pathIndex;                  //current cell on the path
     private int waypointIndex;              //current waypoint thats being targeted 
-    float timer = 2.0f;
+    private float timer = 2.0f;
     int[] Times;
-    int timeIndex;
+    private int timeIndex;
+    private XMLParser XML;
  
 
     // Start is called before the first frame update
     void Start()
     {
+        XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         pathfinding = new AStar();
         currentState = 3;
-        waypointMaster = GameObject.FindGameObjectWithTag("Waypoints");
-        waypoints = waypointMaster.gameObject.GetComponentsInChildren<Transform>();
-        waypointIndex = 1;
-        target = waypoints[waypointIndex].position;
-
+        waypointIndex = 0;
+        target = XML.townWaypoints[waypointIndex];
+        
         nonWalkable = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         Times = new int[]{ 9, 10, 11, 12 };
 
         timeIndex = 0;
+
+        
     }
 
     // Update is called once per frame
@@ -64,7 +63,7 @@ public class NPCMovement : MonoBehaviour
                  {
                     //waypoint target destination is reached
                     waypointIndex++;
-                    target = waypoints[waypointIndex].position;
+                    target = XML.townWaypoints[Random.Range(0, 6)];
                     currentState = 2;
                  }
                  //if the NPC is close enough to the next cell in the path
