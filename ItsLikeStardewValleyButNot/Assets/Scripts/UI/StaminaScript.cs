@@ -19,6 +19,11 @@ public class StaminaScript : MonoBehaviour
         StamBar.value = MaxStam;
     }
 
+    public int GetStamina()
+    {
+        return CurrentStam;
+    }
+
     public void UseStamina(int Amount)
     {
         CurrentStam -= Amount;

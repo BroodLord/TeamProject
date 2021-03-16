@@ -9,7 +9,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     const string CropSpriteSheet  = "Crop_Spritesheet";
 
     // This is the default items properties for each items
-    public enum ItemTypes { Tool, Plant, Ore, Seed, Decoration }
+    public enum ItemTypes { Tool, Wood, Plant, Ore, Seed, Decoration }
     public ItemTypes bItemType;
     public Sprite bImage;
     public string bName;

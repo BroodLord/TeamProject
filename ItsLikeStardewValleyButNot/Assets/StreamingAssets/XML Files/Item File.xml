@@ -2,7 +2,7 @@
 	<!-- List of Tools -->
 	<Item name="Hoe" type="Tool" src-image="Diamond_Hoe" tile-src-image ="tilled dirt" sound-effect ="Hoe_Sound" Prefab =""  amount = "1" stackable="No" sellPrice="50"/>
 	<Item name="Water Bucket" type="Tool" src-image="Water_Bucket_JE2_BE2" tile-src-image ="wateredDirt" sound-effect ="Water_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
-	<Item name="Axe" type="Tool" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
+	<Item name="Axe" type="Tool" src-image="Diamond_Axe_JE2_BE2" tile-src-image ="" sound-effect ="Axe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 	<Item name="Pickaxe" type="Tool" src-image="Diamond_Pickaxe" tile-src-image ="Fulltilemap_180" sound-effect ="Rock_Break" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 	<Item name="Scythe" type="Tool" src-image="Scythe" tile-src-image ="" sound-effect ="Scythe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 
@@ -50,6 +50,9 @@
 	<Item name="Steel" type="Ore" src-image="roguelikeitems_58" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50"/>
 	<Item name="Silver" type="Ore" src-image="roguelikeitems_78" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50"/>
 	<Item name="Gold" type="Ore" src-image="roguelikeitems_79" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50"/>
+
+	<!-- List of Wood -->
+	<Item name="Wood" type="Wood" src-image="Wood" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50"/>
 
 	<!-- List of Decorations -->
 	<Item name="Stone Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>

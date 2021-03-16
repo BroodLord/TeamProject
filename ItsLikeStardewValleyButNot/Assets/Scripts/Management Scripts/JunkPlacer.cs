@@ -28,6 +28,20 @@ public class JunkPlacer : MonoBehaviour
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
         //DataBase = new Dictionary<Vector3Int, ItemBase>();
         // If the level is the same as the one we want to check and the reset hasn't been done
+        if (SceneManager.GetActiveScene().name == "Forest" && cClock.WeeklyReset[3])
+        {
+            cClock.WeeklyReset[3] = false;
+            PlaceTrees();
+        }
+        else if (SceneManager.GetActiveScene().name == "Forest")
+        {
+            foreach (var Childv in Dictioary.TileMapData.ElementAt(4).Value)
+            {
+                Childv.Value.GetTileMap();
+                Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+            }
+        }
+
         if (SceneManager.GetActiveScene().name == "Mines" && cClock.WeeklyReset[0])
         {
             // Reset the reset to false so it doesn't do it again
@@ -85,12 +99,31 @@ public class JunkPlacer : MonoBehaviour
         {
             for (int y = (int)worldMin.y; y < (int)worldMax.y; y++)
             {
-                // 35 - 43
-                if (Random.Range(1, 100) <= 40 && tileMap.GetSprite(new Vector3Int(x, y, 0)) == dirtSprite)
+
+                Vector3 pos = new Vector3(x, y, 0);
+                Vector3Int posInt = grid.WorldToCell(pos);
+                if (Random.Range(1, 100) <= 40 && tileMap.GetSprite(posInt) == dirtSprite)
                 {
-                    nonWalkableTileMap.SetTile(new Vector3Int(x, y, 0), treeTile);
+                    //nonWalkableTileMap.SetTile(posInt, treeTile);
+                    // Create a new slot
+                    TileDataClass Temp = new TileDataClass();
+                    // Added the new slot
+                    Dictioary.TileMapData.ElementAt(4).Value.Add(posInt, Temp);
+                    // Set that tile sprite 
+                    Dictioary.TileMapData.ElementAt(4).Value[posInt].TileMap.SetTile(posInt, treeTile);
+                    // Set the tile to be the one we set
+                    Dictioary.TileMapData.ElementAt(4).Value[posInt].Tile = tileMap.GetTile(posInt);
+                    ItemBase Item = new ItemBase();
+                    Item = this.gameObject.AddComponent<ItemBase>() as ItemBase;
+                    // Sets up and ore item
+                    Item.SetUpThisItem(XML.items.ElementAt(44).Value.bItemType, XML.items.ElementAt(44).Value.bName, 1,
+                        XML.items.ElementAt(44).Value.bStackable, XML.items.ElementAt(44).Value.bSrcImage, XML.items.ElementAt(44).Value.bSoundEffect,
+                        XML.items.ElementAt(44).Value.bTile, XML.items.ElementAt(44).Value.bPrefab, XML.items.ElementAt(44).Value.bSellPrice);
+                    // Set up the item in the rock at the given location.
+                    Dictioary.TileMapData.ElementAt(4).Value[posInt].SetItem(Item);
+                    //DataBase.Add(posInt, Item);
                 }
-                
+
             }
 
         }

@@ -33,8 +33,8 @@ public class Clock : MonoBehaviour
     /*Boolen for the 12 hour clock for AM/PM*/
     private bool AM;
 
-    int Hour, Min, Day, Month, Year, WeekCounter;
-    int MaxHour = 24, MaxMin = 60, MaxDay = 30, MaxMouth = 12; // Setting the max an hour, min and months in a day *FOR NOW WE WILL KEEP IT 30 DAYS, CAN CHANGE LATER WITH SEASONS*
+    public int Hour, Min, Day, Month, Year, WeekCounter;
+    public int MaxHour = 24, MaxMin = 60, MaxDay = 30, MaxMouth = 12; // Setting the max an hour, min and months in a day *FOR NOW WE WILL KEEP IT 30 DAYS, CAN CHANGE LATER WITH SEASONS*
 
     float TimeTimer = 0.0f; // Will count amount of time has past.
 
@@ -45,16 +45,17 @@ public class Clock : MonoBehaviour
     /*Starting values for the clock *THIS CAN BE CHANGED LATER* */
     private void Start()
     {
-        WeeklyReset = new bool[3];
+        WeeklyReset = new bool[4];
         WeeklyReset[0] = true;
         WeeklyReset[1] = true;
         WeeklyReset[2] = true;
+        WeeklyReset[3] = true;
         Hour = 8;
         WeekCounter = 1;
         Min = 0;
         Day = 1;
         Month = 5;
-        Year = 2020;
+        Year = 1969;
         foreach (Transform child in transform)
         {
             if (child.tag == "Lighting")

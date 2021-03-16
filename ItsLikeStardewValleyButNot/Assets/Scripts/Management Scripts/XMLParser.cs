@@ -53,6 +53,10 @@ public class XMLParser : MonoBehaviour
             {
                 Item = ItemBase.ItemTypes.Tool;
             }
+            else if (itemType == "Wood")
+            {
+                Item = ItemBase.ItemTypes.Wood;
+            }
             else if (itemType == "Plant")
             {
                 Item = ItemBase.ItemTypes.Plant;

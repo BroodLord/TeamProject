@@ -10,6 +10,7 @@ public class TileDataClass : MonoBehaviour
 {
     private PlantAbstractClass Plant;
     private OreAbstractClass Ore;
+    private ItemBase Item;
     public Tilemap TileMap;
     public TileBase Tile;
     public GameObject Clone;
@@ -29,6 +30,25 @@ public class TileDataClass : MonoBehaviour
         TileMap = GameObject.Find("Floor").GetComponent<Tilemap>();
         Plant = null;
         Watered = false;
+    }
+
+    public bool HasItem()
+    {
+        if (Item != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public ItemBase GetItem()
+    {
+        return Item;
+    }
+
+    public void SetItem(ItemBase Item)
+    {
+        this.Item = Item;
     }
 
     public bool HasOre()
