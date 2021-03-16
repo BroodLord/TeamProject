@@ -5,6 +5,7 @@
 	<Item name="Axe" type="Tool" src-image="Diamond_Axe_JE2_BE2" tile-src-image ="" sound-effect ="Axe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 	<Item name="Pickaxe" type="Tool" src-image="Diamond_Pickaxe" tile-src-image ="Fulltilemap_180" sound-effect ="Rock_Break" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 	<Item name="Scythe" type="Tool" src-image="Scythe" tile-src-image ="" sound-effect ="Scythe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
+	<Item name="Fishing Rod" type="Tool" src-image="Fishing_Rod" tile-src-image ="" sound-effect ="Bobber_Splash" Prefab ="" amount = "1" stackable="No" sellPrice="50"/>
 
 	<!-- List of Seeds -->
 	<Item name="Potato Seeds" type="Seed" src-image="Crop_Spritesheet_89" tile-src-image ="" sound-effect ="Seed_Sound" Prefab ="PotatoSeed" amount = "1" stackable="Yes" sellPrice="50"/>
@@ -59,5 +60,14 @@
 	<Item name="Wood Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>
 	<Item name="Torch" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>
 	<Item name="Fence" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice=""/>
-
+	
+	<!-- List of Fish -->
+	<Item name="Trout" type="Fish" src-image="Brown_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="30"/>
+	<Item name="Pike" type="Fish" src-image="DarkBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="40"/>
+	<Item name="Salmon" type="Fish" src-image="Red_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50"/>
+	<Item name="Sunfish" type="Fish" src-image="Yellow_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="60"/>
+	<Item name="Perch" type="Fish" src-image="Green_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="70"/>
+	<Item name="Carp" type="Fish" src-image="LightBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="80"/>
+	<Item name="Trash" type="Fish" src-image="Trash" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="0"/>
+	
 </Items>

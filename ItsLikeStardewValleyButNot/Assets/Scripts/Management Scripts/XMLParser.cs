@@ -73,6 +73,11 @@ public class XMLParser : MonoBehaviour
             {
                 Item = ItemBase.ItemTypes.Decoration;
             }
+            else if (itemType == "Fish")
+            {
+                Item = ItemBase.ItemTypes.Fish;
+            }
+
             /*****************************************************/
             // Gets the source image
             string srcImage = ItemsXML.Attributes.GetNamedItem("src-image").Value;

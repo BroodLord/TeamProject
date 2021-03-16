@@ -8,7 +8,8 @@ enum toolList
     hoe,
     axe,
     pick,
-    wateringCan
+    wateringCan, 
+    fishingRod
 }
 
 public abstract class ToolScript : ItemBase

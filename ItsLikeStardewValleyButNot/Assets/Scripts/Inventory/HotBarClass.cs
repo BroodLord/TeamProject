@@ -97,7 +97,8 @@ public class HotBarClass : InventoryAbstractClass
         for (int i = 0; i < XML.items.Count; i++)
         {
             if (XML.items.ElementAt(i).Value.bName == "Hoe" || XML.items.ElementAt(i).Value.bName == "Water Bucket" ||
-                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Pickaxe" || XML.items.ElementAt(i).Value.bName == "Axe")
+                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Pickaxe" || 
+                XML.items.ElementAt(i).Value.bName == "Axe" || XML.items.ElementAt(i).Value.bName == "Fishing Rod")
             {
                 ItemBase BasicItem = new ItemBase();
                 // Get the object the component will be on and give it a name

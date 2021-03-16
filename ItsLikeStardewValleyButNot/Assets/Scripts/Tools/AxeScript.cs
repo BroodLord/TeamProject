@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -37,7 +38,6 @@ public class AxeScript : ToolScript
         GameObject SubGameObject = new GameObject(item.GetName());
         SubGameObject.transform.parent = ToolItems.transform;
         ItemBase PlantItem = item;
-        return PlantItem;
     }
 
     public override void useTool()
