@@ -38,6 +38,7 @@ public class AxeScript : ToolScript
         GameObject SubGameObject = new GameObject(item.GetName());
         SubGameObject.transform.parent = ToolItems.transform;
         ItemBase PlantItem = item;
+        return PlantItem;
     }
 
     public override void useTool()

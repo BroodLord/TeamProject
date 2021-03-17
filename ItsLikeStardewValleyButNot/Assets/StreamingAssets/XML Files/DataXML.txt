@@ -4,7 +4,7 @@
     <PlayerEnergy Energy="100" />
   </PlayerData>
   <WorldData>
-    <WeeklyReset Resets0="False" Resets1="False" Resets2="False" />
+    <WeeklyReset Resets0="True" Resets1="True" Resets2="True" Resets3="True" />
     <Slots Slots0="24" Slots1="10" Slots2="16" />
   </WorldData>
   <InventoryData>
@@ -198,6 +198,17 @@
       <PriceElement Price="50" />
     </ElementData>
     <ElementData>
+      <NameElement Name="Axe" />
+      <TypeElement Type="Tool" />
+      <ImageElement Image="Diamond_Axe_JE2_BE2" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="Axe_Sound" />
+      <PrefabElement Prefab="" />
+      <AmountElement Amount="1" />
+      <StackableElement Stackable="False" />
+      <PriceElement Price="50" />
+    </ElementData>
+    <ElementData>
       <NameElement Name="Pickaxe" />
       <TypeElement Type="Tool" />
       <ImageElement Image="Diamond_Pickaxe" />
@@ -219,269 +230,21 @@
       <StackableElement Stackable="False" />
       <PriceElement Price="50" />
     </ElementData>
+    <ElementData>
+      <NameElement Name="Fishing Rod" />
+      <TypeElement Type="Tool" />
+      <ImageElement Image="Fishing_Rod" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="Bobber_Splash" />
+      <PrefabElement Prefab="" />
+      <AmountElement Amount="1" />
+      <StackableElement Stackable="False" />
+      <PriceElement Price="50" />
+    </ElementData>
   </HotbarData>
   <ChestData />
   <FarmData />
-  <Mines0Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="3" Y="-4" Z="0" />
-      <PosElement X="3" Y="-4" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="3" Y="-2" Z="0" />
-      <PosElement X="3" Y="-2" Z="0" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="3" Y="0" Z="0" />
-      <PosElement X="3" Y="0" Z="0" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="4" Y="3" Z="0" />
-      <PosElement X="4" Y="3" Z="0" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="5" Y="-1" Z="0" />
-      <PosElement X="5" Y="-1" Z="0" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="5" Y="1" Z="0" />
-      <PosElement X="5" Y="1" Z="0" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="6" Y="6" Z="0" />
-      <PosElement X="6" Y="6" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="8" Y="3" Z="0" />
-      <PosElement X="8" Y="3" Z="0" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="10" Y="6" Z="0" />
-      <PosElement X="10" Y="6" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="14" Y="5" Z="0" />
-      <PosElement X="14" Y="5" Z="0" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="3" />
-    </RockData>
-  </Mines0Data>
-  <Mines1Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="-9" Y="3" Z="0" />
-      <PosElement X="-9" Y="3" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="-8" Y="10" Z="0" />
-      <PosElement X="-8" Y="10" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="-3" Y="6" Z="0" />
-      <PosElement X="-3" Y="6" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="-1" Y="10" Z="0" />
-      <PosElement X="-1" Y="10" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="1" Y="6" Z="0" />
-      <PosElement X="1" Y="6" Z="0" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="3" Y="8" Z="0" />
-      <PosElement X="3" Y="8" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="4" Y="10" Z="0" />
-      <PosElement X="4" Y="10" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="6" Y="6" Z="0" />
-      <PosElement X="6" Y="6" Z="0" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="10" Y="9" Z="0" />
-      <PosElement X="10" Y="9" Z="0" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="13" Y="7" Z="0" />
-      <PosElement X="13" Y="7" Z="0" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="13" Y="10" Z="0" />
-      <PosElement X="13" Y="10" Z="0" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="3" />
-    </RockData>
-  </Mines1Data>
-  <Mines2Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="-11" Y="1" Z="0" />
-      <PosElement X="-11" Y="1" Z="0" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="-10" Y="7" Z="0" />
-      <PosElement X="-10" Y="7" Z="0" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="-9" Y="3" Z="0" />
-      <PosElement X="-9" Y="3" Z="0" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="-5" Y="8" Z="0" />
-      <PosElement X="-5" Y="8" Z="0" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="-3" Y="1" Z="0" />
-      <PosElement X="-3" Y="1" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="0" Y="11" Z="0" />
-      <PosElement X="0" Y="11" Z="0" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="3" Y="1" Z="0" />
-      <PosElement X="3" Y="1" Z="0" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="3" Y="3" Z="0" />
-      <PosElement X="3" Y="3" Z="0" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="14" Y="2" Z="0" />
-      <PosElement X="14" Y="2" Z="0" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="15" Y="6" Z="0" />
-      <PosElement X="15" Y="6" Z="0" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="16" Y="2" Z="0" />
-      <PosElement X="16" Y="2" Z="0" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="4" />
-    </RockData>
-  </Mines2Data>
+  <Mines0Data />
+  <Mines1Data />
+  <Mines2Data />
 </SaveData>
