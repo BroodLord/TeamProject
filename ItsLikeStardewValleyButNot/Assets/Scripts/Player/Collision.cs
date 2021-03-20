@@ -11,7 +11,8 @@ public class Collision : MonoBehaviour
     XMLParser ItemManager;
     public InventoryClass cInventory;
     public SellChestClass cChest;
-    public GameObject ShopUI;
+    public GameObject SeedShopUI;
+    public GameObject ToolShopUI;
     public Clock cClock;
     // Start is called before the first frame update
     // Get all the refenece for the variables
@@ -63,9 +64,13 @@ public class Collision : MonoBehaviour
             }
         }
         // if we collide with the shop then enable the shop
-        if (collision.gameObject.tag == "Shop")
+        if (collision.gameObject.tag == "SeedShop")
         {
-            ShopUI.SetActive(true);
+            SeedShopUI.SetActive(true);
+        }
+        if (collision.gameObject.tag == "ToolShop")
+        {
+            ToolShopUI.SetActive(true);
         }
     }
     /* if we leave any of these collisions then disable them. */
@@ -79,9 +84,13 @@ public class Collision : MonoBehaviour
                 cInventory.DisabledNEnable();
             }
         }
-        if (collision.gameObject.tag == "Shop")
+        if (collision.gameObject.tag == "SeedShop")
         {
-            ShopUI.SetActive(false);
+            SeedShopUI.SetActive(false);
+        }
+        if (collision.gameObject.tag == "ToolShop")
+        {
+            ToolShopUI.SetActive(false);
         }
     }
 }

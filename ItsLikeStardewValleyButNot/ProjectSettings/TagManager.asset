@@ -23,9 +23,10 @@ TagManager:
   - Icon
   - ItemManager
   - SellChest
-  - Shop
   - Rockplacer
   - Lighting
+  - SeedShop
+  - ToolShop
   layers:
   - Default
   - TransparentFX

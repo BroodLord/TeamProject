@@ -39,11 +39,11 @@ public class WatermelonClass : PlantAbstractClass
             {
                 mSpriteIndex = 0;
             }
-            if (CurrentDays >= 2 && CurrentDays < 4)
+            if (CurrentDays >= 5 && CurrentDays < 10)
             {
                 mSpriteIndex = 1;
             }
-            if (CurrentDays >= 4)
+            if (CurrentDays >= 10)
             {
                 mSpriteIndex = 2;
                 mHarvestable = true;

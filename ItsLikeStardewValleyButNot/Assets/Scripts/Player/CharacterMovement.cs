@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public LoadLevel LoadManager;
     public PauseMenu PauseMenuScript;
     public GameObject thisObject;
     public Animator PlayerAnim;
@@ -58,7 +59,7 @@ public class CharacterMovement : MonoBehaviour
 
 
         // if we aren't actionlocked or paused then we can move
-        if (!actionLocked && !PauseMenuScript.GameIsPaused)
+        if (!actionLocked && !PauseMenuScript.GameIsPaused && !LoadManager.Loading)
         {
             /* Move either up, down, left or right, this allow set the bool in the animator */
             if (Input.GetKey(KeyCode.W))

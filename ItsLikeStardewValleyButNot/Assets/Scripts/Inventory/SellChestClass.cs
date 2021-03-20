@@ -11,7 +11,7 @@ public class SellChestClass : InventoryAbstractClass
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public GameObject ImageParent;
-    private bool UIEnabled;
+    public bool UIEnabled;
 
     // Same as the Hotbar class so look there for ref.
     public override void UpdateUI()

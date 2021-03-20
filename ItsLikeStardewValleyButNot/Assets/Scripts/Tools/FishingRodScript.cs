@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Tilemaps;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 public class FishingRodScript : ToolScript
 {
@@ -46,6 +49,7 @@ public class FishingRodScript : ToolScript
             Debug.Log("This tile can be fished in");
             fishingTimer = Random.Range(3.0f, 10.0f);
             currentlyFishing = true;
+            ToolUsed = true;
 
         }
         else
@@ -124,7 +128,7 @@ public class FishingRodScript : ToolScript
             {
                 ItemBase PlantItem = SubGameObject.gameObject.AddComponent<ItemBase>() as ItemBase;
                 PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage,
-                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
+                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice, i.Value.bCustomData);
                 return PlantItem;
             }
         }

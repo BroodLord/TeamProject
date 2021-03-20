@@ -78,6 +78,7 @@ public class PickaxeScript : ToolScript
                 Audio.clip = GetSoundEffect();
                 Audio.Play();
                 Debug.Log("GATHERED ORE");
+                ToolUsed = true;
                 /****************/
                 // Assess the ore
                 InventoryAssessment(GetRockItem(Ore), posInt);

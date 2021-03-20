@@ -35,9 +35,10 @@ public class PlantSeed : ToolScript
             /***************************/
 
             Debug.Log("Seed Planted");
+            ToolUsed = true;
             /*Create a clone and instantiate it*/
             GameObject Clone;
-            Clone = Instantiate(PlantPrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+            Clone = Instantiate(PlantPrefab, new Vector3(posInt.x + 0.5f, posInt.y + 0.5f, posInt.z), Quaternion.identity);
             /*****************************/
             /* Set up the plant for the clone on that spot in the database */
             PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();

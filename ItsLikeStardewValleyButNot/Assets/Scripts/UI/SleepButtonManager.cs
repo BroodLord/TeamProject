@@ -9,6 +9,7 @@ public class SleepButtonManager : MonoBehaviour
     public GameObject ReportUI;
     public PauseMenu PauseMenuScript;
     public GameObject SleepUI;
+    public StaminaScript Stam;
 
     // Function used to show a UI that asks the player if they would like to sleep
     public void SleepButton()
@@ -26,6 +27,7 @@ public class SleepButtonManager : MonoBehaviour
     // Loads the next day and does any updates we need to do in the night
     public void NextDayButton()
     {
+        Stam.Reset();
         cClock.NightUpdate();
         ReportUI.SetActive(false);
         PauseMenuScript.GameIsPaused = false;

@@ -3,6 +3,7 @@ using System.Threading;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
@@ -11,8 +12,12 @@ public class Clock : MonoBehaviour
 {
     public TileDictionaryClass Dictioary;
     public MoneyClass GoldManager;
-    public GameObject ParentShopSlot;
+    public GameObject SeedParentShopSlot;
+    public GameObject Player;
+    public GameObject ToolParentShopSlot;
     public GameObject ShopSlot;
+    public StaminaScript Stam;
+    public Animator Transition;
     /*UI Components for Text on the Canvus*/
     public TextMeshProUGUI[] TimeUIText;
     public TextMeshProUGUI[] DateUIText;
@@ -23,8 +28,10 @@ public class Clock : MonoBehaviour
     public float SecondsPerMin;
     public TextMeshProUGUI GoldText;
     public PauseMenu PauseMenuScript;
-    public Dictionary<string, ItemBase> Items;
+    public int PassoutTimer;
     public bool[] WeeklyReset;
+
+    private bool AtMidDay;
 
     /*Strings which will be assigned to the UI*/
     private string TimeText;
@@ -45,6 +52,8 @@ public class Clock : MonoBehaviour
     /*Starting values for the clock *THIS CAN BE CHANGED LATER* */
     private void Start()
     {
+        AtMidDay = false;
+        PassoutTimer = 0;
         WeeklyReset = new bool[4];
         WeeklyReset[0] = true;
         WeeklyReset[1] = true;
@@ -67,7 +76,8 @@ public class Clock : MonoBehaviour
         if (Hour < 12) { AM = true; }
         cChest = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<SellChestClass>();
         SetTextStrings();
-        AssignShopItems();
+        AssignShopItems(DefaultItemBase.ItemTypes.Seed);
+        AssignShopItems(DefaultItemBase.ItemTypes.Tool);
     }
     // Used when the player goes to bed
     public void NightUpdate()
@@ -121,7 +131,11 @@ public class Clock : MonoBehaviour
             if(v.Value.HasPlant())
             {
                 PlantAbstractClass P = v.Value.GetPlant();
-                P.UpdatePlant(3);
+                P.UpdatePlant(1);
+            }
+            else
+            {
+               v.Value.SetWatered(false);
             }
         }
     }
@@ -131,6 +145,7 @@ public class Clock : MonoBehaviour
     {
         if (!PauseMenuScript.GameIsPaused)
         {
+            
             string Output = GoldManager.GetMoney().ToString();
             GoldText.text = Output;
             /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
@@ -138,8 +153,24 @@ public class Clock : MonoBehaviour
             {
                 /*******************************/
                 /* Change the light so it represents a full realistic lighting, 8am 70% light, 12 100%, 12pm - 2am decrease the light till 30% light */
+                // 30% 0.1176471, 100% 0.3921569
+                
+                // GROUND BREAKING LIGHTING MATHS THAT THE WORLD NEEDS TO KNOW ABOUT, ONLY WORKS X NUMBER OF TIMES
+                // Lighting = ( 39 % ((CurrentLighting% / Time(Hours)) / 60)) 0.0004875f;
                 var tempColor = Lighting.color;
-                tempColor.a += 0.00083f;
+                if (!AtMidDay)
+                {
+                    tempColor.a -= 0.0004875f;
+                    if (PassoutTimer == 4)
+                    {
+                        AtMidDay = true;
+                    }
+                }
+                else
+                {
+                    tempColor.a += 0.0004875f;
+                }
+
                 Lighting.color = tempColor;
                 /*********************************/
                 //Lighting.color.a = 1f;
@@ -147,6 +178,12 @@ public class Clock : MonoBehaviour
                 if (Min >= MaxMin)
                 {
                     Min = 0;
+                    ++PassoutTimer;
+                    if (PassoutTimer == 18)
+                    {
+                        PassoutTimer = 0;
+                        PlayerPassOut();
+                    }
                     ++Hour;
                     if (Hour >= MaxHour)
                     {
@@ -174,8 +211,17 @@ public class Clock : MonoBehaviour
         }
     }
 
+    void PlayerPassOut()
+    {
+        // Start the play transition
+        Stam.SetStamina(75);
+        NightUpdate();
+        LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
+        Load.TransferLevel("PlayerRoom", new Vector3(-1, 9,0));
+    }
+
     // RIP AZIR
-    void AssignShopItems()
+    void AssignShopItems(DefaultItemBase.ItemTypes Type)
     {
         // Finds the refs
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
@@ -184,15 +230,23 @@ public class Clock : MonoBehaviour
         for (int i = 0; i < XML.items.Count; i++)
         {
             // if its a seed
-            if (XML.items.ElementAt(i).Value.GetType() == DefaultItemBase.ItemTypes.Seed)
+            if (XML.items.ElementAt(i).Value.GetType() == Type)
             {
                 // Generate a random number to see if that seed will be in the shop
                 int RandomChance = UnityEngine.Random.Range(0, 100);
-                if (RandomChance > 50)
+                if (Type == DefaultItemBase.ItemTypes.Tool || RandomChance > 50)
                 {
                     /*Wanna get the gameobject we will put the component on*/
                     GameObject childObject = Instantiate(ShopSlot) as GameObject;
-                    childObject.transform.parent = ParentShopSlot.transform;
+                    if (Type == DefaultItemBase.ItemTypes.Seed)
+                    {
+                        childObject.transform.parent = SeedParentShopSlot.transform;
+                    }
+                    else
+                    {
+                        childObject.transform.parent = ToolParentShopSlot.transform;
+                    }
+
                     /******************************************/
                     /* Get the image so we can set the sprite to appear there */
                     Image Image = childObject.transform.Find("ImageSlot").transform.Find("ItemImage").GetComponent<Image>();
@@ -209,7 +263,7 @@ public class Clock : MonoBehaviour
                     // Find what item we are wanting to use and set it up
                     TypeFinder.TyepFinder(i, childObject).SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
                                                                         XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
-                                                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
+                                                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice, XML.items.ElementAt(i).Value.bCustomData);
                 }
             }
         }

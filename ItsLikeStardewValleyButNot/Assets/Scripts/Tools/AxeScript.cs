@@ -63,6 +63,7 @@ public class AxeScript : ToolScript
                 Audio.clip = GetSoundEffect();
                 Audio.Play();
                 Debug.Log("GATHERED WOOD");
+                ToolUsed = true;
                 /****************/
                 // Assess the ore
                 InventoryAssessment(GetTreeItem(Item), posInt);

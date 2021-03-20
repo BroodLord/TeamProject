@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class ScytheTool : ToolScript
@@ -42,7 +43,7 @@ public class ScytheTool : ToolScript
             {
                 ItemBase PlantItem = SubGameObject.gameObject.AddComponent<ItemBase>() as ItemBase;
                 PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage, 
-                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice);
+                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice, i.Value.bCustomData);
                 return PlantItem;
             }
         }
@@ -51,34 +52,38 @@ public class ScytheTool : ToolScript
 
     public override void useTool()
     {
-        Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
-        //TODO - when we add more grids and tilemaps, this will break
-        // Get the mouse positon in world
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int posInt = grid.LocalToCell(pos);
-        // Check if the dictionary has a plant there
-        if (Dictioary.TileMapData.ElementAt(0).Value[posInt].HasPlant())
+        if (SceneManager.GetActiveScene().name == "Farmland")
         {
-            // check if that plant is harvestable
-            PlantAbstractClass Plant = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
-            if (Plant.mHarvestable)
+            Dictioary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
+            //TODO - when we add more grids and tilemaps, this will break
+            // Get the mouse positon in world
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int posInt = grid.LocalToCell(pos);
+            // Check if the dictionary has a plant there
+            if (Dictioary.TileMapData.ElementAt(0).Value[posInt].HasPlant())
             {
-                cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
-                // Play the sound effect
-                AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
-                Audio.clip = GetSoundEffect();
-                Audio.Play();
-                /************************/
-                //Debug.Log("GATHERED PLANT");
-                // Asset the plant and destory the planted one.
-                InventoryAssessment(GetPlantItem(Plant.XMLName), posInt);
-                Plant.DestoryPlant();
+                // check if that plant is harvestable
+                PlantAbstractClass Plant = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
+                if (Plant.mHarvestable)
+                {
+                    cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
+                    // Play the sound effect
+                    AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+                    Audio.clip = GetSoundEffect();
+                    Audio.Play();
+                    ToolUsed = true;
+                    /************************/
+                    //Debug.Log("GATHERED PLANT");
+                    // Asset the plant and destory the planted one.
+                    InventoryAssessment(GetPlantItem(Plant.XMLName), posInt);
+                    Plant.DestoryPlant();
+                }
             }
-        }
-        else
-        {
-            Debug.Log(tileMap.GetTile(posInt).name);
-            Debug.Log("No Plant to Gather");
+            else
+            {
+                Debug.Log(tileMap.GetTile(posInt).name);
+                Debug.Log("No Plant to Gather");
+            }
         }
     }
 }

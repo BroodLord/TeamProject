@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
@@ -24,7 +25,6 @@ public class XMLParser : MonoBehaviour
 
         XmlNodeList constVarList = root.SelectNodes("Item");
 
-
         foreach (XmlNode ItemsXML in constVarList)
         {
             /*Get the attributes we want for each variable*/
@@ -35,6 +35,8 @@ public class XMLParser : MonoBehaviour
             string prefab = ItemsXML.Attributes.GetNamedItem("Prefab").Value;
             string TileName = ItemsXML.Attributes.GetNamedItem("tile-src-image").Value;
             string SoundEffectName = ItemsXML.Attributes.GetNamedItem("sound-effect").Value;
+            string customDataString = ItemsXML.Attributes.GetNamedItem("customData").Value;
+            var CustomData = 0;
             bool StackableResult = false;
             float sellPrice;
             ItemBase.ItemTypes Item = ItemBase.ItemTypes.Tool;
@@ -107,7 +109,7 @@ public class XMLParser : MonoBehaviour
             AudioClip Audio = Resources.Load<AudioClip>(Path);
             ItemBase temp = new ItemBase();
             // Set up the item and add it to the dicitiory for the XML.
-            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice);
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, Convert.ToInt32(customDataString));
             items.Add(name, temp);
         }
             

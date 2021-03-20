@@ -9,6 +9,7 @@ using UnityEngine.Tilemaps;
 
 public class LoadLevel : MonoBehaviour
 {
+    public bool Loading;
     public TileBase TilledTile;
     public Animator Transition;
     public bool NewLevel;
@@ -19,11 +20,10 @@ public class LoadLevel : MonoBehaviour
     public HotBarClass HotBarRef;
     public TileDictionaryClass Dictionary;
     public Vector3 StartLocation;
-    // Start is called before the first frame update
-    // RIP AZIR, FUCKING REEEEEE THIS SHIT MAKES ME SICK, I'M SORRY PAPPI NICK.
 
     public void TransferLevel(string LevelName, Vector3 startLoc)
     {
+        Loading = true;
         // Get all the refernece that we need
         Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
@@ -35,7 +35,7 @@ public class LoadLevel : MonoBehaviour
         // Dont destory on load the Dictionary because we need it
         DontDestroyOnLoad(Dictionary);
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
-        if (LevelName != "PlayerFarm")
+        if (LevelName != "Farmland")
         {
             // Loops through all the databases and makes the clones are don't destory on load
             foreach (var BaseV in Dictionary.TileMapData)
@@ -51,7 +51,6 @@ public class LoadLevel : MonoBehaviour
                 }
             }
         }
-        //UICanvas.SetActive(false);
         // Set up the new start location
         StartLocation = new Vector3(startLoc.x, startLoc.y, startLoc.z);
         // Loop through the hot bar and inventory and don't destory on load everything
@@ -91,6 +90,7 @@ public class LoadLevel : MonoBehaviour
         }
         if (asyncLoad.isDone)
         {
+            Loading = false;
             //UICanvas = GameObject.FindGameObjectWithTag("Canvas");
             //UICanvas.SetActive(true);
             // if we aren't on the farm then set all the clone to be not active 
@@ -100,14 +100,17 @@ public class LoadLevel : MonoBehaviour
 
                 foreach (var ChildV in Dictionary.TileMapData.ElementAt(0).Value)
                 {
-                    ChildV.Value.Clone.SetActive(false);
-                    DontDestroyOnLoad(ChildV.Value.Clone);
+                    if (ChildV.Value.Clone != null)
+                    {
+                        ChildV.Value.Clone.SetActive(false);
+                        DontDestroyOnLoad(ChildV.Value.Clone);
+                    }
                 }
             }
             // Set up the player at the location
             Player.transform.position = StartLocation;
             Debug.Log(StartLocation);
-            if (LevelName == "PlayerFarm")
+            if (LevelName == "Farmland")
             {
                 // If we are on the player farm then we want to loop through all the clones and set them all to active
                 foreach (var Childv in Dictionary.TileMapData.ElementAt(0).Value)
@@ -128,7 +131,7 @@ public class LoadLevel : MonoBehaviour
                             Childv.Value.TileMap.SetTile(Childv.Key, TilledTile);
                         }
                     }
-                    else
+                    else if(!Childv.Value.IsWatered())
                     {
                         Childv.Value.SetWatered(false);
                         PlantAbstractClass P = Childv.Value.GetPlant();

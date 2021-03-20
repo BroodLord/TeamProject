@@ -24,11 +24,12 @@ public class ItemBase : DefaultItemBase
     protected string mSrcImage;
     protected float mSellPrice;
     private string TempAssetPath = "XML Loaded Assets/";
+    private int mCustomData;
 
     // Sets up the an item that is in the inventory
-    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
+    public void SetUpThisItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice, int CustomData)
     {
-        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Audio, Tile, prefab, SellPrice);
+        SetUpBaseItem(ItemType, Name, Amount, Stackable, SrcImage, Audio, Tile, prefab, SellPrice, CustomData);
         mItemType = bItemType;
         mImage = bImage;
         mPrefab = prefab;
@@ -39,6 +40,12 @@ public class ItemBase : DefaultItemBase
         mSrcImage = bSrcImage;
         mStackable = bStackable;
         mSellPrice = bSellPrice;
+        mCustomData = CustomData;
+    }
+
+    public int GetCustomData()
+    {
+        return mCustomData;
     }
 
     public AudioClip GetSoundEffect()

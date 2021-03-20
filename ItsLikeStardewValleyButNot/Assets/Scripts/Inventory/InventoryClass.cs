@@ -15,7 +15,7 @@ public class InventoryClass : InventoryAbstractClass
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public GameObject ImageParent;
-    private bool UIEnabled;
+    public bool UIEnabled;
 
     // Same as the Hotbar class so look there for ref.
     public override void UpdateUI()
@@ -76,23 +76,23 @@ public class InventoryClass : InventoryAbstractClass
         Debug.Log(ItemList.Length);
         cInventory = this.GetComponent<InventoryClass>();
         cHotBar = this.GetComponent<HotBarClass>();
-        ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
-        for (int i = 0; i < XML.items.Count; i++)
-        {
-            if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed)
-            {
-                ItemBase BasicItem = new ItemBase();
-                // Get the object the component will be on and give it a name
-                GameObject SubGameObject = new GameObject(XML.items.ElementAt(i).Value.bName);
-                SubGameObject.transform.parent = ToolItems.transform;
-                // Find the type of the item and set it up, after add it to the dictionary.
-                BasicItem = TypeFinder.TyepFinder(i, SubGameObject);
-                BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
-                                        XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
-                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
-                AddItem(BasicItem);
-            }
-        }
+        //ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
+        //for (int i = 0; i < XML.items.Count; i++)
+        //{
+        //    if (XML.items.ElementAt(i).Value.bItemType == DefaultItemBase.ItemTypes.Seed)
+        //    {
+        //        ItemBase BasicItem = new ItemBase();
+        //        // Get the object the component will be on and give it a name
+        //        GameObject SubGameObject = new GameObject(XML.items.ElementAt(i).Value.bName);
+        //        SubGameObject.transform.parent = ToolItems.transform;
+        //        // Find the type of the item and set it up, after add it to the dictionary.
+        //        BasicItem = TypeFinder.TyepFinder(i, SubGameObject);
+        //        BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
+        //                                XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
+        //                                XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
+        //        AddItem(BasicItem);
+        //    }
+        //}
         UpdateUI();
         /***************************************/
     }

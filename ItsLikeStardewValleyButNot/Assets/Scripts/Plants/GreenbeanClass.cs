@@ -38,11 +38,11 @@ public class GreenbeanClass : PlantAbstractClass
             {
                 mSpriteIndex = 0;
             }
-            if (CurrentDays >= 2 && CurrentDays < 4)
+            if (CurrentDays >= 3 && CurrentDays < 6)
             {
                 mSpriteIndex = 1;
             }
-            if (CurrentDays >= 4)
+            if (CurrentDays >= 6)
             {
                 mSpriteIndex = 2;
                 mHarvestable = true;

@@ -38,11 +38,11 @@ public class Honeydew_WatermelonClass : PlantAbstractClass
             {
                 mSpriteIndex = 0;
             }
-            if (CurrentDays >= 2 && CurrentDays < 4)
+            if (CurrentDays >= 4 && CurrentDays < 8)
             {
                 mSpriteIndex = 1;
             }
-            if (CurrentDays >= 4)
+            if (CurrentDays >= 8)
             {
                 mSpriteIndex = 2;
                 mHarvestable = true;

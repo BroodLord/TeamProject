@@ -455,6 +455,7 @@ public class DataXMLParser : MonoBehaviour
 
     public void LoadXML()
     {
-
+        //XmlDocument XMLDoc = new XmlDocument();
+        //XMLDoc.Load(Application.dataPath + "\\StreamingAssets\\XML Files\\DataXML.txt");
     }
 }

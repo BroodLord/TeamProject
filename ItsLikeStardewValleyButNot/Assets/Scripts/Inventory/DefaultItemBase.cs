@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -21,6 +22,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     public AudioClip bSoundEffect;
     public TileBase bTile;
     public float bSellPrice;
+    public int bCustomData;
 
     // Gets the base tool type
     public ItemTypes GetBaseType()
@@ -29,17 +31,18 @@ public abstract class DefaultItemBase : MonoBehaviour
     }
 
     // This will set up the default value
-    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice)
+    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice, int CustomData)
     {
         bItemType = ItemType;
         // If the tool type isn't a plant or ore then we are using just a base png image for the tool so just load the image, NOTE: This might change later.
-        if (ItemType != ItemTypes.Plant && ItemType != ItemTypes.Seed && ItemType != ItemTypes.Ore)
+        char ch = SrcImage[SrcImage.Length - 1];
+        if (!Char.IsDigit(ch))
         {
             string Path = "XML Loaded Assets/" + SrcImage;
             bImage = Resources.Load<Sprite>(Path);
         }
         // If its an ore or plant then load the sprite from a sprite sheet
-        else if (ItemType == ItemTypes.Ore)
+        else if (ItemType == ItemTypes.Ore || ItemType == ItemTypes.Tool)
         {
             bImage = GetFromSheet(SrcImage, RogueSpriteSheet);
         }
@@ -56,7 +59,7 @@ public abstract class DefaultItemBase : MonoBehaviour
         bSrcImage = SrcImage;
         bStackable = Stackable;
         bSellPrice = SellPrice;
-
+        bCustomData = CustomData;
 
     }
     // These are the same function but just load from a different sprite sheet, NOTE: This will be azir dead but the base code for it will stay the same

@@ -118,7 +118,7 @@ public class JunkPlacer : MonoBehaviour
                     // Sets up and ore item
                     Item.SetUpThisItem(XML.items.ElementAt(44).Value.bItemType, XML.items.ElementAt(44).Value.bName, 1,
                         XML.items.ElementAt(44).Value.bStackable, XML.items.ElementAt(44).Value.bSrcImage, XML.items.ElementAt(44).Value.bSoundEffect,
-                        XML.items.ElementAt(44).Value.bTile, XML.items.ElementAt(44).Value.bPrefab, XML.items.ElementAt(44).Value.bSellPrice);
+                        XML.items.ElementAt(44).Value.bTile, XML.items.ElementAt(44).Value.bPrefab, XML.items.ElementAt(44).Value.bSellPrice, XML.items.ElementAt(44).Value.bCustomData);
                     // Set up the item in the rock at the given location.
                     Dictioary.TileMapData.ElementAt(4).Value[posInt].SetItem(Item);
                     //DataBase.Add(posInt, Item);
@@ -168,7 +168,7 @@ public class JunkPlacer : MonoBehaviour
                     // Sets up and ore item
                     Item.SetUpThisItem(XML.items.ElementAt(ItemIndex).Value.bItemType, XML.items.ElementAt(ItemIndex).Value.bName, RandAmount,
                         XML.items.ElementAt(ItemIndex).Value.bStackable, XML.items.ElementAt(ItemIndex).Value.bSrcImage, XML.items.ElementAt(ItemIndex).Value.bSoundEffect,
-                        XML.items.ElementAt(ItemIndex).Value.bTile, XML.items.ElementAt(ItemIndex).Value.bPrefab, XML.items.ElementAt(ItemIndex).Value.bSellPrice);
+                        XML.items.ElementAt(ItemIndex).Value.bTile, XML.items.ElementAt(ItemIndex).Value.bPrefab, XML.items.ElementAt(ItemIndex).Value.bSellPrice, XML.items.ElementAt(ItemIndex).Value.bCustomData);
                     // Set up the item in the rock at the given location.
                     Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].SetOre(Item);
                     //DataBase.Add(posInt, Item);

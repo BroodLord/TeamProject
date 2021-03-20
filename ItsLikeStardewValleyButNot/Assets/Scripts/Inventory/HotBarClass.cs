@@ -10,6 +10,7 @@ public class HotBarClass : InventoryAbstractClass
 {
     // Start is called before the first frame update
     public UnityEngine.UI.Image[] ImageSlots;
+    public StaminaScript Stam;
     public TextMeshProUGUI[] AmountText;
     public Sprite BackgroundImage;
     public ItemBase[] InitItems;
@@ -22,6 +23,7 @@ public class HotBarClass : InventoryAbstractClass
     private float actionLockedTimer = actionLock;
     public ItemBase tool;                         //tool that is currently being used 
     private bool UIEnabled;
+    public SellChestClass Chest;
 
     // Function used to update the UI
     public override void UpdateUI()
@@ -97,8 +99,7 @@ public class HotBarClass : InventoryAbstractClass
         for (int i = 0; i < XML.items.Count; i++)
         {
             if (XML.items.ElementAt(i).Value.bName == "Hoe" || XML.items.ElementAt(i).Value.bName == "Water Bucket" ||
-                XML.items.ElementAt(i).Value.bName == "Scythe" || XML.items.ElementAt(i).Value.bName == "Pickaxe" || 
-                XML.items.ElementAt(i).Value.bName == "Axe" || XML.items.ElementAt(i).Value.bName == "Fishing Rod")
+                XML.items.ElementAt(i).Value.bName == "Scythe")
             {
                 ItemBase BasicItem = new ItemBase();
                 // Get the object the component will be on and give it a name
@@ -108,7 +109,7 @@ public class HotBarClass : InventoryAbstractClass
                 BasicItem = TypeFinder.TyepFinder(i, SubGameObject);
                 BasicItem.SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
                     XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
-                    XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice);
+                    XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice, XML.items.ElementAt(i).Value.bCustomData);
                 AddItem(BasicItem);
             }
         }
@@ -270,7 +271,7 @@ public class HotBarClass : InventoryAbstractClass
         }
         /******************************************/
         /* If we can act */
-        if (!actionLocked)
+        if (!actionLocked && !cInventory.UIEnabled && !Chest.UIEnabled)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -295,6 +296,12 @@ public class HotBarClass : InventoryAbstractClass
                         actionLocked = true;
                         FindFarmComponenets();
                         tool.useTool();
+                        ToolScript Tool = (ToolScript)tool;
+                        if (Tool.ToolUsed)
+                        {
+                            Tool.ToolUsed = false;
+                            Stam.UseStamina(tool.GetCustomData());
+                        }
                     }
                     else
                     {
