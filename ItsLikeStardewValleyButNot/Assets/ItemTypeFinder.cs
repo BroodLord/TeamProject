@@ -22,6 +22,37 @@ public class ItemTypeFinder : MonoBehaviour
 
     }
 
+    public int FindItemIndex(string Name)
+    {
+        XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
+        for (int i = 0; i < XML.items.Count; i++)
+        {
+            if (Name == XML.items.ElementAt(i).Value.bName)
+            {
+                return i;
+            }
+        }
+        return 0;
+
+    }
+
+    public ItemBase ItemByTyepFinder(string Name, string TypeName, GameObject childObject)
+    {
+        XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
+        ItemBase BasicItem = new ItemBase();
+        if (Name == "Hoe") { BasicItem = childObject.AddComponent<HoeScript>() as HoeScript; }
+        else if (Name == "Axe") { BasicItem = childObject.AddComponent<AxeScript>() as AxeScript; }
+        else if (Name == "Water Bucket") { BasicItem = childObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
+        else if (Name == "Scythe") { BasicItem = childObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
+        else if (Name == "Fishing Rod") { BasicItem = childObject.gameObject.AddComponent<FishingRodScript>() as FishingRodScript; }
+        else if (TypeName == "Seed") { BasicItem = childObject.gameObject.AddComponent<PlantSeed>() as PlantSeed; }
+        else if (TypeName == "Ore") { BasicItem = childObject.gameObject.AddComponent<Ore>() as Ore; }
+        else { BasicItem = childObject.gameObject.AddComponent<ItemBase>() as ItemBase; }
+
+        return BasicItem;
+
+    }
+
     public ItemBase ItemTyepFinder(ItemBase Item, GameObject childObject)
     {
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();

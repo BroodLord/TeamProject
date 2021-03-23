@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 // I don't think this need commenting as its pretty easy to understand but ask me if you have any questions
@@ -15,6 +16,7 @@ public class TileDataClass : MonoBehaviour
     public TileBase Tile;
     public GameObject Clone;
     private bool Watered;
+    private bool NeedsFloor;
 
     public void GetTileMap()
     {
@@ -25,9 +27,24 @@ public class TileDataClass : MonoBehaviour
         TileMap.SetTile(posInt, Tile);
     }
 
+    private void Update()
+    {
+        if(NeedsFloor)
+        {
+            GetTileMap();
+        }
+    }
+
     public TileDataClass()
     {
-        TileMap = GameObject.Find("Floor").GetComponent<Tilemap>();
+        if (SceneManager.GetActiveScene().name != "LoadSaveScene")
+        {
+            TileMap = GameObject.Find("Floor").GetComponent<Tilemap>();
+        }
+        else
+        {
+            NeedsFloor = true;
+        }
         Plant = null;
         Watered = false;
     }

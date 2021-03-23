@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: 384990bfb05fffb42984cf52339715c6
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: 
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Farmland.unity
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mines2.unity
     guid: 18053d64079a4fe40b32e4dd68e3350d
+  - enabled: 1
+    path: Assets/Scenes/LoadSaveScene.unity
+    guid: 062af592a5d5ca2459237232cce0f866
   m_configObjects: {}

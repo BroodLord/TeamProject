@@ -25,7 +25,11 @@ public class LoadLevel : MonoBehaviour
     {
         Loading = true;
         // Get all the refernece that we need
-        Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
+        //if (SceneManager.GetActiveScene().name != "LoadSaveScene")
+        //{
+            Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
+        //}
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         Player = GameObject.FindGameObjectWithTag("Player");
         UICanvas = GameObject.FindGameObjectWithTag("Canvas");
@@ -34,7 +38,6 @@ public class LoadLevel : MonoBehaviour
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         // Dont destory on load the Dictionary because we need it
         DontDestroyOnLoad(Dictionary);
-        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
         if (LevelName != "Farmland")
         {
             // Loops through all the databases and makes the clones are don't destory on load
@@ -76,7 +79,6 @@ public class LoadLevel : MonoBehaviour
 
     IEnumerator eLoadNextLevel(string LevelName)
     {
-        // Start the play transition
         Transition.SetTrigger("Start");
         // Wait 1 second so the animation can play
         yield return new WaitForSeconds(1);

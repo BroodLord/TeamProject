@@ -14,6 +14,7 @@ public class InitMainCharacter : MonoBehaviour
     public GameObject LoadManager;
     public GameObject ItemManager;
     public XMLParser XML;
+    public string TargetScene;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,15 @@ public class InitMainCharacter : MonoBehaviour
         DontDestroyOnLoad(XML);
         /*TEST REMOVE AFTER*/
         //Player.transform.position = new Vector3(9, 12, 0);
-        SceneManager.LoadScene("PlayerFarm");
+        if (SceneManager.GetActiveScene().name != "LoadSaveScene")
+        {
+            SceneManager.LoadScene(TargetScene);
+        }
+        else
+        {
+            Clock cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
+            LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
+            Load.TransferLevel(cClock.SceneName, cClock.PlayerPos);
+        }
     }
 }

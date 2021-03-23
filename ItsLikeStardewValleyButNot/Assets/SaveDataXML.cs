@@ -12,11 +12,12 @@ public struct RockData
     public string OreName;
     public float[] ID;
     public float[] Pos;
+    public string Tile;
     public string XMLName;
     public float Amount;
 
     public void SetUp(string itemType, string oreName, float[] id, 
-                      float[] pos, string xmlName, float amount)
+                      float[] pos, string tile, string xmlName, float amount)
     {
         ID = new float[3];
         Pos = new float[3];
@@ -24,6 +25,7 @@ public struct RockData
         OreName = oreName;
         ID[0] = id[0]; ID[1] = id[1]; ID[2] = id[2];
         Pos[0] = pos[0]; Pos[1] = pos[1]; Pos[2] = pos[2];
+        Tile = tile;
         XMLName = xmlName;
         Amount = amount;
     }
@@ -38,13 +40,14 @@ public struct PlantData
     public string[] GrowthSprite;
     public float[] ID;
     public float[] Pos;
+    public string Tile;
     public bool Harvestable;
     public bool Growth;
     public string XMLName;
     public bool Watered;
 
     public void SetUp(int currentDays, int growthTime, string type, string image, int amount, string[] growthSprite, 
-                      Vector3Int id, Vector3Int pos, bool harvestable, bool growth, string xmlName, bool watered)
+                      Vector3Int id, Vector3Int pos, string tile, bool harvestable, bool growth, string xmlName, bool watered)
     {
         ID = new float[3];
         Pos = new float[3];
@@ -56,6 +59,7 @@ public struct PlantData
         GrowthSprite[0] = growthSprite[0]; GrowthSprite[1] = growthSprite[1]; GrowthSprite[2] = growthSprite[2];
         ID[0] = id[0]; ID[1] = id[1]; ID[2] = id[2];
         Pos[0] = pos[0]; Pos[1] = pos[1]; Pos[2] = pos[2];
+        Tile = tile;
         Harvestable = harvestable;
         Growth = growth;
         XMLName = xmlName;
@@ -214,7 +218,7 @@ public class SaveData : MonoBehaviour
                 GrowthSprites[1] = Plant.mGrowthSprites[1].name;
                 GrowthSprites[2] = Plant.mGrowthSprites[2].name;
                 Farm[counter].SetUp(Plant.mCurrentDays, Plant.mGrowthTime, Plant.GetType().ToString(),
-                    Plant.GetSrcImage(), Plant.GetAmount(), GrowthSprites, Key, Key,
+                    Plant.GetSrcImage(), Plant.GetAmount(), GrowthSprites, Key, Key, var.Value.Tile.name,
                     Plant.mHarvestable, Plant.mGrowth, Plant.XMLName, Plant.mWatered);
             }
             counter++;
@@ -224,7 +228,7 @@ public class SaveData : MonoBehaviour
         {
             OreAbstractClass Ore = var.Value.GetOre();
             float[] Key = new float[3]; Key[0] = var.Key.x; Key[1] = var.Key.y; Key[2] = var.Key.z;
-            Mines[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, Ore.XMLName, Ore.GetAmount());
+            Mines[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, var.Value.Tile.name, Ore.XMLName, Ore.GetAmount());
             counter++;
         }
 
@@ -233,7 +237,7 @@ public class SaveData : MonoBehaviour
         {
             OreAbstractClass Ore = var.Value.GetOre();
             float[] Key = new float[3]; Key[0] = var.Key.x; Key[1] = var.Key.y; Key[2] = var.Key.z;
-            Mines1[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, Ore.XMLName, Ore.GetAmount());
+            Mines1[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, var.Value.Tile.name, Ore.XMLName, Ore.GetAmount());
             counter++;
         }
         counter = 0;
@@ -241,7 +245,7 @@ public class SaveData : MonoBehaviour
         {
             OreAbstractClass Ore = var.Value.GetOre();
             float[] Key = new float[3]; Key[0] = var.Key.x; Key[1] = var.Key.y; Key[2] = var.Key.z;
-            Mines2[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, Ore.XMLName, Ore.GetAmount());
+            Mines2[counter].SetUp(Ore.mItemType.ToString(), Ore.GetName(), Key, Key, var.Value.Tile.name, Ore.XMLName, Ore.GetAmount());
             counter++;
         }
         counter = 0;

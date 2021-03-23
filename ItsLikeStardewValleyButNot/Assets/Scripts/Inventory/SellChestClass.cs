@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class SellChestClass : InventoryAbstractClass
 {
     public UnityEngine.UI.Image[] ImageSlots;
@@ -69,7 +71,10 @@ public class SellChestClass : InventoryAbstractClass
     {
         UIEnabled = true;
         DisabledNEnable();
-        Resize(16);
+        if (SceneManager.GetActiveScene().name != "LoadSaveScene")
+        {
+            Resize(16);
+        }
         Debug.Log(ItemList.Length);
     }
 

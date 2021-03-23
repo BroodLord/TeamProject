@@ -4074,6 +4074,7 @@ MonoBehaviour:
   ReportUI: {fileID: 1001331506}
   PauseMenuScript: {fileID: 310731303}
   SleepUI: {fileID: 371377630}
+  Stam: {fileID: 1674248401}
 --- !u!1 &378027729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,6 +5100,7 @@ MonoBehaviour:
   LoadManager: {fileID: 678973975}
   ItemManager: {fileID: 964482012}
   XML: {fileID: 964482013}
+  TargetScene: PlayerFarm
 --- !u!4 &434586524
 Transform:
   m_ObjectHideFlags: 0
@@ -8123,6 +8125,10 @@ PrefabInstance:
       propertyPath: StamBar
       value: 
       objectReference: {fileID: 425376719}
+    - target: {fileID: 466166299104135610, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
+      propertyPath: cClock
+      value: 
+      objectReference: {fileID: 310731300}
     - target: {fileID: 466166299104135611, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0039658844

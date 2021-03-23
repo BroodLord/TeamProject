@@ -116,9 +116,9 @@ public class JunkPlacer : MonoBehaviour
                     ItemBase Item = new ItemBase();
                     Item = this.gameObject.AddComponent<ItemBase>() as ItemBase;
                     // Sets up and ore item
-                    Item.SetUpThisItem(XML.items.ElementAt(44).Value.bItemType, XML.items.ElementAt(44).Value.bName, 1,
-                        XML.items.ElementAt(44).Value.bStackable, XML.items.ElementAt(44).Value.bSrcImage, XML.items.ElementAt(44).Value.bSoundEffect,
-                        XML.items.ElementAt(44).Value.bTile, XML.items.ElementAt(44).Value.bPrefab, XML.items.ElementAt(44).Value.bSellPrice, XML.items.ElementAt(44).Value.bCustomData);
+                    Item.SetUpThisItem(XML.items.ElementAt(45).Value.bItemType, XML.items.ElementAt(45).Value.bName, 1,
+                        XML.items.ElementAt(45).Value.bStackable, XML.items.ElementAt(45).Value.bSrcImage, XML.items.ElementAt(45).Value.bSoundEffect,
+                        XML.items.ElementAt(45).Value.bTile, XML.items.ElementAt(45).Value.bPrefab, XML.items.ElementAt(45).Value.bSellPrice, XML.items.ElementAt(45).Value.bCustomData);
                     // Set up the item in the rock at the given location.
                     Dictioary.TileMapData.ElementAt(4).Value[posInt].SetItem(Item);
                     //DataBase.Add(posInt, Item);
@@ -161,7 +161,7 @@ public class JunkPlacer : MonoBehaviour
                     // Set the tile to be the one we set
                     Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].Tile = tileMap.GetTile(posInt);
                     // Generate two random numbers, one for what ore will spawn and then what amount will spawn with it.
-                    int ItemIndex = Random.Range(35, 43);
+                    int ItemIndex = Random.Range(36, 44);
                     int RandAmount = Random.Range(1, 5);
                     Ore Item = new Ore();
                     Item = this.gameObject.AddComponent<Ore>() as Ore;

@@ -36,7 +36,7 @@
 	<Item name="Wheat" type="Plant" src-image="Crop_Spritesheet_60" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0"/>
 	<Item name="Pineapple" type="Plant" src-image="Crop_Spritesheet_48" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0"/>
 	<Item name="Pear" type="Plant" src-image="Crop_Spritesheet_102" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0"/>
-	<Item name="Honeydew_Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0"/>
+	<Item name="Honeydew Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0"/>
 	<Item name="Corn" type="Plant" src-image="Crop_Spritesheet_108" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0"/>
 	<Item name="Grape" type="Plant" src-image="Crop_Spritesheet_66" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0"/>
 	<Item name="Rasberry" type="Plant" src-image="Crop_Spritesheet_90" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0"/>

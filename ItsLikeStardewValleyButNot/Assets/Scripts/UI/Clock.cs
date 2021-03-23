@@ -31,6 +31,9 @@ public class Clock : MonoBehaviour
     public int PassoutTimer;
     public bool[] WeeklyReset;
 
+    public Vector3 PlayerPos;
+    public String SceneName;
+
     private bool AtMidDay;
 
     /*Strings which will be assigned to the UI*/
