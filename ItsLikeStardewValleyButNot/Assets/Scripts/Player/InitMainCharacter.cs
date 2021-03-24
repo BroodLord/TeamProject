@@ -19,23 +19,35 @@ public class InitMainCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
         DontDestroyOnLoad(Player);
+        DOLD.Add(Player);
         DontDestroyOnLoad(UICanvas);
+        DOLD.Add(UICanvas.gameObject);
         DontDestroyOnLoad(Manager);
+        DOLD.Add(Manager);
         DontDestroyOnLoad(TileMapManager);
+        DOLD.Add(TileMapManager);
         DontDestroyOnLoad(LoadManager);
+        DOLD.Add(LoadManager);
         DontDestroyOnLoad(ItemManager);
+        DOLD.Add(ItemManager);
         DontDestroyOnLoad(XML);
+        DOLD.Add(XML.gameObject);
+
         /*TEST REMOVE AFTER*/
         //Player.transform.position = new Vector3(9, 12, 0);
+
+        Clock cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
+        LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
+
         if (SceneManager.GetActiveScene().name != "LoadSaveScene")
         {
-            SceneManager.LoadScene(TargetScene);
+            Load.TransferLevel("PlayerFarm", new Vector3(0,0,0));
         }
         else
         {
-            Clock cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
-            LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
+            
             Load.TransferLevel(cClock.SceneName, cClock.PlayerPos);
         }
     }

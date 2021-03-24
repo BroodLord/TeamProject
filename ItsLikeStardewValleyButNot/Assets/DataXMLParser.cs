@@ -743,6 +743,7 @@ public class DataXMLParser : MonoBehaviour
             else if (currentnode.Name == "FarmData")
             {
                 ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
+                DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
                 XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
                 PlantData Item = new PlantData();
                 Item.SetUp();
@@ -773,6 +774,7 @@ public class DataXMLParser : MonoBehaviour
                     int Index = TypeFinder.FindItemIndex(Item.XMLName + " Seeds");
                     Clone = Instantiate(XML.items.ElementAt(Index).Value.GetPrefab(), new Vector3(Item.Pos[0] + 0.5f, Item.Pos[1] + 0.5f, Item.Pos[2]), Quaternion.identity);
                     DontDestroyOnLoad(Clone);
+                    DOLD.Add(Clone);
                     ///*****************************/
                     ///* Set up the plant for the clone on that spot in the database */
                     PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();

@@ -8,6 +8,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuObject;
+    private Animator Transition;
     public bool GameIsPaused = false;
 
     // Update is called once per frame
@@ -40,8 +41,23 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void QuitGame()
+    public void QuitButton()
     {
+        StartCoroutine(QuitGame());
+    }
+
+    public IEnumerator QuitGame()
+    {
+        PauseMenuObject.SetActive(false);
+        Time.timeScale = 1.0f;
+        Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
+        Transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1.0f);
+
+        DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
+        DOLD.DestoryObjects();
+
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -49,6 +49,8 @@ public class PlantSeed : ToolScript
             Dictioary.TileMapData.ElementAt(0).Value[posInt].Clone = Clone;
             if (Dictioary.TileMapData.ElementAt(0).Value[posInt].IsWatered()) { TempPlant.mWatered = true; }
             else { TempPlant.mWatered = false; }
+            HotBar.UpdateUI();
+
             /*******************************************************************/
         }
         else

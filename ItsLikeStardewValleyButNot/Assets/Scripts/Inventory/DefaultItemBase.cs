@@ -35,6 +35,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     {
         bItemType = ItemType;
         // If the tool type isn't a plant or ore then we are using just a base png image for the tool so just load the image, NOTE: This might change later.
+
         char ch = SrcImage[SrcImage.Length - 1];
         if (!Char.IsDigit(ch))
         {

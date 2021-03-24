@@ -24,12 +24,14 @@ public class LoadLevel : MonoBehaviour
     public void TransferLevel(string LevelName, Vector3 startLoc)
     {
         Loading = true;
-        // Get all the refernece that we need
-        //if (SceneManager.GetActiveScene().name != "LoadSaveScene")
-        //{
+        DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
+        if (SceneManager.GetActiveScene().name != "LoadSaveScene" && SceneManager.GetActiveScene().name != "InitScene")
+        {
             Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
-        //}
+            DOLD.Add(GameObject.FindGameObjectWithTag("EventSystem"));
+        }
+
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
         Player = GameObject.FindGameObjectWithTag("Player");
         UICanvas = GameObject.FindGameObjectWithTag("Canvas");
@@ -38,6 +40,7 @@ public class LoadLevel : MonoBehaviour
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         // Dont destory on load the Dictionary because we need it
         DontDestroyOnLoad(Dictionary);
+        DOLD.Add(Dictionary.gameObject);
         if (LevelName != "Farmland")
         {
             // Loops through all the databases and makes the clones are don't destory on load
@@ -50,6 +53,7 @@ public class LoadLevel : MonoBehaviour
                     if (ChildV.Value.Clone != null)
                     {
                         DontDestroyOnLoad(ChildV.Value.Clone);
+
                     }
                 }
             }
@@ -60,12 +64,16 @@ public class LoadLevel : MonoBehaviour
         for (int i = 0; i < Invent.ItemList.Length; i++)
         {
             if (Invent.ItemList[i] != null)
+            {
                 DontDestroyOnLoad(Invent.ItemList[i]);
+            }
         }
         for (int i = 0; i < HotBar.ItemList.Length; i++)
         {
             if (HotBar.ItemList[i] != null)
+            {
                 DontDestroyOnLoad(HotBar.ItemList[i]);
+            }
         }
         // load level with a selected level
         LoadNextLevel(LevelName);
@@ -74,14 +82,19 @@ public class LoadLevel : MonoBehaviour
 
     public void LoadNextLevel(string LevelName)
     {
-        StartCoroutine(eLoadNextLevel(LevelName));
+        StartCoroutine(eLoadNextLevel(LevelName, 1.0f));
     }
 
-    IEnumerator eLoadNextLevel(string LevelName)
+    IEnumerator eLoadNextLevel(string LevelName, float time)
     {
-        Transition.SetTrigger("Start");
-        // Wait 1 second so the animation can play
-        yield return new WaitForSeconds(1);
+        if (SceneManager.GetActiveScene().name != "LoadSaveScene" && SceneManager.GetActiveScene().name != "InitScene")
+        {
+            Transition.SetTrigger("Start");
+            // Wait 1 second so the animation can play
+            Debug.Log("CoroutineExample started at " + Time.time.ToString() + "s");
+            yield return new WaitForSeconds(time);
+            Debug.Log("Coroutine Iteration Successful at " + Time.time.ToString() + "s");
+        }
 
         // Tell the Async operation to load the level
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(LevelName);
@@ -106,6 +119,8 @@ public class LoadLevel : MonoBehaviour
                     {
                         ChildV.Value.Clone.SetActive(false);
                         DontDestroyOnLoad(ChildV.Value.Clone);
+                        DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
+                        DOLD.Add(ChildV.Value.Clone);
                     }
                 }
             }
@@ -133,7 +148,7 @@ public class LoadLevel : MonoBehaviour
                             Childv.Value.TileMap.SetTile(Childv.Key, TilledTile);
                         }
                     }
-                    else if(!Childv.Value.IsWatered())
+                    else if (!Childv.Value.IsWatered())
                     {
                         Childv.Value.SetWatered(false);
                         PlantAbstractClass P = Childv.Value.GetPlant();
