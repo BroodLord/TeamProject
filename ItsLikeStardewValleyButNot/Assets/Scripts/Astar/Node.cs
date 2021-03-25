@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Node 
 {
-    public Vector3Int worldPosition;
+    public Vector3 worldPosition;
+    public Vector3Int gridPosition;
 
     public Node parent;
 
-    public Node(Vector3Int _worldpos)
+    public Node(Vector3Int _gridpos)
     {
-        worldPosition = _worldpos;
+        gridPosition = _gridpos;
     }
 }

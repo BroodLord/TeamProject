@@ -14,113 +14,133 @@ public class AStar : MonoBehaviour
     public Tilemap Nonwalkable;
     JunkPlacer placer;
 
-    private void Awake()
-    {
-        placer = this.GetComponent<JunkPlacer>();
-        placer.PlaceTrees();
-
-        npcPathfind(Vector3Int.RoundToInt(this.transform.position), Vector3Int.RoundToInt(goal.transform.position), Nonwalkable, grid);
-        
-
-    }
+    //work, please :'(
     public List<Node> npcPathfind(Vector3Int Start, Vector3Int Goal, Tilemap nonWalkable, Grid grid)
     {
-        bool found = false;
-
-        
-
         List<Node> openList = new List<Node>();
         List<Node> closedList = new List<Node>();
         List<Node> result = new List<Node>();
 
+        //start node is created and a world and grid position is created, Node is custom created as i dont think the grid has its own
         Node startNode = new Node(grid.WorldToCell(Start));
-
+        startNode.worldPosition = Start;
         Vector3Int goal = grid.WorldToCell(Goal);
+
+
 
         openList.Add(startNode);
         Node currentNode = openList[0];
 
-        while (openList.Count < 100 || openList.Count > 0 || !found)
+        while (openList.Count > 0)
         {
             //make closest node to the goal the current node
             currentNode = openList[0];
 
             //remove from the openlist, add to closed 
             openList.Remove(currentNode);
-            closedList.Add(currentNode);
+            
 
-            //check to see if current is the goal, if so end
-            if (currentNode.worldPosition == goal)
+            //check to see if current is the goal, if so reverse the path and return the result
+            if (currentNode.gridPosition == goal)
             {
-                found = true;
-                break;
+                bool foundStart = false;
+
+                do
+                {
+                    if (currentNode.parent == null)
+                    {
+                        foundStart = true;
+                    }
+                    else
+                    {
+                        result.Insert(0, currentNode);
+                        currentNode = currentNode.parent;
+                    }
+                } while (!foundStart);
+
+                result.Insert(0, startNode);
+
+                return result;
             }
 
-            Vector3Int up = new Vector3Int(currentNode.worldPosition.x, currentNode.worldPosition.y + 1, 0);
-            Vector3Int right = new Vector3Int(currentNode.worldPosition.x + 1, currentNode.worldPosition.y , 0);
-            Vector3Int down = new Vector3Int(currentNode.worldPosition.x, currentNode.worldPosition.y - 1, 0);
-            Vector3Int left = new Vector3Int(currentNode.worldPosition.x - 1, currentNode.worldPosition.y, 0);
+            //checks all directions
+            Vector3Int up = new Vector3Int(currentNode.gridPosition.x, currentNode.gridPosition.y + 1, 0);
+            Vector3Int right = new Vector3Int(currentNode.gridPosition.x + 1, currentNode.gridPosition.y , 0);
+            Vector3Int down = new Vector3Int(currentNode.gridPosition.x, currentNode.gridPosition.y - 1, 0);
+            Vector3Int left = new Vector3Int(currentNode.gridPosition.x - 1, currentNode.gridPosition.y, 0);
 
             Node Temp;
 
-            //need to stop the adding of the same tile  
-
-            //if not add up, right, down, left to open list 
+            //add up, right, down, left to open list if nothing is blocking
             if (nonWalkable.GetTile(up) == null)
             {
                 Temp = new Node(up);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+
+                //check open and closed list
+                if (!searchList(openList, Temp.gridPosition.x, Temp.gridPosition.y) && !searchList(closedList, Temp.gridPosition.x, Temp.gridPosition.y))
+                {
+                    Temp.parent = currentNode;
+                    //all nodes should have a world position and a grid position
+                    Temp.worldPosition = grid.CellToWorld(Temp.gridPosition);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(right) == null)
             {
                 Temp = new Node(right);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!searchList(openList, Temp.gridPosition.x, Temp.gridPosition.y) && !searchList(closedList, Temp.gridPosition.x, Temp.gridPosition.y))
+                {
+                    Temp.parent = currentNode;
+                    Temp.worldPosition = grid.CellToWorld(Temp.gridPosition);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(down) == null)
             {
                 Temp = new Node(down);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!searchList(openList, Temp.gridPosition.x, Temp.gridPosition.y) && !searchList(closedList, Temp.gridPosition.x, Temp.gridPosition.y))
+                {
+                    Temp.parent = currentNode;
+                    Temp.worldPosition = grid.CellToWorld(Temp.gridPosition);
+                    openList.Add(Temp);
+                }
             }
 
             if (nonWalkable.GetTile(left) == null)
             {
                 Temp = new Node(left);
-                Temp.parent = currentNode;
-                //GameObject instance = Instantiate(tempObj, Temp.worldPosition, Quaternion.identity);
-                openList.Add(Temp);
+                if (!searchList(openList, Temp.gridPosition.x, Temp.gridPosition.y) && !searchList(closedList, Temp.gridPosition.x, Temp.gridPosition.y))
+                {
+                    Temp.parent = currentNode;
+                    Temp.worldPosition = grid.CellToWorld(Temp.gridPosition);
+                    openList.Add(Temp);
+                }
             }
 
+            closedList.Add(currentNode);
 
+            //sorts based on distance to the goal
+            openList.Sort((x, y) => { return (goal - x.gridPosition).sqrMagnitude.CompareTo((goal - y.gridPosition).sqrMagnitude); });
 
-            openList.Sort((x, y) => { return (goal - x.worldPosition).sqrMagnitude.CompareTo((goal - y.worldPosition).sqrMagnitude); });
-
-
-
+            //Debug.Log(openList.Count);
         }
 
-        if (found)
+        Debug.Log(closedList.Count);
+        return null;
+    }
+
+    bool searchList(List<Node> list, int x, int y)
+    {
+        for (int i = 0; i < list.Count; i++)
         {
-            while (currentNode.parent != null)
+            if (list[i].gridPosition.x == x && list[i].gridPosition.y == y)
             {
-                result.Add(currentNode.parent);
-                nonWalkable.SetTile(currentNode.parent.worldPosition, tempTile);
-                currentNode = currentNode.parent;
+                return true;
             }
-            return result;
         }
-        else
-        {
-            return null;
-        }
-       
+        return false;
     }
 }
 

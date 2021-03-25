@@ -143,6 +143,11 @@ public class Clock : MonoBehaviour
         }
     }
 
+    public int getHour()
+    {
+        return Hour;
+    }
+
     // Update is called once per frame
     void Update()
     {
