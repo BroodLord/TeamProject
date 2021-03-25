@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadSaveScene.unity
     guid: 062af592a5d5ca2459237232cce0f866
+  - enabled: 1
+    path: Assets/Scenes/TownHouse1.unity
+    guid: 836179172e5e2a54a9311d4305a98065
+  - enabled: 1
+    path: Assets/Scenes/TownHouse2.unity
+    guid: 9a120500ef37ed64faae99bd43f05d3f
+  - enabled: 1
+    path: Assets/Scenes/TownHouse3.unity
+    guid: 815c1e41a9e426c4f8744fb097d60218
   m_configObjects: {}

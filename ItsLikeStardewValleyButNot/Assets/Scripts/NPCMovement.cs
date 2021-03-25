@@ -13,7 +13,7 @@ public class NPCMovement : MonoBehaviour
     private Vector2 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
     private Tilemap nonWalkable;
     private Grid grid;
-    public TileBase Tile;
+    //public TileBase Tile;
     //current path is a list of every cell from NPC to Target
     private List<Node> currentPath;         //calculated by the npcPathfind call in state 3
     [SerializeField]private int currentState;

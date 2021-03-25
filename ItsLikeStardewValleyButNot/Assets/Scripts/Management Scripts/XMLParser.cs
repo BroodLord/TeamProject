@@ -10,6 +10,9 @@ public class XMLParser : MonoBehaviour
 {
     public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
 
+    public Dictionary<string, Vector2[]> NPCWaypoints = new Dictionary<string, Vector2[]>();    //this is here for when multiple characters get added so they can filter out what waypoints 
+    public List<Vector2> townWaypoints;
+
     // Creates and loads the xml document
     void Start()
     {
@@ -22,8 +25,34 @@ public class XMLParser : MonoBehaviour
     private void parseXML(XmlDocument data)
     {
         XmlNode root = data.DocumentElement;
+        XmlNodeList constVarList = root.SelectNodes("Waypoint");
 
-        XmlNodeList constVarList = root.SelectNodes("Item");
+        foreach (XmlNode ItemsXML in constVarList)
+        {
+            string name = ItemsXML.Attributes.GetNamedItem("name").Value;
+            Vector2 pos;
+            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+            {
+                pos.x = result;
+            }
+            else
+            {
+                pos.x = 0.0f;
+            }
+
+            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
+            {
+                pos.y = result2;
+            }
+            else
+            {
+                pos.y = 0.0f;
+            }
+
+            townWaypoints.Add(pos);
+        }
+
+        constVarList = root.SelectNodes("Item");
 
         foreach (XmlNode ItemsXML in constVarList)
         {
@@ -112,7 +141,9 @@ public class XMLParser : MonoBehaviour
             temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, Convert.ToInt32(customDataString));
             items.Add(name, temp);
         }
-            
+
+        
+
     }
     
 }
