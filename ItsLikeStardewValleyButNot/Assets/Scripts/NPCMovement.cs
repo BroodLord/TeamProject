@@ -17,7 +17,7 @@ public class NPCMovement : MonoBehaviour
     //current path is a list of every cell from NPC to Target
     private List<Node> currentPath;         //calculated by the npcPathfind call in state 3
     [SerializeField]private int currentState;
-    [SerializeField]private float NPCSpeed = 0.2f;
+    [SerializeField]private float NPCSpeed;
     private int pathIndex;                  //current cell on the path
     private int waypointIndex;              //current waypoint thats being targeted 
     private float timer = 2.0f;
