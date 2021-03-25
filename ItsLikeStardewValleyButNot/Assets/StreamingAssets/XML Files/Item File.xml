@@ -54,12 +54,6 @@
 
 	<!-- List of Wood -->
 	<Item name="Wood" type="Wood" src-image="Wood" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="40" customData ="0"/>
-
-	<!-- List of Decorations -->
-	<Item name="Stone Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
-	<Item name="Wood Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
-	<Item name="Torch" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
-	<Item name="Fence" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
 	
 	<!-- List of Fish -->
 	<Item name="Trout" type="Fish" src-image="Brown_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50" customData ="0"/>
@@ -85,6 +79,13 @@
 	<CrazyEdNPC name="BedWP" x="17.5" y="6.5" />
 	<CrazyEdNPC name="WardrobeWP" x="7.5" y="5.5" />
 	<CrazyEdNPC name="BookWP" x="15.5" y="2.5" />
+
+
+	<!-- List of Decorations -->
+	<Item name="Stone Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
+	<Item name="Wood Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
+	<Item name="Torch" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
+	<Item name="Fence" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0"/>
 
 	<JennyNPC>
 	</JennyNPC>
