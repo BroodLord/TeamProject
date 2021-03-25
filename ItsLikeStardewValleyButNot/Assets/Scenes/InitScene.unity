@@ -7276,6 +7276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f491cc5cc36464994d6c4aff2fcc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DOLList: []
 --- !u!114 &682586607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8130,7 +8131,7 @@ PrefabInstance:
       objectReference: {fileID: 650536490}
     - target: {fileID: 466166299104135609, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
       propertyPath: moveSpeed
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 466166299104135609, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
       propertyPath: LoadManager
