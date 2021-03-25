@@ -11,7 +11,6 @@ public class XMLParser : MonoBehaviour
     public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
 
     public Dictionary<string, Vector2[]> NPCWaypoints = new Dictionary<string, Vector2[]>();    //this is here for when multiple characters get added so they can filter out what waypoints 
-    public List<Vector2> townWaypoints;
 
     // Creates and loads the xml document
     void Start()
@@ -25,33 +24,111 @@ public class XMLParser : MonoBehaviour
     private void parseXML(XmlDocument data)
     {
         XmlNode root = data.DocumentElement;
-        XmlNodeList constVarList = root.SelectNodes("Waypoint");
+        XmlNodeList constVarList = root.SelectNodes("GordonNPC");
+        Vector2[] tempArray = new Vector2[5];
+        int arrayIndex = 0;
 
         foreach (XmlNode ItemsXML in constVarList)
         {
-            string name = ItemsXML.Attributes.GetNamedItem("name").Value;
-            Vector2 pos;
-            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+            
+            if (ItemsXML.Name == "GordonNPC")
             {
-                pos.x = result;
-            }
-            else
-            {
-                pos.x = 0.0f;
+                string name = ItemsXML.Attributes.GetNamedItem("name").Value;
+                Vector2 pos;
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+                {
+                    pos.x = result;
+                }
+                else
+                {
+                    pos.x = 0.0f;
+                }
+
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
+                {
+                    pos.y = result2;
+                }
+                else
+                {
+                    pos.y = 0.0f;
+                }
+
+                tempArray[arrayIndex] = pos;
+                arrayIndex++;
             }
 
-            if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
-            {
-                pos.y = result2;
-            }
-            else
-            {
-                pos.y = 0.0f;
-            }
+        }
+        NPCWaypoints.Add("GordonNPC", tempArray);
+        arrayIndex = 0;
+        constVarList = root.SelectNodes("ShirleyNPC");
+        tempArray = new Vector2[3];
 
-            townWaypoints.Add(pos);
+        foreach (XmlNode ItemsXML in constVarList)
+        {
+            if (ItemsXML.Name == "ShirleyNPC")
+            {
+                string name = ItemsXML.Attributes.GetNamedItem("name").Value;
+                Vector2 pos;
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+                {
+                    pos.x = result;
+                }
+                else
+                {
+                    pos.x = 0.0f;
+                }
+
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
+                {
+                    pos.y = result2;
+                }
+                else
+                {
+                    pos.y = 0.0f;
+                }
+
+                tempArray[arrayIndex] = pos;
+                arrayIndex++;
+            }
         }
 
+        NPCWaypoints.Add("ShirleyNPC", tempArray);
+        arrayIndex = 0;
+        constVarList = root.SelectNodes("CrazyEdNPC");
+        tempArray = new Vector2[3];
+
+        foreach (XmlNode ItemsXML in constVarList)
+        {
+            if (ItemsXML.Name == "CrazyEdNPC")
+            {
+                string name = ItemsXML.Attributes.GetNamedItem("name").Value;
+                Vector2 pos;
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("x").Value, out float result))
+                {
+                    pos.x = result;
+                }
+                else
+                {
+                    pos.x = 0.0f;
+                }
+
+                if (float.TryParse(ItemsXML.Attributes.GetNamedItem("y").Value, out float result2))
+                {
+                    pos.y = result2;
+                }
+                else
+                {
+                    pos.y = 0.0f;
+                }
+
+                tempArray[arrayIndex] = pos;
+                arrayIndex++;
+            }
+
+        }
+
+        NPCWaypoints.Add("CrazyEdNPC", tempArray);
+        arrayIndex = 0;
         constVarList = root.SelectNodes("Item");
 
         foreach (XmlNode ItemsXML in constVarList)

@@ -71,11 +71,22 @@
 	<Item name="Trash" type="Fish" src-image="Trash" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="0" customData ="0"/>
 
 	<!-- List of Town Waypoints -->
-	<Waypoint name="MarketWP" x="34.5" y="-5.5" />
-	<Waypoint name="FountainWP" x="29.5" y="-8.5" />
-	<Waypoint name="LakeLeftWP" x="23.5" y="6.5" />
-	<Waypoint name="GravesWP" x="23.5" y="16.5" />
-	<Waypoint name="WaterfallWP" x="31.5" y="22.5" />
-	<Waypoint name="MinesWP" x="13.5" y="14.5" />
+	
+	<GordonNPC name="FountainWP" x="29.5" y="-8.5" />
+	<GordonNPC name="LakeLeftWP" x="23.5" y="6.5" />
+	<GordonNPC name="GravesWP" x="23.5" y="16.5" />
+	<GordonNPC name="WaterfallWP" x="31.5" y="22.5" />
+	<GordonNPC name="MinesWP" x="13.5" y="14.5" />
+	
+	<ShirleyNPC name="StoveWP" x="8.5" y="14.5" />
+	<ShirleyNPC name="BookshelfWP" x="3.5" y="7.5" />
+	<ShirleyNPC name="PlantWP" x="17.5" y="4.5" />
+	
+	<CrazyEdNPC name="BedWP" x="17.5" y="6.5" />
+	<CrazyEdNPC name="WardrobeWP" x="7.5" y="5.5" />
+	<CrazyEdNPC name="BookWP" x="15.5" y="2.5" />
+
+	<JennyNPC>
+	</JennyNPC>
 	
 </Items>

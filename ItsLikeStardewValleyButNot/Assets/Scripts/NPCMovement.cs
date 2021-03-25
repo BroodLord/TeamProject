@@ -11,6 +11,7 @@ public class NPCMovement : MonoBehaviour
 {
     private AStar pathfinding;
     private Vector2 target;                 //location of waypoint that is being targeted, this is converted to an intager when calculating pathfinding 
+    private Vector2[] waypoints;
     private Tilemap nonWalkable;
     private Grid grid;
     //public TileBase Tile;
@@ -33,8 +34,9 @@ public class NPCMovement : MonoBehaviour
         pathfinding = new AStar();
         currentState = 3;
         waypointIndex = 0;
-        target = XML.townWaypoints[waypointIndex];
-        
+        XML.NPCWaypoints.TryGetValue(this.name, out waypoints);
+
+        target = waypoints[waypointIndex];
         nonWalkable = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         Times = new int[]{ 9, 10, 11, 12 };
@@ -63,7 +65,7 @@ public class NPCMovement : MonoBehaviour
                  {
                     //waypoint target destination is reached
                     waypointIndex++;
-                    target = XML.townWaypoints[Random.Range(0, 6)];
+                    target = waypoints[Random.Range(1, waypoints.Length) - 1];
                     currentState = 2;
                  }
                  //if the NPC is close enough to the next cell in the path
@@ -98,7 +100,7 @@ public class NPCMovement : MonoBehaviour
                  //NPC and target positions are turned to Vector3Ints as the A* cant use floats when converting to grid space
                  //Mathf.CeilToInt()
                 Vector3Int targetV3I = Vector3Int.FloorToInt(target);
-                 Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
+                Vector3Int thisV3I = Vector3Int.FloorToInt(this.transform.position);
                 //find and update new path
                 currentPath = pathfinding.npcPathfind(thisV3I, targetV3I, nonWalkable, grid);
 
