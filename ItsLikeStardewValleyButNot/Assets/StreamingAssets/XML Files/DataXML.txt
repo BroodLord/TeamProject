@@ -1,6 +1,6 @@
 <SaveData SaveData="Data">
   <PlayerData>
-    <MoneyNumber Money="25" />
+    <MoneyNumber Money="10025" />
     <PlayerEnergy Energy="91" />
     <CurrentScene Scene="Town" />
     <PlayerPos x="9.640797" y="0.5200337" z="0" />
