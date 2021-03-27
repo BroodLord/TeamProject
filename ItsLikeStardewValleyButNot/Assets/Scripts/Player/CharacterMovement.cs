@@ -65,26 +65,26 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 PlayerAnim.SetBool("Up", true);
-                thisObject.transform.position += new Vector3(0, moveSpeed + Time.deltaTime, 0);
+                thisObject.transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
             }
             else { PlayerAnim.SetBool("Up", false); }
             if (Input.GetKey(KeyCode.A))
             {
                 PlayerAnim.SetBool("Left", true);
-                thisObject.transform.position -= new Vector3(moveSpeed + Time.deltaTime, 0, 0);
+                thisObject.transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
             }
             else { PlayerAnim.SetBool("Left", false); }
             if (Input.GetKey(KeyCode.S))
             {
                 PlayerAnim.SetBool("Forward", true);
-                thisObject.transform.position -= new Vector3(0, moveSpeed + Time.deltaTime, 0);
+                thisObject.transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
 
             }
             else { PlayerAnim.SetBool("Forward", false); }
             if (Input.GetKey(KeyCode.D))
             {
                 PlayerAnim.SetBool("Right", true);
-                thisObject.transform.position += new Vector3(moveSpeed + Time.deltaTime, 0, 0);
+                thisObject.transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
             }
             else { PlayerAnim.SetBool("Right", false); }
             /*******************************************************/

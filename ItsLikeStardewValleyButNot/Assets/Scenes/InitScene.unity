@@ -8131,7 +8131,7 @@ PrefabInstance:
       objectReference: {fileID: 650536490}
     - target: {fileID: 466166299104135609, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
       propertyPath: moveSpeed
-      value: 0.05
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 466166299104135609, guid: b6a0e0fb38ed56048b9195b7433089bb, type: 3}
       propertyPath: LoadManager
