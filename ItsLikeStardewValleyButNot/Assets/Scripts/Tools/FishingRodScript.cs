@@ -128,7 +128,8 @@ public class FishingRodScript : ToolScript
             {
                 ItemBase PlantItem = SubGameObject.gameObject.AddComponent<ItemBase>() as ItemBase;
                 PlantItem.SetUpThisItem(i.Value.bItemType, i.Value.bName, i.Value.bAmount, i.Value.bStackable, i.Value.bSrcImage,
-                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice, i.Value.bCustomData);
+                                        i.Value.bSoundEffect, i.Value.bTile, i.Value.bPrefab, i.Value.bSellPrice, i.Value.bCustomData,
+                                        i.Value.GetDesc());
                 return PlantItem;
             }
         }

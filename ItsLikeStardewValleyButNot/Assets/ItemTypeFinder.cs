@@ -11,6 +11,7 @@ public class ItemTypeFinder : MonoBehaviour
         ItemBase BasicItem = new ItemBase();
         if (XML.items.ElementAt(i).Value.bName == "Hoe") { BasicItem = childObject.AddComponent<HoeScript>() as HoeScript; }
         else if (XML.items.ElementAt(i).Value.bName == "Axe") { BasicItem = childObject.AddComponent<AxeScript>() as AxeScript; }
+        else if (XML.items.ElementAt(i).Value.bName == "Pickaxe") { BasicItem = childObject.AddComponent<PickaxeScript>() as PickaxeScript; }
         else if (XML.items.ElementAt(i).Value.bName == "Water Bucket") { BasicItem = childObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
         else if (XML.items.ElementAt(i).Value.bName == "Scythe") { BasicItem = childObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
         else if (XML.items.ElementAt(i).Value.bName == "Fishing Rod") { BasicItem = childObject.gameObject.AddComponent<FishingRodScript>() as FishingRodScript; }
@@ -42,6 +43,7 @@ public class ItemTypeFinder : MonoBehaviour
         ItemBase BasicItem = new ItemBase();
         if (Name == "Hoe") { BasicItem = childObject.AddComponent<HoeScript>() as HoeScript; }
         else if (Name == "Axe") { BasicItem = childObject.AddComponent<AxeScript>() as AxeScript; }
+        else if (Name == "Pickaxe") { BasicItem = childObject.AddComponent<PickaxeScript>() as PickaxeScript; }
         else if (Name == "Water Bucket") { BasicItem = childObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
         else if (Name == "Scythe") { BasicItem = childObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
         else if (Name == "Fishing Rod") { BasicItem = childObject.gameObject.AddComponent<FishingRodScript>() as FishingRodScript; }
@@ -59,6 +61,7 @@ public class ItemTypeFinder : MonoBehaviour
         ItemBase BasicItem = new ItemBase();
         if (Item.bName == "Hoe") { BasicItem = childObject.AddComponent<HoeScript>() as HoeScript; }
         else if (Item.bName == "Axe") { BasicItem = childObject.AddComponent<AxeScript>() as AxeScript; }
+        else if (Item.bName == "Pickaxe") { BasicItem = childObject.AddComponent<PickaxeScript>() as PickaxeScript; }
         else if (Item.bName == "Water Bucket") { BasicItem = childObject.gameObject.AddComponent<WateringCanScript>() as WateringCanScript; }
         else if (Item.bName == "Scythe") { BasicItem = childObject.gameObject.AddComponent<ScytheTool>() as ScytheTool; }
         else if (Item.bName == "Fishing Rod") { BasicItem = childObject.gameObject.AddComponent<FishingRodScript>() as FishingRodScript; }

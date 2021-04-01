@@ -29,6 +29,7 @@ TagManager:
   - ToolShop
   - Grid
   - Non-Walkable
+  - NPC
   layers:
   - Default
   - TransparentFX

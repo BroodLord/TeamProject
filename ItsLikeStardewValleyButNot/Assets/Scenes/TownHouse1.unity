@@ -2927,9 +2927,10 @@ GameObject:
   - component: {fileID: 1580611840}
   - component: {fileID: 1580611839}
   - component: {fileID: 1580611838}
+  - component: {fileID: 1580611841}
   m_Layer: 0
   m_Name: ShirleyNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3013,6 +3014,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580611841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580611837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bed97e7186f504d914d24f2a3d05db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCID: 1
+  Name: 
+  Protrait: 
+  AboutText: []
+  DoingText: []
 --- !u!1 &1744415036
 GameObject:
   m_ObjectHideFlags: 0

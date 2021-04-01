@@ -33,7 +33,8 @@ public class BuyItem : MonoBehaviour
                 Item = TypeFinder.ItemTyepFinder(NewItem, SubGameObject);
                 Item.SetUpThisItem(NewItem.bItemType, NewItem.bName, NewItem.bAmount,
                                    NewItem.bStackable, NewItem.bSrcImage, NewItem.bSoundEffect,
-                                   NewItem.bTile, NewItem.bPrefab, NewItem.bSellPrice, NewItem.bCustomData);
+                                   NewItem.bTile, NewItem.bPrefab, NewItem.bSellPrice, NewItem.bCustomData,
+                                   NewItem.GetDesc());
                 cInventory.AddItem(Item);
                 PlayerMoney.SetMoney(PlayerMoney.GetMoney() - Item.GetSellPrice());
             }

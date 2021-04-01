@@ -9,14 +9,14 @@ using UnityEngine.Tilemaps;
 public class XMLParser : MonoBehaviour
 {
     public Dictionary<string, ItemBase> items = new Dictionary<string, ItemBase>();
-
+    public Dictionary<int, NPC> NPCs = new Dictionary<int, NPC>();
     public Dictionary<string, Vector2[]> NPCWaypoints = new Dictionary<string, Vector2[]>();    //this is here for when multiple characters get added so they can filter out what waypoints 
 
     // Creates and loads the xml document
     void Start()
     {
         XmlDocument newXml = new XmlDocument();
-       // string Test = Application.streamingAssetsPath;
+        // string Test = Application.streamingAssetsPath;
         newXml.Load(Application.dataPath + "\\StreamingAssets\\XML Files\\Item File.xml");
         parseXML(newXml);
     }
@@ -26,11 +26,12 @@ public class XMLParser : MonoBehaviour
         XmlNode root = data.DocumentElement;
         XmlNodeList constVarList = root.SelectNodes("GordonNPC");
         Vector2[] tempArray = new Vector2[5];
+        int NPCCounter = 0;
         int arrayIndex = 0;
 
         foreach (XmlNode ItemsXML in constVarList)
         {
-            
+
             if (ItemsXML.Name == "GordonNPC")
             {
                 string name = ItemsXML.Attributes.GetNamedItem("name").Value;
@@ -142,6 +143,7 @@ public class XMLParser : MonoBehaviour
             string TileName = ItemsXML.Attributes.GetNamedItem("tile-src-image").Value;
             string SoundEffectName = ItemsXML.Attributes.GetNamedItem("sound-effect").Value;
             string customDataString = ItemsXML.Attributes.GetNamedItem("customData").Value;
+            string ItemDesc = ItemsXML.Attributes.GetNamedItem("ItemDesc").Value;
             var CustomData = 0;
             bool StackableResult = false;
             float sellPrice;
@@ -215,14 +217,42 @@ public class XMLParser : MonoBehaviour
             AudioClip Audio = Resources.Load<AudioClip>(Path);
             ItemBase temp = new ItemBase();
             // Set up the item and add it to the dicitiory for the XML.
-            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, Convert.ToInt32(customDataString));
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, Convert.ToInt32(customDataString), ItemDesc);
             items.Add(name, temp);
         }
+        constVarList = root.SelectNodes("NPCInfo");
+        foreach (XmlNode ItemsXML in constVarList)
+        {
+            string Name                    = ItemsXML.Attributes.GetNamedItem("name").Value;
+            string Protrait                = ItemsXML.Attributes.GetNamedItem("Protrait").Value;
+            string IntroDialogueCount      = ItemsXML.Attributes.GetNamedItem("IntroDialogueCount").Value;
+            string AboutDialogueCount      = ItemsXML.Attributes.GetNamedItem("AboutDialogueCount").Value;
+            string DoingTodayDialogueCount = ItemsXML.Attributes.GetNamedItem("DoingTodayDialogueCount").Value;
+            string[] IntroDialogue = new string[int.Parse(IntroDialogueCount)];
+            string[] AboutDialogue = new string[int.Parse(AboutDialogueCount)];
+            string[] DoingDialogue = new string[int.Parse(DoingTodayDialogueCount)];
+            for (int i = 0; i < IntroDialogue.Length; i++)
+            {
+                IntroDialogue[i] = ItemsXML.Attributes.GetNamedItem("AboutDialogue" + i).Value;
+            }
+            for (int i = 0; i < AboutDialogue.Length; i++)
+            {
+                AboutDialogue[i] = ItemsXML.Attributes.GetNamedItem("AboutDialogue" + i).Value;
+            }
+            for (int i = 0; i < DoingDialogue.Length; i++)
+            {
+                DoingDialogue[i] = ItemsXML.Attributes.GetNamedItem("DoingDialogue" + i).Value;
+            }
+            NPC npc = new NPC();
+            npc.SetUp(Name, Protrait, IntroDialogue, AboutDialogue, DoingDialogue);
+            NPCs.Add(NPCCounter, npc);
+            NPCCounter++;
+        }
 
-        
+
 
     }
-    
+
 }
 
 

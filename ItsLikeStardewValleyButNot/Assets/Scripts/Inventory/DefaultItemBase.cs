@@ -23,6 +23,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     public TileBase bTile;
     public float bSellPrice;
     public int bCustomData;
+    public string bDesc;
 
     // Gets the base tool type
     public ItemTypes GetBaseType()
@@ -31,7 +32,7 @@ public abstract class DefaultItemBase : MonoBehaviour
     }
 
     // This will set up the default value
-    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice, int CustomData)
+    public void SetUpBaseItem(ItemTypes ItemType, string Name, int Amount, bool Stackable, string SrcImage, AudioClip Audio, TileBase Tile, GameObject prefab, float SellPrice, int CustomData, string desc)
     {
         bItemType = ItemType;
         // If the tool type isn't a plant or ore then we are using just a base png image for the tool so just load the image, NOTE: This might change later.
@@ -61,6 +62,7 @@ public abstract class DefaultItemBase : MonoBehaviour
         bStackable = Stackable;
         bSellPrice = SellPrice;
         bCustomData = CustomData;
+        bDesc = desc;
 
     }
     // These are the same function but just load from a different sprite sheet, NOTE: This will be azir dead but the base code for it will stay the same

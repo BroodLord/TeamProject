@@ -103,7 +103,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                 }
             }
             // this else statement is if we are swapping a dragged item with a slot in the current inventory so SellChest to SellChest
-            else
+            else if(eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.parent.name == "SellChestUI")
             {
                 //if the dragged item is dropped in the place wehere we dragged the item from then return
                 if (eventData.pointerDrag.transform.parent.name == gameObject.name)
@@ -310,7 +310,7 @@ public class ItemDrag : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
                     cHotBar.UpdateUI();
                 }
             }
-            else
+            else if(eventData.pointerDrag.GetComponent<ItemDrag>().transform.parent.parent.name == "HotbarUI")
             {
                 if (eventData.pointerDrag.transform.parent.name == gameObject.name)
                 {

@@ -15691,9 +15691,10 @@ GameObject:
   m_Component:
   - component: {fileID: 257822088}
   - component: {fileID: 257822087}
+  - component: {fileID: 257822089}
   m_Layer: 0
   m_Name: JennyNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15763,6 +15764,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257822089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257822086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bed97e7186f504d914d24f2a3d05db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCID: 3
+  Protrait: {fileID: 0}
+  Name: 
+  IntroText: []
+  AboutText: []
+  DoingText: []
 --- !u!1 &539123118
 GameObject:
   m_ObjectHideFlags: 0
@@ -41080,9 +41099,11 @@ GameObject:
   - component: {fileID: 2083992517}
   - component: {fileID: 2083992516}
   - component: {fileID: 2083992515}
+  - component: {fileID: 2083992518}
+  - component: {fileID: 2083992519}
   m_Layer: 0
   m_Name: GordonNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41141,7 +41162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 7152930139536384079, guid: a4031a26b68596f4fa80667d8cf54ad7, type: 3}
+  m_Sprite: {fileID: -5498452386917162133, guid: daf6c0d70de0a834cb42dde3de1bd237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -41166,3 +41187,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083992518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083992514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bed97e7186f504d914d24f2a3d05db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCID: 0
+  Protrait: {fileID: 0}
+  Name: 
+  IntroText: []
+  AboutText: []
+  DoingText: []
+--- !u!95 &2083992519
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083992514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c3128ea729cee04cb7b6a6ca67b2a2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

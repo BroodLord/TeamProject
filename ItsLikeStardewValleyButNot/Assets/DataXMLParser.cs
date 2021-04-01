@@ -39,6 +39,22 @@ public class DataXMLParser : MonoBehaviour
             Pos = new float[3];
         }
     }
+    public struct TreeData
+    {
+        public string ItemType;
+        public string OreName;
+        public float[] ID;
+        public float[] Pos;
+        public string Tile;
+        public string XMLName;
+        public float Amount;
+
+        public void SetUp()
+        {
+            ID = new float[3];
+            Pos = new float[3];
+        }
+    }
     public struct PlantData
     {
         public string ItemType;
@@ -73,6 +89,7 @@ public class DataXMLParser : MonoBehaviour
         public int Amount;
         public bool Stackable;
         public float SellPrice;
+        public string Desc;
     }
 
     // PURELY FOR TESTING REASONS
@@ -92,9 +109,12 @@ public class DataXMLParser : MonoBehaviour
         Slots[2] = Chest.MaxCapacity;
         PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Vector3Int Date = new Vector3Int(cClock.Day, cClock.Month, cClock.Year);
+        Vector3Int Time = new Vector3Int(cClock.Hour, cClock.Min, (int)cClock.TimeTimer);
+        float[] lighting = new float[4];
+        lighting[0] = cClock.Lighting.color.r; lighting[1] = cClock.Lighting.color.g; lighting[2] = cClock.Lighting.color.b; lighting[3] = cClock.Lighting.color.a;
         Vector3 Pos = new Vector3(PlayerPos.position.x, PlayerPos.position.y, PlayerPos.position.z);
         Resets = cClock.WeeklyReset;
-        SaveData Data = new SaveData(Date, Pos, Resets, Slots, Money.GetMoney(), Stamania.GetStamina(), Inventory.ItemList,
+        SaveData Data = new SaveData(Date, Pos, Time, lighting, Resets, Slots, Money.GetMoney(), Stamania.GetStamina(), Inventory.ItemList,
                                     HotBar.ItemList, Chest.ItemList, Database.TileMapData);
         WriteXML(Data);
     }
@@ -168,6 +188,25 @@ public class DataXMLParser : MonoBehaviour
 
         XmlElement WorldData = SavedDataXML.CreateElement("WorldData");
 
+        XmlElement Date = SavedDataXML.CreateElement("Date");
+        Date.SetAttribute("Day", Data.Date[0].ToString());
+        Date.SetAttribute("Month", Data.Date[1].ToString());
+        Date.SetAttribute("Year", Data.Date[2].ToString());
+        WorldData.AppendChild(Date);
+
+        XmlElement Time = SavedDataXML.CreateElement("Time");
+        Time.SetAttribute("Hour", Data.Time[0].ToString());
+        Time.SetAttribute("Min", Data.Time[1].ToString());
+        Time.SetAttribute("Seconds", Data.Time[2].ToString());
+        WorldData.AppendChild(Time);
+
+        XmlElement Lighting = SavedDataXML.CreateElement("Lighting");
+        Lighting.SetAttribute("Lighting.r", Data.Lighting[0].ToString());
+        Lighting.SetAttribute("Lighting.g", Data.Lighting[1].ToString());
+        Lighting.SetAttribute("Lighting.b", Data.Lighting[2].ToString());
+        Lighting.SetAttribute("Lighting.a", Data.Lighting[3].ToString());
+        WorldData.AppendChild(Lighting);
+
         XmlElement WeeklyReset = SavedDataXML.CreateElement("WeeklyReset");
         WeeklyReset.SetAttribute("Resets" + 0, Data.WeeklyResets[0].ToString());
         WeeklyReset.SetAttribute("Resets" + 1, Data.WeeklyResets[1].ToString());
@@ -187,7 +226,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML InventoryData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
             XmlElement InventoryData = SavedDataXML.CreateElement("InventoryData");
             for (int i = 0; i < Data.InventorySlotAmount[0]; i++)
             {
@@ -203,6 +242,8 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement = SavedDataXML.CreateElement("AmountElement");
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
+                    DescElement = SavedDataXML.CreateElement("DescElement");
+
 
                     NameElement.SetAttribute("Name", Data.Inventory[i].Name);
                     TypeElement.SetAttribute("Type", Data.Inventory[i].Type);
@@ -213,6 +254,7 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement.SetAttribute("Amount", Data.Inventory[i].Amount.ToString());
                     StackableElement.SetAttribute("Stackable", Data.Inventory[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.Inventory[i].SellPrice.ToString());
+                    DescElement.SetAttribute("Desc", Data.Inventory[i].Desc);
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -223,6 +265,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(AmountElement);
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
+                    ElementData.AppendChild(DescElement);
 
                     InventoryData.AppendChild(ElementData);
                 }
@@ -238,7 +281,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML HotbarData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
             XmlElement HotbarData = SavedDataXML.CreateElement("HotbarData");
             for (int i = 0; i < Data.InventorySlotAmount[1]; i++)
             {
@@ -254,6 +297,7 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement = SavedDataXML.CreateElement("AmountElement");
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
+                    DescElement = SavedDataXML.CreateElement("DescElement");
 
                     NameElement.SetAttribute("Name", Data.HotBar[i].Name);
                     TypeElement.SetAttribute("Type", Data.HotBar[i].Type);
@@ -264,6 +308,7 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement.SetAttribute("Amount", Data.HotBar[i].Amount.ToString());
                     StackableElement.SetAttribute("Stackable", Data.HotBar[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.HotBar[i].SellPrice.ToString());
+                    DescElement.SetAttribute("Desc", Data.HotBar[i].Desc);
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -274,6 +319,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(AmountElement);
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
+                    ElementData.AppendChild(DescElement);
 
                     HotbarData.AppendChild(ElementData);
                 }
@@ -286,7 +332,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML ChestData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
             XmlElement ChestData = SavedDataXML.CreateElement("ChestData");
             for (int i = 0; i < Data.InventorySlotAmount[2]; i++)
             {
@@ -302,6 +348,7 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement = SavedDataXML.CreateElement("AmountElement");
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
+                    DescElement = SavedDataXML.CreateElement("DescElement");
 
                     NameElement.SetAttribute("Name", Data.Chest[i].Name);
                     TypeElement.SetAttribute("Type", Data.Chest[i].Type);
@@ -312,6 +359,7 @@ public class DataXMLParser : MonoBehaviour
                     AmountElement.SetAttribute("Amount", Data.Chest[i].Amount.ToString());
                     StackableElement.SetAttribute("Stackable", Data.Chest[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.Chest[i].SellPrice.ToString());
+                    DescElement.SetAttribute("Desc", Data.Chest[i].Desc);
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -322,6 +370,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(AmountElement);
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
+                    ElementData.AppendChild(DescElement);
 
                     ChestData.AppendChild(ElementData);
                 }
@@ -568,6 +617,60 @@ public class DataXMLParser : MonoBehaviour
 
         #endregion
 
+        #region CreateXML ForestData
+
+        {
+            XmlElement TreeData, TypeElement, TreeElement, IdElement, PosElement, TileElement, XmlNameElement, AmountElement;
+            XmlElement MinesData = SavedDataXML.CreateElement("ForestData");
+
+            for (int i = 0; i < Data.Forest.Length; i++)
+            {
+                TreeData = SavedDataXML.CreateElement("TreeData");
+                TypeElement = SavedDataXML.CreateElement("TypElement");
+                TreeElement = SavedDataXML.CreateElement("TreeElement");
+                IdElement = SavedDataXML.CreateElement("IdElement");
+                PosElement = SavedDataXML.CreateElement("PosElement");
+                TileElement = SavedDataXML.CreateElement("TileElement");
+                XmlNameElement = SavedDataXML.CreateElement("XmlElement");
+                AmountElement = SavedDataXML.CreateElement("AmountElement");
+
+                TypeElement.SetAttribute("Type", Data.Forest[i].ItemType);
+                TreeElement.SetAttribute("Tree", Data.Forest[i].TreeName);
+
+                string[] XYZ = { "X", "Y", "Z" };
+                for (int j = 0; j < 3; j++)
+                {
+                    IdElement.SetAttribute(XYZ[j].ToString(), Data.Forest[i].ID[j].ToString());
+                }
+
+
+                for (int j = 0; j < 3; j++)
+                {
+                    PosElement.SetAttribute(XYZ[j].ToString(), Data.Forest[i].Pos[j].ToString());
+                }
+
+                TileElement.SetAttribute("Tile", Data.Forest[i].Tile);
+
+                XmlNameElement.SetAttribute("XMLName", Data.Forest[i].XMLName);
+                AmountElement.SetAttribute("Amount", Data.Forest[i].Amount.ToString());
+
+
+                TreeData.AppendChild(TypeElement);
+                TreeData.AppendChild(TreeElement);
+                TreeData.AppendChild(IdElement);
+                TreeData.AppendChild(PosElement);
+                TreeData.AppendChild(TileElement);
+                TreeData.AppendChild(XmlNameElement);
+                TreeData.AppendChild(AmountElement);
+
+                MinesData.AppendChild(TreeData);
+            }
+
+            root.AppendChild(MinesData);
+        }
+
+        #endregion
+
         SavedDataXML.AppendChild(root);
         string Path = (Application.dataPath + "/StreamingAssets/XML Files/") + "DataXML.txt";
         SavedDataXML.Save(Path);
@@ -604,16 +707,33 @@ public class DataXMLParser : MonoBehaviour
                 XmlNodeList lst = currentnode.ChildNodes;
                 string[] Resets = new string[4];
                 string[] Slots = new string[3];
-                Resets[0] = lst[0].Attributes.GetNamedItem("Resets0").Value;
-                Resets[1] = lst[0].Attributes.GetNamedItem("Resets1").Value;
-                Resets[2] = lst[0].Attributes.GetNamedItem("Resets2").Value;
-                Resets[3] = lst[0].Attributes.GetNamedItem("Resets3").Value;
-                Slots[0] = lst[1].Attributes.GetNamedItem("Slots0").Value;
-                Slots[1] = lst[1].Attributes.GetNamedItem("Slots1").Value;
-                Slots[2] = lst[1].Attributes.GetNamedItem("Slots2").Value;
+                float[] lighting = new float[4];
+                int[] Date = new int[3];
+                int[] Time = new int[3];
+                Date[0] = int.Parse(lst[0].Attributes.GetNamedItem("Day").Value);
+                Date[1] = int.Parse(lst[0].Attributes.GetNamedItem("Month").Value);
+                Date[2] = int.Parse(lst[0].Attributes.GetNamedItem("Year").Value);
+                Time[0] = int.Parse(lst[1].Attributes.GetNamedItem("Hour").Value);
+                Time[1] = int.Parse(lst[1].Attributes.GetNamedItem("Min").Value);
+                Time[2] = int.Parse(lst[1].Attributes.GetNamedItem("Seconds").Value);
+                lighting[0] = float.Parse(lst[2].Attributes.GetNamedItem("Lighting.r").Value);
+                lighting[1] = float.Parse(lst[2].Attributes.GetNamedItem("Lighting.g").Value);
+                lighting[2] = float.Parse(lst[2].Attributes.GetNamedItem("Lighting.b").Value);
+                lighting[3] = float.Parse(lst[2].Attributes.GetNamedItem("Lighting.a").Value);
+                Resets[0] = lst[3].Attributes.GetNamedItem("Resets0").Value;
+                Resets[1] = lst[3].Attributes.GetNamedItem("Resets1").Value;
+                Resets[2] = lst[3].Attributes.GetNamedItem("Resets2").Value;
+                Resets[3] = lst[3].Attributes.GetNamedItem("Resets3").Value;
+                Slots[0] = lst[4].Attributes.GetNamedItem("Slots0").Value;
+                Slots[1] = lst[4].Attributes.GetNamedItem("Slots1").Value;
+                Slots[2] = lst[4].Attributes.GetNamedItem("Slots2").Value;
+                Color color = new Color(lighting[0], lighting[1], lighting[2], lighting[3]);
+                cClock.Day = Date[0]; cClock.Month = Date[1]; cClock.Year = Date[2];
+                cClock.Hour = Time[0]; cClock.Min = Time[1]; cClock.TimeTimer = Time[2];
+                cClock.Lighting.color = color;
                 for (int i = 0; i < 4; i++)
                 {
-                    cClock.WeeklyReset[i] = bool.Parse(Resets[0]);
+                    cClock.WeeklyReset[i] = bool.Parse(Resets[i]);
                 }
                 Inventory.Resize(Convert.ToInt32(Slots[0]));
                 HotBar.Resize(Convert.ToInt32(Slots[1]));
@@ -637,6 +757,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Amount = Convert.ToInt32(lst0[6].Attributes.GetNamedItem("Amount").Value);
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
+                    Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -656,7 +777,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0);
+                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
                     Inventory.AddItem(BasicItem);
                 }
             }
@@ -677,6 +798,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Amount = Convert.ToInt32(lst0[6].Attributes.GetNamedItem("Amount").Value);
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
+                    Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -696,7 +818,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0);
+                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
                     HotBar.AddItem(BasicItem);
                 }
             }
@@ -717,6 +839,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Amount = Convert.ToInt32(lst0[6].Attributes.GetNamedItem("Amount").Value);
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
+                    Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -736,7 +859,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0);
+                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
                     Chest.AddItem(BasicItem);
                 }
             }
@@ -831,7 +954,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable, 
                                        XML.items.ElementAt(Index).Value.bSrcImage, XML.items.ElementAt(Index).Value.bSoundEffect,
                                        XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab, 
-                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData);
+                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData, XML.items.ElementAt(Index).Value.bDesc);
 
                     // Loads what tile we want the item to use
                     string Path = "XML Loaded Assets/" + Data.Tile;
@@ -876,7 +999,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable,
                                        XML.items.ElementAt(Index).Value.bSrcImage, XML.items.ElementAt(Index).Value.bSoundEffect,
                                        XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab,
-                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData);
+                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData, XML.items.ElementAt(Index).Value.bDesc);
                     // Loads what tile we want the item to use
                     string Path = "XML Loaded Assets/" + Data.Tile;
                     TileBase Tile = Resources.Load<TileBase>(Path);
@@ -919,13 +1042,57 @@ public class DataXMLParser : MonoBehaviour
                     Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable,
                                        XML.items.ElementAt(Index).Value.bSrcImage, XML.items.ElementAt(Index).Value.bSoundEffect,
                                        XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab,
-                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData);
+                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData, XML.items.ElementAt(Index).Value.bDesc);
                     // Loads what tile we want the item to use
                     string Path = "XML Loaded Assets/" + Data.Tile;
                     TileBase Tile = Resources.Load<TileBase>(Path);
 
                     Database.TileMapData.ElementAt(3).Value[posInt].Tile = Tile;
                     Database.TileMapData.ElementAt(3).Value[posInt].SetOre(Item);
+                }
+            }
+            else if (currentnode.Name == "ForestData")
+            {
+                ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
+                XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
+                TreeData Data = new TreeData();
+                Data.SetUp();
+                XmlNodeList lst = currentnode.ChildNodes;
+                foreach (XmlNode Node in lst)
+                {
+                    XmlNodeList lst0 = Node.ChildNodes;
+
+                    Data.ItemType = lst0[0].Attributes.GetNamedItem("Type").Value;
+                    Data.OreName = lst0[1].Attributes.GetNamedItem("Tree").Value;
+                    Data.ID[0] = float.Parse(lst0[2].Attributes.GetNamedItem("X").Value);
+                    Data.ID[0] = float.Parse(lst0[2].Attributes.GetNamedItem("Y").Value);
+                    Data.ID[0] = float.Parse(lst0[2].Attributes.GetNamedItem("Z").Value);
+                    Data.Pos[0] = float.Parse(lst0[3].Attributes.GetNamedItem("X").Value);
+                    Data.Pos[1] = float.Parse(lst0[3].Attributes.GetNamedItem("Y").Value);
+                    Data.Pos[2] = float.Parse(lst0[3].Attributes.GetNamedItem("Z").Value);
+                    Data.Tile = lst0[4].Attributes.GetNamedItem("Tile").Value;
+                    Data.XMLName = lst0[5].Attributes.GetNamedItem("XMLName").Value;
+                    Data.Amount = float.Parse(lst0[6].Attributes.GetNamedItem("Amount").Value);
+
+
+                    TileDataClass Temp = new TileDataClass();
+                    Vector3Int posInt = new Vector3Int(Convert.ToInt32(Data.Pos[0]), Convert.ToInt32(Data.Pos[1]), Convert.ToInt32(Data.Pos[2]));
+                    // Added the new slot
+                    Database.TileMapData.ElementAt(4).Value.Add(posInt, Temp);
+                    ItemBase Item = new ItemBase();
+                    Item = this.gameObject.AddComponent<ItemBase>() as ItemBase;
+                    // Sets up and ore item
+                    int Index = TypeFinder.FindItemIndex(Data.XMLName);
+                    Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable,
+                                       XML.items.ElementAt(Index).Value.bSrcImage, XML.items.ElementAt(Index).Value.bSoundEffect,
+                                       XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab,
+                                       XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData, XML.items.ElementAt(Index).Value.bDesc);
+                    // Loads what tile we want the item to use
+                    string Path = "XML Loaded Assets/" + Data.Tile;
+                    TileBase Tile = Resources.Load<TileBase>(Path);
+
+                    Database.TileMapData.ElementAt(4).Value[posInt].Tile = Tile;
+                    Database.TileMapData.ElementAt(4).Value[posInt].SetItem(Item);
                 }
             }
         }

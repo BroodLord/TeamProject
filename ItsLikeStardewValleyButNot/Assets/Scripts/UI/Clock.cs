@@ -46,7 +46,7 @@ public class Clock : MonoBehaviour
     public int Hour, Min, Day, Month, Year, WeekCounter;
     public int MaxHour = 24, MaxMin = 60, MaxDay = 30, MaxMouth = 12; // Setting the max an hour, min and months in a day *FOR NOW WE WILL KEEP IT 30 DAYS, CAN CHANGE LATER WITH SEASONS*
 
-    float TimeTimer = 0.0f; // Will count amount of time has past.
+    public float TimeTimer = 0.0f; // Will count amount of time has past.
 
     /*Different formats for Time and Date*/
     public enum TimeFormats { Hour_24, Hour_12 }
@@ -268,10 +268,12 @@ public class Clock : MonoBehaviour
                     PriceText.text = "Price: " + XML.items.ElementAt(i).Value.GetSellPrice().ToString();
                     // Set the desctext
                     TextMeshProUGUI DescText = childObject.transform.Find("Description").GetComponent<TextMeshProUGUI>();
+                    DescText.text = XML.items.ElementAt(i).Value.GetDesc();
                     // Find what item we are wanting to use and set it up
                     TypeFinder.TyepFinder(i, childObject).SetUpThisItem(XML.items.ElementAt(i).Value.bItemType, XML.items.ElementAt(i).Value.bName, XML.items.ElementAt(i).Value.bAmount,
                                                                         XML.items.ElementAt(i).Value.bStackable, XML.items.ElementAt(i).Value.bSrcImage, XML.items.ElementAt(i).Value.bSoundEffect,
-                                                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice, XML.items.ElementAt(i).Value.bCustomData);
+                                                                        XML.items.ElementAt(i).Value.bTile, XML.items.ElementAt(i).Value.bPrefab, XML.items.ElementAt(i).Value.bSellPrice, XML.items.ElementAt(i).Value.bCustomData,
+                                                                        XML.items.ElementAt(i).Value.GetDesc());
                 }
             }
         }
