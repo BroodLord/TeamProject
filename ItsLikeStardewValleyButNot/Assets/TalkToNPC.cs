@@ -51,17 +51,17 @@ public class TalkToNPC : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         DialogueUI.SetActive(true);
-        Image picture = DialogueUI.transform.FindChild("Background").FindChild("Portait").GetComponent<Image>();
+        Image picture = DialogueUI.transform.Find("Background").Find("Portait").GetComponent<Image>();
         picture.sprite = ChosenNPC.Protrait;
-        DialogueUI.transform.FindChild("TextBackground").FindChild("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetIntroText().text;
+        DialogueUI.transform.Find("TextBackground").Find("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetIntroText().text;
     }
 
     public void ShowAboutDialogue()
     {
         ConversationUI.SetActive(true);
-        Image picture = ConversationUI.transform.FindChild("Background").FindChild("Portait").GetComponent<Image>();
+        Image picture = ConversationUI.transform.Find("Background").Find("Portait").GetComponent<Image>();
         picture.sprite = ChosenNPC.Protrait;
-        ConversationUI.transform.FindChild("TextBackground").FindChild("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetAboutText().text;
+        ConversationUI.transform.Find("TextBackground").Find("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetAboutText().text;
         DialogueUI.SetActive(false);
     }
 
@@ -74,9 +74,9 @@ public class TalkToNPC : MonoBehaviour
     public void ShowWDYTDialogue()
     {
         ConversationUI.SetActive(true);
-        Image picture = ConversationUI.transform.FindChild("Background").FindChild("Portait").GetComponent<Image>();
+        Image picture = ConversationUI.transform.Find("Background").Find("Portait").GetComponent<Image>();
         picture.sprite = ChosenNPC.Protrait;
-        ConversationUI.transform.FindChild("TextBackground").FindChild("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetAboutText().text;
+        ConversationUI.transform.Find("TextBackground").Find("TalkingText").GetComponent<TextMeshProUGUI>().text = ChosenNPC.GetAboutText().text;
         DialogueUI.SetActive(false);
     }
 

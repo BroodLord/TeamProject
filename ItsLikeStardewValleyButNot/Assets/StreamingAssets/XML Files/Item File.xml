@@ -73,13 +73,13 @@
 	<!-- List of NPC Infomation -->
 
 	<NPCInfo name ="Gordan"  Protrait ="CGabrielFaces48x48_11" AboutDialogueCount = "4" AboutDialogue0 = "A" AboutDialogue1 = "B" AboutDialogue2 = "C" AboutDialogue3 = "D"
-									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
+									   IntroDialogueCount = "G'Day son, Nice day we're having." IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
 								       DoingTodayDialogueCount = "4" DoingDialogue0 = "E" DoingDialogue1 = "F" DoingDialogue2 = "G" DoingDialogue3 = "H"/>
 	<NPCInfo name ="Shirley" Protrait ="CGabrielFaces48x48_12" AboutDialogueCount = "4" AboutDialogue0 = "I" AboutDialogue1 = "J" AboutDialogue2 = "K" AboutDialogue3 = "L"
 									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
 									   DoingTodayDialogueCount = "4" DoingDialogue0 = "M" DoingDialogue1 = "N" DoingDialogue2 = "O" DoingDialogue3 = "P"/>
-	<NPCInfo name ="CrazyEd" Protrait ="CGabrielFaces48x48_13" AboutDialogueCount = "4" AboutDialogue0 = "Q" AboutDialogue1 = "R" AboutDialogue2 = "S" AboutDialogue3 = "T"
-									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
+	<NPCInfo name ="CrazyEd" Protrait ="CGabrielFaces48x48_13" AboutDialogueCount = "" AboutDialogue0 = "Q" AboutDialogue1 = "R" AboutDialogue2 = "S" AboutDialogue3 = "T"
+									   IntroDialogueCount = "GeT oUT oF My hOuSE. REEEEEEEEEEEEEEEE" IntroDialogue0 = "Oh, sorry. I thought you were one of those doctors." IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
 								       DoingTodayDialogueCount = "4" DoingDialogue0 = "U" DoingDialogue1 = "V" DoingDialogue2 = "W" DoingDialogue3 = "X"/>
 	<NPCInfo name ="Jenny"   Protrait ="CGabrielFaces48x48_14" AboutDialogueCount = "4" AboutDialogue0 = "1" AboutDialogue1 = "2" AboutDialogue2 = "3" AboutDialogue3 = "4"
 								  	   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
