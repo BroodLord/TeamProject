@@ -16,6 +16,7 @@ public class Clock : MonoBehaviour
     public GameObject Player;
     public GameObject ToolParentShopSlot;
     public GameObject ShopSlot;
+    public GameObject GoldSpritePrefab;
     public StaminaScript Stam;
     public Animator Transition;
     /*UI Components for Text on the Canvus*/
@@ -27,9 +28,12 @@ public class Clock : MonoBehaviour
     public DateFormats ClockDateFormat = DateFormats.DD_MM_YYYY;
     public float SecondsPerMin;
     public TextMeshProUGUI GoldText;
+    public GameObject GoldSpriteHolder;
     public PauseMenu PauseMenuScript;
     public int PassoutTimer;
     public bool[] WeeklyReset;
+    public Sprite[] GoldTextSprites;
+    private List<KeyValuePair<int, GameObject>> SpriteDictionary;
 
     public Vector3 PlayerPos;
     public String SceneName;
@@ -50,7 +54,7 @@ public class Clock : MonoBehaviour
 
     /*Different formats for Time and Date*/
     public enum TimeFormats { Hour_24, Hour_12 }
-    public enum DateFormats { MM_DD_YYYY, DD_MM_YYYY}
+    public enum DateFormats { MM_DD_YYYY, DD_MM_YYYY }
 
     /*Starting values for the clock *THIS CAN BE CHANGED LATER* */
     private void Start()
@@ -68,6 +72,7 @@ public class Clock : MonoBehaviour
         Day = 1;
         Month = 5;
         Year = 1969;
+        SpriteDictionary = new List<KeyValuePair<int, GameObject>>();
         foreach (Transform child in transform)
         {
             if (child.tag == "Lighting")
@@ -94,7 +99,7 @@ public class Clock : MonoBehaviour
         WeekCounter++;
         if (WeekCounter == 7)
         {
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 WeeklyReset[i] = true;
             }
@@ -106,17 +111,17 @@ public class Clock : MonoBehaviour
         Hour = 8;
         ++Day;
         /* This is used to update the players gold */
-        for(int i = 0; i < cChest.ItemList.Length; i++)
+        for (int i = 0; i < cChest.ItemList.Length; i++)
         {
             /*If the current index marker is true then we have something to sell*/
-            if(cChest.Markers[i])
+            if (cChest.Markers[i])
             {
                 // An item will have an amount attached so we also want to sell these too
                 float Temp = cChest.ItemList[i].GetSellPrice() * cChest.ItemList[i].GetAmount();
                 GoldManager.AddAmount(Temp);
                 // Reset the current chest slot as it should be empty
                 cChest.ItemList[i] = null;
-     
+
 
 
             }
@@ -124,21 +129,129 @@ public class Clock : MonoBehaviour
         // Reset the markers as they should all be false
         cChest.ResetMarkers();
         // Update the text
-        string Output = GoldManager.GetMoney().ToString();
-        GoldText.text = Output;
+        //string Output = GoldManager.GetMoney().ToString();
+        //GoldText.text = Output;
+
+        AssignGoldSprites();
+
         /************************************/
 
         // THIS FUNCTION WILL BE USED TO UPDATED EVERYTHING WE WANT TO CHANGE WHEN THE PLAYER FALLS ALSEEP!
         foreach (var v in Dictioary.TileMapData.ElementAt(0).Value)
         {
-            if(v.Value.HasPlant())
+            if (v.Value.HasPlant())
             {
                 PlantAbstractClass P = v.Value.GetPlant();
                 P.UpdatePlant(1);
             }
             else
             {
-               v.Value.SetWatered(false);
+                v.Value.SetWatered(false);
+            }
+        }
+    }
+
+    int FindNumber(char Gold)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            int GoldNum = (int)char.GetNumericValue(Gold);
+            if (i == GoldNum)
+            {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    void AssginSprites(string Gold)
+    {
+        int[] array = new int[Gold.Length];
+        for (int i = 0; i < Gold.Length; i++)
+        {
+            array[i] = FindNumber(Gold[i]);
+        }
+        for (int i = 0; i < array.Length; i++)
+        {
+            GameObject Sprite = Instantiate(GoldSpritePrefab) as GameObject;
+            Sprite.transform.parent = GoldSpriteHolder.transform;
+            Sprite.transform.position = GoldSpriteHolder.transform.position;
+            Sprite.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+            KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], Sprite);
+            SpriteDictionary.Add(KVP);
+        }
+    }
+
+    void ChangeSprites(string Gold)
+    {
+        int[] array = new int[Gold.Length];
+        for (int i = 0; i < Gold.Length; i++)
+        {
+            array[i] = FindNumber(Gold[i]);
+        }
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array.Length > SpriteDictionary.Count)
+            {
+                if (i < SpriteDictionary.Count)
+                {
+                    if (SpriteDictionary[i].Key != array[i])
+                    {
+                        KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], SpriteDictionary[i].Value);
+                        SpriteDictionary[i].Value.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+                        SpriteDictionary[i] = KVP;
+                    }
+                }
+                else
+                {
+                    GameObject Sprite = Instantiate(GoldSpritePrefab) as GameObject;
+                    Sprite.transform.parent = GoldSpriteHolder.transform;
+                    Sprite.transform.position = GoldSpriteHolder.transform.position;
+                    Sprite.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+                    KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], Sprite);
+                    SpriteDictionary.Add(KVP);
+                }
+            }
+            else if (array.Length < SpriteDictionary.Count)
+            {
+                int Diff = SpriteDictionary.Count - array.Length;
+                for(int j = 0; j < Diff; j++)
+                {
+                    Destroy(SpriteDictionary[j].Value);
+                    SpriteDictionary.RemoveAt(j);
+                }
+            }
+        }
+    }
+
+    void AssignGoldSprites()
+    {
+        // Assigns the sprite if there isn't any
+        string Gold = GoldManager.GetMoney().ToString();
+        if (SpriteDictionary.Count == 0)
+        {
+            AssginSprites(Gold);
+        }
+        else if (Gold.Length > SpriteDictionary.Count)
+        {
+            ChangeSprites(Gold);
+        }
+        else if (Gold.Length < SpriteDictionary.Count)
+        {
+            ChangeSprites(Gold);
+        }
+        // Will check if the amount has changed
+        else if (Gold.Length == SpriteDictionary.Count)
+        {
+            int Counter = 0;
+            foreach (var Dic in SpriteDictionary)
+            {
+                int Number = FindNumber(Gold[Counter]);
+                if (Dic.Key != Number)
+                {
+                    Dic.Value.gameObject.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[Number];
+                }
+                Counter++;
             }
         }
     }
@@ -153,16 +266,18 @@ public class Clock : MonoBehaviour
     {
         if (!PauseMenuScript.GameIsPaused)
         {
-            
-            string Output = GoldManager.GetMoney().ToString();
-            GoldText.text = Output;
+
+            //string Output = GoldManager.GetMoney().ToString();
+            //GoldText.text = Output;
+            AssignGoldSprites();
+
             /*This Update function is simple, if a enough time has passed then increase the Min, If that reach the max then increase the hour etc.*/
             if (TimeTimer >= SecondsPerMin)
             {
                 /*******************************/
                 /* Change the light so it represents a full realistic lighting, 8am 70% light, 12 100%, 12pm - 2am decrease the light till 30% light */
                 // 30% 0.1176471, 100% 0.3921569
-                
+
                 // GROUND BREAKING LIGHTING MATHS THAT THE WORLD NEEDS TO KNOW ABOUT, ONLY WORKS X NUMBER OF TIMES
                 // Lighting = ( 39 % ((CurrentLighting% / Time(Hours)) / 60)) 0.0004875f;
                 var tempColor = Lighting.color;
@@ -225,7 +340,7 @@ public class Clock : MonoBehaviour
         Stam.SetStamina(75);
         NightUpdate();
         LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
-        Load.TransferLevel("PlayerRoom", new Vector3(-1, 9,0));
+        Load.TransferLevel("PlayerRoom", new Vector3(-1, 9, 0));
     }
 
     // RIP AZIR
@@ -286,11 +401,11 @@ public class Clock : MonoBehaviour
         {
             case TimeFormats.Hour_24:
                 {
-                    if(Hour <= 9) { TimeText = "0" + Hour + ":"; }
+                    if (Hour <= 9) { TimeText = "0" + Hour + ":"; }
 
                     else { TimeText = Hour + ":"; }
 
-                    if(Min <= 9) { TimeText += "0" + Min; }
+                    if (Min <= 9) { TimeText += "0" + Min; }
 
                     else { TimeText += Min; }
                     break;
@@ -299,9 +414,9 @@ public class Clock : MonoBehaviour
                 {
                     int ConvertedHour;
 
-                    if(Hour >= 13) { ConvertedHour = Hour - 12; }
+                    if (Hour >= 13) { ConvertedHour = Hour - 12; }
 
-                    else if(Hour == 0) { ConvertedHour = 12; }
+                    else if (Hour == 0) { ConvertedHour = 12; }
 
                     else { ConvertedHour = Hour; }
 
@@ -311,7 +426,7 @@ public class Clock : MonoBehaviour
 
                     else { TimeText += Min; }
 
-                    if(AM) { TimeText += " AM"; }
+                    if (AM) { TimeText += " AM"; }
                     else { TimeText += " PM"; }
                     break;
                 }
@@ -331,7 +446,7 @@ public class Clock : MonoBehaviour
         }
 
         /*These two for loops will set all the time and dates in the array to the current time*/
-        for(int i = 0; i < TimeUIText.Length; i++)  { TimeUIText[i].text = TimeText; }
+        for (int i = 0; i < TimeUIText.Length; i++) { TimeUIText[i].text = TimeText; }
         for (int i = 0; i < DateUIText.Length; i++) { DateUIText[i].text = DateText; }
     }
 }

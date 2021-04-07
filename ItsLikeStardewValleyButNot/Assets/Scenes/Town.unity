@@ -15692,6 +15692,7 @@ GameObject:
   - component: {fileID: 257822088}
   - component: {fileID: 257822087}
   - component: {fileID: 257822089}
+  - component: {fileID: 257822090}
   m_Layer: 0
   m_Name: JennyNPC
   m_TagString: NPC
@@ -15739,7 +15740,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 7152930139536384079, guid: a4031a26b68596f4fa80667d8cf54ad7, type: 3}
+  m_Sprite: {fileID: 6586815544308170364, guid: bbab7fc8244805442acd0f8e8731f1b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15782,6 +15783,25 @@ MonoBehaviour:
   IntroText: []
   AboutText: []
   DoingText: []
+--- !u!95 &257822090
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257822086}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1164ea9461fbf3d4ca3e9347d582822f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &539123118
 GameObject:
   m_ObjectHideFlags: 0
@@ -41181,7 +41201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083992514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.96, y: -9.68, z: 0}
+  m_LocalPosition: {x: 23, y: -10, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}

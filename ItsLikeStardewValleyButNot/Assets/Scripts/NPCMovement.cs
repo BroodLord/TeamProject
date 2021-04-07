@@ -27,6 +27,9 @@ public class NPCMovement : MonoBehaviour
     private int timeIndex;
     private XMLParser XML;
 
+    enum MovementStates {Idle, Up, Down, Left, Right}
+    MovementStates States;
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,25 +84,40 @@ public class NPCMovement : MonoBehaviour
                     Vector2 v2;
                     v2.x = currentPath[pathIndex].worldPosition.x;
                     v2.y = currentPath[pathIndex].worldPosition.y;
-                    Vector2Int v2pos = new Vector2Int((int)this.transform.position.x, (int)this.transform.position.y); 
-                    if (v2.y > v2pos.y)
+                    Vector2 v2pos;
+                    v2pos.x = transform.position.x;
+                    v2pos.y = transform.position.y;
+                    Vector2 Dir = (v2 - v2pos).normalized;
+                    if (Dir.y == 1)
                     {
                         anim.SetBool("Up", true);
+                        anim.SetBool("Forward", false);
+                        anim.SetBool("Right", false);
+                        anim.SetBool("Left", false);
                     }
-                    else { anim.SetBool("Up", false); }
-                    if (v2.x > v2pos.x)
+                    else { anim.SetBool("Up", false);  }
+                    if (Dir.x == 1)
                     {
                         anim.SetBool("Right", true);
+                        anim.SetBool("Forward", false);
+                        anim.SetBool("Up", false);
+                        anim.SetBool("Left", false);
                     }
                     else { anim.SetBool("Right", false); }
-                    if (v2.x < v2pos.x)
+                    if (Dir.x == -1)
                     {
                         anim.SetBool("Left", true);
+                        anim.SetBool("Forward", false);
+                        anim.SetBool("Right", false);
+                        anim.SetBool("Up", false);
                     }
                     else { anim.SetBool("Left", false); }
-                    if (v2.y < v2pos.y)
+                    if (Dir.y == -1)
                     {
                         anim.SetBool("Forward", true);
+                        anim.SetBool("Up", false);
+                        anim.SetBool("Right", false);
+                        anim.SetBool("Left", false);
                     }
                     else { anim.SetBool("Forward", false); }
                     this.transform.position = Vector2.MoveTowards(this.transform.position, v2, movement);
@@ -112,6 +130,7 @@ public class NPCMovement : MonoBehaviour
                 anim.SetBool("Up", false);
                 anim.SetBool("Left", false);
                 anim.SetBool("Right", false);
+                anim.SetBool("Idle", true);
                 timer -= Time.deltaTime;
                 if (timer < 0)
                 {
@@ -147,6 +166,7 @@ public class NPCMovement : MonoBehaviour
                 pathIndex = 0;
                 //go back to case 1
                 currentState = 1;
+                anim.SetBool("Idle", false);
                 break;
         }
     }
