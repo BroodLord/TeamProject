@@ -30,6 +30,7 @@ TagManager:
   - Grid
   - Non-Walkable
   - NPC
+  - ReelBar
   layers:
   - Default
   - TransparentFX

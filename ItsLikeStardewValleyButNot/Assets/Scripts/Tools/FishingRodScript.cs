@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,11 @@ public class FishingRodScript : ToolScript
     XMLParser XML;
     int numOfFish = 0;
     bool audioPlayed;
+    enum FishingStates { notFishing, waiting, bobberTrigger, reeling, caught }
+    [SerializeField] private int currentState;
+    [SerializeField] private int reelDifficulty;
+    [SerializeField] private int reelCount;
+    //public GameObject reelMeter;
 
     private void Start()
     {
@@ -28,6 +34,10 @@ public class FishingRodScript : ToolScript
         fish = new List<string>();
         catchTimer = 2.0f;
         audioPlayed = false;
+        currentState = 0;
+        reelCount = 0;
+        //reelMeter = GameObject.FindGameObjectWithTag("ReelBar");
+
         foreach (var fishType in XML.items)
         {
             if (fishType.Value.GetType() == ItemTypes.Fish)
@@ -48,7 +58,8 @@ public class FishingRodScript : ToolScript
         {
             Debug.Log("This tile can be fished in");
             fishingTimer = Random.Range(3.0f, 10.0f);
-            currentlyFishing = true;
+            catchTimer = 2.0f;
+            currentState = 1;
             ToolUsed = true;
 
         }
@@ -62,11 +73,22 @@ public class FishingRodScript : ToolScript
 
     private void Update()
     {
-        if (currentlyFishing)
+        switch (currentState)
         {
-            fishingTimer -= Time.deltaTime;
-            if (fishingTimer < 0)
-            {
+            //not fishing state
+            case 0:
+                break;
+            //waiting state
+            case 1:
+                fishingTimer -= Time.deltaTime;
+                if (fishingTimer < 0)
+                {
+                    currentState = 2;
+                }
+
+                break;
+            //bobber triggered state
+            case 2:
                 if (!audioPlayed)
                 {
                     AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
@@ -74,31 +96,54 @@ public class FishingRodScript : ToolScript
                     Audio.Play();
                     audioPlayed = true;
                 }
-                /** CAUTION, EARRAPE! UNCOMMENT AT YOUR OWN RISK **/
-                //Audio.PlayOneShot(Audio.clip);
-
                 catchTimer -= Time.deltaTime;
+
                 if (catchTimer < 0)
                 {
                     currentlyFishing = false;
                     catchTimer = 2.0f;
                     fishingTimer = 10.0f;
                     audioPlayed = false;
+                    currentState = 0;
                 }
+                
+                if (Input.GetKeyDown("space"))
+                {
+                    catchTimer = 5.0f;
+                    fishingTimer = 10.0f;
+                    reelDifficulty = Random.Range(15, 30);
+                    //reelMeter.SetActive(true);
+                    audioPlayed = false;
+                    currentState = 3;
+                }
+                break;
+            //reeling state
+            case 3:
+                catchTimer -= Time.deltaTime;
+                if (Input.GetKeyDown("space")) { reelCount += 1; }
 
-                if (Input.GetMouseButtonDown(1))
+                if (reelCount >= reelDifficulty)
                 {
                     int fishPicked = Random.Range(0, numOfFish);
                     string Name = fish[fishPicked];
 
                     InventoryAssessment(GetFishItem(Name));
-
-                    currentlyFishing = false;
-                    catchTimer = 2.0f;
-                    fishingTimer = 10.0f;
+                    reelCount = 0;
+                    //reelMeter.SetActive(false);
+                    currentState = 4;
                 }
-            }
-
+                else if (catchTimer < 0)
+                {
+                    catchTimer = 2.0f;
+                    //reelMeter.SetActive(false);
+                    currentState = 0;
+                }
+                break;
+            //caught state
+            case 4:
+                
+                currentState = 0;
+                break;
         }
     }
 
