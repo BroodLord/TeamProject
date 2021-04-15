@@ -233,7 +233,7 @@ public class XMLParser : MonoBehaviour
             string[] DoingDialogue = new string[int.Parse(DoingTodayDialogueCount)];
             for (int i = 0; i < IntroDialogue.Length; i++)
             {
-                IntroDialogue[i] = ItemsXML.Attributes.GetNamedItem("AboutDialogue" + i).Value;
+                IntroDialogue[i] = ItemsXML.Attributes.GetNamedItem("IntroDialogue" + i).Value;
             }
             for (int i = 0; i < AboutDialogue.Length; i++)
             {

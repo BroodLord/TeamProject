@@ -72,18 +72,45 @@
 
 	<!-- List of NPC Infomation -->
 
-	<NPCInfo name ="Gordan"  Protrait ="CGabrielFaces48x48_11" AboutDialogueCount = "4" AboutDialogue0 = "A" AboutDialogue1 = "B" AboutDialogue2 = "C" AboutDialogue3 = "D"
-									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
-								       DoingTodayDialogueCount = "4" DoingDialogue0 = "E" DoingDialogue1 = "F" DoingDialogue2 = "G" DoingDialogue3 = "H"/>
-	<NPCInfo name ="Shirley" Protrait ="CGabrielFaces48x48_12" AboutDialogueCount = "4" AboutDialogue0 = "I" AboutDialogue1 = "J" AboutDialogue2 = "K" AboutDialogue3 = "L"
-									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
-									   DoingTodayDialogueCount = "4" DoingDialogue0 = "M" DoingDialogue1 = "N" DoingDialogue2 = "O" DoingDialogue3 = "P"/>
-	<NPCInfo name ="CrazyEd" Protrait ="CGabrielFaces48x48_13" AboutDialogueCount = "4" AboutDialogue0 = "Q" AboutDialogue1 = "R" AboutDialogue2 = "S" AboutDialogue3 = "T"
-									   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
-								       DoingTodayDialogueCount = "4" DoingDialogue0 = "U" DoingDialogue1 = "V" DoingDialogue2 = "W" DoingDialogue3 = "X"/>
-	<NPCInfo name ="Jenny"   Protrait ="CGabrielFaces48x48_14" AboutDialogueCount = "4" AboutDialogue0 = "1" AboutDialogue1 = "2" AboutDialogue2 = "3" AboutDialogue3 = "4"
-								  	   IntroDialogueCount = "4" IntroDialogue0 = "A" IntroDialogue1 = "B" IntroDialogue2 = "C" IntroDialogue3 = "D"
-								       DoingTodayDialogueCount = "4" DoingDialogue0 = "5" DoingDialogue1 = "6" DoingDialogue2 = "7" DoingDialogue3 = "8"/>
+	<NPCInfo name ="Gordan"  Protrait ="CGabrielFaces48x48_11" AboutDialogueCount = "5" AboutDialogue0 = "Lived in this town for 47 years now, never get tired o the quiet." 
+									   AboutDialogue1 = "Mine and Shirley's gold wedding anniversary's coming up. Its a wonder we 'avent killed eachother yet." AboutDialogue2 = "I love me some fishin', can catch some proper bigguns in the town lake." 
+									   AboutDialogue3 = "We take good care of old Ed, shame what the war did to him." AboutDialogue4 ="As you well know i'm Gordan. Me and me wife Shirley live in the house closest to your farm."
+			 
+									   IntroDialogueCount = "5" IntroDialogue0 = "Mornin', just on me daily walk about the town." IntroDialogue1 = "Hey there farmer!" 
+									   IntroDialogue2 = "Lord help me if I have to listen to more of Shirleys nagging." IntroDialogue3 = "Lovely today ain't it." IntroDialogue4 = "G'Day son, nice weather we're having"  
+			 
+									   DoingTodayDialogueCount = "5" 
+									   DoingDialogue0 = "Just visited me dad's grave. Best farmer this side o the world, no offence o course." DoingDialogue1 = "Can never get enough o listnin' to that old waterfall. Plenty of mem'ries." 
+									   DoingDialogue2 = "Ed's food delivery is done for the day, lucky bugger got the best part o the roast." DoingDialogue3 = "Got'ta pop over to Jenny's shop for a bit o bait. Goin' for a spot of fishing later."  
+									   DoingDialogue4 = "Just getting away from the wife for a bit. You know what she's like for nagging."/>
+	
+	<NPCInfo name ="Shirley" Protrait ="CGabrielFaces48x48_12" AboutDialogueCount = "3" AboutDialogue0 = "We take care of that poor soul Ed nextdoor. Talks to his imaginary friends after the war." AboutDialogue1 = "I hope Gordan remembers our anniversary is soon. His memory is going I think." 
+									   AboutDialogue2 = "This is such a peaceful little town. It's dodged a lot of the backfire from the war that all the cities recieved."
+			 
+									   IntroDialogueCount = "4" IntroDialogue0 = "Hello there dear, come for a chat and a spot of tea?" IntroDialogue1 = "If you see that husband of mine, tell him to ask Jenny if she could fix our shelf." 
+									   IntroDialogue2 = "Morning petal. I've got cookies in the oven, have a seat whilst I pour you some tea." IntroDialogue3 = "How are you today pumpkin, all going well I hope?"
+			 
+									   DoingTodayDialogueCount = "5" DoingDialogue0 = "Just tidying around the house dear, but I can stop for a little chat." 
+									   DoingDialogue1 = "Gordan has tracked his muddy boots in the house again. One of those days I dont know what i'm gonna do to him." DoingDialogue2 = "I've just fed our cute mouse Terry. He lives in a hole under the dresser." 
+									   DoingDialogue3 = "Just stretching my legs pumpkin. These old bones still need a bit of excersize every now and again." DoingDialogue4 = "Ive just finished baking a pie! It's out to cool on the windowsill." />
+	
+	<NPCInfo name ="CrazyEd" Protrait ="CGabrielFaces48x48_13" AboutDialogueCount = "4" AboutDialogue0 = "IM CRAZY ED!" AboutDialogue1 = "THESE WARDROBES ARE MINE! DONT GO NEAR THEM YA HEAR?" 
+									   AboutDialogue2 = "YOU MUST REFER TO ME AS MY FULL TITLE: CRAZY ED, HIGH MAJOR COMMODORE OF THE FIRST LEGION THIRD MULTIPLICATION DOUBLE ADMIRAL ARTILLERY VANGUARD COMPANY!" AboutDialogue3 = "STOP TRESSPASSING ON MY LAND!"
+			 
+									   IntroDialogueCount = "4" IntroDialogue0 = "WHO ARE YOU AND WHAT ARE YOU DOING IN MY HOUSE?!?!" IntroDialogue1 = "TAKE COVER MR TUMNUS, HE'S COME TO TAKE YOU AWAY!" IntroDialogue2 = "Don't touch my wardrobes. You don't know where they will take you" 
+									   IntroDialogue3 = "Have you come to deliver me my mushrooms?"
+			 
+								       DoingTodayDialogueCount = "4" DoingDialogue0 = "Hope those trespassers next door bring tacos." DoingDialogue1 = "I dont remember why i'm here BUT IM SURE AS HELL GONNA DEFEND IT." DoingDialogue2 = "Im keeping my eyes open all the time." 
+									   DoingDialogue3 = "NO IM NOT ANGRY BECAUSE OF THE MUSHROOMS, IT'S BECAUSE I AINT HAD MY MUSHROOMS YET."/>
+	
+	<NPCInfo name ="Jenny"   Protrait ="CGabrielFaces48x48_14" AboutDialogueCount = "4" AboutDialogue0 = "I'm Jenny, the village's resident blacksmith, carpenter, merchant etc." AboutDialogue1 = "My business is 100% legal and I definitely DO NOT offer questionable substances to arguably crazy people." 
+									   AboutDialogue2 = "I can get just about anything shipped in to sell to you, might even be willing to do it if you spend more money." AboutDialogue3 = "I collect all of the things you put in the export bin next to your house then ship it off to the nearby garrison."
+			 
+								  	   IntroDialogueCount = "4" IntroDialogue0 = "Hey! We just got a new delivery of tools. you should go check them out at the market." IntroDialogue1 = "If you need anything dont be afraid to ask." 
+									   IntroDialogue2 = "If you dont buy all my tools i'll go out of business. Please buy some. setting up up a tool shop in  a town with 4 other people wasnt a sound decision." IntroDialogue3 = "lovely day to buy some of my merchandise."
+			 
+								       DoingTodayDialogueCount = "4" DoingDialogue0 = "Ive just sold the 9th set of plates this week to Shirley. What can she possibly do with them all?" DoingDialogue1 = "Just gave Ed his bi-weekly shipment of his special mushrooms." 
+									   DoingDialogue2 = "I need to sort out my basement. The local garrison are using it to store some cannons." DoingDialogue3 = "If I dont get rid of these fishing poles I might have to ummm... borrow... Gordans fishing rod. Again."/>
 	
 	<!-- List of Town Waypoints -->
 	

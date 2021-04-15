@@ -176,7 +176,7 @@ public class Clock : MonoBehaviour
             GameObject Sprite = Instantiate(GoldSpritePrefab) as GameObject;
             Sprite.transform.parent = GoldSpriteHolder.transform;
             Sprite.transform.position = GoldSpriteHolder.transform.position;
-            Sprite.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+            Sprite.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
             KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], Sprite);
             SpriteDictionary.Add(KVP);
         }
@@ -198,7 +198,7 @@ public class Clock : MonoBehaviour
                     if (SpriteDictionary[i].Key != array[i])
                     {
                         KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], SpriteDictionary[i].Value);
-                        SpriteDictionary[i].Value.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+                        SpriteDictionary[i].Value.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
                         SpriteDictionary[i] = KVP;
                     }
                 }
@@ -207,7 +207,7 @@ public class Clock : MonoBehaviour
                     GameObject Sprite = Instantiate(GoldSpritePrefab) as GameObject;
                     Sprite.transform.parent = GoldSpriteHolder.transform;
                     Sprite.transform.position = GoldSpriteHolder.transform.position;
-                    Sprite.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
+                    Sprite.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[array[i]];
                     KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(array[i], Sprite);
                     SpriteDictionary.Add(KVP);
                 }
@@ -249,7 +249,7 @@ public class Clock : MonoBehaviour
                 int Number = FindNumber(Gold[Counter]);
                 if (Dic.Key != Number)
                 {
-                    Dic.Value.gameObject.transform.FindChild("Sprite").GetComponent<Image>().sprite = GoldTextSprites[Number];
+                    Dic.Value.gameObject.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[Number];
                 }
                 Counter++;
             }
