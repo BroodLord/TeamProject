@@ -23,7 +23,8 @@ public class FishingRodScript : ToolScript
     [SerializeField] private int currentState;
     [SerializeField] private int reelDifficulty;
     [SerializeField] private int reelCount;
-    //public GameObject reelMeter;
+    public GameObject reelMeter;
+    public Slider ReelSlider;
 
     private void Start()
     {
@@ -36,7 +37,10 @@ public class FishingRodScript : ToolScript
         audioPlayed = false;
         currentState = 0;
         reelCount = 0;
-        //reelMeter = GameObject.FindGameObjectWithTag("ReelBar");
+        GameObject Parent = GameObject.Find("ReelMeterHolder");
+        reelMeter = Parent.gameObject.transform.GetChild(0).gameObject;
+        ReelSlider = reelMeter.GetComponent<Slider>();
+        //var test = GameObject.FindGameObjectWithTag("ReelBar");
 
         foreach (var fishType in XML.items)
         {
@@ -112,7 +116,10 @@ public class FishingRodScript : ToolScript
                     catchTimer = 5.0f;
                     fishingTimer = 10.0f;
                     reelDifficulty = Random.Range(15, 30);
-                    //reelMeter.SetActive(true);
+                    ReelSlider.maxValue = reelDifficulty;
+                    ReelSlider.minValue = 0;
+                    ReelSlider.value = 0;
+                    reelMeter.SetActive(true);
                     audioPlayed = false;
                     currentState = 3;
                 }
@@ -120,7 +127,11 @@ public class FishingRodScript : ToolScript
             //reeling state
             case 3:
                 catchTimer -= Time.deltaTime;
-                if (Input.GetKeyDown("space")) { reelCount += 1; }
+                if (Input.GetKeyDown("space"))
+                {
+                    ReelSlider.value += 1;
+                    reelCount += 1; 
+                }
 
                 if (reelCount >= reelDifficulty)
                 {
@@ -129,13 +140,13 @@ public class FishingRodScript : ToolScript
 
                     InventoryAssessment(GetFishItem(Name));
                     reelCount = 0;
-                    //reelMeter.SetActive(false);
+                    reelMeter.SetActive(false);
                     currentState = 4;
                 }
                 else if (catchTimer < 0)
                 {
                     catchTimer = 2.0f;
-                    //reelMeter.SetActive(false);
+                    reelMeter.SetActive(false);
                     currentState = 0;
                 }
                 break;

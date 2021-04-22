@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Town
   Load: {fileID: 0}
-  LoadPosition: {x: 9.5, y: -7, z: 0.1}
+  LoadPosition: {x: 15, y: -11, z: 0.1}
 --- !u!19719996 &219610056
 TilemapCollider2D:
   m_ObjectHideFlags: 0
