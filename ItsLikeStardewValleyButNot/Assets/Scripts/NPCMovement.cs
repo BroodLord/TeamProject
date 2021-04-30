@@ -60,7 +60,6 @@ public class NPCMovement : MonoBehaviour
         //whilst there is a target and the npc hasnt reached the target do nothing
         //if there isnt a target or the npc reaches a target, go into a waiting state (until a certain time possibly) then cycle to the next target 
         float movement = NPCSpeed * Time.deltaTime;
-
         switch (currentState)
         {
             //Movement State
@@ -73,8 +72,7 @@ public class NPCMovement : MonoBehaviour
                     target = waypoints[Random.Range(1, waypoints.Length) - 1];
                     currentState = 2;
                 }
-                //if the NPC is close enough to the next cell in the path
-                else if (this.transform.position == currentPath[pathIndex].worldPosition)
+                else if (this.transform.position.x == currentPath[pathIndex].worldPosition.x + 0.5f && this.transform.position.y == currentPath[pathIndex].worldPosition.y + 0.5f)
                 {
                     pathIndex++;
                 }
@@ -82,8 +80,8 @@ public class NPCMovement : MonoBehaviour
                 else
                 {
                     Vector2 v2;
-                    v2.x = currentPath[pathIndex].worldPosition.x;
-                    v2.y = currentPath[pathIndex].worldPosition.y;
+                    v2.x = currentPath[pathIndex].worldPosition.x + 0.5f;
+                    v2.y = currentPath[pathIndex].worldPosition.y + 0.5f;
                     Vector2 v2pos;
                     v2pos.x = transform.position.x;
                     v2pos.y = transform.position.y;

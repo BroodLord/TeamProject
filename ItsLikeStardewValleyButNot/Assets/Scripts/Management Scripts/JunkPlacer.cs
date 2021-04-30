@@ -27,6 +27,7 @@ public class JunkPlacer : MonoBehaviour
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         cClock = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Clock>();
         //DataBase = new Dictionary<Vector3Int, ItemBase>();
+        //DontDestroyOnLoad(this.gameObject);
         // If the level is the same as the one we want to check and the reset hasn't been done
         if (SceneManager.GetActiveScene().name == "Forest" && cClock.WeeklyReset[3])
         {
@@ -56,6 +57,8 @@ public class JunkPlacer : MonoBehaviour
             {
                 Childv.Value.GetTileMap();
                 Childv.Value.TileMap.SetTile(Childv.Key, Childv.Value.Tile);
+                //OreAbstractClass Item = Childv.Value.GetOre();
+
             }
         }
         // Same as above

@@ -137,14 +137,17 @@ public abstract class InventoryAbstractClass : MonoBehaviour
     // Adds an item in an empty space in the inventory
     public bool AddItem(ItemBase Item)
     {
-        for (int i = 0; i < ItemList.Length; i++)
+        if (ItemList.Length <= MaxCapacity)
         {
-            if(Markers[i] == false)
+            for (int i = 0; i < ItemList.Length; i++)
             {
-                ItemList[i] = Item;
-                Markers[i] = true;
-                UpdateUI();
-                return true;
+                if (Markers[i] == false)
+                {
+                    ItemList[i] = Item;
+                    Markers[i] = true;
+                    UpdateUI();
+                    return true;
+                }
             }
         }
        return false;

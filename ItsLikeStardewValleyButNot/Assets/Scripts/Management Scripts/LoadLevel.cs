@@ -55,6 +55,16 @@ public class LoadLevel : MonoBehaviour
                         DontDestroyOnLoad(ChildV.Value.Clone);
 
                     }
+                    else if(ChildV.Value.GetOre() != null)
+                    {
+                        OreAbstractClass ore = ChildV.Value.GetOre();
+                        DontDestroyOnLoad(ore);
+                    }
+                    else if (ChildV.Value.GetItem() != null)
+                    {
+                        ItemBase Item = ChildV.Value.GetItem();
+                        DontDestroyOnLoad(Item);
+                    }
                 }
             }
         }

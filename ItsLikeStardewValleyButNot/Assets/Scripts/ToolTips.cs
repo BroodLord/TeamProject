@@ -33,13 +33,16 @@ public class ToolTips : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             ChosenInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<HotBarClass>();
         }
-        isOver = true;
-        Vector3 newPos = eventData.pointerEnter.transform.position;
-        newPos.y += 70f;
-        ToolTip.transform.position = newPos;
-        TitleText.text = ChosenInventory.ItemList[eventData.pointerEnter.GetComponent<ToolTips>().transform.parent.GetSiblingIndex()].GetName();
-        DescText.text = ChosenInventory.ItemList[eventData.pointerEnter.GetComponent<ToolTips>().transform.parent.GetSiblingIndex()].GetDesc();
-        ToolTip.SetActive(true);
+        if (ChosenInventory.ItemList[eventData.pointerEnter.GetComponent<ToolTips>().transform.parent.GetSiblingIndex()] != null)
+        {
+            isOver = true;
+            Vector3 newPos = eventData.pointerEnter.transform.position;
+            newPos.y += 70f;
+            ToolTip.transform.position = newPos;
+            TitleText.text = ChosenInventory.ItemList[eventData.pointerEnter.GetComponent<ToolTips>().transform.parent.GetSiblingIndex()].GetName();
+            DescText.text = ChosenInventory.ItemList[eventData.pointerEnter.GetComponent<ToolTips>().transform.parent.GetSiblingIndex()].GetDesc();
+            ToolTip.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

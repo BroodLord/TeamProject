@@ -13,6 +13,7 @@ public class Collision : MonoBehaviour
     public SellChestClass cChest;
     public GameObject SeedShopUI;
     public GameObject ToolShopUI;
+    public GameObject MissionBoardUI;
     public Clock cClock;
     // Start is called before the first frame update
     // Get all the refenece for the variables
@@ -64,6 +65,11 @@ public class Collision : MonoBehaviour
             }
         }
         // if we collide with the shop then enable the shop
+        if (collision.gameObject.tag == "MissionBoard")
+        {
+            MissionBoardUI.SetActive(true);
+        }
+        // if we collide with the shop then enable the shop
         if (collision.gameObject.tag == "SeedShop")
         {
             SeedShopUI.SetActive(true);
@@ -83,6 +89,10 @@ public class Collision : MonoBehaviour
             {
                 cInventory.DisabledNEnable();
             }
+        }
+        if (collision.gameObject.tag == "MissionBoard")
+        {
+            MissionBoardUI.SetActive(false);
         }
         if (collision.gameObject.tag == "SeedShop")
         {

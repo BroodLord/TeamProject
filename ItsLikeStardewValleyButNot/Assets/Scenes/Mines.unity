@@ -2172,7 +2172,7 @@ GameObject:
   - component: {fileID: 421061362}
   - component: {fileID: 421061361}
   m_Layer: 0
-  m_Name: Rock placer
+  m_Name: Rock placer1
   m_TagString: Rockplacer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
