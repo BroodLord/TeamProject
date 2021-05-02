@@ -19,13 +19,21 @@ public class ToolTips : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         ToolTip.SetActive(false);
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.I))
+        {
+            ToolTip.SetActive(false);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(transform.parent.parent.name == "SellChestUI")
+        if (transform.parent.parent.name == "SellChestUI")
         {
             ChosenInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<SellChestClass>();
         }
-        else if(transform.parent.parent.name == "InventoryUI")
+        else if (transform.parent.parent.name == "InventoryUI")
         {
             ChosenInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
         }

@@ -13,6 +13,7 @@ public class InitMainCharacter : MonoBehaviour
     public GameObject TileMapManager;
     public GameObject LoadManager;
     public GameObject ItemManager;
+    public GameObject WelcomeMenu;
     public XMLParser XML;
     public string TargetScene;
 

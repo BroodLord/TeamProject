@@ -12,6 +12,7 @@ public class StaminaScript : MonoBehaviour
     private int MaxStam = 100;
     private int CurrentStam;
     public Clock cClock;
+    public GameObject KnockoutUI;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class StaminaScript : MonoBehaviour
                 cClock.NightUpdate();
                 LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
                 Load.TransferLevel("PlayerRoom", new Vector3(-1, 9, 0));
+                KnockoutUI.SetActive(true);
         }
     }
 

@@ -162,6 +162,10 @@ public class DataXMLParser : MonoBehaviour
 
         XmlElement PlayerData = SavedDataXML.CreateElement("PlayerData");
 
+        XmlElement PaidTaxesElement = SavedDataXML.CreateElement("PaidTaxes");
+        PaidTaxesElement.SetAttribute("PaidTaxes", GameObject.FindGameObjectWithTag("Player").GetComponent<MainMissionManagement>().PaidTaxes.ToString());
+        PlayerData.AppendChild(PaidTaxesElement);
+
         XmlElement MoneyElement = SavedDataXML.CreateElement("MoneyNumber");
         MoneyElement.SetAttribute("Money", Data.PlayerGold.ToString());
         PlayerData.AppendChild(MoneyElement);
@@ -692,15 +696,18 @@ public class DataXMLParser : MonoBehaviour
             /*Little side note, wanna redo these two but don't have time before the demo day*/
             if (currentnode.Name == "PlayerData")
             {
+                
                 XmlNodeList lst = currentnode.ChildNodes;
-                string MoneyText = lst[0].Attributes.GetNamedItem("Money").Value;
+                bool Taxesbool = Convert.ToBoolean(lst[0].Attributes.GetNamedItem("PaidTaxes").Value);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<MainMissionManagement>().UpdateFromXML(Taxesbool);
+                string MoneyText = lst[1].Attributes.GetNamedItem("Money").Value;
                 Money.SetMoney(float.Parse(MoneyText));
-                string EnergyText = lst[1].Attributes.GetNamedItem("Energy").Value;
+                string EnergyText = lst[2].Attributes.GetNamedItem("Energy").Value;
                 Stamania.SetStamina(int.Parse(EnergyText));
-                cClock.SceneName = lst[2].Attributes.GetNamedItem("Scene").Value;
-                cClock.PlayerPos.x = float.Parse(lst[3].Attributes.GetNamedItem("x").Value);
-                cClock.PlayerPos.y = float.Parse(lst[3].Attributes.GetNamedItem("y").Value);
-                cClock.PlayerPos.z = float.Parse(lst[3].Attributes.GetNamedItem("z").Value);
+                cClock.SceneName = lst[3].Attributes.GetNamedItem("Scene").Value;
+                cClock.PlayerPos.x = float.Parse(lst[4].Attributes.GetNamedItem("x").Value);
+                cClock.PlayerPos.y = float.Parse(lst[4].Attributes.GetNamedItem("y").Value);
+                cClock.PlayerPos.z = float.Parse(lst[4].Attributes.GetNamedItem("z").Value);
             }
             else if (currentnode.Name == "WorldData")
             {

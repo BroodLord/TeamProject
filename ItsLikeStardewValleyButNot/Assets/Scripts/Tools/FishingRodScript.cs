@@ -10,7 +10,10 @@ using Random = UnityEngine.Random;
 
 public class FishingRodScript : ToolScript
 {
-    [SerializeField] private Object fishableTile;
+    [SerializeField] private TileBase fishableTile;
+    [SerializeField] private Sprite Bobber;
+    private CharacterMovement CM;
+    private GameObject BobberHolder;
     bool currentlyFishing;
     [SerializeField]float fishingTimer = 10.0f;
     [SerializeField]float catchTimer;
@@ -28,7 +31,9 @@ public class FishingRodScript : ToolScript
 
     private void Start()
     {
-        fishableTile = Resources.Load("Assets/Sprites/Overworld Sprites/Overworld_276.asset");
+        CM = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
+        fishableTile = GetTile();
+        Bobber = Resources.Load<Sprite>("XML Loaded Assets/Bobber");
         ToolItems = GameObject.Find("TemplateTools");
         XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
@@ -57,12 +62,19 @@ public class FishingRodScript : ToolScript
         //get mouse position in world and convert to grid space
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
-
+        tileMap = GameObject.FindGameObjectWithTag("Non-Walkable").GetComponent<Tilemap>();
         if (tileMap.GetTile(posInt) == fishableTile)
         {
             Debug.Log("This tile can be fished in");
             fishingTimer = Random.Range(3.0f, 10.0f);
             catchTimer = 2.0f;
+            CM.Moveable = false;
+            BobberHolder = new GameObject();
+            BobberHolder.AddComponent<SpriteRenderer>();
+            BobberHolder.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            BobberHolder.GetComponent<SpriteRenderer>().sprite = Instantiate(Bobber, new Vector3(0,0,0), Quaternion.identity);//Sprite.Instantiate(Bobber, pos, Quaternion.identity);
+            BobberHolder.transform.position = new Vector3(pos.x,pos.y,0);
+            //Instantiate(Bobber, pos, Quaternion.identity);
             currentState = 1;
             ToolUsed = true;
 
@@ -106,6 +118,8 @@ public class FishingRodScript : ToolScript
                 {
                     currentlyFishing = false;
                     catchTimer = 2.0f;
+                    DestroyImmediate(BobberHolder);
+                    CM.Moveable = true;
                     fishingTimer = 10.0f;
                     audioPlayed = false;
                     currentState = 0;
@@ -137,16 +151,19 @@ public class FishingRodScript : ToolScript
                 {
                     int fishPicked = Random.Range(0, numOfFish);
                     string Name = fish[fishPicked];
-
+                    CM.Moveable = true;
                     InventoryAssessment(GetFishItem(Name));
                     reelCount = 0;
                     reelMeter.SetActive(false);
+                    DestroyImmediate(BobberHolder);
                     currentState = 4;
                 }
                 else if (catchTimer < 0)
                 {
+                    DestroyImmediate(BobberHolder);
                     catchTimer = 2.0f;
                     reelMeter.SetActive(false);
+                    CM.Moveable = true;
                     currentState = 0;
                 }
                 break;

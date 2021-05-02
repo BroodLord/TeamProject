@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float interactRange;
     private static float actionLock = 0.4f;         //how long after executing an action the character is locked in place for 
     private Vector3 mouseWorldPoint;
+    public bool Moveable;
     private bool actionLocked;
     private float actionLockedTimer = actionLock;
 
@@ -25,7 +26,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Awake()
     {
-
+        Moveable = true;
         if (GameObject.FindGameObjectWithTag("InventoryManager") != null)
         {
             cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
@@ -59,7 +60,7 @@ public class CharacterMovement : MonoBehaviour
 
 
         // if we aren't actionlocked or paused then we can move
-        if (!actionLocked && !PauseMenuScript.GameIsPaused && !LoadManager.Loading)
+        if (!actionLocked && !PauseMenuScript.GameIsPaused && !LoadManager.Loading && Moveable)
         {
             /* Move either up, down, left or right, this allow set the bool in the animator */
             if (Input.GetKey(KeyCode.W))

@@ -65,7 +65,7 @@ public class Collision : MonoBehaviour
             }
         }
         // if we collide with the shop then enable the shop
-        if (collision.gameObject.tag == "MissionBoard")
+        if (collision.gameObject.tag == "MissionBoard" && !GameObject.FindGameObjectWithTag("Player").GetComponent<MainMissionManagement>().PaidTaxes)
         {
             MissionBoardUI.SetActive(true);
         }
@@ -89,10 +89,13 @@ public class Collision : MonoBehaviour
             {
                 cInventory.DisabledNEnable();
             }
+            GameObject.Find("ToolTip").SetActive(false);
         }
         if (collision.gameObject.tag == "MissionBoard")
         {
             MissionBoardUI.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MainMissionManagement>().ScreenDiologe.text =
+                "HEY! You ready to pay off your taxes yet?";
         }
         if (collision.gameObject.tag == "SeedShop")
         {

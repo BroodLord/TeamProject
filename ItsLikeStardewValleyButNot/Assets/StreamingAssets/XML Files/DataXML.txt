@@ -1,15 +1,16 @@
 <SaveData SaveData="Data">
   <PlayerData>
-    <MoneyNumber Money="500" />
+    <PaidTaxes PaidTaxes="True" />
+    <MoneyNumber Money="0" />
     <PlayerEnergy Energy="100" />
     <CurrentScene Scene="Town" />
-    <PlayerPos x="14.69255" y="-8.034754" z="0.1" />
+    <PlayerPos x="10.09056" y="-0.4459047" z="0" />
   </PlayerData>
   <WorldData>
     <Date Day="1" Month="5" Year="1969" />
-    <Time Hour="8" Min="46" Seconds="0" />
-    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.02242501" />
-    <WeeklyReset Resets0="False" Resets1="False" Resets2="False" Resets3="False" />
+    <Time Hour="8" Min="10" Seconds="0" />
+    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.004875" />
+    <WeeklyReset Resets0="True" Resets1="True" Resets2="True" Resets3="True" />
     <Slots Slots0="24" Slots1="10" Slots2="16" />
   </WorldData>
   <InventoryData />
@@ -24,7 +25,7 @@
       <AmountElement Amount="1" />
       <StackableElement Stackable="False" />
       <PriceElement Price="250" />
-      <DescElement Desc="" />
+      <DescElement Desc="Use on untilled soil to till it and allow crops to be planted." />
     </ElementData>
     <ElementData>
       <NameElement Name="Water Bucket" />
@@ -36,7 +37,19 @@
       <AmountElement Amount="1" />
       <StackableElement Stackable="False" />
       <PriceElement Price="100" />
-      <DescElement Desc="" />
+      <DescElement Desc="Use on tilled soil or plants to water them" />
+    </ElementData>
+    <ElementData>
+      <NameElement Name="Pickaxe" />
+      <TypeElement Type="Tool" />
+      <ImageElement Image="roguelikeitems_83" />
+      <TileImageElement Tile="Fulltilemap_180" />
+      <SoundEffectElement SoundEffect="Rock_Break" />
+      <PrefabElement Prefab="" />
+      <AmountElement Amount="1" />
+      <StackableElement Stackable="False" />
+      <PriceElement Price="750" />
+      <DescElement Desc="Use on rocks to collect ore" />
     </ElementData>
     <ElementData>
       <NameElement Name="Scythe" />
@@ -48,530 +61,13 @@
       <AmountElement Amount="1" />
       <StackableElement Stackable="False" />
       <PriceElement Price="250" />
-      <DescElement Desc="" />
+      <DescElement Desc="Use on fully grown crops to harvest" />
     </ElementData>
   </HotbarData>
   <ChestData />
   <FarmData />
-  <Mines0Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="-5" Y="1" Z="0" />
-      <PosElement X="-5" Y="1" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="-2" Y="2" Z="0" />
-      <PosElement X="-2" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="1" Y="-2" Z="0" />
-      <PosElement X="1" Y="-2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="1" Y="6" Z="0" />
-      <PosElement X="1" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="2" Y="2" Z="0" />
-      <PosElement X="2" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="5" Y="1" Z="0" />
-      <PosElement X="5" Y="1" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="8" Y="3" Z="0" />
-      <PosElement X="8" Y="3" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="11" Y="2" Z="0" />
-      <PosElement X="11" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="14" Y="2" Z="0" />
-      <PosElement X="14" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="1" />
-    </RockData>
-  </Mines0Data>
-  <Mines1Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="-9" Y="3" Z="0" />
-      <PosElement X="-9" Y="3" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="-8" Y="10" Z="0" />
-      <PosElement X="-8" Y="10" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="-7" Y="8" Z="0" />
-      <PosElement X="-7" Y="8" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="-6" Y="4" Z="0" />
-      <PosElement X="-6" Y="4" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="-6" Y="6" Z="0" />
-      <PosElement X="-6" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="-1" Y="4" Z="0" />
-      <PosElement X="-1" Y="4" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="-1" Y="10" Z="0" />
-      <PosElement X="-1" Y="10" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="3" Y="8" Z="0" />
-      <PosElement X="3" Y="8" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="6" Y="6" Z="0" />
-      <PosElement X="6" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="10" Y="7" Z="0" />
-      <PosElement X="10" Y="7" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="10" Y="9" Z="0" />
-      <PosElement X="10" Y="9" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Silver" />
-      <IdElement X="13" Y="7" Z="0" />
-      <PosElement X="13" Y="7" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Silver" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="13" Y="10" Z="0" />
-      <PosElement X="13" Y="10" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="1" />
-    </RockData>
-  </Mines1Data>
-  <Mines2Data>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="-11" Y="1" Z="0" />
-      <PosElement X="-11" Y="1" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="-10" Y="7" Z="0" />
-      <PosElement X="-10" Y="7" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="-9" Y="3" Z="0" />
-      <PosElement X="-9" Y="3" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="-8" Y="6" Z="0" />
-      <PosElement X="-8" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="-5" Y="1" Z="0" />
-      <PosElement X="-5" Y="1" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="0" Y="9" Z="0" />
-      <PosElement X="0" Y="9" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="3" Y="1" Z="0" />
-      <PosElement X="3" Y="1" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="3" Y="3" Z="0" />
-      <PosElement X="3" Y="3" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="4" Y="9" Z="0" />
-      <PosElement X="4" Y="9" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Steel" />
-      <IdElement X="4" Y="12" Z="0" />
-      <PosElement X="4" Y="12" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Steel" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="6" Y="4" Z="0" />
-      <PosElement X="6" Y="4" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Emerald" />
-      <IdElement X="7" Y="2" Z="0" />
-      <PosElement X="7" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Emerald" />
-      <AmountElement Amount="1" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Diamond" />
-      <IdElement X="7" Y="11" Z="0" />
-      <PosElement X="7" Y="11" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Diamond" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="9" Y="6" Z="0" />
-      <PosElement X="9" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Cobalt" />
-      <IdElement X="9" Y="10" Z="0" />
-      <PosElement X="9" Y="10" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Cobalt" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Copper" />
-      <IdElement X="10" Y="2" Z="0" />
-      <PosElement X="10" Y="2" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Copper" />
-      <AmountElement Amount="2" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Iron" />
-      <IdElement X="13" Y="9" Z="0" />
-      <PosElement X="13" Y="9" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Iron" />
-      <AmountElement Amount="4" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="15" Y="6" Z="0" />
-      <PosElement X="15" Y="6" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="3" />
-    </RockData>
-    <RockData>
-      <TypElement Type="Ore" />
-      <OreElement Ore="Bronze" />
-      <IdElement X="16" Y="4" Z="0" />
-      <PosElement X="16" Y="4" Z="0" />
-      <TileElement Tile="cave_43" />
-      <XmlElement XMLName="Bronze" />
-      <AmountElement Amount="3" />
-    </RockData>
-  </Mines2Data>
-  <ForestData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-25" Y="-1" Z="0" />
-      <PosElement X="-25" Y="-1" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-19" Y="4" Z="0" />
-      <PosElement X="-19" Y="4" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-18" Y="-2" Z="0" />
-      <PosElement X="-18" Y="-2" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-14" Y="-16" Z="0" />
-      <PosElement X="-14" Y="-16" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-13" Y="3" Z="0" />
-      <PosElement X="-13" Y="3" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-12" Y="-1" Z="0" />
-      <PosElement X="-12" Y="-1" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-8" Y="-4" Z="0" />
-      <PosElement X="-8" Y="-4" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-7" Y="1" Z="0" />
-      <PosElement X="-7" Y="1" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="-6" Y="-16" Z="0" />
-      <PosElement X="-6" Y="-16" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="4" Y="-16" Z="0" />
-      <PosElement X="4" Y="-16" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="4" Y="-4" Z="0" />
-      <PosElement X="4" Y="-4" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="15" Y="5" Z="0" />
-      <PosElement X="15" Y="5" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="20" Y="4" Z="0" />
-      <PosElement X="20" Y="4" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="21" Y="-14" Z="0" />
-      <PosElement X="21" Y="-14" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="23" Y="-10" Z="0" />
-      <PosElement X="23" Y="-10" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-    <TreeData>
-      <TypElement Type="Wood" />
-      <TreeElement Tree="Wood" />
-      <IdElement X="23" Y="-5" Z="0" />
-      <PosElement X="23" Y="-5" Z="0" />
-      <TileElement Tile="objects_121" />
-      <XmlElement XMLName="Wood" />
-      <AmountElement Amount="1" />
-    </TreeData>
-  </ForestData>
+  <Mines0Data />
+  <Mines1Data />
+  <Mines2Data />
+  <ForestData />
 </SaveData>

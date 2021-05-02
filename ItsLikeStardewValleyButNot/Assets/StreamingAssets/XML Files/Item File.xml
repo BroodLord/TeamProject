@@ -5,7 +5,7 @@
 	<Item name="Axe" type="Tool" src-image="roguelikeitems_86" tile-src-image ="" sound-effect ="Axe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="500" customData ="5" ItemDesc ="Use on trees to collect wood"/>
 	<Item name="Pickaxe" type="Tool" src-image="roguelikeitems_83" tile-src-image ="Fulltilemap_180" sound-effect ="Rock_Break" Prefab ="" amount = "1" stackable="No" sellPrice="750" customData ="10" ItemDesc ="Use on rocks to collect ore"/>
 	<Item name="Scythe" type="Tool" src-image="roguelikeitems_90" tile-src-image ="" sound-effect ="Scythe_Sound" Prefab ="" amount = "1" stackable="No" sellPrice="250" customData ="2" ItemDesc ="Use on fully grown crops to harvest"/>
-	<Item name="Fishing Rod" type="Tool" src-image="Fishing_Rod" tile-src-image ="" sound-effect ="Bobber_Splash" Prefab ="" amount = "1" stackable="No" sellPrice="200" customData ="5" ItemDesc ="Use in water to start fishing, keep pressing space when you hear a splash to reel in"/>
+	<Item name="Fishing Rod" type="Tool" src-image="Fishing_Rod" tile-src-image ="Overworld_276" sound-effect ="Bobber_Splash" Prefab ="" amount = "1" stackable="No" sellPrice="200" customData ="5" ItemDesc ="Use in water to start fishing, keep pressing space when you hear a splash to reel in"/>
 
 	<!-- List of Seeds -->
 	<Item name="Potato Seeds" type="Seed" src-image="Crop_Spritesheet_89" tile-src-image ="" sound-effect ="Seed_Sound" Prefab ="PotatoSeed" amount = "1" stackable="Yes" sellPrice="40" customData ="0" ItemDesc ="Plant in tilled soil, takes 4 days to grow"/>
