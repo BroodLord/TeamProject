@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DOLDatabase : MonoBehaviour
 {
-    [SerializeField]
-    List<GameObject> DOLList;
+    
+    public List<GameObject> DOLList;
     // Start is called before the first frame update
     void Start()
     {

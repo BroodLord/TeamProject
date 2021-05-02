@@ -29,7 +29,10 @@ public class LoadLevel : MonoBehaviour
         {
             Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
-            DOLD.Add(GameObject.FindGameObjectWithTag("EventSystem"));
+            if (!DOLD.DOLList.Contains(GameObject.FindGameObjectWithTag("EventSystem")))
+            {
+                DOLD.Add(GameObject.FindGameObjectWithTag("EventSystem"));
+            }
         }
 
         Dictionary = GameObject.FindGameObjectWithTag("TileMapManager").GetComponent<TileDictionaryClass>();
@@ -39,8 +42,11 @@ public class LoadLevel : MonoBehaviour
         InventoryClass Invent = Manager.GetComponent<InventoryClass>();
         HotBarClass HotBar = Manager.GetComponent<HotBarClass>();
         // Dont destory on load the Dictionary because we need it
-        DontDestroyOnLoad(Dictionary);
-        DOLD.Add(Dictionary.gameObject);
+        if (!DOLD.DOLList.Contains(Dictionary.gameObject))
+        {
+            DontDestroyOnLoad(Dictionary);
+            DOLD.Add(Dictionary.gameObject);
+        }
         if (LevelName != "Farmland")
         {
             // Loops through all the databases and makes the clones are don't destory on load

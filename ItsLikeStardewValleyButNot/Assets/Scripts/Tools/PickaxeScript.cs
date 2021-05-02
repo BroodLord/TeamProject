@@ -70,7 +70,7 @@ public class PickaxeScript : ToolScript
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int posInt = grid.WorldToCell(pos);
             // check if the dictionary has an ore at the given location
-            if (Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].HasOre())
+            if (Dictioary.TileMapData.ElementAt(INDEX).Value.ContainsKey(posInt) && Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].HasOre())
             {
                 OreAbstractClass Ore = Dictioary.TileMapData.ElementAt(INDEX).Value[posInt].GetOre();
                 AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
