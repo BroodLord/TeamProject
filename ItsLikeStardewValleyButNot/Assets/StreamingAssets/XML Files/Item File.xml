@@ -28,32 +28,32 @@
 	<Item name="Potato" type="Plant" src-image="Crop_Spritesheet_84" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0" ItemDesc ="PO-TAY-TOES, boil em, mash em, stick em in a stew"/>
 	<Item name="Turnip" type="Plant" src-image="Crop_Spritesheet_0" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="125" customData ="0" ItemDesc ="Not the red kind Daisy used to scam you out of"/>
 	<Item name="Eggplant" type="Plant" src-image="Crop_Spritesheet_36" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Winky face emoji, water splash emoji, heart emoji"/>
-	<Item name="Strawberry" type="Plant" src-image="Crop_Spritesheet_72" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc =""/>
+	<Item name="Strawberry" type="Plant" src-image="Crop_Spritesheet_72" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc ="Has nothing to do with straw and isn't even a berry. Good job english"/>
 	<Item name="Watermelon" type="Plant" src-image="Crop_Spritesheet_30" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="200" customData ="0" ItemDesc ="WAHTA-MELOWN"/>
 	<Item name="Pumpkin" type="Plant" src-image="Crop_Spritesheet_96" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Great for pies unless its the american kind"/>
-	<Item name="Tomato" type="Plant" src-image="Crop_Spritesheet_24" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc =""/>
-	<Item name="Greenbean" type="Plant" src-image="Crop_Spritesheet_12" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc =""/>
+	<Item name="Tomato" type="Plant" src-image="Crop_Spritesheet_24" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc ="It's 3am, i'm tired, writing some quippy description for a tomato is hard, here have sarcastic fourth wall breaks instead"/>
+	<Item name="Greenbean" type="Plant" src-image="Crop_Spritesheet_12" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc ="The worst part of a sunday roast. Dont @ me"/>
 	<Item name="Wheat" type="Plant" src-image="Crop_Spritesheet_60" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0" ItemDesc ="YUCK, YUCK, GROSS, GET OUTTA HERE WHEAT"/>
-	<Item name="Pineapple" type="Plant" src-image="Crop_Spritesheet_48" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc =""/>
-	<Item name="Pear" type="Plant" src-image="Crop_Spritesheet_102" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc =""/>
-	<Item name="Honeydew Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc =""/>
+	<Item name="Pineapple" type="Plant" src-image="Crop_Spritesheet_48" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Would go great on a pizza"/>
+	<Item name="Pear" type="Plant" src-image="Crop_Spritesheet_102" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc ="Should plant another for a pair of pears"/>
+	<Item name="Honeydew Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc ="Diggy Diggy hole"/>
 	<Item name="Corn" type="Plant" src-image="Crop_Spritesheet_108" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="YEAH, YEAH, HELL YEAH, CORN!"/>
 	<Item name="Grape" type="Plant" src-image="Crop_Spritesheet_66" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Sorely undersold in lemonade stands"/>
-	<Item name="Rasberry" type="Plant" src-image="Crop_Spritesheet_90" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc =""/>
+	<Item name="Rasberry" type="Plant" src-image="Crop_Spritesheet_90" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Put some in a pi and code a game with better item descriptions than this"/>
 
 	<!-- List of Ore -->
 	<Item name="Bronze" type="Ore" src-image="roguelikeitems_52" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="80" customData ="0" ItemDesc ="How can you mine bronze ore? Magic."/>
-	<Item name="Copper" type="Ore" src-image="roguelikeitems_53" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="105" customData ="0" ItemDesc =""/>
-	<Item name="Iron" type="Ore" src-image="roguelikeitems_54" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="90" customData ="0" ItemDesc =""/>
-	<Item name="Emerald" type="Ore" src-image="roguelikeitems_55" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="130" customData ="0" ItemDesc =""/>
-	<Item name="Cobalt" type="Ore" src-image="roguelikeitems_56" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="110" customData ="0" ItemDesc ="I guess this is in the chemically combined form? or this is another alloy."/>
-	<Item name="Diamond" type="Ore" src-image="roguelikeitems_57" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc =""/>
-	<Item name="Steel" type="Ore" src-image="roguelikeitems_58" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0" ItemDesc =""/>
-	<Item name="Silver" type="Ore" src-image="roguelikeitems_78" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="125" customData ="0" ItemDesc =""/>
-	<Item name="Gold" type="Ore" src-image="roguelikeitems_79" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="I love goooooooooooold "/>
+	<Item name="Copper" type="Ore" src-image="roguelikeitems_53" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="105" customData ="0" ItemDesc ="Oi, you got a loicense for swingin that pickaxe?"/>
+	<Item name="Iron" type="Ore" src-image="roguelikeitems_54" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="90" customData ="0" ItemDesc ="Why mine this when you can just find the steel Crazy Ed keeps burying here?"/>
+	<Item name="Emerald" type="Ore" src-image="roguelikeitems_55" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="130" customData ="0" ItemDesc ="Considered a symbol of love, and boy do I love how much it sells for"/>
+	<Item name="Cobalt" type="Ore" src-image="roguelikeitems_56" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="110" customData ="0" ItemDesc ="I guess this is in the chemically combined form? or this is another alloy"/>
+	<Item name="Diamond" type="Ore" src-image="roguelikeitems_57" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc ="Why just a girls best friend? Who doesn't love diamonds?"/>
+	<Item name="Steel" type="Ore" src-image="roguelikeitems_58" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0" ItemDesc ="How did you find steel in a rock? Crazy Ed smelted it and put it back in"/>
+	<Item name="Silver" type="Ore" src-image="roguelikeitems_78" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="125" customData ="0" ItemDesc ="Used for lining clouds"/>
+	<Item name="Gold" type="Ore" src-image="roguelikeitems_79" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="I love goooooooooooold"/>
 
 	<!-- List of Wood -->
-	<Item name="Wood" type="Wood" src-image="Wood" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="40" customData ="0" ItemDesc =""/>
+	<Item name="Wood" type="Wood" src-image="Wood" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="40" customData ="0" ItemDesc ="Look how adorable it's face is and you cut it down you murderer :'("/>
 
 	<!-- List of Decorations 
 	<Item name="Stone Path" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0" ItemDesc =""/>
@@ -62,12 +62,12 @@
 	<Item name="Fence" type="Decoration" src-image="" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="" customData ="0" ItemDesc =""/> -->
 	
 	<!-- List of Fish -->
-	<Item name="Trout" type="Fish" src-image="Brown_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50" customData ="0" ItemDesc =""/>
-	<Item name="Pike" type="Fish" src-image="DarkBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="75" customData ="0" ItemDesc =""/>
-	<Item name="Salmon" type="Fish" src-image="Red_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="60" customData ="0" ItemDesc =""/>
-	<Item name="Sunfish" type="Fish" src-image="Yellow_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="80" customData ="0" ItemDesc =""/>
-	<Item name="Perch" type="Fish" src-image="Green_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="85" customData ="0" ItemDesc =""/>
-	<Item name="Carp" type="Fish" src-image="LightBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="90" customData ="0" ItemDesc =""/>
+	<Item name="Trout" type="Fish" src-image="Brown_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="50" customData ="0" ItemDesc ="Thinks golden trouts are just showing off"/>
+	<Item name="Pike" type="Fish" src-image="DarkBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="75" customData ="0" ItemDesc ="The counter when fighting someone with a swordfish"/>
+	<Item name="Salmon" type="Fish" src-image="Red_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="60" customData ="0" ItemDesc ="Im naming him sammy the jammin' salmon"/>
+	<Item name="Sunfish" type="Fish" src-image="Yellow_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="80" customData ="0" ItemDesc ="Will blind you if you look directly at it"/>
+	<Item name="Perch" type="Fish" src-image="Green_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="85" customData ="0" ItemDesc ="The birds have to stand somewhere to catch dinner"/>
+	<Item name="Carp" type="Fish" src-image="LightBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="90" customData ="0" ItemDesc ="You seized the day and the carp"/>
 	<Item name="Trash" type="Fish" src-image="Trash" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="0" customData ="0" ItemDesc ="Known for being toxic to whatever it's near"/>
 
 	<!-- List of NPC Infomation -->
