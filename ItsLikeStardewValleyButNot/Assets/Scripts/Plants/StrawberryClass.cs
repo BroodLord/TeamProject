@@ -34,6 +34,7 @@ public class StrawberryClass : PlantAbstractClass
             if (!P.mWatered) { DestoryPlant(); }
             else { Dictioary.TileMapData.ElementAt(0).Value[ID].SetWatered(false); }
             CurrentDays += DayAmount;
+            
             if (CurrentDays >= 0 && CurrentDays < 1)
             {
                 mSpriteIndex = 0;
