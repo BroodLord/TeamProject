@@ -87,6 +87,7 @@ public class DataXMLParser : MonoBehaviour
         public string Sound_Effect;
         public string Prefab;
         public int Amount;
+        public int CustomData;
         public bool Stackable;
         public float SellPrice;
         public string Desc;
@@ -230,7 +231,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML InventoryData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement, CustomDataElement;
             XmlElement InventoryData = SavedDataXML.CreateElement("InventoryData");
             for (int i = 0; i < Data.InventorySlotAmount[0]; i++)
             {
@@ -247,7 +248,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
                     DescElement = SavedDataXML.CreateElement("DescElement");
-
+                    CustomDataElement = SavedDataXML.CreateElement("CustomDataElement");
 
                     NameElement.SetAttribute("Name", Data.Inventory[i].Name);
                     TypeElement.SetAttribute("Type", Data.Inventory[i].Type);
@@ -259,6 +260,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement.SetAttribute("Stackable", Data.Inventory[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.Inventory[i].SellPrice.ToString());
                     DescElement.SetAttribute("Desc", Data.Inventory[i].Desc);
+                    CustomDataElement.SetAttribute("CustomData", Data.Inventory[i].CustomData.ToString());
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -270,6 +272,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
                     ElementData.AppendChild(DescElement);
+                    ElementData.AppendChild(CustomDataElement);
 
                     InventoryData.AppendChild(ElementData);
                 }
@@ -285,7 +288,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML HotbarData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement, CustomDataElement;
             XmlElement HotbarData = SavedDataXML.CreateElement("HotbarData");
             for (int i = 0; i < Data.InventorySlotAmount[1]; i++)
             {
@@ -302,6 +305,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
                     DescElement = SavedDataXML.CreateElement("DescElement");
+                    CustomDataElement = SavedDataXML.CreateElement("CustomDataElement");
 
                     NameElement.SetAttribute("Name", Data.HotBar[i].Name);
                     TypeElement.SetAttribute("Type", Data.HotBar[i].Type);
@@ -313,6 +317,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement.SetAttribute("Stackable", Data.HotBar[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.HotBar[i].SellPrice.ToString());
                     DescElement.SetAttribute("Desc", Data.HotBar[i].Desc);
+                    CustomDataElement.SetAttribute("CustomData", Data.HotBar[i].CustomData.ToString());
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -324,6 +329,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
                     ElementData.AppendChild(DescElement);
+                    ElementData.AppendChild(CustomDataElement);
 
                     HotbarData.AppendChild(ElementData);
                 }
@@ -336,7 +342,7 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML ChestData
 
         {
-            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement;
+            XmlElement ElementData, NameElement, TypeElement, ImageElement, TileImageElement, SoundEffectElement, PrefabElement, AmountElement, StackableElement, PriceElement, DescElement, CustomDataElement;
             XmlElement ChestData = SavedDataXML.CreateElement("ChestData");
             for (int i = 0; i < Data.InventorySlotAmount[2]; i++)
             {
@@ -353,6 +359,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement = SavedDataXML.CreateElement("StackableElement");
                     PriceElement = SavedDataXML.CreateElement("PriceElement");
                     DescElement = SavedDataXML.CreateElement("DescElement");
+                    CustomDataElement = SavedDataXML.CreateElement("CustomDataElement");
 
                     NameElement.SetAttribute("Name", Data.Chest[i].Name);
                     TypeElement.SetAttribute("Type", Data.Chest[i].Type);
@@ -364,6 +371,7 @@ public class DataXMLParser : MonoBehaviour
                     StackableElement.SetAttribute("Stackable", Data.Chest[i].Stackable.ToString());
                     PriceElement.SetAttribute("Price", Data.Chest[i].SellPrice.ToString());
                     DescElement.SetAttribute("Desc", Data.Chest[i].Desc);
+                    CustomDataElement.SetAttribute("CustomData", Data.Chest[i].CustomData.ToString());
 
                     ElementData.AppendChild(NameElement);
                     ElementData.AppendChild(TypeElement);
@@ -375,6 +383,7 @@ public class DataXMLParser : MonoBehaviour
                     ElementData.AppendChild(StackableElement);
                     ElementData.AppendChild(PriceElement);
                     ElementData.AppendChild(DescElement);
+                    ElementData.AppendChild(CustomDataElement);
 
                     ChestData.AppendChild(ElementData);
                 }
@@ -795,6 +804,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
                     Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
+                    Item.CustomData = Convert.ToInt32(lst0[10].Attributes.GetNamedItem("CustomData").Value);
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -814,7 +824,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
+                        Tile, Pre, Item.SellPrice, Item.CustomData, Item.Desc);
                     Inventory.AddItem(BasicItem);
                 }
             }
@@ -836,6 +846,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
                     Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
+                    Item.CustomData = Convert.ToInt32(lst0[10].Attributes.GetNamedItem("CustomData").Value);
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -855,7 +866,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
+                        Tile, Pre, Item.SellPrice, Item.CustomData, Item.Desc);
                     HotBar.AddItem(BasicItem);
                 }
             }
@@ -877,6 +888,7 @@ public class DataXMLParser : MonoBehaviour
                     Item.Stackable = Convert.ToBoolean(lst0[7].Attributes.GetNamedItem("Stackable").Value);
                     Item.SellPrice = float.Parse(lst0[8].Attributes.GetNamedItem("Price").Value);
                     Item.Desc = lst0[9].Attributes.GetNamedItem("Desc").Value;
+                    Item.CustomData = Convert.ToInt32(lst0[10].Attributes.GetNamedItem("CustomData").Value);
                     ItemBase BasicItem = new ItemBase();
                     // Get the object the component will be on and give it a name
                     GameObject SubGameObject = new GameObject(Item.Name);
@@ -896,7 +908,7 @@ public class DataXMLParser : MonoBehaviour
 
                     BasicItem = TypeFinder.ItemByTyepFinder(Item.Name, Item.Type, SubGameObject);
                     BasicItem.SetUpThisItem(FindType(Item.Type), Item.Name, Item.Amount, Item.Stackable, Item.Src_Image, Audio,
-                        Tile, Pre, Item.SellPrice, 0, Item.Desc);
+                        Tile, Pre, Item.SellPrice, Item.CustomData, Item.Desc);
                     Chest.AddItem(BasicItem);
                 }
             }

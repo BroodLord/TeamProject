@@ -1,15 +1,15 @@
 <SaveData SaveData="Data">
   <PlayerData>
     <PaidTaxes PaidTaxes="False" />
-    <MoneyNumber Money="1620" />
-    <PlayerEnergy Energy="100" />
+    <MoneyNumber Money="500" />
+    <PlayerEnergy Energy="65" />
     <CurrentScene Scene="Farmland" />
-    <PlayerPos x="9.771575" y="-4.759604" z="0.1" />
+    <PlayerPos x="10.5444" y="-4.566465" z="0.1" />
   </PlayerData>
   <WorldData>
-    <Date Day="3" Month="5" Year="1969" />
-    <Time Hour="10" Min="17" Seconds="0" />
-    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.06727496" />
+    <Date Day="1" Month="5" Year="1969" />
+    <Time Hour="8" Min="19" Seconds="0" />
+    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.009262498" />
     <WeeklyReset Resets0="True" Resets1="True" Resets2="True" Resets3="True" />
     <Slots Slots0="24" Slots1="10" Slots2="16" />
   </WorldData>
@@ -26,6 +26,7 @@
       <StackableElement Stackable="False" />
       <PriceElement Price="250" />
       <DescElement Desc="Use on untilled soil to till it and allow crops to be planted." />
+      <CustomDataElement CustomData="2" />
     </ElementData>
     <ElementData>
       <NameElement Name="Water Bucket" />
@@ -38,6 +39,7 @@
       <StackableElement Stackable="False" />
       <PriceElement Price="100" />
       <DescElement Desc="Use on tilled soil or plants to water them" />
+      <CustomDataElement CustomData="1" />
     </ElementData>
     <ElementData>
       <NameElement Name="Scythe" />
@@ -50,29 +52,40 @@
       <StackableElement Stackable="False" />
       <PriceElement Price="250" />
       <DescElement Desc="Use on fully grown crops to harvest" />
+      <CustomDataElement CustomData="2" />
     </ElementData>
   </HotbarData>
   <ChestData />
   <FarmData>
     <CropData>
-      <TypeElement Type="Seed" />
-      <AmountElement Amount="2" />
-      <CurrentDaysElement CurrentDays="0" />
-      <GrowthTimElement GrowthTime="4" />
-      <SpritesElement Sprite0="Crop_Spritesheet_41" Sprite1="Crop_Spritesheet_39" Sprite2="Crop_Spritesheet_37" />
+      <IdElement X="9" Y="-4" Z="0" />
+      <PosElement X="9" Y="-4" Z="0" />
+      <TileElement Tile="WateredDirt" />
+      <WateredElement Watered="True" />
+    </CropData>
+    <CropData>
       <IdElement X="10" Y="-4" Z="0" />
       <PosElement X="10" Y="-4" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <HarvesElement Harvestable="False" />
-      <GrowthElement HasGrown="False" />
-      <XmlNamElement XMLName="Eggplant" />
-      <WateredElement Watered="True" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
     </CropData>
     <CropData>
       <IdElement X="11" Y="-4" Z="0" />
       <PosElement X="11" Y="-4" Z="0" />
+      <TileElement Tile="WateredDirt" />
+      <WateredElement Watered="True" />
+    </CropData>
+    <CropData>
+      <IdElement X="9" Y="-5" Z="0" />
+      <PosElement X="9" Y="-5" Z="0" />
       <TileElement Tile="tilled dirt" />
       <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="10" Y="-5" Z="0" />
+      <PosElement X="10" Y="-5" Z="0" />
+      <TileElement Tile="WateredDirt" />
+      <WateredElement Watered="True" />
     </CropData>
     <CropData>
       <IdElement X="11" Y="-5" Z="0" />
@@ -81,40 +94,62 @@
       <WateredElement Watered="False" />
     </CropData>
     <CropData>
-      <TypeElement Type="Seed" />
-      <AmountElement Amount="2" />
-      <CurrentDaysElement CurrentDays="0" />
-      <GrowthTimElement GrowthTime="4" />
-      <SpritesElement Sprite0="Crop_Spritesheet_41" Sprite1="Crop_Spritesheet_39" Sprite2="Crop_Spritesheet_37" />
-      <IdElement X="10" Y="-5" Z="0" />
-      <PosElement X="10" Y="-5" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <HarvesElement Harvestable="False" />
-      <GrowthElement HasGrown="False" />
-      <XmlNamElement XMLName="Eggplant" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
       <IdElement X="8" Y="-4" Z="0" />
       <PosElement X="8" Y="-4" Z="0" />
       <TileElement Tile="tilled dirt" />
       <WateredElement Watered="False" />
     </CropData>
     <CropData>
-      <IdElement X="9" Y="-4" Z="0" />
-      <PosElement X="9" Y="-4" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="9" Y="-5" Z="0" />
-      <PosElement X="9" Y="-5" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
       <IdElement X="8" Y="-5" Z="0" />
       <PosElement X="8" Y="-5" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="9" Y="-3" Z="0" />
+      <PosElement X="9" Y="-3" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="10" Y="-3" Z="0" />
+      <PosElement X="10" Y="-3" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="11" Y="-3" Z="0" />
+      <PosElement X="11" Y="-3" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="12" Y="-4" Z="0" />
+      <PosElement X="12" Y="-4" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="12" Y="-5" Z="0" />
+      <PosElement X="12" Y="-5" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="10" Y="-6" Z="0" />
+      <PosElement X="10" Y="-6" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="9" Y="-6" Z="0" />
+      <PosElement X="9" Y="-6" Z="0" />
+      <TileElement Tile="tilled dirt" />
+      <WateredElement Watered="False" />
+    </CropData>
+    <CropData>
+      <IdElement X="11" Y="-6" Z="0" />
+      <PosElement X="11" Y="-6" Z="0" />
       <TileElement Tile="tilled dirt" />
       <WateredElement Watered="False" />
     </CropData>

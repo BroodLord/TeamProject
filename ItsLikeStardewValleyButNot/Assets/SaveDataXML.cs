@@ -112,11 +112,12 @@ public struct ItemData
     public string Sound_Effect;
     public string Prefab;
     public int Amount;
+    public int CustomData;
     public bool Stackable;
     public float SellPrice;
     public string Desc;
 
-    public void SetUp(string name, string type, string image, string tile_image, string sound_effect, string prefab, int amount, bool stackable, float price, string desc)
+    public void SetUp(string name, string type, string image, string tile_image, string sound_effect, string prefab, int amount, bool stackable, float price, int customdata, string desc)
     {
         Name = name;
         Type = type;
@@ -127,6 +128,7 @@ public struct ItemData
         Amount = amount;
         Stackable = stackable;
         SellPrice = price;
+        CustomData = customdata;
         Desc = desc;
     }
 }
@@ -196,7 +198,7 @@ public class SaveData : MonoBehaviour
                 Inventory[i].SetUp(inventory[i].GetName(), inventory[i].mItemType.ToString(),
                     inventory[i].GetSrcImage(), TileName,
                     inventory[i].GetSoundEffect().name, PrefabName, inventory[i].GetAmount(),
-                    inventory[i].GetStackable(), inventory[i].GetSellPrice(), inventory[i].GetDesc());
+                    inventory[i].GetStackable(), inventory[i].GetSellPrice(), inventory[i].GetCustomData(), inventory[i].GetDesc());
             }
 
             TileName = "";
@@ -218,7 +220,7 @@ public class SaveData : MonoBehaviour
 
                 HotBar[i].SetUp(hotbar[i].GetName(), hotbar[i].mItemType.ToString(), hotbar[i].GetSrcImage(),
                     TileName, hotbar[i].GetSoundEffect().name, PrefabName, hotbar[i].GetAmount(),
-                    hotbar[i].GetStackable(),hotbar[i].GetSellPrice(), hotbar[i].GetDesc());
+                    hotbar[i].GetStackable(),hotbar[i].GetSellPrice(), hotbar[i].GetCustomData(), hotbar[i].GetDesc());
             }
 
             TileName = "";
@@ -239,7 +241,7 @@ public class SaveData : MonoBehaviour
 
                 Chest[i].SetUp(chest[i].GetName(), chest[i].mItemType.ToString(), chest[i].GetSrcImage(),
                     TileName, chest[i].GetSoundEffect().name, PrefabName, chest[i].GetAmount(),
-                    chest[i].GetStackable(), chest[i].GetSellPrice(), chest[i].GetDesc());
+                    chest[i].GetStackable(), chest[i].GetSellPrice(), chest[i].GetCustomData(), chest[i].GetDesc());
             }
 
             TileName = "";

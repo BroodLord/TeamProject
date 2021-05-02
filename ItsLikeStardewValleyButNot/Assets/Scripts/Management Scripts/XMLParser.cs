@@ -144,7 +144,7 @@ public class XMLParser : MonoBehaviour
             string SoundEffectName = ItemsXML.Attributes.GetNamedItem("sound-effect").Value;
             string customDataString = ItemsXML.Attributes.GetNamedItem("customData").Value;
             string ItemDesc = ItemsXML.Attributes.GetNamedItem("ItemDesc").Value;
-            var CustomData = 0;
+            var CustomData = Convert.ToInt32(customDataString);
             bool StackableResult = false;
             float sellPrice;
             ItemBase.ItemTypes Item = ItemBase.ItemTypes.Tool;
@@ -217,7 +217,7 @@ public class XMLParser : MonoBehaviour
             AudioClip Audio = Resources.Load<AudioClip>(Path);
             ItemBase temp = new ItemBase();
             // Set up the item and add it to the dicitiory for the XML.
-            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, Convert.ToInt32(customDataString), ItemDesc);
+            temp.SetUpThisItem(Item, name, Amount, StackableResult, srcImage, Audio, Tile, Pre, sellPrice, CustomData, ItemDesc);
             items.Add(name, temp);
         }
         constVarList = root.SelectNodes("NPCInfo");
