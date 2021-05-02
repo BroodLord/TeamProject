@@ -28,10 +28,13 @@ public class LoadLevel : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "LoadSaveScene" && SceneManager.GetActiveScene().name != "InitScene")
         {
             Transition = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
             if (!DOLD.DOLList.Contains(GameObject.FindGameObjectWithTag("EventSystem")))
             {
-                DOLD.Add(GameObject.FindGameObjectWithTag("EventSystem"));
+                if (GameObject.FindGameObjectWithTag("EventSystem") != null)
+                {
+                    DontDestroyOnLoad(GameObject.FindGameObjectWithTag("EventSystem"));
+                    DOLD.Add(GameObject.FindGameObjectWithTag("EventSystem"));
+                }
             }
         }
 
