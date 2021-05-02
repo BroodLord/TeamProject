@@ -445,8 +445,11 @@ public class HotBarClass : InventoryAbstractClass
                         ToolScript Tool = (ToolScript)tool;
                         if (Tool.ToolUsed)
                         {
-                            Tool.ToolUsed = false;
-                            Stam.UseStamina(tool.GetCustomData());
+                            if (Tool.GetName() != "fishing Rod")
+                            {
+                                Tool.ToolUsed = false;
+                                Stam.UseStamina(tool.GetCustomData());
+                            }
                         }
                     }
                     else

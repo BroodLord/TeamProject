@@ -18,7 +18,7 @@ public class HoeScript : ToolScript
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int posInt = grid.LocalToCell(pos);
             // check if the key is already on the Dictioary
-            if (!Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt))
+            if (/*tileMap.GetTile(posInt) == fishableTile &&*/ !Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt))
             {
                 /*Play the sound effects*/
                 AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();

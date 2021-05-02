@@ -45,13 +45,12 @@ public class StaminaScript : MonoBehaviour
         if (CurrentStam <= 0)
         {
             // Start the play transition
-                SetStamina(75);
-                cClock.NightUpdate();
-                LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
-                Load.TransferLevel("PlayerRoom", new Vector3(-1, 9, 0));
-                KnockoutUI.SetActive(true);
+            SetStamina(75);
+            cClock.NightUpdate();
+            LoadLevel Load = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<LoadLevel>();
+            Load.TransferLevel("PlayerRoom", new Vector3(-1, 9, 0));
+            KnockoutUI.SetActive(true);
         }
     }
-
 }
 

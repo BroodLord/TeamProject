@@ -28,6 +28,8 @@ public class FishingRodScript : ToolScript
     [SerializeField] private int reelCount;
     public GameObject reelMeter;
     public Slider ReelSlider;
+    private bool bobberSpawned;
+    private StaminaScript staminaCheck;
 
     private void Start()
     {
@@ -45,6 +47,8 @@ public class FishingRodScript : ToolScript
         GameObject Parent = GameObject.Find("ReelMeterHolder");
         reelMeter = Parent.gameObject.transform.GetChild(0).gameObject;
         ReelSlider = reelMeter.GetComponent<Slider>();
+        bobberSpawned = false;
+        staminaCheck = GameObject.FindGameObjectWithTag("Player").GetComponent<StaminaScript>();
         //var test = GameObject.FindGameObjectWithTag("ReelBar");
 
         foreach (var fishType in XML.items)
@@ -58,7 +62,6 @@ public class FishingRodScript : ToolScript
     }
     public override void useTool()
     {
-
         //get mouse position in world and convert to grid space
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int posInt = grid.LocalToCell(pos);
@@ -69,21 +72,27 @@ public class FishingRodScript : ToolScript
             fishingTimer = Random.Range(3.0f, 10.0f);
             catchTimer = 2.0f;
             CM.Moveable = false;
-            BobberHolder = new GameObject();
-            BobberHolder.AddComponent<SpriteRenderer>();
-            BobberHolder.GetComponent<SpriteRenderer>().sortingOrder = 6;
-            BobberHolder.GetComponent<SpriteRenderer>().sprite = Instantiate(Bobber, new Vector3(0,0,0), Quaternion.identity);//Sprite.Instantiate(Bobber, pos, Quaternion.identity);
-            BobberHolder.transform.position = new Vector3(pos.x,pos.y,0);
+            if (!bobberSpawned)
+            {
+                BobberHolder = new GameObject();
+                BobberHolder.AddComponent<SpriteRenderer>();
+                BobberHolder.GetComponent<SpriteRenderer>().sortingOrder = 6;
+                BobberHolder.GetComponent<SpriteRenderer>().sprite = Instantiate(Bobber, new Vector3(0, 0, 0), Quaternion.identity);//Sprite.Instantiate(Bobber, pos, Quaternion.identity);
+                BobberHolder.transform.position = new Vector3(pos.x, pos.y, 0);
+                bobberSpawned = true;
+            }
+            else
+            {
+                BobberHolder.transform.position = new Vector3(pos.x, pos.y, 0);
+            }
             //Instantiate(Bobber, pos, Quaternion.identity);
             currentState = 1;
-            ToolUsed = true;
-
         }
         else
         {
             Debug.Log("This tile cannot be fished in");
         }
-
+        
 
     }
 
@@ -119,9 +128,11 @@ public class FishingRodScript : ToolScript
                     currentlyFishing = false;
                     catchTimer = 2.0f;
                     DestroyImmediate(BobberHolder);
+                    bobberSpawned = false;
                     CM.Moveable = true;
                     fishingTimer = 10.0f;
                     audioPlayed = false;
+                    staminaCheck.UseStamina(GetCustomData());
                     currentState = 0;
                 }
                 
@@ -156,14 +167,19 @@ public class FishingRodScript : ToolScript
                     reelCount = 0;
                     reelMeter.SetActive(false);
                     DestroyImmediate(BobberHolder);
+                    bobberSpawned = false;
+                    staminaCheck.UseStamina(GetCustomData());
                     currentState = 4;
                 }
                 else if (catchTimer < 0)
                 {
                     DestroyImmediate(BobberHolder);
+                    bobberSpawned = false;
+                    reelCount = 0;
                     catchTimer = 2.0f;
                     reelMeter.SetActive(false);
                     CM.Moveable = true;
+                    staminaCheck.UseStamina(GetCustomData());
                     currentState = 0;
                 }
                 break;
@@ -207,5 +223,14 @@ public class FishingRodScript : ToolScript
             }
         }
         return null;
+    }
+
+    public void forceStopFishing()
+    {
+        CM.Moveable = true;
+        reelCount = 0;
+        reelMeter.SetActive(false);
+        DestroyImmediate(BobberHolder);
+        currentState = 4;
     }
 }
