@@ -11,6 +11,8 @@ public class BuyItem : MonoBehaviour
         XMLParser XML = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<XMLParser>();
         MoneyClass PlayerMoney = GameObject.FindGameObjectWithTag("Player").GetComponent<MoneyClass>();
         InventoryClass cInventory = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<InventoryClass>();
+        HotBarClass cHotbar = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<HotBarClass>();
+        SellChestClass cSellChest = GameObject.FindGameObjectWithTag("InventoryManager").GetComponent<SellChestClass>();
         ItemBase Item = new ItemBase();
         ItemBase NewItem = gameObject.GetComponentInParent<ItemBase>();
         ItemTypeFinder TypeFinder = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemTypeFinder>();
@@ -27,7 +29,7 @@ public class BuyItem : MonoBehaviour
                 cInventory.AddAmount(NewItem.GetName(), NewItem.GetAmount());
                 PlayerMoney.SetMoney(PlayerMoney.GetMoney() - NewItem.GetSellPrice());
             }
-            else
+            else if(!cInventory.HasItem(NewItem.GetName()) && !cHotbar.HasItem(NewItem.GetName()) && !cSellChest.HasItem(NewItem.GetName()))
             {
                 // Find the type of the item and set it up, after add it to the dictionary.
                 Item = TypeFinder.ItemTyepFinder(NewItem, SubGameObject);

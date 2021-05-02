@@ -71,6 +71,16 @@ public struct PlantData
     public string XMLName;
     public bool Watered;
 
+    public void SetUp(Vector3Int id, Vector3Int pos, string tile, bool watered)
+    {
+        ID = new float[3];
+        Pos = new float[3];
+        ID[0] = id[0]; ID[1] = id[1]; ID[2] = id[2];
+        Pos[0] = pos[0]; Pos[1] = pos[1]; Pos[2] = pos[2];
+        Tile = tile;
+        Watered = watered;
+    }
+
     public void SetUp(int currentDays, int growthTime, string type, string image, int amount, string[] growthSprite, 
                       Vector3Int id, Vector3Int pos, string tile, bool harvestable, bool growth, string xmlName, bool watered)
     {
@@ -250,6 +260,11 @@ public class SaveData : MonoBehaviour
                 Farm[counter].SetUp(Plant.mCurrentDays, Plant.mGrowthTime, Plant.GetType().ToString(),
                     Plant.GetSrcImage(), Plant.GetAmount(), GrowthSprites, Key, Key, var.Value.Tile.name,
                     Plant.mHarvestable, Plant.mGrowth, Plant.XMLName, Plant.mWatered);
+            }
+            else
+            {
+                Vector3Int Key = new Vector3Int(var.Key.x, var.Key.y, var.Key.z);
+                Farm[counter].SetUp(Key, Key, var.Value.Tile.name, var.Value.IsWatered());
             }
             counter++;
         }

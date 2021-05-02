@@ -387,13 +387,14 @@ public class DataXMLParser : MonoBehaviour
         #region CreateXML FarmData
 
         {
-            XmlElement CropData, TypeElement, AmountElement, TileElement, CurrentDaysElement, GrowthTimElement, SpritesElement, IdElement, PosElement, HarvesElement, GrowthElement, XmlNamElement, WateredElement;
+            XmlElement CropData;
             XmlElement FarmData = SavedDataXML.CreateElement("FarmData");
 
             for (int i = 0; i < Data.Farm.Length; i++)
             {
                 if (Data.Farm[i].ItemType != null)
                 {
+                    XmlElement TypeElement, AmountElement, TileElement, CurrentDaysElement, GrowthTimElement, SpritesElement, IdElement, PosElement, HarvesElement, GrowthElement, XmlNamElement, WateredElement;
                     CropData = SavedDataXML.CreateElement("CropData");
                     TypeElement = SavedDataXML.CreateElement("TypeElement");
                     AmountElement = SavedDataXML.CreateElement("AmountElement");
@@ -444,6 +445,35 @@ public class DataXMLParser : MonoBehaviour
                     CropData.AppendChild(HarvesElement);
                     CropData.AppendChild(GrowthElement);
                     CropData.AppendChild(XmlNamElement);
+                    CropData.AppendChild(WateredElement);
+
+                    FarmData.AppendChild(CropData);
+                }
+                else
+                {
+                    XmlElement TileElement, IdElement, PosElement, WateredElement;
+                    CropData = SavedDataXML.CreateElement("CropData");
+                    IdElement = SavedDataXML.CreateElement("IdElement");
+                    PosElement = SavedDataXML.CreateElement("PosElement");
+                    TileElement = SavedDataXML.CreateElement("TileElement");
+                    WateredElement = SavedDataXML.CreateElement("WateredElement");
+                    string[] XYZ = { "X", "Y", "Z" };
+                    for (int j = 0; j < 3; j++)
+                    {
+                        IdElement.SetAttribute(XYZ[j].ToString(), Data.Farm[i].ID[j].ToString());
+                    }
+
+
+                    for (int j = 0; j < 3; j++)
+                    {
+                        PosElement.SetAttribute(XYZ[j].ToString(), Data.Farm[i].Pos[j].ToString());
+                    }
+                    TileElement.SetAttribute("Tile", Data.Farm[i].Tile);
+                    WateredElement.SetAttribute("Watered", Data.Farm[i].Watered.ToString());
+
+                    CropData.AppendChild(IdElement);
+                    CropData.AppendChild(PosElement);
+                    CropData.AppendChild(TileElement);
                     CropData.AppendChild(WateredElement);
 
                     FarmData.AppendChild(CropData);
@@ -696,7 +726,7 @@ public class DataXMLParser : MonoBehaviour
             /*Little side note, wanna redo these two but don't have time before the demo day*/
             if (currentnode.Name == "PlayerData")
             {
-                
+
                 XmlNodeList lst = currentnode.ChildNodes;
                 bool Taxesbool = Convert.ToBoolean(lst[0].Attributes.GetNamedItem("PaidTaxes").Value);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<MainMissionManagement>().UpdateFromXML(Taxesbool);
@@ -881,49 +911,74 @@ public class DataXMLParser : MonoBehaviour
                 foreach (XmlNode Node in lst)
                 {
                     XmlNodeList lst0 = Node.ChildNodes;
-                    Item.ItemType = lst0[0].Attributes.GetNamedItem("Type").Value;
-                    Item.Amount = Convert.ToInt32(lst0[1].Attributes.GetNamedItem("Amount").Value);
-                    Item.CurrentDays = Convert.ToInt32(lst0[2].Attributes.GetNamedItem("CurrentDays").Value);
-                    Item.GrowthTime = Convert.ToInt32(lst0[3].Attributes.GetNamedItem("GrowthTime").Value);
-                    Item.GrowthSprite[0] = lst0[4].Attributes.GetNamedItem("Sprite0").Value;
-                    Item.GrowthSprite[1] = lst0[4].Attributes.GetNamedItem("Sprite1").Value;
-                    Item.GrowthSprite[2] = lst0[4].Attributes.GetNamedItem("Sprite2").Value;
-                    Item.ID[0] = float.Parse(lst0[5].Attributes.GetNamedItem("X").Value);
-                    Item.ID[1] = float.Parse(lst0[5].Attributes.GetNamedItem("Y").Value);
-                    Item.ID[2] = float.Parse(lst0[5].Attributes.GetNamedItem("Z").Value);
-                    Item.Pos[0] = float.Parse(lst0[6].Attributes.GetNamedItem("X").Value);
-                    Item.Pos[1] = float.Parse(lst0[6].Attributes.GetNamedItem("Y").Value);
-                    Item.Pos[2] = float.Parse(lst0[6].Attributes.GetNamedItem("Z").Value);
-                    Item.Tile  = lst0[7].Attributes.GetNamedItem("Tile").Value;
-                    Item.Harvestable = Convert.ToBoolean(lst0[8].Attributes.GetNamedItem("Harvestable").Value);
-                    Item.Growth = Convert.ToBoolean(lst0[9].Attributes.GetNamedItem("HasGrown").Value);
-                    Item.XMLName = lst0[10].Attributes.GetNamedItem("XMLName").Value;
-                    Item.Watered = Convert.ToBoolean(lst0[11].Attributes.GetNamedItem("Watered").Value);
+                    if (lst0.Count == 4)
+                    {
+                        Item.ID[0] = float.Parse(lst0[0].Attributes.GetNamedItem("X").Value);
+                        Item.ID[1] = float.Parse(lst0[0].Attributes.GetNamedItem("Y").Value);
+                        Item.ID[2] = float.Parse(lst0[0].Attributes.GetNamedItem("Z").Value);
+                        Item.Pos[0] = float.Parse(lst0[1].Attributes.GetNamedItem("X").Value);
+                        Item.Pos[1] = float.Parse(lst0[1].Attributes.GetNamedItem("Y").Value);
+                        Item.Pos[2] = float.Parse(lst0[1].Attributes.GetNamedItem("Z").Value);
+                        Item.Tile = lst0[2].Attributes.GetNamedItem("Tile").Value;
+                        Item.Watered = Convert.ToBoolean(lst0[3].Attributes.GetNamedItem("Watered").Value);
 
-                    GameObject Clone;
-                    int Index = TypeFinder.FindItemIndex(Item.XMLName + " Seeds");
-                    Clone = Instantiate(XML.items.ElementAt(Index).Value.GetPrefab(), new Vector3(Item.Pos[0] + 0.5f, Item.Pos[1] + 0.5f, Item.Pos[2]), Quaternion.identity);
-                    DontDestroyOnLoad(Clone);
-                    DOLD.Add(Clone);
-                    ///*****************************/
-                    ///* Set up the plant for the clone on that spot in the database */
-                    PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();
-                    TempPlant.ID = new Vector3Int(Convert.ToInt32(Item.ID[0]), Convert.ToInt32(Item.ID[1]), Convert.ToInt32(Item.ID[2]));
-                    TempPlant.pos = new Vector3Int(Convert.ToInt32(Item.Pos[0]), Convert.ToInt32(Item.Pos[1]), Convert.ToInt32(Item.Pos[2]));
-                    TempPlant.mHarvestable = Item.Harvestable;
-                    TempPlant.mGrowth = Item.Growth;
-                    TempPlant.mCurrentDays = Item.CurrentDays;
-                    TempPlant.mGrowthTime = Item.GrowthTime;
-                    TempPlant.mItemType = FindType(Item.ItemType);
-                    TempPlant.SetAmount(Item.Amount);
-                    TileDataClass Data = new TileDataClass();
-                    Database.TileMapData.ElementAt(0).Value.Add(TempPlant.ID, Data);
-                    Database.TileMapData.ElementAt(0).Value[TempPlant.ID].SetPlant(TempPlant);
-                    string Path = "XML Loaded Assets/" + Item.Tile;
-                    TileBase Tile = Resources.Load<TileBase>(Path);
-                    Database.TileMapData.ElementAt(0).Value[TempPlant.ID].Tile = Tile;
-                    Database.TileMapData.ElementAt(0).Value[TempPlant.ID].Clone = Clone;
-                    Database.TileMapData.ElementAt(0).Value[TempPlant.ID].SetWatered(Item.Watered);
+                        ///*****************************/
+                        ///* Set up the plant for the clone on that spot in the database */
+                        Vector3Int ID = new Vector3Int(Convert.ToInt32(Item.ID[0]), Convert.ToInt32(Item.ID[1]), Convert.ToInt32(Item.ID[2]));
+                        Vector3Int pos = new Vector3Int(Convert.ToInt32(Item.Pos[0]), Convert.ToInt32(Item.Pos[1]), Convert.ToInt32(Item.Pos[2]));
+                        TileDataClass Data = new TileDataClass();
+                        Database.TileMapData.ElementAt(0).Value.Add(ID, Data);
+                        string Path = "XML Loaded Assets/" + Item.Tile;
+                        TileBase Tile = Resources.Load<TileBase>(Path);
+                        Database.TileMapData.ElementAt(0).Value[ID].Tile = Tile;
+                        Database.TileMapData.ElementAt(0).Value[ID].SetWatered(Item.Watered);
+                    }
+                    else
+                    {
+                        Item.ItemType = lst0[0].Attributes.GetNamedItem("Type").Value;
+                        Item.Amount = Convert.ToInt32(lst0[1].Attributes.GetNamedItem("Amount").Value);
+                        Item.CurrentDays = Convert.ToInt32(lst0[2].Attributes.GetNamedItem("CurrentDays").Value);
+                        Item.GrowthTime = Convert.ToInt32(lst0[3].Attributes.GetNamedItem("GrowthTime").Value);
+                        Item.GrowthSprite[0] = lst0[4].Attributes.GetNamedItem("Sprite0").Value;
+                        Item.GrowthSprite[1] = lst0[4].Attributes.GetNamedItem("Sprite1").Value;
+                        Item.GrowthSprite[2] = lst0[4].Attributes.GetNamedItem("Sprite2").Value;
+                        Item.ID[0] = float.Parse(lst0[5].Attributes.GetNamedItem("X").Value);
+                        Item.ID[1] = float.Parse(lst0[5].Attributes.GetNamedItem("Y").Value);
+                        Item.ID[2] = float.Parse(lst0[5].Attributes.GetNamedItem("Z").Value);
+                        Item.Pos[0] = float.Parse(lst0[6].Attributes.GetNamedItem("X").Value);
+                        Item.Pos[1] = float.Parse(lst0[6].Attributes.GetNamedItem("Y").Value);
+                        Item.Pos[2] = float.Parse(lst0[6].Attributes.GetNamedItem("Z").Value);
+                        Item.Tile = lst0[7].Attributes.GetNamedItem("Tile").Value;
+                        Item.Harvestable = Convert.ToBoolean(lst0[8].Attributes.GetNamedItem("Harvestable").Value);
+                        Item.Growth = Convert.ToBoolean(lst0[9].Attributes.GetNamedItem("HasGrown").Value);
+                        Item.XMLName = lst0[10].Attributes.GetNamedItem("XMLName").Value;
+                        Item.Watered = Convert.ToBoolean(lst0[11].Attributes.GetNamedItem("Watered").Value);
+
+                        GameObject Clone;
+                        int Index = TypeFinder.FindItemIndex(Item.XMLName + " Seeds");
+                        Clone = Instantiate(XML.items.ElementAt(Index).Value.GetPrefab(), new Vector3(Item.Pos[0] + 0.5f, Item.Pos[1] + 0.5f, Item.Pos[2]), Quaternion.identity);
+                        DontDestroyOnLoad(Clone);
+                        DOLD.Add(Clone);
+                        ///*****************************/
+                        ///* Set up the plant for the clone on that spot in the database */
+                        PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();
+                        TempPlant.ID = new Vector3Int(Convert.ToInt32(Item.ID[0]), Convert.ToInt32(Item.ID[1]), Convert.ToInt32(Item.ID[2]));
+                        TempPlant.pos = new Vector3Int(Convert.ToInt32(Item.Pos[0]), Convert.ToInt32(Item.Pos[1]), Convert.ToInt32(Item.Pos[2]));
+                        TempPlant.mHarvestable = Item.Harvestable;
+                        TempPlant.mGrowth = Item.Growth;
+                        TempPlant.mCurrentDays = Item.CurrentDays;
+                        TempPlant.mGrowthTime = Item.GrowthTime;
+                        TempPlant.mItemType = FindType(Item.ItemType);
+                        TempPlant.SetAmount(Item.Amount);
+                        TileDataClass Data = new TileDataClass();
+                        Database.TileMapData.ElementAt(0).Value.Add(TempPlant.ID, Data);
+                        Database.TileMapData.ElementAt(0).Value[TempPlant.ID].SetPlant(TempPlant);
+                        string Path = "XML Loaded Assets/" + Item.Tile;
+                        TileBase Tile = Resources.Load<TileBase>(Path);
+                        Database.TileMapData.ElementAt(0).Value[TempPlant.ID].Tile = Tile;
+                        Database.TileMapData.ElementAt(0).Value[TempPlant.ID].Clone = Clone;
+                        Database.TileMapData.ElementAt(0).Value[TempPlant.ID].SetWatered(Item.Watered);
+                    }
                 }
             }
             else if (currentnode.Name == "Mines0Data")
@@ -958,9 +1013,9 @@ public class DataXMLParser : MonoBehaviour
                     Item = this.gameObject.AddComponent<Ore>() as Ore;
                     // Sets up and ore item
                     int Index = TypeFinder.FindItemIndex(Data.XMLName);
-                    Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable, 
+                    Item.SetUpThisItem(FindType(Data.ItemType), Data.XMLName, (int)Data.Amount, XML.items.ElementAt(Index).Value.bStackable,
                                        XML.items.ElementAt(Index).Value.bSrcImage, XML.items.ElementAt(Index).Value.bSoundEffect,
-                                       XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab, 
+                                       XML.items.ElementAt(Index).Value.bTile, XML.items.ElementAt(Index).Value.bPrefab,
                                        XML.items.ElementAt(Index).Value.bSellPrice, XML.items.ElementAt(Index).Value.bCustomData, XML.items.ElementAt(Index).Value.bDesc);
 
                     // Loads what tile we want the item to use
