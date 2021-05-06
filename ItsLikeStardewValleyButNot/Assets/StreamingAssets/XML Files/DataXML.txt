@@ -1,19 +1,46 @@
 <SaveData SaveData="Data">
   <PlayerData>
     <PaidTaxes PaidTaxes="False" />
-    <MoneyNumber Money="1320" />
-    <PlayerEnergy Energy="63" />
+    <MoneyNumber Money="390" />
+    <PlayerEnergy Energy="98" />
     <CurrentScene Scene="Farmland" />
-    <PlayerPos x="10.36895" y="-2.533823" z="0.1" />
+    <PlayerPos x="11.43935" y="-4" z="0.1" />
   </PlayerData>
   <WorldData>
-    <Date Day="1" Month="5" Year="1969" />
-    <Time Hour="8" Min="57" Seconds="0" />
-    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.02778752" />
+    <Date Day="3" Month="5" Year="1969" />
+    <Time Hour="8" Min="46" Seconds="0" />
+    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="0.09473465" />
     <WeeklyReset Resets0="True" Resets1="True" Resets2="True" Resets3="True" />
     <Slots Slots0="24" Slots1="10" Slots2="16" />
   </WorldData>
-  <InventoryData />
+  <InventoryData>
+    <ElementData>
+      <NameElement Name="Strawberry" />
+      <TypeElement Type="Plant" />
+      <ImageElement Image="Crop_Spritesheet_72" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="" />
+      <PrefabElement Prefab="" />
+      <AmountElement Amount="1" />
+      <StackableElement Stackable="True" />
+      <PriceElement Price="180" />
+      <DescElement Desc="Has nothing to do with straw and isn't even a berry. Good job english" />
+      <CustomDataElement CustomData="0" />
+    </ElementData>
+    <ElementData>
+      <NameElement Name="Pineapple" />
+      <TypeElement Type="Plant" />
+      <ImageElement Image="Crop_Spritesheet_48" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="" />
+      <PrefabElement Prefab="" />
+      <AmountElement Amount="1" />
+      <StackableElement Stackable="True" />
+      <PriceElement Price="150" />
+      <DescElement Desc="Would go great on a pizza" />
+      <CustomDataElement CustomData="0" />
+    </ElementData>
+  </InventoryData>
   <HotbarData>
     <ElementData>
       <NameElement Name="Hoe" />
@@ -54,132 +81,9 @@
       <DescElement Desc="Use on fully grown crops to harvest" />
       <CustomDataElement CustomData="2" />
     </ElementData>
-    <ElementData>
-      <NameElement Name="Potato Seeds" />
-      <TypeElement Type="Seed" />
-      <ImageElement Image="Crop_Spritesheet_89" />
-      <TileImageElement Tile="" />
-      <SoundEffectElement SoundEffect="Seed_Sound" />
-      <PrefabElement Prefab="PotatoSeed" />
-      <AmountElement Amount="2" />
-      <StackableElement Stackable="True" />
-      <PriceElement Price="40" />
-      <DescElement Desc="Plant in tilled soil, takes 4 days to grow" />
-      <CustomDataElement CustomData="0" />
-    </ElementData>
-    <ElementData>
-      <NameElement Name="Honeydew Watermelon Seeds" />
-      <TypeElement Type="Seed" />
-      <ImageElement Image="Crop_Spritesheet_47" />
-      <TileImageElement Tile="" />
-      <SoundEffectElement SoundEffect="Seed_Sound" />
-      <PrefabElement Prefab="Honeydew_WatermelonSeed" />
-      <AmountElement Amount="2" />
-      <StackableElement Stackable="True" />
-      <PriceElement Price="50" />
-      <DescElement Desc="Plant in tilled soil, takes 8 days to grow" />
-      <CustomDataElement CustomData="0" />
-    </ElementData>
   </HotbarData>
   <ChestData />
-  <FarmData>
-    <CropData>
-      <IdElement X="9" Y="-4" Z="0" />
-      <PosElement X="9" Y="-4" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="10" Y="-4" Z="0" />
-      <PosElement X="10" Y="-4" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="11" Y="-4" Z="0" />
-      <PosElement X="11" Y="-4" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="9" Y="-5" Z="0" />
-      <PosElement X="9" Y="-5" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="10" Y="-5" Z="0" />
-      <PosElement X="10" Y="-5" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="11" Y="-5" Z="0" />
-      <PosElement X="11" Y="-5" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="8" Y="-4" Z="0" />
-      <PosElement X="8" Y="-4" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="8" Y="-5" Z="0" />
-      <PosElement X="8" Y="-5" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="9" Y="-3" Z="0" />
-      <PosElement X="9" Y="-3" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="10" Y="-3" Z="0" />
-      <PosElement X="10" Y="-3" Z="0" />
-      <TileElement Tile="WateredDirt" />
-      <WateredElement Watered="True" />
-    </CropData>
-    <CropData>
-      <IdElement X="11" Y="-3" Z="0" />
-      <PosElement X="11" Y="-3" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="12" Y="-4" Z="0" />
-      <PosElement X="12" Y="-4" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="12" Y="-5" Z="0" />
-      <PosElement X="12" Y="-5" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="10" Y="-6" Z="0" />
-      <PosElement X="10" Y="-6" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="9" Y="-6" Z="0" />
-      <PosElement X="9" Y="-6" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-    <CropData>
-      <IdElement X="11" Y="-6" Z="0" />
-      <PosElement X="11" Y="-6" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
-    </CropData>
-  </FarmData>
+  <FarmData />
   <Mines0Data />
   <Mines1Data />
   <Mines2Data />

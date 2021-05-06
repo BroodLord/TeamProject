@@ -92,6 +92,7 @@ public class Clock : MonoBehaviour
     {
         /*Used to reset the global lightning*/
         AtMidDay = false;
+        PassoutTimer = 0;
         var tempColor = Lighting.color;
         tempColor.a = 0.1176471f;
         Lighting.color = tempColor;
@@ -245,12 +246,14 @@ public class Clock : MonoBehaviour
         else if (Gold.Length == SpriteDictionary.Count)
         {
             int Counter = 0;
-            foreach (var Dic in SpriteDictionary)
+            for (int i = 0; i < Gold.Length; i++)
             {
                 int Number = FindNumber(Gold[Counter]);
-                if (Dic.Key != Number)
+                if (SpriteDictionary[i].Key != Number)
                 {
-                    Dic.Value.gameObject.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[Number];
+                    KeyValuePair<int, GameObject> KVP = new KeyValuePair<int, GameObject>(Number, SpriteDictionary[i].Value);
+                    SpriteDictionary[i].Value.gameObject.transform.Find("Sprite").GetComponent<Image>().sprite = GoldTextSprites[Number];
+                    SpriteDictionary[i] = KVP;
                 }
                 Counter++;
             }

@@ -19,23 +19,27 @@ public class WateringCanScript : ToolScript
             Vector3Int posInt = grid.LocalToCell(pos);
             if (Dictioary.TileMapData.ElementAt(0).Value.ContainsKey(posInt))
             {
-                // Shows the name of the tile at the specified coordinates    
-                // Check if it has already been watered
                 if (!Dictioary.TileMapData.ElementAt(0).Value[posInt].IsWatered())
                 {
-                    //Debug.Log(tileMap.GetTile(posInt).name);
-                    /*Play the sound effect*/
-                    AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
-                    Audio.clip = GetSoundEffect();
-                    Audio.Play();
-                    /*************************/
-                    Debug.Log("This is watered");
-                    ToolUsed = true;
-                    /*Edit the tile so it is watered*/
-                    Dictioary.TileMapData.ElementAt(0).Value[posInt].TileMap.SetTile(posInt, GetTile());
-                    Dictioary.TileMapData.ElementAt(0).Value[posInt].Tile = tileMap.GetTile(posInt);
-                    Dictioary.TileMapData.ElementAt(0).Value[posInt].SetWatered(true);
                     PlantAbstractClass P = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
+                    // Shows the name of the tile at the specified coordinates    
+                    // Check if it has already been watered
+                    if (!P.mHarvestable)
+                    {
+                        //Debug.Log(tileMap.GetTile(posInt).name);
+                        /*Play the sound effect*/
+                        AudioSource Audio = gameObject.GetComponentInParent<AudioSource>();
+                        Audio.clip = GetSoundEffect();
+                        Audio.Play();
+                        /*************************/
+                        Debug.Log("This is watered");
+                        ToolUsed = true;
+                        /*Edit the tile so it is watered*/
+                        Dictioary.TileMapData.ElementAt(0).Value[posInt].TileMap.SetTile(posInt, GetTile());
+                        Dictioary.TileMapData.ElementAt(0).Value[posInt].Tile = tileMap.GetTile(posInt);
+                        Dictioary.TileMapData.ElementAt(0).Value[posInt].SetWatered(true);
+                        P = Dictioary.TileMapData.ElementAt(0).Value[posInt].GetPlant();
+                    }
                 }
                 else
                 {

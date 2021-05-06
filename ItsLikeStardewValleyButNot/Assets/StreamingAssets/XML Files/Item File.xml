@@ -36,7 +36,7 @@
 	<Item name="Wheat" type="Plant" src-image="Crop_Spritesheet_60" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="100" customData ="0" ItemDesc ="YUCK, YUCK, GROSS, GET OUTTA HERE WHEAT"/>
 	<Item name="Pineapple" type="Plant" src-image="Crop_Spritesheet_48" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Would go great on a pizza"/>
 	<Item name="Pear" type="Plant" src-image="Crop_Spritesheet_102" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="120" customData ="0" ItemDesc ="Should plant another for a pair of pears"/>
-	<Item name="Honeydew Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc ="Diggy Diggy hole"/>
+	<Item name="Honeydew_Watermelon" type="Plant" src-image="Crop_Spritesheet_42" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="180" customData ="0" ItemDesc ="Diggy Diggy hole"/>
 	<Item name="Corn" type="Plant" src-image="Crop_Spritesheet_108" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="YEAH, YEAH, HELL YEAH, CORN!"/>
 	<Item name="Grape" type="Plant" src-image="Crop_Spritesheet_66" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Sorely undersold in lemonade stands"/>
 	<Item name="Rasberry" type="Plant" src-image="Crop_Spritesheet_90" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="150" customData ="0" ItemDesc ="Put some in a pi and code a game with better item descriptions than this"/>
@@ -68,7 +68,7 @@
 	<Item name="Sunfish" type="Fish" src-image="Yellow_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="80" customData ="0" ItemDesc ="Will blind you if you look directly at it"/>
 	<Item name="Perch" type="Fish" src-image="Green_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="85" customData ="0" ItemDesc ="The birds have to stand somewhere to catch dinner"/>
 	<Item name="Carp" type="Fish" src-image="LightBlue_Fish" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="90" customData ="0" ItemDesc ="You seized the day and the carp"/>
-	<Item name="Trash" type="Fish" src-image="Trash" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="0" customData ="0" ItemDesc ="Known for being toxic to whatever it's near"/>
+	<Item name="Trash" type="Fish" src-image="Trash" tile-src-image ="" sound-effect ="" Prefab ="" amount = "1" stackable="Yes" sellPrice="10" customData ="0" ItemDesc ="Known for being toxic to whatever it's near"/>
 
 	<!-- List of NPC Infomation -->
 

@@ -182,6 +182,7 @@ public class SaveData : MonoBehaviour
 
         string TileName = "";
         string PrefabName = "";
+        string SoundEffectName = "";
         for (int i = 0; i < slots[0]; i++)
         {
             if (inventory[i] != null)
@@ -194,15 +195,20 @@ public class SaveData : MonoBehaviour
                 {
                     PrefabName = inventory[i].GetPrefab().name;
                 }
+                if (inventory[i].GetSoundEffect() != null)
+                {
+                    SoundEffectName = inventory[i].GetSoundEffect().name;
+                }
 
-                Inventory[i].SetUp(inventory[i].GetName(), inventory[i].mItemType.ToString(),
+                    Inventory[i].SetUp(inventory[i].GetName(), inventory[i].mItemType.ToString(),
                     inventory[i].GetSrcImage(), TileName,
-                    inventory[i].GetSoundEffect().name, PrefabName, inventory[i].GetAmount(),
+                    SoundEffectName, PrefabName, inventory[i].GetAmount(),
                     inventory[i].GetStackable(), inventory[i].GetSellPrice(), inventory[i].GetCustomData(), inventory[i].GetDesc());
             }
 
             TileName = "";
             PrefabName = "";
+            SoundEffectName = "";
         }
         for (int i = 0; i < slots[1]; i++)
         {
@@ -216,15 +222,20 @@ public class SaveData : MonoBehaviour
                 {
                     PrefabName = hotbar[i].GetPrefab().name;
                 }
+                if (hotbar[i].GetSoundEffect() != null)
+                {
+                    SoundEffectName = hotbar[i].GetSoundEffect().name;
+                }
 
 
                 HotBar[i].SetUp(hotbar[i].GetName(), hotbar[i].mItemType.ToString(), hotbar[i].GetSrcImage(),
-                    TileName, hotbar[i].GetSoundEffect().name, PrefabName, hotbar[i].GetAmount(),
+                    TileName, SoundEffectName, PrefabName, hotbar[i].GetAmount(),
                     hotbar[i].GetStackable(),hotbar[i].GetSellPrice(), hotbar[i].GetCustomData(), hotbar[i].GetDesc());
             }
 
             TileName = "";
             PrefabName = "";
+            SoundEffectName = "";
         }
         for (int i = 0; i < slots[2]; i++)
         {
@@ -238,9 +249,13 @@ public class SaveData : MonoBehaviour
                 {
                     PrefabName = chest[i].GetPrefab().name;
                 }
+                if (chest[i].GetSoundEffect() != null)
+                {
+                    SoundEffectName = chest[i].GetSoundEffect().name;
+                }
 
                 Chest[i].SetUp(chest[i].GetName(), chest[i].mItemType.ToString(), chest[i].GetSrcImage(),
-                    TileName, chest[i].GetSoundEffect().name, PrefabName, chest[i].GetAmount(),
+                    TileName, SoundEffectName, PrefabName, chest[i].GetAmount(),
                     chest[i].GetStackable(), chest[i].GetSellPrice(), chest[i].GetCustomData(), chest[i].GetDesc());
             }
 
