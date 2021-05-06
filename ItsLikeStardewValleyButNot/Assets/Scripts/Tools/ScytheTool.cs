@@ -76,6 +76,8 @@ public class ScytheTool : ToolScript
                     /************************/
                     //Debug.Log("GATHERED PLANT");
                     // Asset the plant and destory the planted one.
+                    DOLDatabase DOLD = GameObject.FindGameObjectWithTag("LoadManager").GetComponent<DOLDatabase>();
+                    DOLD.Remove(Dictioary.TileMapData.ElementAt(0).Value[posInt].Clone);
                     Dictioary.TileMapData.ElementAt(0).Value.Remove(posInt);
                     InventoryAssessment(GetPlantItem(Plant.XMLName), posInt);
                     Plant.DestoryPlant();

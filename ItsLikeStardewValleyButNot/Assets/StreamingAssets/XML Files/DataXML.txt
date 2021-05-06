@@ -1,15 +1,15 @@
 <SaveData SaveData="Data">
   <PlayerData>
     <PaidTaxes PaidTaxes="False" />
-    <MoneyNumber Money="500" />
-    <PlayerEnergy Energy="65" />
+    <MoneyNumber Money="1320" />
+    <PlayerEnergy Energy="63" />
     <CurrentScene Scene="Farmland" />
-    <PlayerPos x="10.5444" y="-4.566465" z="0.1" />
+    <PlayerPos x="10.36895" y="-2.533823" z="0.1" />
   </PlayerData>
   <WorldData>
     <Date Day="1" Month="5" Year="1969" />
-    <Time Hour="8" Min="19" Seconds="0" />
-    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.009262498" />
+    <Time Hour="8" Min="57" Seconds="0" />
+    <Lighting Lighting.r="0" Lighting.g="0" Lighting.b="0" Lighting.a="-0.02778752" />
     <WeeklyReset Resets0="True" Resets1="True" Resets2="True" Resets3="True" />
     <Slots Slots0="24" Slots1="10" Slots2="16" />
   </WorldData>
@@ -54,6 +54,32 @@
       <DescElement Desc="Use on fully grown crops to harvest" />
       <CustomDataElement CustomData="2" />
     </ElementData>
+    <ElementData>
+      <NameElement Name="Potato Seeds" />
+      <TypeElement Type="Seed" />
+      <ImageElement Image="Crop_Spritesheet_89" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="Seed_Sound" />
+      <PrefabElement Prefab="PotatoSeed" />
+      <AmountElement Amount="2" />
+      <StackableElement Stackable="True" />
+      <PriceElement Price="40" />
+      <DescElement Desc="Plant in tilled soil, takes 4 days to grow" />
+      <CustomDataElement CustomData="0" />
+    </ElementData>
+    <ElementData>
+      <NameElement Name="Honeydew Watermelon Seeds" />
+      <TypeElement Type="Seed" />
+      <ImageElement Image="Crop_Spritesheet_47" />
+      <TileImageElement Tile="" />
+      <SoundEffectElement SoundEffect="Seed_Sound" />
+      <PrefabElement Prefab="Honeydew_WatermelonSeed" />
+      <AmountElement Amount="2" />
+      <StackableElement Stackable="True" />
+      <PriceElement Price="50" />
+      <DescElement Desc="Plant in tilled soil, takes 8 days to grow" />
+      <CustomDataElement CustomData="0" />
+    </ElementData>
   </HotbarData>
   <ChestData />
   <FarmData>
@@ -66,8 +92,8 @@
     <CropData>
       <IdElement X="10" Y="-4" Z="0" />
       <PosElement X="10" Y="-4" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
+      <TileElement Tile="WateredDirt" />
+      <WateredElement Watered="True" />
     </CropData>
     <CropData>
       <IdElement X="11" Y="-4" Z="0" />
@@ -114,8 +140,8 @@
     <CropData>
       <IdElement X="10" Y="-3" Z="0" />
       <PosElement X="10" Y="-3" Z="0" />
-      <TileElement Tile="tilled dirt" />
-      <WateredElement Watered="False" />
+      <TileElement Tile="WateredDirt" />
+      <WateredElement Watered="True" />
     </CropData>
     <CropData>
       <IdElement X="11" Y="-3" Z="0" />

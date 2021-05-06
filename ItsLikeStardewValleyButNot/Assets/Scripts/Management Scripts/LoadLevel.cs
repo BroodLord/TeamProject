@@ -128,13 +128,11 @@ public class LoadLevel : MonoBehaviour
             //UICanvas = GameObject.FindGameObjectWithTag("Canvas");
             //UICanvas.SetActive(true);
             // if we aren't on the farm then set all the clone to be not active 
-            foreach (var BaseV in Dictionary.TileMapData)
-            {
-
-
+            //foreach (var BaseV in Dictionary.TileMapData)
+            //{
                 foreach (var ChildV in Dictionary.TileMapData.ElementAt(0).Value)
                 {
-                    if (ChildV.Value.Clone != null)
+                    if (ChildV.Value.GetPlant() != null || ChildV.Value.Clone != null)
                     {
                         ChildV.Value.Clone.SetActive(false);
                         DontDestroyOnLoad(ChildV.Value.Clone);
@@ -142,7 +140,7 @@ public class LoadLevel : MonoBehaviour
                         DOLD.Add(ChildV.Value.Clone);
                     }
                 }
-            }
+            //}
             // Set up the player at the location
             Player.transform.position = StartLocation;
             Debug.Log(StartLocation);

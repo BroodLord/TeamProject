@@ -9,6 +9,12 @@ public class PlantSeed : ToolScript
     private Vector3 pos;
     public TileDictionaryClass Dictioary;
     public GameObject PlantPrefab;
+    int Counter;
+
+    public void Start()
+    {
+        Counter = 0;
+    }
     public override void useTool()
     {
         // Set the plant prefab to be the base one
@@ -39,6 +45,8 @@ public class PlantSeed : ToolScript
             /*Create a clone and instantiate it*/
             GameObject Clone;
             Clone = Instantiate(PlantPrefab, new Vector3(posInt.x + 0.5f, posInt.y + 0.5f, posInt.z), Quaternion.identity);
+            Clone.name += Counter;
+            Counter++;
             /*****************************/
             /* Set up the plant for the clone on that spot in the database */
             PlantAbstractClass TempPlant = Clone.GetComponent<PlantAbstractClass>();
