@@ -91,8 +91,9 @@ public class Clock : MonoBehaviour
     public void NightUpdate()
     {
         /*Used to reset the global lightning*/
+        AtMidDay = false;
         var tempColor = Lighting.color;
-        tempColor.a = 0.0f;
+        tempColor.a = 0.1176471f;
         Lighting.color = tempColor;
         /************************************/
         /* This used to counter if it has been a week, used to reset the rocks in the mines currently */
@@ -414,7 +415,7 @@ public class Clock : MonoBehaviour
                 {
                     int ConvertedHour;
 
-                    if (Hour >= 13) { ConvertedHour = Hour - 12; }
+                    if (Hour >= 13) { ConvertedHour = Hour - 12; AM = false; }
 
                     else if (Hour == 0) { ConvertedHour = 12; }
 

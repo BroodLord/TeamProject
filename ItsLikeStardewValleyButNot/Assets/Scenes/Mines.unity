@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Mines1
   Load: {fileID: 0}
-  LoadPosition: {x: 6, y: 19, z: 0}
+  LoadPosition: {x: 4, y: 20, z: 0}
 --- !u!19719996 &1607243752
 TilemapCollider2D:
   m_ObjectHideFlags: 0

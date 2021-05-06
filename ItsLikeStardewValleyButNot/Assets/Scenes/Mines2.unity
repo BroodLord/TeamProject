@@ -24046,7 +24046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Mines1
   Load: {fileID: 0}
-  LoadPosition: {x: 9, y: 19, z: 0}
+  LoadPosition: {x: 11, y: 20, z: 0}
 --- !u!1 &621824604
 GameObject:
   m_ObjectHideFlags: 0
